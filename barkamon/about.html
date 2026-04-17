@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our Story — Bar Kamon, East Village San Diego</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+  :root{--navy:#0a1628;--navy-deep:#050b17;--gold:#c9a961;--gold-bright:#e6c989;--amber:#d4874a;--cream:#f5ede0;--paper:#1a2540}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--navy-deep);color:var(--cream);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1240px;margin:0 auto;padding:0 32px}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:rgba(5,11,23,0.75);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,97,0.15)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:0 32px}
+  .logo{font-family:'Cinzel',serif;font-size:22px;letter-spacing:4px;color:var(--gold);font-weight:500}
+  .logo span{color:var(--cream);font-weight:400}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,237,224,0.75);transition:color .2s}
+  .nav-links a:hover{color:var(--gold)}
+  .btn{display:inline-block;padding:14px 28px;border-radius:2px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;transition:all .3s;font-family:inherit}
+  .btn-primary{background:var(--gold);color:var(--navy-deep)}
+  .btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,237,224,0.3)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  .page-hero{padding:200px 0 120px;position:relative;overflow:hidden}
+  .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%, rgba(212,135,74,0.15) 0%, transparent 55%),linear-gradient(180deg,#050b17 0%, #0a1628 100%)}
+  .page-hero-inner{position:relative;z-index:2;max-width:780px}
+  .eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:32px}
+  .eyebrow::before,.eyebrow::after{content:'';width:36px;height:1px;background:var(--gold)}
+  h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,84px);font-weight:500;line-height:1.05;letter-spacing:-1px;color:var(--cream);margin-bottom:28px}
+  h1 em{font-style:italic;color:var(--gold);font-weight:400}
+
+  .story{padding:80px 0 120px;background:var(--navy-deep)}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .story-art{aspect-ratio:4/5;border-radius:4px;background:linear-gradient(135deg, #0a1628 0%, #1a2540 50%, #d4874a 100%);position:relative;overflow:hidden;border:1px solid rgba(201,169,97,0.3)}
+  .story-art::before{content:'';position:absolute;inset:20px;border:1px solid rgba(201,169,97,0.4)}
+  .story-art::after{content:'燈';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:180px;color:rgba(201,169,97,0.18);font-style:italic}
+  .story-text p{font-size:18px;line-height:1.85;color:rgba(245,237,224,0.78);margin-bottom:22px;font-weight:300}
+  .story-text p:first-child::first-letter{font-family:'Cormorant Garamond',serif;font-size:64px;float:left;line-height:0.9;padding:6px 14px 0 0;color:var(--gold)}
+  .story-sig{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);font-style:italic;margin-top:20px}
+
+  .values{padding:120px 0;background:linear-gradient(180deg,var(--navy-deep) 0%, #0a1628 100%)}
+  .section-head{text-align:center;margin-bottom:72px;max-width:640px;margin-left:auto;margin-right:auto}
+  .section-kicker{font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+  h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,58px);font-weight:500;line-height:1.1;letter-spacing:-0.5px;color:var(--cream)}
+  .vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .val{padding:36px;border:1px solid rgba(201,169,97,0.2);text-align:center;position:relative;background:rgba(26,37,64,0.3)}
+  .val-icon{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--gold);margin-bottom:20px;font-style:italic}
+  .val h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--cream);margin-bottom:14px;font-weight:500}
+  .val p{font-size:15px;color:rgba(245,237,224,0.68);font-weight:300;line-height:1.7}
+
+  .why{padding:120px 0;background:var(--navy-deep)}
+  .why-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:4px}
+  .why-row{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:32px 0;border-top:1px solid rgba(201,169,97,0.15);align-items:center}
+  .why-row:last-child{border-bottom:1px solid rgba(201,169,97,0.15)}
+  .why-num{font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--gold);line-height:1;font-weight:400}
+  .why-title{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin-bottom:8px;font-weight:500}
+  .why-desc{font-size:16px;color:rgba(245,237,224,0.7);font-weight:300;line-height:1.7}
+
+  .cta{padding:130px 0;background:linear-gradient(135deg, #0a1628 0%, #1a2540 70%, #d4874a 180%);text-align:center;position:relative;overflow:hidden;border-top:1px solid rgba(201,169,97,0.25)}
+  .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(212,135,74,0.15) 0%, transparent 60%)}
+  .cta-inner{position:relative;z-index:2;max-width:720px;margin:0 auto}
+  .cta h2{margin-bottom:22px}
+  .cta p{font-size:19px;color:rgba(245,237,224,0.75);margin-bottom:40px;font-weight:300}
+
+  footer{background:#030811;padding:80px 0 30px;border-top:1px solid rgba(201,169,97,0.15)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+  .foot-brand{max-width:320px}
+  .foot-logo{font-family:'Cinzel',serif;font-size:20px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
+  .foot-desc{font-size:14px;color:rgba(245,237,224,0.55);line-height:1.7}
+  .foot-h{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+  .foot-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot-list a,.foot-list li{font-size:14px;color:rgba(245,237,224,0.65);transition:color .2s}
+  .foot-list a:hover{color:var(--gold)}
+  .foot-bottom{padding-top:30px;border-top:1px solid rgba(201,169,97,0.1);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(245,237,224,0.4)}
+  .foot-bottom a{color:var(--gold)}
+  @media(max-width:900px){.nav-links a:not(:last-child){display:none}.story-grid,.vals-grid,.foot-grid{grid-template-columns:1fr}.why-row{grid-template-columns:60px 1fr;gap:20px}}
+</style>
+</head>
+<body>
+  <!-- LVRG CLAIM BAR -->
+  <div id="lvrg-bar" style="
+    position:fixed;top:0;left:0;right:0;z-index:99999;
+    background:rgba(0,0,0,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #c9a96140;
+    padding:10px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    font-size:13px;
+  ">
+    <span style="color:rgba(255,255,255,0.6);letter-spacing:0.3px;">
+      This site was built for <strong style="color:#fff;">Bar Kamon</strong> by 
+      <strong style="color:#c9a961;">LVRG Agency</strong>.
+    </span>
+    <a href="https://theresandiego.com/advertise/" target="_blank" style="
+      background:#c9a961;
+      color:#000;
+      padding:7px 18px;
+      border-radius:3px;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:0.8px;
+      text-decoration:none;
+      white-space:nowrap;
+      margin-left:20px;
+      transition:opacity .2s;
+    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      Claim This Site →
+    </a>
+  </div>
+  <script>
+    // Push page content down by bar height
+    document.addEventListener('DOMContentLoaded', function() {
+      var bar = document.getElementById('lvrg-bar');
+      var h = bar ? bar.offsetHeight : 44;
+      document.body.style.paddingTop = h + 'px';
+      // Also push any fixed nav down
+      var nav = document.querySelector('nav, .nav, header');
+      if (nav && nav.style.position === 'fixed' || (nav && getComputedStyle(nav).position === 'fixed')) {
+        nav.style.top = h + 'px';
+      }
+    });
+  </script>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">BAR <span>KAMON</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="index.html#events">Private Events</a>
+      <a href="index.html#book" class="btn btn-primary">Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="eyebrow">Our Story</div>
+      <h1>We built the bar <em>we wanted</em> to drink at.</h1>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-art"></div>
+      <div class="story-text">
+        <p>We grew up on the kind of bars that don't exist anymore. The kind where the bartender knows your drink before you sit down, where the lighting is low enough that conversation happens honestly, where every detail — the glass, the ice, the way a drink lands on the coaster — was chosen by a human who cares.</p>
+        <p>So we built one. In East Village, behind an unmarked door at the back of Asa Cafe &amp; Bakery, Bar Kamon opened as a love letter to Japan's Taisho Roman era — that brief, beautiful window between East and West when craftsmen in Tokyo built rooms of wood and crystal and called them home.</p>
+        <p>Our team — six bartenders with between six and fifteen years behind the stick — has spent years studying this stuff. We clarify our own cocktails. We age our own infusions. We source Hojicha from a single family in Kyoto. We will happily spend twelve minutes building your drink if that's what the drink needs.</p>
+        <p>San Diego deserved somewhere quieter. Something patient. A room that feels like it has always been here.</p>
+        <div class="story-sig">— The Bar Kamon Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">What We Believe</div>
+      <h2>Three values in every pour.</h2>
+    </div>
+    <div class="vals-grid">
+      <div class="val">
+        <div class="val-icon">静</div>
+        <h3>Quiet Craft</h3>
+        <p>The best cocktails aren't loud. They're layered, balanced, and made by hand — with the patience of someone who's made this exact drink a thousand times.</p>
+      </div>
+      <div class="val">
+        <div class="val-icon">歓</div>
+        <h3>Warm Hospitality</h3>
+        <p>Hidden doesn't mean cold. The moment you find us, you're taken care of — first-timers get the same attention as regulars. Always.</p>
+      </div>
+      <div class="val">
+        <div class="val-icon">一</div>
+        <h3>One Guest at a Time</h3>
+        <p>We keep the room small on purpose. Ten seats at the bar. A few tables. Never crowded, never rushed. Your night matters here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Why Bar Kamon</div>
+      <h2>Reasons people return.</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-row">
+        <div class="why-num">01</div>
+        <div>
+          <div class="why-title">A menu you won't find elsewhere in San Diego.</div>
+          <p class="why-desc">Clarified Tokyo Banana. Hojicha-Infused Negroni. Seasonal experiments that rotate every six weeks. Each is developed in-house by bartenders who have earned the right to play.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">02</div>
+        <div>
+          <div class="why-title">Private buyouts for up to 10 guests.</div>
+          <p class="why-desc">Birthdays, anniversaries, corporate offsites. We close the room, design a custom menu around your guest list, and the night belongs to you alone — no walk-ins, no noise.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">03</div>
+        <div>
+          <div class="why-title">The room itself — built by a team who cared.</div>
+          <p class="why-desc">Reclaimed wood paneling. Antique crystal chandeliers. Vintage fixtures chosen one by one. You feel it the moment you step through the door. So do your guests.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-kicker">The Door Is Open</div>
+      <h2>Ready to book your private event?</h2>
+      <p>Tell us the occasion. We'll build the night.</p>
+      <a href="index.html#book" class="btn btn-primary">Book a Private Event</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo">BAR KAMON</div>
+        <p class="foot-desc">A 1920's Taisho Roman–inspired Japanese craft cocktail bar, hidden in East Village San Diego behind the door at Asa Cafe &amp; Bakery.</p>
+      </div>
+      <div>
+        <div class="foot-h">Visit</div>
+        <ul class="foot-list">
+          <li>East Village</li>
+          <li>San Diego, CA</li>
+          <li>Enter via Asa Cafe</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Hours</div>
+        <ul class="foot-list">
+          <li>Wed–Thu · 5:30–10pm</li>
+          <li>Fri–Sat · 5:30–11pm</li>
+          <li>Sun · 5:30–10pm</li>
+          <li>Closed Mon &amp; Tue</li>
+          <li style="color:var(--gold)">21+ Only</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Site</div>
+        <ul class="foot-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#events">Private Events</a></li>
+          <li><a href="index.html#book">Reservations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© Bar Kamon · All rights reserved</div>
+      <div>Site crafted by <a href="#">LVRG Agency</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Chat Widget -->
+<div id="lvrg-chat-widget">
+  <button id="lvrg-chat-toggle" aria-label="Open chat">
+    <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <div id="lvrg-chat-panel" aria-hidden="true">
+    <div class="lvrg-chat-header">
+      <div class="lvrg-chat-avatar">K</div>
+      <div class="lvrg-chat-meta">
+        <div class="lvrg-chat-title">Bar Kamon</div>
+        <div class="lvrg-chat-sub"><span class="lvrg-chat-dot"></span>AI Cocktail Guide · Online</div>
+      </div>
+    </div>
+    <div class="lvrg-chat-messages" id="lvrg-chat-messages">
+      <div class="lvrg-msg lvrg-msg-bot">
+        <div class="lvrg-msg-bubble">Welcome — step through the door. I can help you book a private event for up to 10 guests, recommend a cocktail from tonight's menu, or tell you how to find us behind Asa Cafe. Where shall we begin?</div>
+      </div>
+    </div>
+    <form class="lvrg-chat-input" id="lvrg-chat-form">
+      <input type="text" id="lvrg-chat-field" placeholder="Ask about a cocktail or event…" autocomplete="off" />
+      <button type="submit" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+</div>
+<style>
+  #lvrg-chat-widget{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter',sans-serif}
+  #lvrg-chat-toggle{width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:var(--gold);color:var(--navy-deep);box-shadow:0 10px 30px rgba(201,169,97,0.35),0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}
+  #lvrg-chat-toggle:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(201,169,97,0.45)}
+  #lvrg-chat-toggle:active{transform:scale(0.96)}
+  #lvrg-chat-panel{position:absolute;bottom:78px;right:0;width:320px;height:440px;background:#f5ede0;border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 6px 18px rgba(0,0,0,0.3);display:flex;flex-direction:column;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.2,.9,.3,1.2)}
+  #lvrg-chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+  .lvrg-chat-header{padding:18px;display:flex;align-items:center;gap:12px;background:#0a1628;color:#f5ede0;border-bottom:2px solid var(--gold)}
+  .lvrg-chat-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold);color:#0a1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;font-family:'Cinzel',serif}
+  .lvrg-chat-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;letter-spacing:1px}
+  .lvrg-chat-sub{font-size:11px;letter-spacing:1.5px;color:var(--gold);display:flex;align-items:center;gap:6px;margin-top:2px;text-transform:uppercase}
+  .lvrg-chat-dot{width:7px;height:7px;border-radius:50%;background:#22c55e}
+  .lvrg-chat-messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:#f5ede0}
+  .lvrg-msg{display:flex}
+  .lvrg-msg-bot{justify-content:flex-start}
+  .lvrg-msg-user{justify-content:flex-end}
+  .lvrg-msg-bubble{max-width:78%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5}
+  .lvrg-msg-bot .lvrg-msg-bubble{background:#fff;color:#0a1628;border:1px solid rgba(201,169,97,0.3);border-bottom-left-radius:4px}
+  .lvrg-msg-user .lvrg-msg-bubble{background:#0a1628;color:var(--gold);border-bottom-right-radius:4px}
+  .lvrg-chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(10,22,40,0.15);background:#f5ede0}
+  .lvrg-chat-input input{flex:1;border:1px solid rgba(10,22,40,0.2);border-radius:6px;padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;background:#fff;color:#0a1628}
+  .lvrg-chat-input input:focus{border-color:var(--gold)}
+  .lvrg-chat-input button{width:40px;border:none;border-radius:6px;cursor:pointer;background:#0a1628;color:var(--gold);display:flex;align-items:center;justify-content:center}
+  .lvrg-chat-input button:hover{background:var(--gold);color:#0a1628}
+  @media(max-width:480px){#lvrg-chat-panel{width:calc(100vw - 32px);right:-8px}}
+</style>
+<script>
+(function(){
+  var t=document.getElementById('lvrg-chat-toggle'),p=document.getElementById('lvrg-chat-panel'),o=document.getElementById('chat-icon-open'),c=document.getElementById('chat-icon-close'),f=document.getElementById('lvrg-chat-form'),i=document.getElementById('lvrg-chat-field'),m=document.getElementById('lvrg-chat-messages');
+  t.addEventListener('click',function(){var k=p.classList.toggle('open');p.setAttribute('aria-hidden',!k);o.style.display=k?'none':'block';c.style.display=k?'block':'none';if(k)setTimeout(function(){i.focus()},250)});
+  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;var u=document.createElement('div');u.className='lvrg-msg lvrg-msg-user';u.innerHTML='<div class="lvrg-msg-bubble"></div>';u.querySelector('.lvrg-msg-bubble').textContent=v;m.appendChild(u);i.value='';m.scrollTop=m.scrollHeight;setTimeout(function(){var b=document.createElement('div');b.className='lvrg-msg lvrg-msg-bot';b.innerHTML='<div class="lvrg-msg-bubble">Lovely question. A member of our team will follow up shortly — or you can reserve directly for your evening above. In the meantime, tell me: is this for an intimate pair or a private buyout?</div>';m.appendChild(b);m.scrollTop=m.scrollHeight},700)});
+})();
+</script>
+
+  <script>
+  // Inject real reviews
+  (function() {
+    var reviews = [{text: "The hidden-door entrance alone is worth the visit. Once you're inside, the atmosphere is unlike anything else in San Diego — wood paneling, chandeliers, and cocktails that actually surprise you.", author: 'Google Reviewer', stars: "★★★★★"},
+{text: 'Booked the Kamon Lounge for a birthday. The team went above and beyond — intimate, sophisticated, and the cocktail menu blew everyone away.', author: 'Google Reviewer', stars: "★★★★★"},
+{text: 'Best speakeasy experience in East Village. The Hojicha Negroni is something special. Staff clearly know their craft.', author: 'Google Reviewer', stars: "★★★★★"}];
+    var accent = '#c9a961';
+    
+    // Find testimonial/review containers
+    var selectors = ['.testimonials', '.reviews', '.review-grid', '.testimonial-grid', 
+                     '[class*="testimonial"]', '[class*="review"]', '#testimonials', '#reviews'];
+    var container = null;
+    for (var s of selectors) {
+      container = document.querySelector(s);
+      if (container) break;
+    }
+    
+    if (!container) return; // fallback: just add to footer
+    
+    // Build review cards HTML
+    var html = reviews.map(function(r) {
+      return `
+        <div style="
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.1);
+          border-radius:8px;padding:32px;
+          display:flex;flex-direction:column;gap:16px;
+          position:relative;
+        ">
+          <div style="color:${accent};font-size:20px;letter-spacing:2px;">${r.stars}</div>
+          <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);font-style:italic;">
+            "${r.text}"
+          </p>
+          <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">
+            — ${r.author}
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    // Try to find review cards inside and replace, or append
+    var existingCards = container.querySelectorAll('[class*="card"], [class*="item"], [class*="block"]');
+    if (existingCards.length > 0) {
+      // Replace existing card container's inner html
+      var grid = existingCards[0].parentElement;
+      grid.innerHTML = html;
+    } else {
+      // Just append a grid
+      var grid = document.createElement('div');
+      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;';
+      grid.innerHTML = html;
+      container.appendChild(grid);
+    }
+  })();
+  </script>
+
+  <!-- NEW / OLD SITE TOGGLE -->
+  <div id="site-toggle" style="
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    z-index:99998;
+    background:rgba(0,0,0,0.88);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:40px;
+    padding:6px 8px;
+    display:flex;gap:6px;align-items:center;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  ">
+    <button onclick="showNewSite()" id="btn-new" style="
+      background:#c9a961;color:#000;border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:700;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">✦ New Site</button>
+    <button onclick="showOldSite()" id="btn-old" style="
+      background:transparent;color:rgba(255,255,255,0.5);border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:500;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">Old Site</button>
+  </div>
+
+      <iframe id="old-iframe" src="" style="flex:1;border:none;width:100%;background:#fff;" 
+      title="Bar Kamon current website"></iframe>
+  </div>
+
+  <script>
+    function showNewSite() {
+      document.getElementById('old-site-overlay').style.display = 'none';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnNew.style.background = '#c9a961';
+      btnNew.style.color = '#000';
+      btnOld.style.background = 'transparent';
+      btnOld.style.color = 'rgba(255,255,255,0.5)';
+    }
+    function showOldSite() {
+      window.open('https://barkamon.com', '_blank');
+    }
+      overlay.style.display = 'flex';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnOld.style.background = 'rgba(255,255,255,0.15)';
+      btnOld.style.color = '#fff';
+      btnNew.style.background = 'transparent';
+      btnNew.style.color = 'rgba(255,255,255,0.5)';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our Story — Misadventure &amp; Co. · Vista, CA</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+  :root{--forest:#1f3a2c;--forest-deep:#122218;--forest-light:#385a45;--copper:#b26e38;--copper-light:#d9965b;--cream:#f5ecd7;--cream-warm:#ede2c4;--ink:#1a1510}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--forest);color:var(--cream);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1280px;margin:0 auto;padding:0 32px}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:rgba(18,34,24,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(178,110,56,0.2)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 32px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'DM Serif Display',serif;color:var(--cream);font-size:22px}
+  .logo-mark{width:32px;height:32px;border-radius:50%;background:var(--copper);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--forest-deep);font-weight:600;font-family:'Inter',sans-serif;border:1.5px solid var(--copper-light)}
+  .logo em{font-style:italic;color:var(--copper)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:14px;color:rgba(245,236,215,0.8);transition:color .2s}
+  .nav-links a:hover{color:var(--copper)}
+  .btn{display:inline-block;padding:14px 28px;font-size:14px;font-weight:500;cursor:pointer;border:none;transition:all .3s;font-family:inherit;border-radius:2px;letter-spacing:0.3px}
+  .btn-primary{background:var(--copper);color:var(--forest-deep)}
+  .btn-primary:hover{background:var(--copper-light);transform:translateY(-2px);box-shadow:0 12px 30px rgba(178,110,56,0.35)}
+
+  .page-hero{padding:180px 0 80px;position:relative;overflow:hidden}
+  .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%, rgba(178,110,56,0.2) 0%, transparent 55%),linear-gradient(180deg, var(--forest-deep) 0%, var(--forest) 100%)}
+  .page-hero-inner{position:relative;z-index:2;max-width:900px}
+  .eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:3.5px;text-transform:uppercase;color:var(--copper);margin-bottom:32px;font-weight:500}
+  .eyebrow::before{content:'';width:40px;height:1px;background:var(--copper)}
+  h1{font-family:'DM Serif Display',serif;font-size:clamp(48px,7vw,96px);font-weight:400;line-height:1;letter-spacing:-2px;color:var(--cream);margin-bottom:26px}
+  h1 em{font-style:italic;color:var(--copper)}
+
+  .story{padding:60px 0 120px;background:var(--forest-deep)}
+  .story-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start}
+  .story-art{position:sticky;top:110px;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,var(--forest) 0%, var(--forest-deep) 80%);border:1px solid rgba(178,110,56,0.3)}
+  .story-art::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%, rgba(178,110,56,0.35) 0%, transparent 55%)}
+  .story-art-content{position:absolute;inset:36px;border:1px solid rgba(245,236,215,0.2);border-radius:4px;padding:36px;display:flex;flex-direction:column;justify-content:space-between}
+  .story-art-top{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--copper);font-weight:500}
+  .story-art-big{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(50px,9vw,110px);line-height:0.9;color:var(--cream);letter-spacing:-3px;text-align:center}
+  .story-art-big em{color:var(--copper)}
+  .story-art-bottom{font-family:'DM Serif Display',serif;font-style:italic;font-size:18px;color:rgba(245,236,215,0.8);text-align:center}
+
+  .story-text p{font-size:18px;line-height:1.8;color:rgba(245,236,215,0.82);margin-bottom:22px;font-weight:300}
+  .story-text p:first-child::first-letter{font-family:'DM Serif Display',serif;font-style:italic;font-size:84px;float:left;line-height:0.85;padding:6px 14px 0 0;color:var(--copper)}
+  .story-sig{font-family:'DM Serif Display',serif;font-style:italic;font-size:22px;color:var(--copper);margin-top:28px}
+
+  section{padding:120px 0}
+  .section-head{text-align:center;margin-bottom:68px;max-width:720px;margin-left:auto;margin-right:auto}
+  .section-kicker{font-size:12px;letter-spacing:3.5px;text-transform:uppercase;color:var(--copper);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:12px;font-weight:500}
+  .section-kicker::before{content:'';width:30px;height:1px;background:var(--copper)}
+  h2{font-family:'DM Serif Display',serif;font-size:clamp(40px,5.2vw,64px);font-weight:400;line-height:1.05;letter-spacing:-1.2px;color:var(--cream)}
+  h2 em{font-style:italic;color:var(--copper)}
+
+  .values{background:var(--forest)}
+  .vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .val{background:var(--forest-deep);padding:44px 36px;border-radius:8px;border:1px solid rgba(178,110,56,0.2);text-align:center;position:relative;overflow:hidden;transition:border-color .3s}
+  .val:hover{border-color:var(--copper)}
+  .val-num{font-family:'DM Serif Display',serif;font-style:italic;font-size:14px;color:var(--copper);margin-bottom:14px;letter-spacing:1px}
+  .val-icon{width:72px;height:72px;margin:0 auto 20px;border-radius:50%;border:1px solid var(--copper);background:rgba(178,110,56,0.15);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-style:italic;font-size:30px;color:var(--copper)}
+  .val h3{font-family:'DM Serif Display',serif;font-size:24px;color:var(--cream);margin-bottom:14px;font-weight:400;letter-spacing:-0.5px}
+  .val p{font-size:15.5px;color:rgba(245,236,215,0.72);line-height:1.7;font-weight:300}
+
+  .why{background:var(--forest-deep)}
+  .why-list{max-width:960px;margin:0 auto}
+  .why-row{display:grid;grid-template-columns:120px 1fr;gap:40px;padding:44px 0;border-top:1px solid rgba(178,110,56,0.2);align-items:center}
+  .why-row:last-child{border-bottom:1px solid rgba(178,110,56,0.2)}
+  .why-num{font-family:'DM Serif Display',serif;font-style:italic;font-size:76px;color:var(--copper);line-height:1;letter-spacing:-2px}
+  .why h3{font-family:'DM Serif Display',serif;font-size:30px;color:var(--cream);margin-bottom:10px;font-weight:400;letter-spacing:-0.5px}
+  .why h3 em{font-style:italic;color:var(--copper)}
+  .why p{font-size:16px;color:rgba(245,236,215,0.72);line-height:1.65;font-weight:300}
+
+  .cta{background:linear-gradient(135deg,var(--copper) 0%, var(--copper-light) 100%);color:var(--forest-deep);text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%, rgba(255,255,255,0.18) 0%, transparent 55%)}
+  .cta-inner{position:relative;z-index:2;max-width:720px;margin:0 auto}
+  .cta h2{color:var(--forest-deep);margin-bottom:22px}
+  .cta h2 em{color:var(--forest)}
+  .cta p{font-size:18px;color:rgba(26,21,16,0.82);margin-bottom:40px;font-weight:400}
+  .cta .btn-primary{background:var(--forest-deep);color:var(--copper-light)}
+  .cta .btn-primary:hover{background:var(--forest);color:var(--cream)}
+
+  footer{background:var(--forest-deep);padding:80px 0 30px;border-top:1px solid rgba(178,110,56,0.2)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+  .foot-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--cream);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .foot-logo em{color:var(--copper);font-style:italic}
+  .foot-logo-mark{width:28px;height:28px;border-radius:50%;background:var(--copper);color:var(--forest-deep);display:flex;align-items:center;justify-content:center;font-size:13px;font-family:'Inter',sans-serif;font-weight:700}
+  .foot-desc{font-size:14px;color:rgba(245,236,215,0.6);line-height:1.75;max-width:320px;font-weight:300}
+  .foot-h{font-size:11px;letter-spacing:3px;color:var(--copper);text-transform:uppercase;margin-bottom:20px;font-weight:500}
+  .foot-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .foot-list a,.foot-list li{font-size:14px;color:rgba(245,236,215,0.65);transition:color .2s;font-weight:300}
+  .foot-list a:hover{color:var(--copper)}
+  .foot-bottom{padding-top:30px;border-top:1px solid rgba(178,110,56,0.15);display:flex;justify-content:space-between;font-size:12px;color:rgba(245,236,215,0.45)}
+  .foot-bottom a{color:var(--copper)}
+  @media(max-width:900px){.nav-links a:not(:last-child){display:none}.story-grid,.vals-grid,.foot-grid{grid-template-columns:1fr}.story-art{position:relative;top:0}.why-row{grid-template-columns:80px 1fr;gap:20px}.why-num{font-size:56px}}
+</style>
+</head>
+<body>
+  <!-- LVRG CLAIM BAR -->
+  <div id="lvrg-bar" style="
+    position:fixed;top:0;left:0;right:0;z-index:99999;
+    background:rgba(0,0,0,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #4a7c5940;
+    padding:10px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    font-size:13px;
+  ">
+    <span style="color:rgba(255,255,255,0.6);letter-spacing:0.3px;">
+      This site was built for <strong style="color:#fff;">Misadventure & Co.</strong> by 
+      <strong style="color:#4a7c59;">LVRG Agency</strong>.
+    </span>
+    <a href="https://theresandiego.com/advertise/" target="_blank" style="
+      background:#4a7c59;
+      color:#000;
+      padding:7px 18px;
+      border-radius:3px;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:0.8px;
+      text-decoration:none;
+      white-space:nowrap;
+      margin-left:20px;
+      transition:opacity .2s;
+    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      Claim This Site →
+    </a>
+  </div>
+  <script>
+    // Push page content down by bar height
+    document.addEventListener('DOMContentLoaded', function() {
+      var bar = document.getElementById('lvrg-bar');
+      var h = bar ? bar.offsetHeight : 44;
+      document.body.style.paddingTop = h + 'px';
+      // Also push any fixed nav down
+      var nav = document.querySelector('nav, .nav, header');
+      if (nav && nav.style.position === 'fixed' || (nav && getComputedStyle(nav).position === 'fixed')) {
+        nav.style.top = h + 'px';
+      }
+    });
+  </script>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-mark">M</span>
+      <span>Misadventure <em>&amp; Co.</em></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#cocktails">Cocktails</a>
+      <a href="index.html#visit">Visit</a>
+      <a href="index.html#buy" class="btn btn-primary">Buy Our Vodka</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="eyebrow">Our Story</div>
+      <h1>We started with <em>day-old bread.</em> And a hunch.</h1>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-art">
+        <div class="story-art-content">
+          <div class="story-art-top">// Estd. Vista, CA</div>
+          <div class="story-art-big"><em>18×</em><br/>awards.</div>
+          <div class="story-art-bottom">From surplus baked goods.</div>
+        </div>
+      </div>
+      <div class="story-text">
+        <p>Here's the quick version. A few years ago, we looked at how much perfectly good bread was getting thrown out every single day by bakeries across California — tens of thousands of pounds — and we wondered if it could be made into something. Turns out it could. Turns out it could be made into really good vodka.</p>
+        <p>So we built a distillery in Vista. We figured out how to ferment day-old bread, how to distill it, how to make the vodka taste clean and soft and a little bit bright. It took us longer than we planned. It was a genuine misadventure. That's where the name comes from.</p>
+        <p>Eighteen awards later, we still operate the same way. Every bottle of Misadventure Vodka starts as surplus baked goods that would have been landfilled. We're not putting that on the label for marketing points — it's the entire reason we exist.</p>
+        <p>The tasting room came next. We wanted somewhere the story could be told in person, where you could sip the vodka neat, try cocktails with Blood Runs Cold and Lychee Chi Chi and Crime of Passion, and hang out in North County for an afternoon. So we built that too. Cozy, whimsical, warm. Exactly the way we wanted it.</p>
+        <p>Vista deserves more attention than it gets. We're doing our part. Come find us.</p>
+        <div class="story-sig">— The Misadventure Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">What We Believe</div>
+      <h2>Three things we <em>stand for,</em> one glass at a time.</h2>
+    </div>
+    <div class="vals-grid">
+      <div class="val">
+        <div class="val-num">— i —</div>
+        <div class="val-icon">♻</div>
+        <h3>Sustainable by default</h3>
+        <p>Every bottle rescues bread that would have been landfilled. Lower footprint, better vodka, a story we're proud to pour. This isn't a marketing add-on — it's the whole premise.</p>
+      </div>
+      <div class="val">
+        <div class="val-num">— ii —</div>
+        <div class="val-icon">✦</div>
+        <h3>Small-batch, always</h3>
+        <p>We don't scale for volume. We scale for quality. 18 spirits awards later, we still distill in small batches, hand-fill, and sign off every lot personally.</p>
+      </div>
+      <div class="val">
+        <div class="val-num">— iii —</div>
+        <div class="val-icon">❦</div>
+        <h3>Local obsession</h3>
+        <p>We're Vista, through and through. North County is our home and our muse. Every cocktail, every event, every visit supports the neighborhood that let us build this.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Why Misadventure</div>
+      <h2>Three reasons to make the <em>drive north.</em></h2>
+    </div>
+    <div class="why-list">
+      <div class="why-row">
+        <div class="why-num">i.</div>
+        <div>
+          <h3>A vodka with <em>actual</em> awards.</h3>
+          <p>18 and counting. Blind-tasted against distilleries with 50x the marketing budget. The spirit stands up on its own, which is a big part of the reason guests keep coming back for bottles after their first visit.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">ii.</div>
+        <div>
+          <h3>Cocktails that <em>actually</em> have personality.</h3>
+          <p>Blood Runs Cold. Lychee Chi Chi. Blue Dahlia. Crime of Passion. We build drinks with names for a reason — each one is engineered around the vodka and a specific mood. No cookie-cutter menu.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-num">iii.</div>
+        <div>
+          <h3>A room worth <em>staying in.</em></h3>
+          <p>Indoor and outdoor seating. Golden hour on the patio. A tasting room that feels like a friend's living room. Guests describe it as "cozy," "whimsical," "elegant," and "warm" — which is exactly what we were going for.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-kicker" style="color:var(--forest-deep)">Come See Us</div>
+      <h2>Plan your visit. <em>Or take a bottle home.</em></h2>
+      <p>We're open seven days a week in Vista. The drive is part of the Misadventure.</p>
+      <a href="index.html#buy" class="btn btn-primary">Plan Your Visit / Buy Our Vodka</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <span class="foot-logo-mark">M</span>
+          <span>Misadventure <em>&amp; Co.</em></span>
+        </div>
+        <p class="foot-desc">Award-winning, sustainable craft vodka distilled from surplus baked goods. Cocktail bar and tasting room in Vista, California — the North County destination worth the drive.</p>
+      </div>
+      <div>
+        <div class="foot-h">Visit</div>
+        <ul class="foot-list">
+          <li>Vista, CA</li>
+          <li>North County SD</li>
+          <li>Indoor + outdoor</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Hours</div>
+        <ul class="foot-list">
+          <li>Mon–Sat · 3pm–11pm</li>
+          <li>Sun · 12pm–9pm</li>
+          <li style="color:var(--copper)">Happy Hour nightly</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Navigate</div>
+        <ul class="foot-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#cocktails">Cocktails</a></li>
+          <li><a href="index.html#buy">Buy Vodka</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© Misadventure &amp; Co. · Drink responsibly · 21+</div>
+      <div>Site crafted by <a href="#">LVRG Agency</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Chat Widget -->
+<div id="lvrg-chat-widget">
+  <button id="lvrg-chat-toggle" aria-label="Open chat">
+    <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <div id="lvrg-chat-panel" aria-hidden="true">
+    <div class="lvrg-chat-header">
+      <div class="lvrg-chat-avatar">M</div>
+      <div class="lvrg-chat-meta">
+        <div class="lvrg-chat-title">Misadventure &amp; Co.</div>
+        <div class="lvrg-chat-sub"><span class="lvrg-chat-dot"></span>Cocktail Guide · Online</div>
+      </div>
+    </div>
+    <div class="lvrg-chat-messages" id="lvrg-chat-messages">
+      <div class="lvrg-msg lvrg-msg-bot">
+        <div class="lvrg-msg-bubble">Hey, welcome to Misadventure 🥃 I can tell you the story behind our 18-award vodka, recommend a cocktail based on what you like to drink, or help you plan a visit to our Vista tasting room. What sounds good?</div>
+      </div>
+    </div>
+    <form class="lvrg-chat-input" id="lvrg-chat-form">
+      <input type="text" id="lvrg-chat-field" placeholder="Visit, cocktails, or vodka?" autocomplete="off" />
+      <button type="submit" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+</div>
+<style>
+  #lvrg-chat-widget{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter',sans-serif}
+  #lvrg-chat-toggle{width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:var(--copper);color:var(--forest-deep);box-shadow:0 10px 30px rgba(178,110,56,0.4),0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}
+  #lvrg-chat-toggle:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(178,110,56,0.55)}
+  #lvrg-chat-toggle:active{transform:scale(0.96)}
+  #lvrg-chat-panel{position:absolute;bottom:78px;right:0;width:320px;height:440px;background:var(--cream);border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);display:flex;flex-direction:column;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.2,.9,.3,1.2);border:1px solid rgba(178,110,56,0.3)}
+  #lvrg-chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+  .lvrg-chat-header{padding:18px;display:flex;align-items:center;gap:12px;background:var(--forest-deep);color:var(--cream);border-bottom:2px solid var(--copper)}
+  .lvrg-chat-avatar{width:40px;height:40px;border-radius:50%;background:var(--copper);color:var(--forest-deep);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:18px;font-family:'DM Serif Display',serif;border:1.5px solid var(--copper-light)}
+  .lvrg-chat-title{font-family:'DM Serif Display',serif;font-weight:400;font-size:16px}
+  .lvrg-chat-sub{font-size:11px;letter-spacing:2px;color:var(--copper);display:flex;align-items:center;gap:6px;margin-top:3px;text-transform:uppercase;font-weight:500}
+  .lvrg-chat-dot{width:7px;height:7px;border-radius:50%;background:#9ed694}
+  .lvrg-chat-messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:var(--cream)}
+  .lvrg-msg{display:flex}
+  .lvrg-msg-bot{justify-content:flex-start}
+  .lvrg-msg-user{justify-content:flex-end}
+  .lvrg-msg-bubble{max-width:78%;padding:10px 14px;border-radius:12px;font-size:13.5px;line-height:1.5}
+  .lvrg-msg-bot .lvrg-msg-bubble{background:#fff;color:var(--ink);border:1px solid rgba(178,110,56,0.25);border-bottom-left-radius:3px}
+  .lvrg-msg-user .lvrg-msg-bubble{background:var(--forest);color:var(--cream);border-bottom-right-radius:3px}
+  .lvrg-chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(178,110,56,0.2);background:#fff}
+  .lvrg-chat-input input{flex:1;border:1px solid rgba(178,110,56,0.25);border-radius:6px;padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;background:#fff;color:var(--ink)}
+  .lvrg-chat-input input:focus{border-color:var(--copper)}
+  .lvrg-chat-input button{width:40px;border:none;border-radius:6px;cursor:pointer;background:var(--copper);color:var(--forest-deep);display:flex;align-items:center;justify-content:center}
+  .lvrg-chat-input button:hover{background:var(--forest);color:var(--cream)}
+  @media(max-width:480px){#lvrg-chat-panel{width:calc(100vw - 32px);right:-8px}}
+</style>
+<script>
+(function(){
+  var t=document.getElementById('lvrg-chat-toggle'),p=document.getElementById('lvrg-chat-panel'),o=document.getElementById('chat-icon-open'),c=document.getElementById('chat-icon-close'),f=document.getElementById('lvrg-chat-form'),i=document.getElementById('lvrg-chat-field'),m=document.getElementById('lvrg-chat-messages');
+  t.addEventListener('click',function(){var k=p.classList.toggle('open');p.setAttribute('aria-hidden',!k);o.style.display=k?'none':'block';c.style.display=k?'block':'none';if(k)setTimeout(function(){i.focus()},250)});
+  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;var u=document.createElement('div');u.className='lvrg-msg lvrg-msg-user';u.innerHTML='<div class="lvrg-msg-bubble"></div>';u.querySelector('.lvrg-msg-bubble').textContent=v;m.appendChild(u);i.value='';m.scrollTop=m.scrollHeight;setTimeout(function(){var b=document.createElement('div');b.className='lvrg-msg lvrg-msg-bot';b.innerHTML='<div class="lvrg-msg-bubble">Love that. Tell me if you lean sweet / citrus / boozy and I\\'ll steer you to the right cocktail. Or drop a date + group size and I\\'ll flag our private events team. 🥃</div>';m.appendChild(b);m.scrollTop=m.scrollHeight},700)});
+})();
+</script>
+
+  <script>
+  // Inject real reviews
+  (function() {
+    var reviews = [{text: 'The story behind this vodka — made from surplus baked goods — is as good as the cocktail itself. Cozy, whimsical, and genuinely the best tasting room in North County.', author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"},
+{text: "18 awards and counting. The Blue Dahlia cocktail alone is worth the drive to Vista. Elegant, warm atmosphere and staff who actually care about what they're serving.", author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"},
+{text: 'Hidden gem of North County. Sustainable vodka, beautiful tasting room, and cocktails that are genuinely inventive. Brought friends from downtown — they all want to come back.', author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"}];
+    var accent = '#4a7c59';
+    
+    // Find testimonial/review containers
+    var selectors = ['.testimonials', '.reviews', '.review-grid', '.testimonial-grid', 
+                     '[class*="testimonial"]', '[class*="review"]', '#testimonials', '#reviews'];
+    var container = null;
+    for (var s of selectors) {
+      container = document.querySelector(s);
+      if (container) break;
+    }
+    
+    if (!container) return; // fallback: just add to footer
+    
+    // Build review cards HTML
+    var html = reviews.map(function(r) {
+      return `
+        <div style="
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.1);
+          border-radius:8px;padding:32px;
+          display:flex;flex-direction:column;gap:16px;
+          position:relative;
+        ">
+          <div style="color:${accent};font-size:20px;letter-spacing:2px;">${r.stars}</div>
+          <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);font-style:italic;">
+            "${r.text}"
+          </p>
+          <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">
+            — ${r.author}
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    // Try to find review cards inside and replace, or append
+    var existingCards = container.querySelectorAll('[class*="card"], [class*="item"], [class*="block"]');
+    if (existingCards.length > 0) {
+      // Replace existing card container's inner html
+      var grid = existingCards[0].parentElement;
+      grid.innerHTML = html;
+    } else {
+      // Just append a grid
+      var grid = document.createElement('div');
+      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;';
+      grid.innerHTML = html;
+      container.appendChild(grid);
+    }
+  })();
+  </script>
+
+  <!-- NEW / OLD SITE TOGGLE -->
+  <div id="site-toggle" style="
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    z-index:99998;
+    background:rgba(0,0,0,0.88);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:40px;
+    padding:6px 8px;
+    display:flex;gap:6px;align-items:center;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  ">
+    <button onclick="showNewSite()" id="btn-new" style="
+      background:#4a7c59;color:#000;border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:700;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">✦ New Site</button>
+    <button onclick="showOldSite()" id="btn-old" style="
+      background:transparent;color:rgba(255,255,255,0.5);border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:500;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">Old Site</button>
+  </div>
+
+      <iframe id="old-iframe" src="" style="flex:1;border:none;width:100%;background:#fff;" 
+      title="Misadventure & Co. current website"></iframe>
+  </div>
+
+  <script>
+    function showNewSite() {
+      document.getElementById('old-site-overlay').style.display = 'none';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnNew.style.background = '#4a7c59';
+      btnNew.style.color = '#000';
+      btnOld.style.background = 'transparent';
+      btnOld.style.color = 'rgba(255,255,255,0.5)';
+    }
+    function showOldSite() {
+      window.open('https://misadventure.co/cocktail-bar/', '_blank');
+    }
+      overlay.style.display = 'flex';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnOld.style.background = 'rgba(255,255,255,0.15)';
+      btnOld.style.color = '#fff';
+      btnNew.style.background = 'transparent';
+      btnNew.style.color = 'rgba(255,255,255,0.5)';
+    }
+  </script>
+
+</body>
+</html>

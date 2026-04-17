@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LVRG Lead Magnet Engine</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+
+  :root {
+    --black: #080808;
+    --surface: #111;
+    --surface2: #191919;
+    --surface3: #222;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.13);
+    --text: #f0f0f0;
+    --muted: rgba(240,240,240,0.4);
+    --muted2: rgba(240,240,240,0.65);
+    --gold: #c9a961;
+    --gold-dim: rgba(201,169,97,0.15);
+    --green: #3ecf8e;
+    --green-dim: rgba(62,207,142,0.12);
+    --red: #ff5c5c;
+    --blue: #4a9eff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── LAYOUT ── */
+  .app { display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,8,8,0.95);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .topbar-logo { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  .topbar-logo span { color: var(--gold); }
+  .topbar-badge {
+    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); background: var(--surface2);
+    border: 1px solid var(--border2); border-radius: 20px;
+    padding: 5px 12px;
+  }
+  .topbar-right { display: flex; gap: 20px; align-items: center; }
+  .status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 8px var(--green);
+    display: inline-block; margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .status-text { font-size: 12px; color: var(--muted2); }
+
+  /* ── MAIN CONTENT ── */
+  .main { display: flex; flex: 1; }
+
+  /* ── LEFT PANEL ── */
+  .panel-left {
+    width: 380px; min-width: 340px;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column;
+    height: calc(100vh - 57px);
+    position: sticky; top: 57px;
+    overflow-y: auto;
+  }
+
+  .panel-section {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .panel-label {
+    font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px; font-weight: 600;
+  }
+
+  /* Input area */
+  .drop-area {
+    background: var(--surface2);
+    border: 1px dashed rgba(201,169,97,0.3);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .drop-area textarea {
+    width: 100%; background: transparent; border: none; outline: none;
+    color: var(--text); font-family: 'Inter', monospace; font-size: 12px;
+    line-height: 1.7; resize: none; height: 120px;
+  }
+  .drop-area textarea::placeholder { color: var(--muted); }
+
+  /* Config row */
+  .config-row {
+    display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .config-select {
+    flex: 1; min-width: 0; max-width: 100%;
+    background: var(--surface2); border: 1px solid var(--border2);
+    border-radius: 6px; color: var(--text); font-family: 'Inter', sans-serif;
+    font-size: 12px; padding: 8px 10px; outline: none; cursor: pointer;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* Run button */
+  .run-btn {
+    width: 100%; padding: 14px;
+    background: var(--gold); color: #000;
+    border: none; border-radius: 8px;
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.5px; cursor: pointer;
+    transition: all .2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .run-btn:hover { background: #e6c989; transform: translateY(-1px); }
+  .run-btn:disabled { background: var(--surface3); color: var(--muted); cursor: not-allowed; transform: none; }
+
+  /* Progress log */
+  .log {
+    background: var(--surface2); border-radius: 8px;
+    padding: 14px; font-size: 11px; font-family: 'Inter', monospace;
+    line-height: 1.9; color: var(--muted2);
+    height: 160px; overflow-y: auto;
+    border: 1px solid var(--border);
+  }
+  .log-line { display: flex; gap: 8px; }
+  .log-line.done { color: var(--green); }
+  .log-line.active { color: var(--gold); }
+  .log-line.dim { color: var(--muted); }
+  .log-ts { color: var(--muted); min-width: 52px; }
+
+  /* Prospect list */
+  .prospect-list { display: flex; flex-direction: column; gap: 6px; }
+  .prospect-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 6px;
+    background: var(--surface2); border: 1px solid var(--border);
+    cursor: pointer; transition: all .15s;
+  }
+  .prospect-item:hover { border-color: var(--border2); background: var(--surface3); }
+  .prospect-item.active { border-color: var(--gold); background: var(--gold-dim); }
+  .prospect-item.pending .pi-dot { background: var(--muted); box-shadow: none; }
+  .prospect-item.processing .pi-dot { background: var(--gold); box-shadow: 0 0 6px var(--gold); animation: pulse 1s infinite; }
+  .prospect-item.done .pi-dot { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .pi-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .pi-info { flex: 1; min-width: 0; }
+  .pi-name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pi-meta { font-size: 11px; color: var(--muted); }
+  .pi-score {
+    font-size: 11px; font-weight: 600;
+    padding: 2px 7px; border-radius: 4px;
+    background: rgba(255,92,92,0.12); color: var(--red);
+  }
+  .pi-score.ok { background: rgba(201,169,97,0.12); color: var(--gold); }
+
+  /* ── RIGHT PANEL ── */
+  .panel-right {
+    flex: 1; overflow-y: auto;
+    padding: 32px 40px;
+  }
+
+  /* Empty state */
+  .empty-state {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 60vh; text-align: center; gap: 16px;
+  }
+  .empty-icon { font-size: 48px; opacity: 0.3; }
+  .empty-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--muted2); }
+  .empty-sub { font-size: 15px; color: var(--muted); max-width: 380px; line-height: 1.7; }
+
+  /* Result card */
+  .result-card { display: none; }
+  .result-card.visible { display: block; }
+
+  .result-header { margin-bottom: 28px; }
+  .result-kicker {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green); margin-bottom: 8px; font-weight: 600;
+  }
+  .result-name {
+    font-family: 'DM Serif Display', serif; font-size: 40px; margin-bottom: 6px;
+  }
+  .result-type { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+
+  /* Score bar */
+  .score-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px; margin-bottom: 20px;
+  }
+  .score-title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+  .score-row {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 10px; font-size: 13px;
+  }
+  .score-label { width: 160px; color: var(--muted2); flex-shrink: 0; }
+  .score-bar-wrap { flex: 1; background: var(--surface2); border-radius: 4px; height: 6px; overflow: hidden; }
+  .score-bar { height: 100%; border-radius: 4px; transition: width 1s ease; }
+  .score-val { width: 30px; text-align: right; font-weight: 600; font-size: 12px; }
+  .score-total {
+    margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .score-big { font-family: 'DM Serif Display', serif; font-size: 48px; }
+  .score-big.poor { color: var(--red); }
+  .score-big.mid { color: var(--gold); }
+  .score-big.good { color: var(--green); }
+  .score-out { font-size: 20px; color: var(--muted); }
+  .score-verdict { font-size: 14px; color: var(--muted2); margin-left: 8px; }
+
+  /* Gap callout */
+  .gap-box {
+    background: rgba(255,92,92,0.06); border: 1px solid rgba(255,92,92,0.2);
+    border-left: 3px solid var(--red); border-radius: 8px;
+    padding: 16px 20px; margin-bottom: 20px;
+    font-size: 14px; line-height: 1.7; color: var(--muted2);
+  }
+  .gap-box strong { color: #ff8888; }
+
+  /* Preview site embed */
+  .preview-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; margin-bottom: 20px;
+  }
+  .preview-toolbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 16px; background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+  .preview-dots { display: flex; gap: 6px; }
+  .preview-dots span {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .d1 { background: #ff5f57; }
+  .d2 { background: #ffbd2e; }
+  .d3 { background: #28c840; }
+  .preview-url {
+    flex: 1; margin: 0 12px;
+    background: var(--surface3); border: 1px solid var(--border);
+    border-radius: 5px; padding: 5px 12px; font-size: 12px; color: var(--muted2);
+    font-family: monospace;
+  }
+  .preview-actions { display: flex; gap: 8px; }
+  .preview-btn {
+    padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;
+    cursor: pointer; border: none; font-family: 'Inter', sans-serif;
+    transition: all .15s;
+  }
+  .preview-btn-gold { background: var(--gold); color: #000; }
+  .preview-btn-gold:hover { background: #e6c989; }
+  .preview-btn-ghost {
+    background: var(--surface3); color: var(--muted2);
+    border: 1px solid var(--border2);
+  }
+  .preview-btn-ghost:hover { color: var(--text); }
+
+  .preview-frame-wrap {
+    position: relative; height: 460px; overflow: hidden;
+    background: #fff;
+  }
+  .preview-frame-wrap iframe {
+    width: 100%; height: 100%; border: none;
+    transform-origin: top left;
+  }
+  .preview-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--surface);
+    flex-direction: column; gap: 12px;
+  }
+  .preview-overlay.hidden { display: none; }
+  .spinner {
+    width: 32px; height: 32px; border: 2px solid var(--border2);
+    border-top-color: var(--gold); border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spinner-text { font-size: 13px; color: var(--muted); }
+
+  /* Email section */
+  .email-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px; margin-bottom: 20px;
+  }
+  .email-meta {
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 4px 12px; font-size: 13px; margin-bottom: 16px;
+    padding-bottom: 16px; border-bottom: 1px solid var(--border);
+  }
+  .email-field { color: var(--muted); font-weight: 500; }
+  .email-val { color: var(--muted2); }
+  .email-subjects { margin-bottom: 16px; }
+  .email-subject-row {
+    display: flex; gap: 8px; align-items: flex-start;
+    padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;
+    background: var(--surface2); font-size: 13px;
+    border: 1px solid transparent; cursor: pointer; transition: all .15s;
+  }
+  .email-subject-row:hover { border-color: var(--border2); }
+  .email-subject-row.selected { border-color: var(--gold); background: var(--gold-dim); }
+  .subj-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    padding: 2px 6px; border-radius: 3px;
+    background: var(--surface3); color: var(--muted); flex-shrink: 0; margin-top: 1px;
+  }
+  .subj-text { color: var(--muted2); line-height: 1.5; }
+  .email-body {
+    font-size: 14px; line-height: 1.8; color: var(--muted2);
+    white-space: pre-wrap;
+    background: var(--surface2); border-radius: 6px; padding: 16px;
+  }
+  .email-body a { color: var(--gold); }
+
+  .email-actions { display: flex; gap: 8px; margin-top: 16px; }
+  .action-btn {
+    padding: 10px 20px; border-radius: 7px; font-size: 13px; font-weight: 600;
+    cursor: pointer; border: none; font-family: 'Inter', sans-serif; transition: all .15s;
+  }
+  .action-btn-primary { background: var(--gold); color: #000; }
+  .action-btn-primary:hover { background: #e6c989; }
+  .action-btn-ghost {
+    background: transparent; color: var(--muted2);
+    border: 1px solid var(--border2);
+  }
+  .action-btn-ghost:hover { color: var(--text); border-color: var(--border2); }
+
+  /* Sequence */
+  .sequence-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px; margin-bottom: 20px;
+  }
+  .seq-title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+  .seq-item {
+    display: flex; gap: 16px; padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .seq-item:last-child { border-bottom: none; }
+  .seq-day {
+    font-size: 11px; font-weight: 700; color: var(--gold);
+    min-width: 50px; text-transform: uppercase; letter-spacing: 1px; padding-top: 1px;
+  }
+  .seq-text { font-size: 13px; color: var(--muted2); line-height: 1.6; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit:scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-logo">LVRG <span>Agency</span></div>
+    <div class="topbar-badge">Lead Magnet Engine &mdash; V1</div>
+    <div class="topbar-right">
+      <span class="status-dot"></span>
+      <span class="status-text">Engine ready</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- LEFT PANEL -->
+    <div class="panel-left">
+
+      <!-- Input -->
+      <div class="panel-section">
+        <div class="panel-label">Drop Lead List</div>
+        <div class="drop-area">
+          <textarea id="leadInput" placeholder="barkamon.com&#10;toastcatering.com&#10;hiddencraftsd.com&#10;insideoutsd.com&#10;misadventure.co">barkamon.com
+toastcatering.com
+hiddencraftsd.com
+insideoutsd.com
+misadventure.co</textarea>
+        </div>
+        <div class="config-row">
+          <select class="config-select">
+            <option>ICP: Food &amp; Bev — San Diego</option>
+            <option>ICP: Catering — San Diego</option>
+            <option>ICP: Retail — San Diego</option>
+          </select>
+          <select class="config-select">
+            <option>LM: Website Rebuild</option>
+            <option>LM: Site Grader</option>
+            <option>LM: AI Chat Demo</option>
+          </select>
+        </div>
+        <button class="run-btn" id="runBtn" onclick="runEngine()">
+          &#9654;&nbsp; Run Engine
+        </button>
+      </div>
+
+      <!-- Log -->
+      <div class="panel-section">
+        <div class="panel-label">Process Log</div>
+        <div class="log" id="log">
+          <div class="log-line dim"><span class="log-ts">--:--</span>Waiting for input...</div>
+        </div>
+      </div>
+
+      <!-- Prospect queue -->
+      <div class="panel-section" style="flex:1;">
+        <div class="panel-label">Prospect Queue</div>
+        <div class="prospect-list" id="prospectList">
+          <div style="font-size:13px;color:var(--muted);">Run the engine to populate.</div>
+        </div>
+      </div>
+
+    </div><!-- /panel-left -->
+
+    <!-- RIGHT PANEL -->
+    <div class="panel-right" id="rightPanel">
+
+      <!-- Empty state -->
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">&#9670;</div>
+        <div class="empty-title">Ready to run.</div>
+        <div class="empty-sub">Paste domains into the lead list, hit Run Engine, and watch the machine work. Results appear here in real time.</div>
+      </div>
+
+      <!-- Results (one per prospect, shown on click) -->
+      <div id="results"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+const PROSPECTS = [
+  {
+    id: 'barkamon',
+    name: 'Bar Kamon',
+    domain: 'barkamon.com',
+    type: 'Japanese craft cocktail speakeasy &mdash; East Village, San Diego',
+    headline: '"Behind the door, a quieter San Diego."',
+    gap: '<strong>Critical gap:</strong> No booking system, no contact info, no chat widget. Someone who wants to book a private event for 10 people literally cannot do so from the website.',
+    previewUrl: 'https://joshclifford.github.io/lvrg-previews/barkamon/index.html',
+    oldUrl: 'https://barkamon.com',
+    scores: [
+      { label: 'Clear value prop', val: 4, color: '#ffbd2e' },
+      { label: 'Primary CTA', val: 1, color: '#ff5c5c' },
+      { label: 'Mobile ready', val: 6, color: '#c9a961' },
+      { label: 'Contact visibility', val: 1, color: '#ff5c5c' },
+      { label: 'Google visibility', val: 5, color: '#ffbd2e' },
+      { label: 'Social proof', val: 5, color: '#ffbd2e' },
+      { label: 'Live chat / capture', val: 0, color: '#ff5c5c' },
+    ],
+    total: 3,
+    verdict: 'Weak — high-value offer, invisible online',
+    subjects: [
+      { tag: 'A', text: 'We built something for Bar Kamon...' },
+      { tag: 'B', text: "People can't find you to book a private event &mdash; here's the fix" },
+      { tag: 'C', text: 'Free preview: a site that actually books your speakeasy\'s private events' },
+    ],
+    emailBody: `The hidden-door entrance is a brilliant experience — the kind of thing people want to tell their friends about — but right now, if someone wants to book a private event at Bar Kamon, they have nowhere to go on your website to make that happen.
+
+We built you a free preview site: a redesigned homepage and about page that captures the 1920s Taisho Roman atmosphere the way it deserves, plus a live AI chat agent that acts as a sophisticated cocktail guide — answering menu questions, sharing what makes the speakeasy experience special, and converting curious visitors into private event bookings.
+
+See it here: https://preview.lvrg.com/barkamon
+
+Claim it free by booking a 15-min call: https://theresandiego.com/advertise/
+
+Josh | LVRG Agency | lvrg.com | 619.361.7484`,
+    sequence: [
+      { day: 'Day 3', text: 'Lead with private events specifically. "High-margin offer for up to 10 people — wanted to make sure this landed." Re-drop preview link.' },
+      { day: 'Day 7', text: 'Shift to social proof. Other SD bars use AI chat to capture after-hours booking requests while closed. Bar Kamon closes at 10pm — missing overnight inquiries.' },
+      { day: 'Day 14', text: 'Different lead magnet: free Google Business Profile audit. Hours, address, and event booking should all show in search before anyone hits the site.' },
+    ]
+  },
+  {
+    id: 'toastcatering',
+    name: 'Toast Catering',
+    domain: 'toastcatering.com',
+    type: 'Gourmet on-site catering &mdash; San Diego',
+    headline: '"Cooked on-site. Served with soul."',
+    gap: '<strong>Critical gap:</strong> No menu listed, no email address, no quote form. The only way to inquire is to call. Every wedding planner who visits at 10pm on a Sunday bounces with no lead captured.',
+    previewUrl: 'https://joshclifford.github.io/lvrg-previews/toastcatering/index.html',
+    oldUrl: 'https://toastcatering.com',
+    scores: [
+      { label: 'Clear value prop', val: 5, color: '#ffbd2e' },
+      { label: 'Primary CTA', val: 3, color: '#ff5c5c' },
+      { label: 'Mobile ready', val: 5, color: '#ffbd2e' },
+      { label: 'Contact visibility', val: 3, color: '#ff5c5c' },
+      { label: 'Google visibility', val: 4, color: '#ffbd2e' },
+      { label: 'Social proof', val: 6, color: '#c9a961' },
+      { label: 'Live chat / capture', val: 0, color: '#ff5c5c' },
+    ],
+    total: 4,
+    verdict: 'Weak — 15 years experience, zero online conversion',
+    subjects: [
+      { tag: 'A', text: 'We built something for Toast Catering...' },
+      { tag: 'B', text: 'A catering company with no menu or quote form is leaving money on the table' },
+      { tag: 'C', text: 'Free preview: a site that gets you quote requests without the phone tag' },
+    ],
+    emailBody: `Fifteen years of on-site cooking at weddings and corporate events is a real differentiator — most caterers just reheat — but right now, someone who lands on your site can't see a menu, can't submit an inquiry, and can't get a ballpark price without picking up the phone.
+
+We built you a free preview: a redesigned homepage and about page that leads with what makes Toast different, plus a live AI chat agent that works like a friendly catering coordinator — walking visitors through menu options, price ranges, and event types, and starting the quote process before you've said a word.
+
+See it here: https://preview.lvrg.com/toastcatering
+
+Claim it free by booking a 15-min call: https://theresandiego.com/advertise/
+
+Josh | LVRG Agency | lvrg.com | 619.361.7484`,
+    sequence: [
+      { day: 'Day 3', text: 'Narrow to weddings. Brides and planners research vendors on nights and weekends. An AI agent captures those leads when no one is answering the phone.' },
+      { day: 'Day 7', text: 'Frame around competition. The caterer that makes it easiest to get a quote wins the booking. One sentence, re-drop the link.' },
+      { day: 'Day 14', text: 'Different lead magnet: free competitor menu audit. Compare what Toast shows online vs. three competitors. Positions LVRG as a strategic partner.' },
+    ]
+  },
+  {
+    id: 'hiddencraftsd',
+    name: 'Hidden Craft SD',
+    domain: 'hiddencraftsd.com',
+    type: 'Self-pour craft beer bar + kitchen &mdash; Downtown San Diego',
+    headline: '"Pour by the ounce. Stay by the hour."',
+    gap: '<strong>Critical gap:</strong> Zero contact information on the entire site. No phone, no email, no real address. Completely unreachable for anyone wanting to book a party or order office catering.',
+    previewUrl: 'https://joshclifford.github.io/lvrg-previews/hiddencraftsd/index.html',
+    oldUrl: 'https://hiddencraftsd.com',
+    scores: [
+      { label: 'Clear value prop', val: 6, color: '#c9a961' },
+      { label: 'Primary CTA', val: 5, color: '#ffbd2e' },
+      { label: 'Mobile ready', val: 6, color: '#c9a961' },
+      { label: 'Contact visibility', val: 0, color: '#ff5c5c' },
+      { label: 'Google visibility', val: 5, color: '#ffbd2e' },
+      { label: 'Social proof', val: 7, color: '#3ecf8e' },
+      { label: 'Live chat / capture', val: 0, color: '#ff5c5c' },
+    ],
+    total: 4,
+    verdict: 'Weak — great product, invisible contact info',
+    subjects: [
+      { tag: 'A', text: 'We built something for Hidden Craft...' },
+      { tag: 'B', text: 'No phone, no email, no address &mdash; here\'s what that\'s costing you' },
+      { tag: 'C', text: 'Free preview: a site that turns downtown foot traffic into private event bookings' },
+    ],
+    emailBody: `The self-pour concept at India and C Street is the kind of thing that sells itself once someone walks in — but with no phone number, no email, and a street-corner address as your contact info, you're relying entirely on people already knowing you exist.
+
+We built you a free preview: a redesigned homepage that puts the 30+ rotating taps, the dog-friendly patio, and the private event option front and center, plus a live AI chat agent that helps visitors find the right pour, plan a birthday or business mixer, or get a catering quote — without you having to lift a finger.
+
+See it here: https://preview.lvrg.com/hiddencraftsd
+
+Claim it free by booking a 15-min call: https://theresandiego.com/advertise/
+
+Josh | LVRG Agency | lvrg.com | 619.361.7484`,
+    sequence: [
+      { day: 'Day 3', text: 'Lead with catering revenue. Office catering and happy-hour buyouts are recurring, high-value business. The chat agent qualifies and captures automatically.' },
+      { day: 'Day 7', text: 'Flip to the experience side. People who discover Hidden Craft want to bring friends back. Better site + chat = easy way to plan a return group visit.' },
+      { day: 'Day 14', text: 'Free Google Maps presence audit. A bar with no listed address is losing massive local search traffic — a quick win they can act on now.' },
+    ]
+  },
+  {
+    id: 'insideoutsd',
+    name: 'insideOUT SD',
+    domain: 'insideoutsd.com',
+    type: 'LGBTQ-owned elevated restaurant + events &mdash; Hillcrest, San Diego',
+    headline: '"An urban oasis, open to the sky."',
+    gap: '<strong>Critical gap:</strong> Private events page buried deep in the site. No chat widget. Booking a private dinner requires knowing to call Christine Kerns directly — a step most first-time visitors will never take.',
+    previewUrl: 'https://joshclifford.github.io/lvrg-previews/insideoutsd/index.html',
+    oldUrl: 'https://insideoutsd.com',
+    scores: [
+      { label: 'Clear value prop', val: 6, color: '#c9a961' },
+      { label: 'Primary CTA', val: 5, color: '#ffbd2e' },
+      { label: 'Mobile ready', val: 6, color: '#c9a961' },
+      { label: 'Contact visibility', val: 5, color: '#ffbd2e' },
+      { label: 'Google visibility', val: 6, color: '#c9a961' },
+      { label: 'Social proof', val: 8, color: '#3ecf8e' },
+      { label: 'Live chat / capture', val: 0, color: '#ff5c5c' },
+    ],
+    total: 5,
+    verdict: 'Mid — strong brand, private events conversion gap',
+    subjects: [
+      { tag: 'A', text: 'We built something for insideOUT SD...' },
+      { tag: 'B', text: "Your private events page is buried &mdash; here's a way to fix that" },
+      { tag: 'C', text: "Free preview: a site that connects guests directly to Chef Duran's table" },
+    ],
+    emailBody: `Chef Johnny Duran's menu and the open-air atrium are the kind of thing that makes people want to celebrate there — but right now, anyone who wants to inquire about a private dinner party has to know to call Christine directly, and that's a step most people won't take.
+
+We built you a free preview: a redesigned homepage and about page that showcases the handcrafted tables, the atrium, and the Mediterranean-California cuisine the way the space deserves, plus a live AI chat agent that acts as a warm, welcoming host — answering menu and hours questions, helping with reservations, and routing private event inquiries to the right person.
+
+See it here: https://preview.lvrg.com/insideoutsd
+
+Claim it free by booking a 15-min call: https://theresandiego.com/advertise/
+
+Josh | LVRG Agency | lvrg.com | 619.361.7484`,
+    sequence: [
+      { day: 'Day 3', text: 'Zoom in on brunch. Sat-Sun brunch is competitive in Hillcrest. A chat agent that helps someone snag a table faster than calling around gives insideOUT a real edge.' },
+      { day: 'Day 7', text: 'Shift to private events. Corporate dinners and seasonal experiences are high-ticket. The "call Christine" friction is likely costing several events a month.' },
+      { day: 'Day 14', text: 'Free Yelp/Google review response audit. insideOUT has standout reviews they could be converting harder — show them how.' },
+    ]
+  },
+  {
+    id: 'misadventureco',
+    name: 'Misadventure & Co.',
+    domain: 'misadventure.co',
+    type: 'Sustainable craft vodka distillery + bar &mdash; Vista, North County SD',
+    headline: '"18 awards. One remarkable story."',
+    gap: '<strong>Critical gap:</strong> An 18-award origin story (vodka made from surplus baked goods) is completely buried on the current site. North County audience has no idea they exist. No chat, no event booking.',
+    previewUrl: 'https://joshclifford.github.io/lvrg-previews/misadventureco/index.html',
+    oldUrl: 'https://misadventure.co/cocktail-bar/',
+    scores: [
+      { label: 'Clear value prop', val: 4, color: '#ffbd2e' },
+      { label: 'Primary CTA', val: 4, color: '#ffbd2e' },
+      { label: 'Mobile ready', val: 6, color: '#c9a961' },
+      { label: 'Contact visibility', val: 5, color: '#ffbd2e' },
+      { label: 'Google visibility', val: 3, color: '#ff5c5c' },
+      { label: 'Social proof', val: 5, color: '#ffbd2e' },
+      { label: 'Live chat / capture', val: 0, color: '#ff5c5c' },
+    ],
+    total: 4,
+    verdict: 'Weak — remarkable story, invisible online',
+    subjects: [
+      { tag: 'A', text: 'We built something for Misadventure & Co....' },
+      { tag: 'B', text: 'An award-winning vodka made from surplus bread deserves a site that tells that story' },
+      { tag: 'C', text: 'Free preview: a site that puts your North County distillery on the map' },
+    ],
+    emailBody: `Eighteen awards and a production story — vodka made from surplus baked goods — that's genuinely fascinating, and most people in North County have no idea it exists, largely because the website doesn't lead with it.
+
+We built you a free preview: a redesigned homepage and about page that puts the Misadventure story and your cocktail lineup front and center, plus a live AI chat agent that recommends cocktails based on taste, tells the sustainable vodka story to curious visitors, and helps people plan a visit or private event at the Vista tasting room.
+
+See it here: https://preview.lvrg.com/misadventureco
+
+Claim it free by booking a 15-min call: https://theresandiego.com/advertise/
+
+Josh | LVRG Agency | lvrg.com | 619.361.7484`,
+    sequence: [
+      { day: 'Day 3', text: 'Lead with retail. Misadventure Vodka at $39.99 has an e-commerce and local retail story. Chat agent surfaces "where to buy" and drives direct revenue.' },
+      { day: 'Day 7', text: 'North County first-mover angle. No other sustainable craft distillery in Vista is telling this story. Local press and tourism audiences are wide open.' },
+      { day: 'Day 14', text: 'Free brand story one-pager as alternate lead magnet. Concise, shareable doc capturing the surplus-bread origin for press, retail buyers, and event planners.' },
+    ]
+  },
+];
+
+let selectedId = null;
+let running = false;
+
+function ts() {
+  const d = new Date();
+  return d.toTimeString().slice(0,5);
+}
+
+function addLog(msg, type='dim') {
+  const log = document.getElementById('log');
+  const line = document.createElement('div');
+  line.className = `log-line ${type}`;
+  line.innerHTML = `<span class="log-ts">${ts()}</span>${msg}`;
+  log.appendChild(line);
+  log.scrollTop = log.scrollHeight;
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function runEngine() {
+  if (running) return;
+  running = true;
+  const btn = document.getElementById('runBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;border-width:2px;margin:0;"></div>&nbsp; Processing...';
+
+  // Clear log
+  document.getElementById('log').innerHTML = '';
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('emptyState').style.display = 'none';
+  selectedId = null;
+
+  addLog('Engine started — 5 domains queued', 'active');
+  await sleep(600);
+
+  // Build prospect list UI (all pending)
+  const list = document.getElementById('prospectList');
+  list.innerHTML = '';
+  PROSPECTS.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'prospect-item pending';
+    el.id = `pi-${p.id}`;
+    el.innerHTML = `
+      <div class="pi-dot"></div>
+      <div class="pi-info">
+        <div class="pi-name">${p.name}</div>
+        <div class="pi-meta">${p.domain}</div>
+      </div>
+      <div class="pi-score" id="score-${p.id}">—</div>
+    `;
+    el.onclick = () => showResult(p.id);
+    list.appendChild(el);
+  });
+
+  // Process each prospect
+  for (let i = 0; i < PROSPECTS.length; i++) {
+    const p = PROSPECTS[i];
+    const item = document.getElementById(`pi-${p.id}`);
+    item.className = 'prospect-item processing';
+
+    addLog(`Fetching ${p.domain}...`, 'active');
+    await sleep(700);
+    addLog(`Analyzing site structure...`, 'dim');
+    await sleep(500);
+    addLog(`Checking Google visibility for "${p.name}"...`, 'dim');
+    await sleep(600);
+    addLog(`Scoring against rubric...`, 'dim');
+    await sleep(400);
+    addLog(`Site score: ${p.total}/10 — ${p.verdict}`, p.total <= 4 ? 'active' : 'done');
+    await sleep(300);
+    addLog(`Generating preview site...`, 'active');
+    await sleep(800);
+    addLog(`Writing personalized copy...`, 'dim');
+    await sleep(500);
+    addLog(`Embedding AI chat widget...`, 'dim');
+    await sleep(400);
+    addLog(`Deploying to preview.lvrg.com/${p.id}...`, 'dim');
+    await sleep(500);
+    addLog(`Drafting outreach email...`, 'dim');
+    await sleep(400);
+    addLog(`&#10003; ${p.name} — ready`, 'done');
+    await sleep(200);
+
+    // Update item
+    item.className = 'prospect-item done';
+    const scoreEl = document.getElementById(`score-${p.id}`);
+    scoreEl.textContent = `${p.total}/10`;
+    scoreEl.className = p.total <= 4 ? 'pi-score' : 'pi-score ok';
+
+    // Build result HTML
+    buildResult(p);
+
+    // Auto-show first result
+    if (i === 0) showResult(p.id);
+  }
+
+  addLog('—— All 5 prospects processed. Ready to send.', 'done');
+  btn.disabled = false;
+  btn.innerHTML = '&#9654;&nbsp; Run Again';
+  running = false;
+}
+
+function buildResult(p) {
+  const container = document.getElementById('results');
+  const div = document.createElement('div');
+  div.className = 'result-card';
+  div.id = `result-${p.id}`;
+
+  const scoreRows = p.scores.map(s => `
+    <div class="score-row">
+      <div class="score-label">${s.label}</div>
+      <div class="score-bar-wrap"><div class="score-bar" style="width:${s.val*10}%;background:${s.color};"></div></div>
+      <div class="score-val" style="color:${s.color};">${s.val}</div>
+    </div>
+  `).join('');
+
+  const totalClass = p.total <= 3 ? 'poor' : p.total <= 6 ? 'mid' : 'good';
+
+  const subjectRows = p.subjects.map((s,i) => `
+    <div class="email-subject-row${i===1?' selected':''}" onclick="selectSubject(this)">
+      <span class="subj-tag">${s.tag}</span>
+      <span class="subj-text">${s.text}</span>
+    </div>
+  `).join('');
+
+  const seqItems = p.sequence.map(s => `
+    <div class="seq-item">
+      <div class="seq-day">${s.day}</div>
+      <div class="seq-text">${s.text}</div>
+    </div>
+  `).join('');
+
+  div.innerHTML = `
+    <div class="result-header">
+      <div class="result-kicker">&#10003; Processed &mdash; ready to send</div>
+      <div class="result-name">${p.name}</div>
+      <div class="result-type">${p.type}</div>
+    </div>
+
+    <!-- SCORE -->
+    <div class="score-section">
+      <div class="score-title">Website Score</div>
+      ${scoreRows}
+      <div class="score-total">
+        <div class="score-big ${totalClass}">${p.total}</div>
+        <div class="score-out">/10</div>
+        <div class="score-verdict">${p.verdict}</div>
+      </div>
+    </div>
+
+    <!-- GAP -->
+    <div class="gap-box">${p.gap}</div>
+
+    <!-- PREVIEW SITE -->
+    <div class="preview-section">
+      <div class="preview-toolbar">
+        <div class="preview-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+        <div class="preview-url">preview.lvrg.com/${p.id}</div>
+        <div class="preview-actions">
+          <a href="${p.oldUrl}" target="_blank" class="preview-btn preview-btn-ghost">View Old Site &#8599;</a>
+          <a href="${p.previewUrl}" target="_blank" class="preview-btn preview-btn-gold">Open Full Preview &#8599;</a>
+        </div>
+      </div>
+      <div class="preview-frame-wrap" id="frame-wrap-${p.id}">
+        <div class="preview-overlay" id="overlay-${p.id}">
+          <div class="spinner"></div>
+          <div class="spinner-text">Loading preview...</div>
+        </div>
+        <iframe id="iframe-${p.id}" src="" style="width:100%;height:100%;border:none;"
+          onload="document.getElementById('overlay-${p.id}').classList.add('hidden')">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="email-section">
+      <div class="panel-label">Outreach Email</div>
+      <div class="email-meta">
+        <span class="email-field">From</span><span class="email-val">Josh @ LVRG Agency &lt;josh@lvrg.com&gt;</span>
+        <span class="email-field">To</span><span class="email-val">Owner / Decision Maker &mdash; ${p.name}</span>
+        <span class="email-field">CTA</span><span class="email-val"><a href="https://theresandiego.com/advertise/" target="_blank" style="color:var(--gold);">theresandiego.com/advertise</a></span>
+      </div>
+      <div class="panel-label" style="margin-bottom:8px;">Subject Lines — pick one</div>
+      <div class="email-subjects">${subjectRows}</div>
+      <div class="email-body">${p.emailBody}</div>
+      <div class="email-actions">
+        <a href="https://theresandiego.com/advertise/" target="_blank" class="action-btn action-btn-primary">Book a Call to Claim</a>
+        <button class="action-btn action-btn-ghost" onclick="copyEmail(this, '${p.id}')">Copy Email</button>
+      </div>
+    </div>
+
+    <!-- SEQUENCE -->
+    <div class="sequence-section">
+      <div class="seq-title">Follow-up Sequence</div>
+      ${seqItems}
+    </div>
+  `;
+  container.appendChild(div);
+}
+
+function showResult(id) {
+  // Update sidebar
+  document.querySelectorAll('.prospect-item').forEach(el => el.classList.remove('active'));
+  const item = document.getElementById(`pi-${id}`);
+  if (item) item.classList.add('active');
+
+  // Show result
+  document.querySelectorAll('.result-card').forEach(el => el.classList.remove('visible'));
+  const result = document.getElementById(`result-${id}`);
+  if (!result) return;
+  result.classList.add('visible');
+
+  // Load iframe
+  const p = PROSPECTS.find(x => x.id === id);
+  const iframe = document.getElementById(`iframe-${id}`);
+  if (iframe && !iframe.src) {
+    iframe.src = p.previewUrl;
+  }
+
+  selectedId = id;
+  document.getElementById('rightPanel').scrollTop = 0;
+}
+
+function selectSubject(el) {
+  el.closest('.email-subjects').querySelectorAll('.email-subject-row').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function copyEmail(btn, id) {
+  const p = PROSPECTS.find(x => x.id === id);
+  navigator.clipboard.writeText(p.emailBody).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy Email', 2000);
+  });
+}
+</script>
+</body>
+</html>

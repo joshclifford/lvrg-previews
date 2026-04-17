@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>insideOUT SD — Elevated Dining &amp; Private Events · Hillcrest, San Diego</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+  :root{--terra:#c1553a;--terra-dark:#8b3423;--green:#355e3b;--green-dark:#1f3c25;--green-light:#5e8663;--cream:#faf5ed;--cream-warm:#f1e8d6;--ink:#2a1e15;--line:rgba(42,30,21,0.12)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--cream);color:var(--ink);font-family:'Outfit',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1280px;margin:0 auto;padding:0 32px}
+
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;background:rgba(250,245,237,0.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 32px}
+  .logo{display:flex;align-items:baseline;gap:0;font-family:'Fraunces',serif}
+  .logo-in{font-size:22px;font-weight:500;color:var(--green)}
+  .logo-side{font-size:22px;font-weight:500;color:var(--ink);font-style:italic}
+  .logo-out{font-size:22px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:1px;margin-left:4px}
+  .logo-sd{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--ink);margin-left:10px;opacity:0.55;font-family:'Outfit',sans-serif;font-weight:500}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink);transition:color .2s}
+  .nav-links a:hover{color:var(--terra)}
+  .btn{display:inline-block;padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .3s;font-family:inherit;border-radius:2px;letter-spacing:0.3px}
+  .btn-primary{background:var(--terra);color:#fff}
+  .btn-primary:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:0 14px 30px rgba(193,85,58,0.3)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
+
+  .hero{padding:140px 0 0;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;min-height:calc(100vh - 140px)}
+  .hero-left{padding:40px 60px 80px 0;display:flex;flex-direction:column;justify-content:center}
+  .eyebrow{font-size:12px;font-weight:500;color:var(--terra);letter-spacing:3.5px;text-transform:uppercase;margin-bottom:28px;display:inline-flex;align-items:center;gap:12px}
+  .eyebrow-leaf{width:24px;height:12px;background:var(--green);clip-path:polygon(0 50%, 50% 0, 100% 50%, 50% 100%);opacity:0.85}
+  h1{font-family:'Fraunces',serif;font-size:clamp(50px,6.5vw,92px);font-weight:400;line-height:0.98;letter-spacing:-2px;color:var(--ink);margin-bottom:30px}
+  h1 em{font-style:italic;color:var(--terra);font-weight:500}
+  h1 .g{color:var(--green);font-style:italic;font-weight:500}
+  .hero-sub{font-size:19px;line-height:1.6;color:rgba(42,30,21,0.72);max-width:500px;margin-bottom:40px;font-weight:400}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+  .hero-hours{display:flex;gap:48px;padding-top:32px;border-top:1px solid var(--line)}
+  .hero-hours-item{}
+  .hero-hours-label{font-size:11px;font-weight:600;color:var(--terra);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:4px}
+  .hero-hours-val{font-family:'Fraunces',serif;font-size:17px;font-style:italic;color:var(--ink)}
+
+  .hero-right{position:relative;overflow:hidden;border-radius:8px 0 0 8px;margin-right:-32px}
+  .hero-art{position:absolute;inset:0;background:linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);overflow:hidden}
+  .hero-art::before{content:'';position:absolute;inset:0;background:
+    radial-gradient(ellipse at 30% 60%, rgba(193,85,58,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(250,245,237,0.15) 0%, transparent 45%)}
+  .hero-art::after{content:'';position:absolute;inset:0;background-image:
+    radial-gradient(circle at 20% 80%, var(--green-light) 40px, transparent 41px),
+    radial-gradient(circle at 80% 30%, var(--green-light) 60px, transparent 61px),
+    radial-gradient(circle at 50% 50%, var(--green-light) 30px, transparent 31px),
+    radial-gradient(circle at 30% 20%, var(--green-light) 50px, transparent 51px);
+    opacity:0.35;filter:blur(20px)}
+  .hero-frame{position:absolute;inset:40px;border:1px solid rgba(250,245,237,0.3);border-radius:4px;display:flex;flex-direction:column;justify-content:space-between;padding:40px;z-index:2}
+  .hero-frame-top{display:flex;justify-content:space-between;color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:15px;opacity:0.8}
+  .hero-frame-mid{flex:1;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:clamp(100px,16vw,220px);line-height:0.9;color:var(--terra);font-style:italic;font-weight:400;letter-spacing:-8px;text-shadow:0 20px 60px rgba(0,0,0,0.3)}
+  .hero-frame-bot{color:var(--cream);font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:0.7;text-align:center}
+
+  .proof{padding:30px 0;background:var(--green);color:var(--cream)}
+  .proof-inner{display:flex;justify-content:space-around;align-items:center;gap:30px;flex-wrap:wrap}
+  .proof-item{font-size:14px;font-weight:500;letter-spacing:0.3px}
+  .proof-item strong{color:var(--terra);font-family:'Fraunces',serif;font-style:italic;font-weight:500;margin-right:8px}
+
+  section{padding:120px 0}
+  .section-head{text-align:center;margin-bottom:72px;max-width:720px;margin-left:auto;margin-right:auto}
+  .section-kicker{font-size:12px;font-weight:600;color:var(--terra);letter-spacing:3.5px;text-transform:uppercase;margin-bottom:20px}
+  h2{font-family:'Fraunces',serif;font-size:clamp(42px,5.5vw,68px);font-weight:400;line-height:1.05;letter-spacing:-1.2px;color:var(--ink)}
+  h2 em{font-style:italic;color:var(--terra);font-weight:500}
+  .section-sub{font-size:18px;color:rgba(42,30,21,0.7);margin-top:18px;font-weight:400}
+
+  .services{background:var(--cream-warm);position:relative;overflow:hidden}
+  .services::before{content:'';position:absolute;top:-80px;left:-80px;width:260px;height:260px;border-radius:50%;background:var(--terra);opacity:0.08}
+  .services::after{content:'';position:absolute;bottom:-100px;right:-100px;width:320px;height:320px;border-radius:50%;background:var(--green);opacity:0.1}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;z-index:2}
+  .svc-card{background:#fff;padding:0;border-radius:8px;overflow:hidden;transition:all .3s;box-shadow:0 1px 3px rgba(42,30,21,0.05)}
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(42,30,21,0.12)}
+  .svc-img{aspect-ratio:5/4;position:relative;overflow:hidden}
+  .svc-img.a{background:linear-gradient(135deg,var(--terra) 0%, var(--terra-dark) 100%)}
+  .svc-img.b{background:linear-gradient(135deg,var(--green) 0%, var(--green-light) 100%)}
+  .svc-img.c{background:linear-gradient(135deg,var(--green-dark) 0%, var(--terra) 140%)}
+  .svc-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%)}
+  .svc-img-word{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:72px;color:rgba(255,255,255,0.95);letter-spacing:-1px;font-weight:400;z-index:2}
+  .svc-body{padding:36px 32px}
+  .svc-num{font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--terra);margin-bottom:12px}
+  .svc-title{font-family:'Fraunces',serif;font-size:28px;color:var(--ink);margin-bottom:14px;font-weight:500;letter-spacing:-0.5px}
+  .svc-desc{font-size:15.5px;color:rgba(42,30,21,0.72);line-height:1.65}
+
+  .tests{background:var(--cream);position:relative}
+  .test-feature{max-width:820px;margin:0 auto;text-align:center}
+  .test-feature-quote{font-family:'Fraunces',serif;font-size:clamp(28px,3.5vw,44px);line-height:1.25;color:var(--ink);font-style:italic;font-weight:400;margin-bottom:32px;letter-spacing:-0.8px}
+  .test-feature-quote::before,.test-feature-quote::after{content:'"';color:var(--terra);font-size:64px;line-height:0;vertical-align:-30px;margin:0 8px;font-weight:500}
+  .test-feature-who{font-size:13px;font-weight:600;color:var(--terra);letter-spacing:2.5px;text-transform:uppercase;margin-top:8px}
+  .test-row{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:80px}
+  .test-mini{padding:32px 36px;background:var(--cream-warm);border-radius:8px;border-left:4px solid var(--green)}
+  .test-mini:nth-child(2){border-left-color:var(--terra)}
+  .test-mini-quote{font-family:'Fraunces',serif;font-size:19px;font-style:italic;color:var(--ink);line-height:1.45;margin-bottom:16px}
+  .test-mini-who{font-size:12px;font-weight:600;color:var(--terra);letter-spacing:2px;text-transform:uppercase}
+
+  .chat-banner{background:linear-gradient(135deg,var(--green-dark) 0%, var(--green) 100%);color:var(--cream);padding:90px 0;position:relative;overflow:hidden}
+  .chat-banner::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:var(--terra);opacity:0.25;filter:blur(8px)}
+  .chat-banner::after{content:'';position:absolute;bottom:-80px;left:10%;width:180px;height:180px;border-radius:50%;background:var(--cream);opacity:0.08}
+  .chat-banner-inner{text-align:center;max-width:720px;margin:0 auto;position:relative;z-index:2}
+  .chat-banner .kicker{color:var(--terra);font-weight:600;letter-spacing:3.5px;font-size:12px;text-transform:uppercase;margin-bottom:18px}
+  .chat-banner h3{font-family:'Fraunces',serif;font-size:48px;font-weight:400;line-height:1.1;margin-bottom:18px;letter-spacing:-1px}
+  .chat-banner h3 em{color:var(--terra);font-style:italic;font-weight:500}
+  .chat-banner p{font-size:18px;color:rgba(250,245,237,0.85);margin-bottom:12px}
+  .chat-banner .arrow{margin-top:22px;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--terra)}
+
+  footer{background:var(--green-dark);color:rgba(250,245,237,0.75);padding:80px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+  .foot-logo{display:flex;align-items:baseline;margin-bottom:18px;font-family:'Fraunces',serif}
+  .foot-logo span{font-size:26px}
+  .foot-logo .i{color:var(--cream);font-weight:500}
+  .foot-logo .s{color:var(--cream);font-style:italic;opacity:0.7}
+  .foot-logo .o{color:var(--terra);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-left:4px;font-size:22px}
+  .foot-desc{font-size:14.5px;line-height:1.7;max-width:320px}
+  .foot-h{font-size:12px;font-weight:600;color:var(--terra);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+  .foot-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .foot-list a,.foot-list li{font-size:14.5px;color:rgba(250,245,237,0.65);transition:color .2s}
+  .foot-list a:hover{color:var(--terra)}
+  .foot-bottom{padding-top:30px;border-top:1px solid rgba(250,245,237,0.12);display:flex;justify-content:space-between;font-size:13px;color:rgba(250,245,237,0.5)}
+  .foot-bottom a{color:var(--terra)}
+  @media(max-width:900px){.nav-links a:not(:last-child){display:none}.hero-grid,.svc-grid,.test-row,.foot-grid{grid-template-columns:1fr}.hero-right{min-height:400px;margin-right:0;border-radius:8px}.hero-left{padding:40px 0 60px}}
+</style>
+</head>
+<body>
+  <!-- LVRG CLAIM BAR -->
+  <div id="lvrg-bar" style="
+    position:fixed;top:0;left:0;right:0;z-index:99999;
+    background:rgba(0,0,0,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #b85c3840;
+    padding:10px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    font-size:13px;
+  ">
+    <span style="color:rgba(255,255,255,0.6);letter-spacing:0.3px;">
+      This site was built for <strong style="color:#fff;">insideOUT SD</strong> by 
+      <strong style="color:#b85c38;">LVRG Agency</strong>.
+    </span>
+    <a href="https://theresandiego.com/advertise/" target="_blank" style="
+      background:#b85c38;
+      color:#000;
+      padding:7px 18px;
+      border-radius:3px;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:0.8px;
+      text-decoration:none;
+      white-space:nowrap;
+      margin-left:20px;
+      transition:opacity .2s;
+    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      Claim This Site →
+    </a>
+  </div>
+  <script>
+    // Push page content down by bar height
+    document.addEventListener('DOMContentLoaded', function() {
+      var bar = document.getElementById('lvrg-bar');
+      var h = bar ? bar.offsetHeight : 44;
+      document.body.style.paddingTop = h + 'px';
+      // Also push any fixed nav down
+      var nav = document.querySelector('nav, .nav, header');
+      if (nav && nav.style.position === 'fixed' || (nav && getComputedStyle(nav).position === 'fixed')) {
+        nav.style.top = h + 'px';
+      }
+    });
+  </script>
+
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-in">inside</span><span class="logo-out">OUT</span><span class="logo-sd">SD</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#events">Private Events</a>
+      <a href="#reserve" class="btn btn-primary">Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow"><span class="eyebrow-leaf"></span>Hillcrest · San Diego</div>
+        <h1>An urban <em>oasis,</em><br/>open to the <span class="g">sky.</span></h1>
+        <p class="hero-sub">California meets the Mediterranean at Chef Johnny Duran's elevated Hillcrest dining room. Open-air atrium, water feature, handcrafted tables — and a menu designed for the people who live here.</p>
+        <div class="hero-ctas">
+          <a href="#reserve" class="btn btn-primary">Reserve a Table</a>
+          <a href="#events" class="btn btn-ghost">Plan Your Event</a>
+        </div>
+        <div class="hero-hours">
+          <div class="hero-hours-item">
+            <div class="hero-hours-label">Dinner</div>
+            <div class="hero-hours-val">Tue–Sat evenings</div>
+          </div>
+          <div class="hero-hours-item">
+            <div class="hero-hours-label">Brunch</div>
+            <div class="hero-hours-val">Sat &amp; Sun · 10–5</div>
+          </div>
+          <div class="hero-hours-item">
+            <div class="hero-hours-label">Happy Hour</div>
+            <div class="hero-hours-val">Tue–Fri · 4–6</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-art">
+          <div class="hero-frame">
+            <div class="hero-frame-top">
+              <span>Est. Hillcrest</span>
+              <span>Open-air dining</span>
+            </div>
+            <div class="hero-frame-mid">iO</div>
+            <div class="hero-frame-bot">Elevated California · Mediterranean</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="proof-item"><strong>Premier</strong>LGBTQ-owned in SD</div>
+      <div class="proof-item"><strong>Chef</strong>Johnny Duran, Executive</div>
+      <div class="proof-item"><strong>Featured</strong>in local press</div>
+      <div class="proof-item"><strong>5.0★</strong>Yelp standout</div>
+    </div>
+  </div>
+</div>
+
+<section class="services" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">What We Offer</div>
+      <h2>Three rooms. <em>One unforgettable</em> evening.</h2>
+      <p class="section-sub">Whether you're here for a date, a brunch with friends, or an event that deserves more than a four-top — we've got you.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-img a"><span class="svc-img-word">Dinner</span></div>
+        <div class="svc-body">
+          <div class="svc-num">i.</div>
+          <h3 class="svc-title">Elevated Dining</h3>
+          <p class="svc-desc">Chef Johnny's California-Mediterranean menu changes with the season — bright, honest, built around what's growing locally. Dinner Tuesday through Saturday.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-img b"><span class="svc-img-word">Brunch</span></div>
+        <div class="svc-body">
+          <div class="svc-num">ii.</div>
+          <h3 class="svc-title">Weekend Brunch</h3>
+          <p class="svc-desc">Saturday and Sunday, 10 to 5. Dine under the atrium, listen to the water feature, order the shakshuka. Hillcrest's favorite way to weekend.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-img c"><span class="svc-img-word">Private</span></div>
+        <div class="svc-body">
+          <div class="svc-num">iii.</div>
+          <h3 class="svc-title">Private Events</h3>
+          <p class="svc-desc">Corporate dinners, birthdays, seasonal experiences. Our open-air atrium transforms for any occasion — full buyouts and semi-private rooms available.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tests">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">In Their Words</div>
+      <h2>What guests say when they <em>find us.</em></h2>
+    </div>
+    <div class="test-feature">
+      <div class="test-feature-quote">A-MAZ-INGGG — welcoming staff, incredible architecture, top-notch service. San Diego's modern urban oasis is exactly that.</div>
+      <div class="test-feature-who">— Yelp Standout Review</div>
+    </div>
+    <div class="test-row">
+      <div class="test-mini">
+        <div class="test-mini-quote">The atrium at golden hour with that brunch menu is genuinely one of the best seats in San Diego.</div>
+        <div class="test-mini-who">— Weekend Regular</div>
+      </div>
+      <div class="test-mini">
+        <div class="test-mini-quote">We booked a private dinner for 20. Christine's team nailed every detail. Everyone left asking when we're coming back.</div>
+        <div class="test-mini-who">— Private Event Host</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="chat-banner" id="reserve">
+  <div class="container">
+    <div class="chat-banner-inner">
+      <div class="kicker">Ask the House</div>
+      <h3>Reservations, events, <em>a question about the menu?</em></h3>
+      <p>Our AI concierge is here 24/7 — reserve a table, ask about Chef Johnny's menu, or connect with the private events team in minutes.</p>
+      <div class="arrow">Tap the chat icon below ↘</div>
+    </div>
+  </div>
+</div>
+
+<footer id="events">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <span class="i">inside</span><span class="o">OUT</span>
+        </div>
+        <p class="foot-desc">San Diego's premier LGBTQ-owned restaurant and urban oasis. Elevated California and Mediterranean cuisine by Executive Chef Johnny Duran, in the heart of Hillcrest.</p>
+      </div>
+      <div>
+        <div class="foot-h">Visit</div>
+        <ul class="foot-list">
+          <li>Hillcrest</li>
+          <li>San Diego, CA</li>
+          <li>Open-air dining</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Hours</div>
+        <ul class="foot-list">
+          <li>Tue–Thu · 4–10:30pm</li>
+          <li>Fri–Sat · 4pm–12am</li>
+          <li>Brunch · Sat–Sun · 10–5</li>
+          <li>HH · Tue–Fri · 4–6</li>
+          <li style="color:var(--terra)">Closed Mondays</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Navigate</div>
+        <ul class="foot-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© insideOUT SD · All rights reserved</div>
+      <div>Site crafted by <a href="#">LVRG Agency</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Chat Widget -->
+<div id="lvrg-chat-widget">
+  <button id="lvrg-chat-toggle" aria-label="Open chat">
+    <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <div id="lvrg-chat-panel" aria-hidden="true">
+    <div class="lvrg-chat-header">
+      <div class="lvrg-chat-avatar">iO</div>
+      <div class="lvrg-chat-meta">
+        <div class="lvrg-chat-title">insideOUT SD</div>
+        <div class="lvrg-chat-sub"><span class="lvrg-chat-dot"></span>AI Host · Online</div>
+      </div>
+    </div>
+    <div class="lvrg-chat-messages" id="lvrg-chat-messages">
+      <div class="lvrg-msg lvrg-msg-bot">
+        <div class="lvrg-msg-bubble">Welcome in 🌿 I'm your insideOUT host. I can help you book a table, answer questions about Chef Johnny's menu, or get you connected with our private events team for dinners, birthdays, or corporate nights. What sounds good?</div>
+      </div>
+    </div>
+    <form class="lvrg-chat-input" id="lvrg-chat-form">
+      <input type="text" id="lvrg-chat-field" placeholder="Reserve, event, or menu?" autocomplete="off" />
+      <button type="submit" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+</div>
+<style>
+  #lvrg-chat-widget{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Outfit',sans-serif}
+  #lvrg-chat-toggle{width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:var(--terra);color:#fff;box-shadow:0 10px 30px rgba(193,85,58,0.4),0 2px 6px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}
+  #lvrg-chat-toggle:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(193,85,58,0.55)}
+  #lvrg-chat-toggle:active{transform:scale(0.96)}
+  #lvrg-chat-panel{position:absolute;bottom:78px;right:0;width:320px;height:440px;background:var(--cream);border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(42,30,21,0.3);display:flex;flex-direction:column;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.2,.9,.3,1.2);border:1px solid var(--line)}
+  #lvrg-chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+  .lvrg-chat-header{padding:18px;display:flex;align-items:center;gap:12px;background:var(--green);color:var(--cream)}
+  .lvrg-chat-avatar{width:40px;height:40px;border-radius:50%;background:var(--terra);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:15px;font-family:'Fraunces',serif;font-style:italic}
+  .lvrg-chat-title{font-family:'Fraunces',serif;font-weight:500;font-size:16px}
+  .lvrg-chat-sub{font-size:11.5px;display:flex;align-items:center;gap:6px;margin-top:3px;opacity:0.88;letter-spacing:0.5px}
+  .lvrg-chat-dot{width:7px;height:7px;border-radius:50%;background:#8ecf8e}
+  .lvrg-chat-messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:var(--cream)}
+  .lvrg-msg{display:flex}
+  .lvrg-msg-bot{justify-content:flex-start}
+  .lvrg-msg-user{justify-content:flex-end}
+  .lvrg-msg-bubble{max-width:78%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5}
+  .lvrg-msg-bot .lvrg-msg-bubble{background:#fff;color:var(--ink);border:1px solid var(--line);border-bottom-left-radius:4px}
+  .lvrg-msg-user .lvrg-msg-bubble{background:var(--terra);color:#fff;border-bottom-right-radius:4px}
+  .lvrg-chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fff}
+  .lvrg-chat-input input{flex:1;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;background:#fff;color:var(--ink)}
+  .lvrg-chat-input input:focus{border-color:var(--terra)}
+  .lvrg-chat-input button{width:40px;border:none;border-radius:8px;cursor:pointer;background:var(--terra);color:#fff;display:flex;align-items:center;justify-content:center}
+  .lvrg-chat-input button:hover{background:var(--green)}
+  @media(max-width:480px){#lvrg-chat-panel{width:calc(100vw - 32px);right:-8px}}
+</style>
+<script>
+(function(){
+  var t=document.getElementById('lvrg-chat-toggle'),p=document.getElementById('lvrg-chat-panel'),o=document.getElementById('chat-icon-open'),c=document.getElementById('chat-icon-close'),f=document.getElementById('lvrg-chat-form'),i=document.getElementById('lvrg-chat-field'),m=document.getElementById('lvrg-chat-messages');
+  t.addEventListener('click',function(){var k=p.classList.toggle('open');p.setAttribute('aria-hidden',!k);o.style.display=k?'none':'block';c.style.display=k?'block':'none';if(k)setTimeout(function(){i.focus()},250)});
+  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;var u=document.createElement('div');u.className='lvrg-msg lvrg-msg-user';u.innerHTML='<div class="lvrg-msg-bubble"></div>';u.querySelector('.lvrg-msg-bubble').textContent=v;m.appendChild(u);i.value='';m.scrollTop=m.scrollHeight;setTimeout(function(){var b=document.createElement('div');b.className='lvrg-msg lvrg-msg-bot';b.innerHTML='<div class="lvrg-msg-bubble">Lovely — happy to help. Share your date, party size, and whether it\\'s dinner or an event, and I\\'ll confirm availability or route you to Christine on our events team right away. 🌿</div>';m.appendChild(b);m.scrollTop=m.scrollHeight},700)});
+})();
+</script>
+
+  <script>
+  // Inject real reviews
+  (function() {
+    var reviews = [{text: 'A-MAZ-INGGG. The architecture alone is stunning — open-air atrium, water feature, handcrafted tables. The food matches the setting. Absolute must-visit in Hillcrest.', author: 'Yelp Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"},
+{text: 'The lemon avocado toast with crab is something I still think about. Top-notch service, beautiful space, and a genuinely safe and welcoming atmosphere.', author: 'Yelp Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"},
+{text: "WOW. Modern urban oasis is exactly the right description. We did brunch and stayed two hours longer than planned. Chef Duran's menu is inspired.", author: 'Yelp Reviewer ⭐⭐⭐⭐⭐', stars: "★★★★★"}];
+    var accent = '#b85c38';
+    
+    // Find testimonial/review containers
+    var selectors = ['.testimonials', '.reviews', '.review-grid', '.testimonial-grid', 
+                     '[class*="testimonial"]', '[class*="review"]', '#testimonials', '#reviews'];
+    var container = null;
+    for (var s of selectors) {
+      container = document.querySelector(s);
+      if (container) break;
+    }
+    
+    if (!container) return; // fallback: just add to footer
+    
+    // Build review cards HTML
+    var html = reviews.map(function(r) {
+      return `
+        <div style="
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.1);
+          border-radius:8px;padding:32px;
+          display:flex;flex-direction:column;gap:16px;
+          position:relative;
+        ">
+          <div style="color:${accent};font-size:20px;letter-spacing:2px;">${r.stars}</div>
+          <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);font-style:italic;">
+            "${r.text}"
+          </p>
+          <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">
+            — ${r.author}
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    // Try to find review cards inside and replace, or append
+    var existingCards = container.querySelectorAll('[class*="card"], [class*="item"], [class*="block"]');
+    if (existingCards.length > 0) {
+      // Replace existing card container's inner html
+      var grid = existingCards[0].parentElement;
+      grid.innerHTML = html;
+    } else {
+      // Just append a grid
+      var grid = document.createElement('div');
+      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;';
+      grid.innerHTML = html;
+      container.appendChild(grid);
+    }
+  })();
+  </script>
+
+  <!-- NEW / OLD SITE TOGGLE -->
+  <div id="site-toggle" style="
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    z-index:99998;
+    background:rgba(0,0,0,0.88);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:40px;
+    padding:6px 8px;
+    display:flex;gap:6px;align-items:center;
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  ">
+    <button onclick="showNewSite()" id="btn-new" style="
+      background:#b85c38;color:#000;border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:700;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">✦ New Site</button>
+    <button onclick="showOldSite()" id="btn-old" style="
+      background:transparent;color:rgba(255,255,255,0.5);border:none;
+      padding:9px 22px;border-radius:32px;
+      font-size:12px;font-weight:500;letter-spacing:0.8px;cursor:pointer;
+      transition:all .2s;
+    ">Old Site</button>
+  </div>
+
+      <iframe id="old-iframe" src="" style="flex:1;border:none;width:100%;background:#fff;" 
+      title="insideOUT SD current website"></iframe>
+  </div>
+
+  <script>
+    function showNewSite() {
+      document.getElementById('old-site-overlay').style.display = 'none';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnNew.style.background = '#b85c38';
+      btnNew.style.color = '#000';
+      btnOld.style.background = 'transparent';
+      btnOld.style.color = 'rgba(255,255,255,0.5)';
+    }
+    function showOldSite() {
+      window.open('https://insideoutsd.com', '_blank');
+    }
+      overlay.style.display = 'flex';
+      var btnNew = document.getElementById('btn-new');
+      var btnOld = document.getElementById('btn-old');
+      btnOld.style.background = 'rgba(255,255,255,0.15)';
+      btnOld.style.color = '#fff';
+      btnNew.style.background = 'transparent';
+      btnNew.style.color = 'rgba(255,255,255,0.5)';
+    }
+  </script>
+
+</body>
+</html>
