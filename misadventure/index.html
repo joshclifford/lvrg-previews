@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Misadventure & Co. | Carbon-Negative Craft Vodka | Vista, CA</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -14,22 +14,21 @@
         }
 
         :root {
-            --primary: #2d5016;
-            --primary-light: #4a7a2a;
-            --primary-dark: #1e3610;
-            --gold: #c9a227;
-            --gold-light: #e3bc3d;
-            --cream: #f8f5eb;
+            --primary: #8B4513;
+            --primary-dark: #6B3410;
+            --primary-light: #A65D2E;
+            --gold: #D4AF37;
+            --cream: #FDF8F3;
             --charcoal: #1a1a1a;
             --white: #ffffff;
+            --gray: #6b6b6b;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
             color: var(--charcoal);
-            background: var(--cream);
-            overflow-x: hidden;
+            line-height: 1.6;
+            background-color: var(--cream);
         }
 
         /* LVRG Claim Bar */
@@ -38,7 +37,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
+            background: var(--charcoal);
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
@@ -47,32 +46,28 @@
             font-size: 13px;
         }
 
-        .claim-bar p {
+        .claim-bar span {
             color: #888;
-            font-weight: 400;
         }
 
-        .claim-bar span {
+        .claim-bar span strong {
             color: var(--white);
-            font-weight: 500;
         }
 
         .claim-btn {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, var(--gold), #C9A227);
             color: var(--charcoal);
-            padding: 8px 20px;
-            border-radius: 25px;
+            padding: 8px 18px;
             text-decoration: none;
+            border-radius: 4px;
             font-weight: 600;
             font-size: 12px;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .claim-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
         /* Navigation */
@@ -81,23 +76,23 @@
             top: 42px;
             left: 0;
             right: 0;
-            background: rgba(248, 245, 235, 0.95);
-            backdrop-filter: blur(20px);
+            background: rgba(253, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
             padding: 15px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 999;
-            border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
         }
 
         .logo span {
@@ -106,7 +101,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 35px;
             list-style: none;
         }
 
@@ -115,13 +110,16 @@
             color: var(--charcoal);
             font-weight: 500;
             font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: color 0.3s ease;
             position: relative;
         }
 
-        .nav-links a:after {
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -132,109 +130,59 @@
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a:hover:after {
+        .nav-links a:hover::after {
             width: 100%;
         }
 
         .nav-cta {
             background: var(--primary);
             color: var(--white);
-            padding: 14px 28px;
-            border-radius: 30px;
+            padding: 12px 28px;
             text-decoration: none;
+            border-radius: 30px;
             font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 14px;
             transition: all 0.3s ease;
         }
 
         .nav-cta:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.3);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            margin-top: 100px;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 160px 50px 80px;
+            padding: 60px 50px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--cream) 0%, #e8e4d4 100%);
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-        }
-
-        .hero-shape-1 {
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 800px;
-            height: 800px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            border-radius: 50%;
-            opacity: 0.08;
-        }
-
-        .hero-shape-2 {
-            position: absolute;
-            bottom: -30%;
-            left: -15%;
-            width: 600px;
-            height: 600px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-
-        .hero-shape-3 {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(45deg, transparent 30%, var(--primary) 30%, var(--primary) 32%, transparent 32%);
-            opacity: 0.05;
-            transform: rotate(45deg);
         }
 
         .hero-content {
-            max-width: 650px;
-            position: relative;
+            max-width: 600px;
             z-index: 2;
         }
 
-        .hero-tag {
+        .hero-badge {
             display: inline-block;
-            background: var(--primary);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--gold), #E8C547);
+            color: var(--charcoal);
             padding: 8px 20px;
-            border-radius: 25px;
+            border-radius: 30px;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 2px;
             margin-bottom: 25px;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            font-weight: 700;
+            font-size: 62px;
             line-height: 1.1;
             color: var(--charcoal);
             margin-bottom: 25px;
@@ -246,29 +194,25 @@
         }
 
         .hero p {
-            font-size: 20px;
-            color: #555;
+            font-size: 18px;
+            color: var(--gray);
             margin-bottom: 40px;
             line-height: 1.8;
-            max-width: 500px;
         }
 
-        .hero-btns {
+        .hero-ctas {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: var(--primary);
             color: var(--white);
-            padding: 18px 40px;
-            border-radius: 35px;
+            padding: 16px 36px;
             text-decoration: none;
+            border-radius: 30px;
             font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 15px;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
@@ -276,20 +220,19 @@
         }
 
         .btn-primary:hover {
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(45, 80, 22, 0.35);
+            box-shadow: 0 12px 35px rgba(139, 69, 19, 0.35);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--charcoal);
-            padding: 18px 40px;
-            border-radius: 35px;
+            padding: 16px 36px;
             text-decoration: none;
+            border-radius: 30px;
             font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 15px;
             border: 2px solid var(--charcoal);
             transition: all 0.3s ease;
         }
@@ -297,285 +240,189 @@
         .btn-secondary:hover {
             background: var(--charcoal);
             color: var(--white);
-            transform: translateY(-3px);
         }
 
         .hero-visual {
             position: absolute;
-            right: 50px;
+            right: -50px;
             top: 50%;
             transform: translateY(-50%);
-            width: 500px;
-            height: 500px;
+            width: 700px;
+            height: 700px;
             z-index: 1;
         }
 
-        .bottle-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .bottle {
-            width: 120px;
-            height: 380px;
-            background: linear-gradient(180deg, #e8e8e8 0%, #f5f5f5 20%, #ffffff 50%, #f0f0f0 80%, #d8d8d8 100%);
-            border-radius: 15px 15px 60px 60px;
-            position: relative;
-            box-shadow: 
-                20px 0 40px rgba(0,0,0,0.1),
-                -5px 0 20px rgba(255,255,255,0.8) inset,
-                5px 0 15px rgba(0,0,0,0.05) inset;
-        }
-
-        .bottle:before {
-            content: '';
+        .visual-circle {
             position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 50px;
-            background: linear-gradient(90deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
-            border-radius: 5px 5px 0 0;
-        }
-
-        .bottle:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 20px;
-            background: linear-gradient(90deg, #c9a227 0%, #e3bc3d 50%, #c9a227 100%);
-            border-radius: 0 0 10px 10px;
-        }
-
-        .bottle-label {
-            position: absolute;
-            top: 80px;
-            left: 10px;
-            right: 10px;
-            height: 150px;
-            background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-
-        .bottle-label-text {
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
-            font-size: 11px;
-            text-align: center;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .bottle-glow {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(45, 80, 22, 0.15) 0%, transparent 70%);
             border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
         }
 
-        .floating-badge {
-            position: absolute;
-            top: 50px;
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--gold) 100%);
+            top: 100px;
             right: 50px;
-            width: 100px;
-            height: 100px;
-            background: var(--gold);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--charcoal);
-            font-weight: 700;
-            font-size: 14px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4);
-            animation: float 3s ease-in-out infinite;
+            opacity: 0.9;
         }
 
-        .floating-badge span {
-            font-size: 28px;
-            line-height: 1;
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(225deg, var(--gold), #E8C547);
+            top: 50px;
+            right: 250px;
+            opacity: 0.7;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        .circle-3 {
+            width: 150px;
+            height: 150px;
+            background: var(--cream);
+            border: 3px solid var(--primary);
+            top: 300px;
+            right: 400px;
+        }
+
+        .geometric-accent {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 4px solid var(--gold);
+            transform: rotate(45deg);
+            top: 200px;
+            right: 150px;
+            opacity: 0.5;
+        }
+
+        .bottle-shape {
+            position: absolute;
+            width: 120px;
+            height: 350px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(139,69,19,0.3) 100%);
+            border-radius: 20px 20px 60px 60px;
+            top: 150px;
+            right: 200px;
+            border: 3px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .bottle-neck {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(139,69,19,0.4));
+            border-radius: 10px 10px 5px 5px;
+            top: 70px;
+            right: 240px;
+            border: 3px solid rgba(255,255,255,0.4);
         }
 
         /* Social Proof Bar */
         .social-proof {
-            background: var(--primary);
-            padding: 60px 50px;
-        }
-
-        .proof-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
+            background: var(--charcoal);
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
         }
 
         .proof-item {
-            color: var(--white);
+            text-align: center;
         }
 
         .proof-number {
             font-family: 'Playfair Display', serif;
-            font-size: 64px;
-            font-weight: 700;
+            font-size: 48px;
             color: var(--gold);
-            line-height: 1;
-            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .proof-label {
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
+            color: var(--white);
+            font-size: 14px;
             letter-spacing: 2px;
-            opacity: 0.9;
+            text-transform: uppercase;
+            margin-top: 5px;
         }
 
         /* Services Section */
         .services {
-            padding: 120px 50px;
+            padding: 100px 50px;
             background: var(--white);
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 80px;
+            margin-bottom: 70px;
         }
 
         .section-tag {
-            display: inline-block;
             color: var(--primary);
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: 3px;
+            text-transform: uppercase;
             margin-bottom: 15px;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            font-weight: 700;
+            font-size: 48px;
             color: var(--charcoal);
-            margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.8;
         }
 
         .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .service-card {
             background: var(--cream);
-            border-radius: 20px;
             padding: 50px 40px;
+            border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            border: 2px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(45, 80, 22, 0.15);
-        }
-
-        .service-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--gold) 100%);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover:before {
-            transform: scaleX(1);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(139, 69, 19, 0.15);
         }
 
         .service-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border-radius: 50%;
+            margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
-            font-size: 32px;
+            font-size: 36px;
         }
 
         .service-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 26px;
-            font-weight: 600;
-            color: var(--charcoal);
             margin-bottom: 15px;
+            color: var(--charcoal);
         }
 
         .service-card p {
-            font-size: 15px;
-            color: #666;
+            color: var(--gray);
             line-height: 1.8;
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 120px 50px;
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials:before {
-            content: '"';
-            position: absolute;
-            top: -50px;
-            left: 50px;
-            font-family: 'Playfair Display', serif;
-            font-size: 400px;
-            color: rgba(255,255,255,0.03);
-            line-height: 1;
+            padding: 100px 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
         }
 
         .testimonials .section-tag {
@@ -586,45 +433,39 @@
             color: var(--white);
         }
 
-        .testimonials .section-subtitle {
-            color: rgba(255,255,255,0.8);
-        }
-
         .testimonials-grid {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonial-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            background: var(--white);
+            padding: 45px;
             border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.15);
+        .quote-icon {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: var(--primary);
+            opacity: 0.15;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            line-height: 1;
         }
 
-        .testimonial-stars {
-            color: var(--gold);
-            font-size: 18px;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
-        }
-
-        .testimonial-quote {
+        .testimonial-text {
             font-size: 17px;
-            color: var(--white);
             line-height: 1.8;
+            color: var(--charcoal);
             margin-bottom: 30px;
-            font-style: italic;
+            position: relative;
+            z-index: 2;
         }
 
         .testimonial-author {
@@ -636,25 +477,30 @@
         .author-avatar {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, var(--primary), var(--gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--white);
             font-weight: 700;
-            color: var(--charcoal);
             font-size: 18px;
         }
 
         .author-info h4 {
-            color: var(--white);
             font-weight: 600;
-            font-size: 15px;
+            color: var(--charcoal);
         }
 
-        .author-info p {
-            color: rgba(255,255,255,0.6);
+        .author-info span {
             font-size: 13px;
+            color: var(--gray);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 18px;
         }
 
         /* CTA Banner */
@@ -666,15 +512,14 @@
 
         .cta-banner h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            font-weight: 700;
+            font-size: 52px;
             color: var(--charcoal);
             margin-bottom: 20px;
         }
 
         .cta-banner p {
             font-size: 18px;
-            color: #666;
+            color: var(--gray);
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -688,104 +533,64 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(10px); }
-            60% { transform: translateY(5px); }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
         }
 
         /* Footer */
         footer {
             background: var(--charcoal);
-            padding: 80px 50px 30px;
+            padding: 80px 50px 40px;
             color: var(--white);
         }
 
         .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .footer-brand .logo {
-            color: var(--white);
-            display: inline-block;
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
             margin-bottom: 20px;
+            color: var(--white);
         }
 
         .footer-brand p {
-            color: rgba(255,255,255,0.6);
-            font-size: 15px;
+            color: #888;
             line-height: 1.8;
-            margin-bottom: 25px;
         }
 
-        .footer-social {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .social-link:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-section h4 {
+        .footer-column h4 {
             font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 25px;
             color: var(--gold);
         }
 
-        .footer-section p, .footer-section a {
-            color: rgba(255,255,255,0.6);
-            font-size: 15px;
-            line-height: 2;
+        .footer-column p, .footer-column a {
+            color: #888;
             text-decoration: none;
             display: block;
+            margin-bottom: 12px;
             transition: color 0.3s ease;
         }
 
-        .footer-section a:hover {
+        .footer-column a:hover {
             color: var(--white);
         }
 
         .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
+            border-top: 1px solid #333;
+            margin-top: 60px;
             padding-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-bottom p {
-            color: rgba(255,255,255,0.4);
-            font-size: 13px;
-        }
-
-        .footer-bottom a {
-            color: var(--gold);
-            text-decoration: none;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
         }
 
         /* Chat Widget */
@@ -796,26 +601,26 @@
             z-index: 1001;
         }
 
-        .chat-button {
+        .chat-toggle {
             width: 65px;
             height: 65px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border-radius: 50%;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 40px rgba(45, 80, 22, 0.4);
+            box-shadow: 0 8px 30px rgba(139, 69, 19, 0.4);
             transition: all 0.3s ease;
         }
 
-        .chat-button:hover {
+        .chat-toggle:hover {
             transform: scale(1.1);
-            box-shadow: 0 15px 50px rgba(45, 80, 22, 0.5);
+            box-shadow: 0 12px 40px rgba(139, 69, 19, 0.5);
         }
 
-        .chat-button svg {
+        .chat-toggle svg {
             width: 28px;
             height: 28px;
             fill: var(--white);
@@ -825,11 +630,11 @@
             position: absolute;
             bottom: 80px;
             right: 0;
-            width: 360px;
+            width: 340px;
             height: 480px;
             background: var(--white);
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
             display: none;
             flex-direction: column;
             overflow: hidden;
@@ -840,7 +645,7 @@
         }
 
         .chat-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             padding: 20px;
             display: flex;
             align-items: center;
@@ -848,37 +653,41 @@
         }
 
         .chat-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--white);
+            width: 45px;
+            height: 45px;
+            background: var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 20px;
-            color: var(--primary);
+            color: var(--charcoal);
+            font-size: 18px;
         }
 
-        .chat-header-info h3 {
+        .chat-header-info h4 {
             color: var(--white);
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 15px;
         }
 
-        .chat-header-info p {
-            color: rgba(255,255,255,0.8);
+        .chat-header-info span {
+            color: rgba(255,255,255,0.7);
             font-size: 12px;
         }
 
-        .chat-status {
+        .online-dot {
             width: 8px;
             height: 8px;
-            background: #4ade80;
+            background: #4CAF50;
             border-radius: 50%;
             display: inline-block;
             margin-right: 5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .chat-messages {
@@ -888,43 +697,46 @@
             background: #f9f9f9;
         }
 
-        .chat-message {
-            display: flex;
-            gap: 10px;
+        .message {
             margin-bottom: 15px;
         }
 
+        .message.bot {
+            display: flex;
+            gap: 10px;
+        }
+
         .message-avatar {
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             flex-shrink: 0;
         }
 
-        .message-content {
+        .message-bubble {
             background: var(--white);
             padding: 15px;
             border-radius: 15px;
             border-top-left-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            max-width: 250px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            max-width: 240px;
         }
 
-        .message-content p {
+        .message-bubble p {
             font-size: 14px;
-            color: var(--charcoal);
             line-height: 1.6;
+            color: var(--charcoal);
         }
 
         .chat-input {
-            padding: 15px 20px;
+            padding: 15px;
             background: var(--white);
             border-top: 1px solid #eee;
             display: flex;
@@ -955,12 +767,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .chat-input button:hover {
             background: var(--primary-dark);
-            transform: scale(1.05);
         }
 
         .chat-input button svg {
@@ -971,26 +782,25 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
+            .services-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .hero h1 {
-                font-size: 52px;
+                font-size: 48px;
             }
 
             .hero-visual {
                 display: none;
             }
 
-            .services-grid, .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .proof-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .social-proof {
+                flex-wrap: wrap;
+                gap: 50px;
             }
         }
 
@@ -1004,12 +814,153 @@
             }
 
             .hero {
-                padding: 140px 20px 60px;
+                padding: 40px 20px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 36px;
             }
 
-            .hero p {
-                font-size:
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .chat-panel {
+                width: 300px;
+                height: 420px;
+                right: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LVRG Claim Bar -->
+    <div class="claim-bar">
+        <span>This site was built for <strong>Misadventure & Co.</strong> by LVRG Agency.</span>
+        <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">MISADVENTURE<span>&</span>CO.</a>
+        <ul class="nav-links">
+            <li><a href="#spirits">Our Spirits</a></li>
+            <li><a href="#tasting">Tasting Room</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#visit" class="nav-cta">Visit Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🌿 Carbon Negative Craft Spirits</span>
+            <h1>Drink Better. <span>Waste Less.</span> Live Bold.</h1>
+            <p>Experience the world's first carbon-negative vodka, handcrafted from rescued baked goods right here in Vista, CA. Every sip supports sustainability without sacrificing award-winning taste.</p>
+            <div class="hero-ctas">
+                <a href="#tasting" class="btn-primary">
+                    Book a Tasting
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                </a>
+                <a href="#spirits" class="btn-secondary">Explore Our Vodka</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-circle circle-1"></div>
+            <div class="visual-circle circle-2"></div>
+            <div class="visual-circle circle-3"></div>
+            <div class="geometric-accent"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-shape"></div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="proof-item">
+            <div class="proof-number">18</div>
+            <div class="proof-label">Awards Won</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-number">#1</div>
+            <div class="proof-label">Carbon Negative Spirit</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-number">Only</div>
+            <div class="proof-label">Vodka From Baked Goods</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="spirits">
+        <div class="section-header">
+            <p class="section-tag">What We Offer</p>
+            <h2 class="section-title">Craft Spirits & Unforgettable Moments</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🥃</div>
+                <h3>Award-Winning Vodka</h3>
+                <p>Our signature spirit transforms surplus bakery goods into impossibly smooth, carbon-negative vodka that's earned 18 prestigious awards and counting.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍸</div>
+                <h3>Craft Cocktail Bar</h3>
+                <p>Step into our Vista tasting room for handcrafted cocktails, daily happy hour "Prohibition Hour" specials, and a rotating menu of seasonal creations.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎵</div>
+                <h3>Events & Entertainment</h3>
+                <p>From live music and trivia nights to murder mysteries and magic shows—every visit brings new adventures and unforgettable memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="reviews">
+        <div class="section-header">
+            <p class="section-tag">What People Are Saying</p>
+            <h2 class="section-title">Stories From Our Guests</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <span class="quote-icon">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">The smoothest vodka I've ever tasted, and knowing it's actually helping the planet makes every sip even better. The tasting room atmosphere in Vista is absolutely magical!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JM</div>
+                    <div class="author-info">
+                        <h4>Jessica M.</h4>
+                        <span>San Diego Local</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <span class="quote-icon">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">We hosted our company party here and it was incredible. The cocktails were phenomenal, the staff was amazing, and everyone left asking where they could buy bottles. Simply world-class.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RK</div>
+                    <div class="author-info">
+                        <h4>Robert K.</h4>
+                        <span>Private Event Host</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <span class="quote-icon">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Trivia night has become our weekly tradition. Great drinks, great food, great vibes. Misadventure is proof that doing good and having fun aren't mutually exclusive!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ST</div>
+                    <div class
