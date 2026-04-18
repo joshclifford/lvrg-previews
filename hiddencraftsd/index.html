@@ -1,490 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hidden Craft &mdash; 30+ Self-Serve Taps &middot; Downtown San Diego</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  :root{--steel:#1a1d21;--steel-dark:#0f1114;--steel-light:#2a2f35;--wood:#c89668;--wood-dark:#8b6239;--hops:#9dd948;--hops-dark:#6fa52e;--cream:#f4f0e8;--ink:#0a0b0d}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--steel-dark);color:var(--cream);font-family:'Space Grotesk',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  .container{max-width:1280px;margin:0 auto;padding:0 32px}
-  .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Craft | San Diego's Premier Self-Pour Craft Beer Bar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(15,17,20,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(157,217,72,0.15)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 32px}
-  .logo{font-family:'Archivo Black',sans-serif;font-size:22px;letter-spacing:-0.5px;color:var(--cream);display:flex;align-items:center;gap:10px}
-  .logo-dot{width:12px;height:12px;background:var(--hops);border-radius:50%;box-shadow:0 0 16px var(--hops)}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(244,240,232,0.75);transition:color .2s}
-  .nav-links a:hover{color:var(--hops)}
-  .btn{display:inline-block;padding:14px 26px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;transition:all .2s;font-weight:600}
-  .btn-primary{background:var(--hops);color:var(--ink)}
-  .btn-primary:hover{background:var(--hops-dark);color:var(--cream);transform:translate(2px,2px);box-shadow:-4px -4px 0 var(--hops)}
-  .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid var(--cream)}
-  .btn-ghost:hover{border-color:var(--hops);color:var(--hops)}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  .hero{padding:130px 0 80px;position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center}
-  .hero-bg{position:absolute;inset:0;background:
-    radial-gradient(circle at 15% 85%, rgba(200,150,104,0.15) 0%, transparent 40%),
-    radial-gradient(circle at 85% 20%, rgba(157,217,72,0.12) 0%, transparent 40%),
-    linear-gradient(180deg, var(--steel-dark) 0%, var(--steel) 100%)}
-  .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(157,217,72,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(157,217,72,0.04) 1px, transparent 1px);background-size:60px 60px;opacity:0.6}
-  .hero-inner{position:relative;z-index:2;width:100%}
-  .hero-tag{display:inline-flex;align-items:center;gap:12px;padding:8px 16px;border:1px solid var(--hops);border-radius:999px;margin-bottom:28px;background:rgba(157,217,72,0.08)}
-  .hero-tag-dot{width:8px;height:8px;background:var(--hops);border-radius:50%;box-shadow:0 0 10px var(--hops);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
-  .hero-tag-text{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--hops)}
-  h1{font-family:'Archivo Black',sans-serif;font-size:clamp(56px,9vw,128px);line-height:0.92;letter-spacing:-3px;color:var(--cream);margin-bottom:32px;text-transform:uppercase}
-  h1 .accent{color:var(--hops)}
-  h1 .stroke{-webkit-text-stroke:2px var(--cream);color:transparent}
-  .hero-sub{font-size:19px;line-height:1.6;color:rgba(244,240,232,0.75);max-width:540px;margin-bottom:44px;font-weight:400}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-stats{position:absolute;right:32px;top:140px;z-index:2;display:flex;flex-direction:column;gap:18px;text-align:right;max-width:280px}
-  .hero-stat{padding:18px 22px;background:rgba(26,29,33,0.8);border:1px solid rgba(157,217,72,0.2);backdrop-filter:blur(10px)}
-  .hero-stat-num{font-family:'Archivo Black',sans-serif;font-size:48px;line-height:1;color:var(--hops);letter-spacing:-2px}
-  .hero-stat-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,240,232,0.7);margin-top:6px}
+        :root {
+            --primary: #1a3a3a;
+            --primary-light: #2a5a5a;
+            --primary-dark: #0f2424;
+            --gold: #c9a962;
+            --gold-light: #e0c987;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f7f7f7;
+            --gray-200: #e5e5e5;
+            --gray-600: #666666;
+            --gray-800: #333333;
+            --black: #0a0a0a;
+        }
 
-  .ticker{background:var(--hops);color:var(--ink);padding:18px 0;overflow:hidden;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);white-space:nowrap}
-  .ticker-track{display:inline-flex;gap:40px;animation:scroll 40s linear infinite;font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:-0.5px;text-transform:uppercase}
-  .ticker-track span::after{content:' &#9670; ';color:var(--wood-dark);margin:0 12px}
-  @keyframes scroll{to{transform:translateX(-50%)}}
+        html {
+            scroll-behavior: smooth;
+        }
 
-  section{padding:120px 0}
-  .section-head{margin-bottom:72px;max-width:880px}
-  .section-head.center{text-align:center;margin-left:auto;margin-right:auto}
-  .section-kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--hops);margin-bottom:18px;display:flex;align-items:center;gap:10px}
-  .section-head.center .section-kicker{justify-content:center}
-  .section-kicker::before{content:'//';color:var(--wood)}
-  h2{font-family:'Archivo Black',sans-serif;font-size:clamp(44px,6vw,82px);line-height:0.95;letter-spacing:-2px;color:var(--cream);text-transform:uppercase}
-  h2 .accent{color:var(--hops)}
-  .section-sub{font-size:18px;color:rgba(244,240,232,0.72);margin-top:20px;max-width:620px}
-  .section-head.center .section-sub{margin-left:auto;margin-right:auto}
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
 
-  .services{background:var(--steel);position:relative}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-  .svc-card{padding:44px 38px;background:var(--steel);border:1px solid rgba(244,240,232,0.08);position:relative;transition:all .3s;overflow:hidden}
-  .svc-card:hover{background:var(--steel-dark);border-color:var(--hops)}
-  .svc-card:hover .svc-num{color:var(--hops)}
-  .svc-img{aspect-ratio:16/10;margin-bottom:28px;position:relative;overflow:hidden}
-  .svc-img.a{background:linear-gradient(135deg,var(--steel-light) 0%, var(--steel-dark) 100%)}
-  .svc-img.a::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg, transparent 0 24px, rgba(157,217,72,0.15) 24px 26px, transparent 26px 50px);animation:bars 4s linear infinite}
-  @keyframes bars{to{background-position:50px 0}}
-  .svc-img.b{background:linear-gradient(135deg,var(--wood-dark) 0%, var(--wood) 100%)}
-  .svc-img.b::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg, transparent 0 12px, rgba(0,0,0,0.1) 12px 13px)}
-  .svc-img.c{background:linear-gradient(135deg,var(--hops-dark) 0%, var(--hops) 100%)}
-  .svc-img.c::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(244,240,232,0.2) 0%, transparent 40%),radial-gradient(circle at 70% 70%, rgba(0,0,0,0.15) 0%, transparent 40%)}
-  .svc-img-label{position:absolute;bottom:16px;left:16px;font-family:'Archivo Black',sans-serif;font-size:28px;color:#fff;text-transform:uppercase;letter-spacing:-1px;z-index:2;text-shadow:0 4px 14px rgba(0,0,0,0.5)}
-  .svc-num{font-family:'Archivo Black',sans-serif;font-size:56px;color:rgba(244,240,232,0.15);line-height:1;margin-bottom:18px;transition:color .3s;letter-spacing:-2px}
-  .svc-title{font-family:'Archivo Black',sans-serif;font-size:26px;color:var(--cream);margin-bottom:14px;text-transform:uppercase;letter-spacing:-0.5px;line-height:1.1}
-  .svc-desc{font-size:15px;color:rgba(244,240,232,0.72);line-height:1.7;margin-bottom:22px}
-  .svc-link{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--hops);display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
-  .svc-link:hover{gap:14px}
+        /* LVRG Claim Bar */
+        .claim-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1001;
+            font-size: 13px;
+        }
 
-  .tests{background:var(--steel-dark);position:relative}
-  .tests::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--hops),transparent);opacity:0.3}
-  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .test-card{padding:40px 32px;background:var(--steel);border:1px solid rgba(244,240,232,0.1);position:relative;transition:all .3s}
-  .test-card:hover{border-color:var(--hops);transform:translateY(-4px)}
-  .test-stars{color:var(--hops);font-size:14px;letter-spacing:4px;margin-bottom:20px}
-  .test-quote{font-size:20px;line-height:1.45;color:var(--cream);margin-bottom:24px;font-weight:500}
-  .test-who{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--wood)}
+        .claim-bar-text {
+            color: #888;
+            font-weight: 400;
+        }
 
-  .chat-banner{background:linear-gradient(135deg,var(--hops) 0%, var(--hops-dark) 100%);color:var(--ink);padding:80px 0;position:relative;overflow:hidden}
-  .chat-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 30px,rgba(0,0,0,0.04) 30px 31px)}
-  .chat-banner-inner{text-align:center;max-width:720px;margin:0 auto;position:relative;z-index:2}
-  .chat-banner h3{font-family:'Archivo Black',sans-serif;font-size:48px;line-height:1;text-transform:uppercase;letter-spacing:-1.5px;margin-bottom:16px}
-  .chat-banner p{font-size:17px;margin-bottom:12px;font-weight:500}
-  .chat-banner .arrow{margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:600}
+        .claim-bar-text span {
+            color: var(--white);
+            font-weight: 500;
+        }
 
-  footer{background:var(--ink);padding:80px 0 30px;border-top:2px solid var(--hops)}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
-  .foot-logo{font-family:'Archivo Black',sans-serif;font-size:24px;color:var(--cream);margin-bottom:18px;display:flex;align-items:center;gap:10px}
-  .foot-logo-dot{width:12px;height:12px;background:var(--hops);border-radius:50%}
-  .foot-desc{font-size:14px;color:rgba(244,240,232,0.6);line-height:1.7;max-width:320px}
-  .foot-h{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--hops);text-transform:uppercase;margin-bottom:20px}
-  .foot-list{list-style:none;display:flex;flex-direction:column;gap:11px}
-  .foot-list a,.foot-list li{font-size:14px;color:rgba(244,240,232,0.65);transition:color .2s}
-  .foot-list a:hover{color:var(--hops)}
-  .foot-bottom{padding-top:30px;border-top:1px solid rgba(244,240,232,0.1);display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:rgba(244,240,232,0.45)}
-  .foot-bottom a{color:var(--hops)}
-  @media(max-width:900px){.nav-links a:not(:last-child){display:none}.hero-stats{display:none}.svc-grid,.test-grid,.foot-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-  <!-- LVRG CLAIM BAR -->
-  <div id="lvrg-bar" style="
-    position:fixed;top:0;left:0;right:0;z-index:99999;
-    background:rgba(0,0,0,0.92);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #5a8a3c40;
-    padding:10px 24px;
-    display:flex;align-items:center;justify-content:space-between;
-    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
-    font-size:13px;
-  ">
-    <span style="color:rgba(255,255,255,0.6);letter-spacing:0.3px;">
-      This site was built for <strong style="color:#fff;">Hidden Craft</strong> by 
-      <strong style="color:#5a8a3c;">LVRG Agency</strong> &mdash; at no cost.
-    </span>
-    <a href="https://theresandiego.com/advertise/" target="_blank" style="
-      background:#5a8a3c;
-      color:#000;
-      padding:7px 18px;
-      border-radius:3px;
-      font-size:12px;
-      font-weight:600;
-      letter-spacing:0.8px;
-      text-decoration:none;
-      white-space:nowrap;
-      margin-left:20px;
-      transition:opacity .2s;
-    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-      Claim This Site &rarr;
-    </a>
-  </div>
-  <script>
-    // Push page content down by bar height
-    document.addEventListener('DOMContentLoaded', function() {
-      var bar = document.getElementById('lvrg-bar');
-      var h = bar ? bar.offsetHeight : 44;
-      document.body.style.paddingTop = h + 'px';
-      // Also push any fixed nav down
-      var nav = document.querySelector('nav, .nav, header');
-      if (nav && nav.style.position === 'fixed' || (nav && getComputedStyle(nav).position === 'fixed')) {
-        nav.style.top = h + 'px';
-      }
-    });
-  </script>
+        .claim-btn {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
+        .claim-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
+        }
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="logo"><span class="logo-dot"></span>HIDDEN CRAFT</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#taps">Taps</a>
-      <a href="#events">Events</a>
-      <a href="#book" class="btn btn-primary">Book Event</a>
-    </div>
-  </div>
-</nav>
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 42px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26, 58, 58, 0.1);
+            transition: all 0.3s ease;
+        }
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid-bg"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-tag"><span class="hero-tag-dot"></span><span class="hero-tag-text">Open Now &middot; India &amp; C Street</span></div>
-      <h1>Pour by the<br/><span class="accent">ounce.</span><br/><span class="stroke">Stay by the</span><br/>hour.</h1>
-      <p class="hero-sub">30+ rotating self-serve taps of the best San Diego breweries pouring right now. Scratch kitchen. Dog-friendly patio. Live music. The most honest craft beer experience downtown.</p>
-      <div class="hero-ctas">
-        <a href="#book" class="btn btn-primary">Book Private Event</a>
-        <a href="#taps" class="btn btn-ghost">See What's On Tap</a>
-      </div>
-    </div>
-  </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">30+</div>
-      <div class="hero-stat-label">Self-serve taps</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">5.0</div>
-      <div class="hero-stat-label">Google average</div>
-    </div>
-  </div>
-</section>
+        .nav.scrolled {
+            padding: 12px 48px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
 
-<div class="ticker">
-  <div class="ticker-track">
-    <span>Self-pour taps</span><span>Local SD breweries</span><span>Scratch kitchen</span><span>Dog-friendly patio</span><span>Live music weekends</span><span>Private events</span><span>Catering available</span><span>Self-pour taps</span><span>Local SD breweries</span><span>Scratch kitchen</span><span>Dog-friendly patio</span><span>Live music weekends</span><span>Private events</span><span>Catering available</span>
-  </div>
-</div>
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-<section class="services" id="taps">
-  <div class="container">
-    <div class="section-head center">
-      <div class="section-kicker">What We Do</div>
-      <h2>Three ways to <span class="accent">show up.</span></h2>
-      <p class="section-sub">Grab a glass, book the patio, or ship the party to your office. Downtown San Diego's most flexible craft beer venue.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <div class="svc-img a"><span class="svc-img-label">Self-Pour</span></div>
-        <div class="svc-num">01</div>
-        <h3 class="svc-title">Self-Serve Taps</h3>
-        <p class="svc-desc">30+ rotating taps. Pay by the ounce &mdash; try a thousand different pours in one night without committing to a full pint. No bartender wait. All local.</p>
-        <a href="#" class="svc-link">See the rotation &rarr;</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-img b"><span class="svc-img-label">Kitchen</span></div>
-        <div class="svc-num">02</div>
-        <h3 class="svc-title">Scratch Kitchen</h3>
-        <p class="svc-desc">Signature tacos, loaded bowls, burgers that hold up to the beer, seasonal specials that rotate with what's fresh. The food is as serious as the taps.</p>
-        <a href="#" class="svc-link">See the menu &rarr;</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-img c"><span class="svc-img-label">Private</span></div>
-        <div class="svc-num">03</div>
-        <h3 class="svc-title">Private Events &amp; Catering</h3>
-        <p class="svc-desc">Birthdays, business mixers, holiday parties. Buy out the space or bring Hidden Craft to your office &mdash; we cater the beer and the food, you bring the crowd.</p>
-        <a href="#book" class="svc-link">Book your event &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
+        .logo span {
+            color: var(--gold);
+        }
 
-<section class="tests" id="events">
-  <div class="container">
-    <div class="section-head center">
-      <div class="section-kicker">The Word On The Street</div>
-      <h2>Five stars. <span class="accent">Downtown's</span> favorite.</h2>
-    </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">Super fun downtown spot. Fabulous food. The self-pour concept is unreal &mdash; we ended up trying nine different beers in one sitting.</p>
-        <div class="test-who">// Downtown Regular</div>
-      </div>
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">Unique self-pour concept. Great for dates, great for friend groups. Dog-friendly patio is the real MVP.</p>
-        <div class="test-who">// Yelp Review</div>
-      </div>
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">Had our holiday office party here. Beer, food, music &mdash; everyone talked about it for weeks. Booking again next year.</p>
-        <div class="test-who">// Private Event Host</div>
-      </div>
-    </div>
-  </div>
-</section>
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
 
-<div class="chat-banner" id="book">
-  <div class="container">
-    <div class="chat-banner-inner">
-      <div class="mono" style="color:var(--ink);margin-bottom:14px;font-weight:600">// Ask Us Anything</div>
-      <h3>What's on tap. What's open.<br/>What's possible.</h3>
-      <p>Chat with our AI beer guide 24/7 &mdash; book an event, plan catering, or just find out what's pouring tonight.</p>
-      <div class="arrow">↘ Tap the button below</div>
-    </div>
-  </div>
-</div>
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo"><span class="foot-logo-dot"></span>HIDDEN CRAFT</div>
-        <p class="foot-desc">30+ self-serve taps. Scratch kitchen. Dog-friendly patio. Live music. Downtown San Diego's most honest craft beer venue &mdash; at India &amp; C Street.</p>
-      </div>
-      <div>
-        <div class="foot-h">Visit</div>
-        <ul class="foot-list">
-          <li>India &amp; C Street</li>
-          <li>Little Italy / Downtown</li>
-          <li>San Diego, CA</li>
-        </ul>
-      </div>
-      <div>
-        <div class="foot-h">Hours</div>
-        <ul class="foot-list">
-          <li>Lunch &middot; Dinner &middot; Late</li>
-          <li>Happy Hour Daily</li>
-          <li>Live Music &middot; Weekends</li>
-          <li style="color:var(--hops)">Dog-friendly patio</li>
-        </ul>
-      </div>
-      <div>
-        <div class="foot-h">Navigate</div>
-        <ul class="foot-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#taps">Taps</a></li>
-          <li><a href="#book">Book Event</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© HIDDEN CRAFT &middot; ALL RIGHTS RESERVED</div>
-      <div>SITE BY <a href="#">LVRG AGENCY</a></div>
-    </div>
-  </div>
-</footer>
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
 
-<!-- Chat Widget -->
-<div id="lvrg-chat-widget">
-  <button id="lvrg-chat-toggle" aria-label="Open chat">
-    <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-    <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-  <div id="lvrg-chat-panel" aria-hidden="true">
-    <div class="lvrg-chat-header">
-      <div class="lvrg-chat-avatar">HC</div>
-      <div class="lvrg-chat-meta">
-        <div class="lvrg-chat-title">Hidden Craft</div>
-        <div class="lvrg-chat-sub"><span class="lvrg-chat-dot"></span>AI Beer Guide &middot; Online</div>
-      </div>
-    </div>
-    <div class="lvrg-chat-messages" id="lvrg-chat-messages">
-      <div class="lvrg-msg lvrg-msg-bot">
-        <div class="lvrg-msg-bubble">Hey &mdash; welcome to Hidden Craft 🍺 I can help you find the right pour from tonight's 30+ taps, book a private event, or quote catering for your office. What are you after?</div>
-      </div>
-    </div>
-    <form class="lvrg-chat-input" id="lvrg-chat-form">
-      <input type="text" id="lvrg-chat-field" placeholder="Taps, events, catering?" autocomplete="off" />
-      <button type="submit" aria-label="Send">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      </button>
-    </form>
-  </div>
-</div>
-<style>
-  #lvrg-chat-widget{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Space Grotesk',sans-serif}
-  #lvrg-chat-toggle{width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:var(--hops);color:var(--ink);box-shadow:0 10px 30px rgba(157,217,72,0.4),0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}
-  #lvrg-chat-toggle:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(157,217,72,0.6)}
-  #lvrg-chat-toggle:active{transform:scale(0.96)}
-  #lvrg-chat-panel{position:absolute;bottom:78px;right:0;width:320px;height:440px;background:var(--steel);border:1px solid rgba(157,217,72,0.3);border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6);display:flex;flex-direction:column;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.2,.9,.3,1.2)}
-  #lvrg-chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
-  .lvrg-chat-header{padding:16px 18px;display:flex;align-items:center;gap:12px;background:var(--steel-dark);color:var(--cream);border-bottom:2px solid var(--hops)}
-  .lvrg-chat-avatar{width:40px;height:40px;border-radius:6px;background:var(--hops);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;font-family:'Archivo Black',sans-serif;letter-spacing:-0.5px}
-  .lvrg-chat-title{font-family:'Archivo Black',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:-0.3px}
-  .lvrg-chat-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--hops);display:flex;align-items:center;gap:6px;margin-top:3px;text-transform:uppercase}
-  .lvrg-chat-dot{width:7px;height:7px;border-radius:50%;background:var(--hops);box-shadow:0 0 8px var(--hops)}
-  .lvrg-chat-messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:var(--steel)}
-  .lvrg-msg{display:flex}
-  .lvrg-msg-bot{justify-content:flex-start}
-  .lvrg-msg-user{justify-content:flex-end}
-  .lvrg-msg-bubble{max-width:78%;padding:10px 14px;border-radius:8px;font-size:13.5px;line-height:1.5}
-  .lvrg-msg-bot .lvrg-msg-bubble{background:var(--steel-light);color:var(--cream);border-bottom-left-radius:2px}
-  .lvrg-msg-user .lvrg-msg-bubble{background:var(--hops);color:var(--ink);border-bottom-right-radius:2px;font-weight:500}
-  .lvrg-chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(244,240,232,0.1);background:var(--steel-dark)}
-  .lvrg-chat-input input{flex:1;border:1px solid rgba(244,240,232,0.15);border-radius:4px;padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;background:var(--steel);color:var(--cream)}
-  .lvrg-chat-input input:focus{border-color:var(--hops)}
-  .lvrg-chat-input button{width:40px;border:none;border-radius:4px;cursor:pointer;background:var(--hops);color:var(--ink);display:flex;align-items:center;justify-content:center}
-  @media(max-width:480px){#lvrg-chat-panel{width:calc(100vw - 32px);right:-8px}}
-</style>
-<script>
-(function(){
-  var t=document.getElementById('lvrg-chat-toggle'),p=document.getElementById('lvrg-chat-panel'),o=document.getElementById('chat-icon-open'),c=document.getElementById('chat-icon-close'),f=document.getElementById('lvrg-chat-form'),i=document.getElementById('lvrg-chat-field'),m=document.getElementById('lvrg-chat-messages');
-  t.addEventListener('click',function(){var k=p.classList.toggle('open');p.setAttribute('aria-hidden',!k);o.style.display=k?'none':'block';c.style.display=k?'block':'none';if(k)setTimeout(function(){i.focus()},250)});
-  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;var u=document.createElement('div');u.className='lvrg-msg lvrg-msg-user';u.innerHTML='<div class="lvrg-msg-bubble"></div>';u.querySelector('.lvrg-msg-bubble').textContent=v;m.appendChild(u);i.value='';m.scrollTop=m.scrollHeight;setTimeout(function(){var b=document.createElement('div');b.className='lvrg-msg lvrg-msg-bot';b.innerHTML='<div class="lvrg-msg-bubble">Cool &mdash; drop your date + headcount and I\\'ll flag our events lead. For catering, we handle pickup + on-site. Dog-friendly patio holds about 40. 🍻</div>';m.appendChild(b);m.scrollTop=m.scrollHeight},700)});
-})();
-</script>
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-  <script>
-  // Inject real reviews
-  (function() {
-    var reviews = [{text: 'Super fun downtown spot. The self-pour concept is genius &mdash; try a flight of local breweries without committing to a full pint. Food was fabulous too.', author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "&#9733;&#9733;&#9733;&#9733;&#9733;"},
-{text: 'Dog-friendly patio, live music, and 30+ taps of rotating San Diego craft beer. This is the kind of place that makes you proud to live here.', author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "&#9733;&#9733;&#9733;&#9733;&#9733;"},
-{text: 'Best for lunch nearby. Delicious food, clean space, and a genuinely pleasant atmosphere. The chicken teriyaki bowl is a must.', author: 'Google Reviewer ⭐⭐⭐⭐⭐', stars: "&#9733;&#9733;&#9733;&#9733;&#9733;"}];
-    var accent = '#5a8a3c';
-    
-    // Find testimonial/review containers
-    var selectors = ['.testimonials', '.reviews', '.review-grid', '.testimonial-grid', 
-                     '[class*="testimonial"]', '[class*="review"]', '#testimonials', '#reviews'];
-    var container = null;
-    for (var s of selectors) {
-      container = document.querySelector(s);
-      if (container) break;
-    }
-    
-    if (!container) return; // fallback: just add to footer
-    
-    // Build review cards HTML
-    var html = reviews.map(function(r) {
-      return `
-        <div style="
-          background:rgba(255,255,255,0.04);
-          border:1px solid rgba(255,255,255,0.1);
-          border-radius:8px;padding:32px;
-          display:flex;flex-direction:column;gap:16px;
-          position:relative;
-        ">
-          <div style="color:${accent};font-size:20px;letter-spacing:2px;">${r.stars}</div>
-          <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);font-style:italic;">
-            "${r.text}"
-          </p>
-          <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">
-            &mdash; ${r.author}
-          </div>
-        </div>
-      `;
-    }).join('');
-    
-    // Try to find review cards inside and replace, or append
-    var existingCards = container.querySelectorAll('[class*="card"], [class*="item"], [class*="block"]');
-    if (existingCards.length > 0) {
-      // Replace existing card container's inner html
-      var grid = existingCards[0].parentElement;
-      grid.innerHTML = html;
-    } else {
-      // Just append a grid
-      var grid = document.createElement('div');
-      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;';
-      grid.innerHTML = html;
-      container.appendChild(grid);
-    }
-  })();
-  </script>
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-  <!-- NEW / OLD SITE TOGGLE -->
-  <div id="site-toggle" style="
-    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
-    z-index:99998;
-    background:rgba(0,0,0,0.88);
-    backdrop-filter:blur(14px);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:40px;
-    padding:6px 8px;
-    display:flex;gap:6px;align-items:center;
-    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
-    box-shadow:0 8px 32px rgba(0,0,0,0.5);
-  ">
-    <button onclick="showNewSite()" id="btn-new" style="
-      background:#5a8a3c;color:#000;border:none;
-      padding:9px 22px;border-radius:32px;
-      font-size:12px;font-weight:700;letter-spacing:0.8px;cursor:pointer;
-      transition:all .2s;
-    ">✦ New Site</button>
-    <button onclick="showOldSite()" id="btn-old" style="
-      background:transparent;color:rgba(255,255,255,0.5);border:none;
-      padding:9px 22px;border-radius:32px;
-      font-size:12px;font-weight:500;letter-spacing:0.8px;cursor:pointer;
-      transition:all .2s;
-    ">Old Site</button>
-  </div>
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
 
-      <iframe id="old-iframe" src="" style="flex:1;border:none;width:100%;background:#fff;" 
-      title="Hidden Craft current website"></iframe>
-  </div>
+        .nav-cta:hover {
+            background: transparent;
+            color: var(--primary);
+        }
 
-  <script>
-    function showNewSite() {
-      document.getElementById('old-site-overlay').style.display = 'none';
-      var btnNew = document.getElementById('btn-new');
-      var btnOld = document.getElementById('btn-old');
-      btnNew.style.background = '#5a8a3c';
-      btnNew.style.color = '#000';
-      btnOld.style.background = 'transparent';
-      btnOld.style.color = 'rgba(255,255,255,0.5)';
-    }
-    function showOldSite() {
-      window.open('https://hiddencraftsd.com', '_blank');
-    }
-      overlay.style.display = 'flex';
-      var btnNew = document.getElementById('btn-new');
-      var btnOld = document.getElementById('btn-old');
-      btnOld.style.background = 'rgba(255,255,255,0.15)';
-      btnOld.style.color = '#fff';
-      btnNew.style.background = 'transparent';
-      btnNew.style.color = 'rgba(255,255,255,0.5)';
-    }
-  </script>
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding: 160px 48px 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--white) 50%, rgba(201, 169, 98, 0.05) 100%);
+        }
 
-</body>
-</html>
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            opacity: 0.6;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(26, 58, 58, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(201, 169, 98, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 30% 70%, rgba(26, 58, 58, 0.05) 0%, transparent 30%);
+        }
+
+        .hero-geometric {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+        }
+
+        .geo-circle-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 3px solid var(--gold);
+            border-radius: 50%;
+            top: 50px;
+            right: 50px;
+            opacity: 0.6;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .geo-circle-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            top: 100px;
+            right: 100px;
+            opacity: 0.9;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        .geo-circle-3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50%;
+            top: 180px;
+            right: 180px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .geo-dots {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            right: 0;
+            background-image: radial-gradient(var(--primary) 2px, transparent 2px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .beer-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 30%, rgba(201, 169, 98, 0.8) 100%);
+            border-radius: 5px 5px 10px 10px;
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.1);
+        }
+
+        .beer-icon::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            right: 5px;
+            height: 20px;
+            background: #fff;
+            border-radius: 5px 5px 0 0;
+            opacity: 0.8;
+        }
+
+        .beer-icon::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -25px;
+            width: 20px;
+            height: 50px;
+            border: 4px solid var(--cream);
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 650px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.15);
+        }
+
+        .hero-badge::before {
+            content: '🍺';
+            font-size: 16px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 5vw, 68px);
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 30px rgba(26, 58, 58, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(26, 58, 58, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--primary);
+            padding: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-proof::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .stat {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 48px;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 64px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--cream);
+            border-radius: 24px;
+            padding: 48px 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(26, 58, 58, 0.12);
+            border-color: rgba(201, 169, 98, 0.2);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .service-link {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 120px 48px;
+            background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            color: var(--gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            line-height: 1;
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .testimonial-text {
+            font-size: 17px;
+            color: var(--gray-800);
+            line-height: 1.9;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .author-info span {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            padding: 100px 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.1) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 4vw, 52px);
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta-banner p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+            margin: 0 auto 36px;
+        }
+
+        .cta-banner .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--black);
+            padding: 80px 48px 40px;
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chat-toggle {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(26, 58, 58, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(26, 58, 58, 0.45);
+        }
+
+        .chat-toggle svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--white);
+        }
+
+        .chat-toggle .close-icon {
+            display: none;
+        }
+
+        .chat-widget.active .chat-toggle .chat-icon {
+            display: none;
+        }
+
+        .chat-widget.active .chat-toggle .close-icon {
+            display: block;
+        }
+
+        .chat-panel {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 360px;
+            height: 480px;
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+
+        .chat-widget.active .chat-panel {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .chat-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .chat-header-info h3 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .chat-header-info span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-header-info span::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+            background: var(--gray-100);
+        }
+
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .message-bubble {
+            background: var(--white);
+            padding: 14px 18px;
+            border-radius: 18px;
+            border-top-left-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            max-width: 240px;
+        }
+
+        .message-bubble p {
+            font-size: 14px;
+            color: var(--gray-800);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: var(--gray-600);
+            margin-top: 6px;
+        }
+
+        .chat-input-area {
+            padding: 16px 20px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 12px 18px;
+            font-size:
