@@ -1,494 +1,964 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bar Kamon — Taisho Roman Cocktail Bar, East Village San Diego</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Kamon | Hidden Speakeasy Cocktail Lounge | East Village San Diego</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap');
 
-  :root{
-    --navy:#0a1628;
-    --navy-deep:#050b17;
-    --gold:#c9a961;
-    --gold-bright:#e6c989;
-    --amber:#d4874a;
-    --cream:#f5ede0;
-    --paper:#1a2540;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--navy-deep);color:var(--cream);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .container{max-width:1240px;margin:0 auto;padding:0 32px}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* NAV */
-  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:rgba(5,11,23,0.75);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,97,0.15)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:0 32px}
-  .logo{font-family:'Cinzel',serif;font-size:22px;letter-spacing:4px;color:var(--gold);font-weight:500}
-  .logo span{color:var(--cream);font-weight:400}
-  .nav-links{display:flex;gap:36px;align-items:center}
-  .nav-links a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,237,224,0.75);transition:color .2s}
-  .nav-links a:hover{color:var(--gold)}
-  .btn{display:inline-block;padding:14px 28px;border-radius:2px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;transition:all .3s;font-family:inherit}
-  .btn-primary{background:var(--gold);color:var(--navy-deep)}
-  .btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,169,97,0.25)}
-  .btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,237,224,0.3)}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+        :root {
+            --primary: #2d2d2d;
+            --gold: #c9a959;
+            --gold-light: #d4b86a;
+            --cream: #f5f0e8;
+            --dark: #1a1a1a;
+            --charcoal: #3d3d3d;
+        }
 
-  /* HERO */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 100px;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background:
-    radial-gradient(ellipse at 20% 50%, rgba(212,135,74,0.18) 0%, transparent 45%),
-    radial-gradient(ellipse at 80% 30%, rgba(201,169,97,0.12) 0%, transparent 50%),
-    linear-gradient(180deg, #050b17 0%, #0a1628 50%, #050b17 100%);
-    z-index:0}
-  .hero-bg::before{content:'';position:absolute;inset:0;background-image:
-    repeating-linear-gradient(45deg, transparent 0 40px, rgba(201,169,97,0.03) 40px 41px),
-    repeating-linear-gradient(-45deg, transparent 0 40px, rgba(201,169,97,0.03) 40px 41px);}
-  .hero-deco{position:absolute;top:50%;right:8%;width:420px;height:420px;transform:translateY(-50%);opacity:0.18;z-index:1}
-  .hero-deco svg{width:100%;height:100%}
-  .hero-inner{position:relative;z-index:2;max-width:800px}
-  .eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:32px}
-  .eyebrow::before,.eyebrow::after{content:'';width:36px;height:1px;background:var(--gold)}
-  h1.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:500;line-height:1.02;letter-spacing:-1.5px;color:var(--cream);margin-bottom:28px}
-  h1.hero-title em{font-style:italic;color:var(--gold);font-weight:400}
-  .hero-sub{font-size:19px;line-height:1.65;color:rgba(245,237,224,0.72);max-width:560px;margin-bottom:44px;font-weight:300}
-  .hero-ctas{display:flex;gap:18px;flex-wrap:wrap}
+        html {
+            scroll-behavior: smooth;
+        }
 
-  /* SOCIAL PROOF */
-  .proof{padding:40px 0;border-top:1px solid rgba(201,169,97,0.15);border-bottom:1px solid rgba(201,169,97,0.15);background:var(--navy-deep)}
-  .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;align-items:center;text-align:center}
-  .proof-item{display:flex;flex-direction:column;gap:6px}
-  .proof-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--gold);font-weight:500;line-height:1}
-  .proof-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(245,237,224,0.55)}
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--primary);
+            color: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  /* SECTION HEADER */
-  section{padding:120px 0;position:relative}
-  .section-head{text-align:center;margin-bottom:72px;max-width:640px;margin-left:auto;margin-right:auto}
-  .section-kicker{font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
-  h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,60px);font-weight:500;line-height:1.1;letter-spacing:-0.5px;color:var(--cream)}
-  .section-sub{font-size:17px;color:rgba(245,237,224,0.65);margin-top:16px;font-weight:300}
+        /* LVRG Claim Bar */
+        .lvrg-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            font-size: 13px;
+        }
 
-  /* SERVICES */
-  .services{background:linear-gradient(180deg,var(--navy-deep) 0%, #0a1628 100%)}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .svc-card{background:linear-gradient(170deg, rgba(26,37,64,0.7) 0%, rgba(10,22,40,0.9) 100%);border:1px solid rgba(201,169,97,0.2);padding:44px 36px;border-radius:4px;position:relative;overflow:hidden;transition:all .4s}
-  .svc-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,0.4)}
-  .svc-card::before{content:'';position:absolute;top:0;left:0;width:60px;height:60px;border-top:1px solid var(--gold);border-left:1px solid var(--gold);opacity:0.5}
-  .svc-card::after{content:'';position:absolute;bottom:0;right:0;width:60px;height:60px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold);opacity:0.5}
-  .svc-num{font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;color:var(--gold);margin-bottom:24px}
-  .svc-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--cream);margin-bottom:14px;line-height:1.2}
-  .svc-desc{font-size:15px;color:rgba(245,237,224,0.68);line-height:1.7;font-weight:300}
+        .lvrg-bar p {
+            color: #888;
+        }
 
-  /* TESTIMONIALS */
-  .tests{background:var(--navy-deep);position:relative}
-  .tests::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(201,169,97,0.06) 0%, transparent 60%)}
-  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
-  .test-card{padding:40px 32px;position:relative}
-  .test-quote-mark{font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold);line-height:0.6;margin-bottom:20px;opacity:0.7}
-  .test-quote{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--cream);line-height:1.4;margin-bottom:24px;font-weight:400}
-  .test-who{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+        .lvrg-bar span {
+            color: var(--gold);
+        }
 
-  /* CHAT BANNER */
-  .chat-banner{background:linear-gradient(135deg, #0a1628 0%, #1a2540 100%);border-top:1px solid rgba(201,169,97,0.25);border-bottom:1px solid rgba(201,169,97,0.25);padding:80px 0}
-  .chat-banner-inner{text-align:center;max-width:640px;margin:0 auto}
-  .chat-banner h3{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--cream);margin-bottom:16px;font-weight:500}
-  .chat-banner p{font-size:17px;color:rgba(245,237,224,0.7);margin-bottom:8px;font-weight:300}
-  .chat-banner .arrow{margin-top:28px;font-size:14px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+        .lvrg-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
 
-  /* FOOTER */
-  footer{background:#030811;padding:80px 0 30px;border-top:1px solid rgba(201,169,97,0.15)}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
-  .foot-brand{max-width:320px}
-  .foot-logo{font-family:'Cinzel',serif;font-size:20px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
-  .foot-desc{font-size:14px;color:rgba(245,237,224,0.55);line-height:1.7}
-  .foot-h{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
-  .foot-list{list-style:none;display:flex;flex-direction:column;gap:10px}
-  .foot-list a,.foot-list li{font-size:14px;color:rgba(245,237,224,0.65);transition:color .2s}
-  .foot-list a:hover{color:var(--gold)}
-  .foot-bottom{padding-top:30px;border-top:1px solid rgba(201,169,97,0.1);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(245,237,224,0.4)}
-  .foot-bottom a{color:var(--gold)}
+        .lvrg-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 169, 89, 0.4);
+        }
 
-  @media (max-width:900px){
-    .nav-links a:not(:last-child){display:none}
-    .hero-deco{display:none}
-    .proof-grid{grid-template-columns:repeat(2,1fr);gap:30px}
-    .svc-grid,.test-grid,.foot-grid{grid-template-columns:1fr}
-  }
-</style>
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 42px;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            border-bottom: 1px solid rgba(201, 169, 89, 0.2);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 160px 60px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(201, 169, 89, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 169, 89, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(45, 45, 45, 1) 0%, rgba(26, 26, 26, 1) 100%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            background-image: 
+                repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%),
+                repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .hero-tagline {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--cream);
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: rgba(245, 240, 232, 0.7);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(201, 169, 89, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(245, 240, 232, 0.3);
+            color: var(--cream);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .hero-visual {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(201, 169, 89, 0.2);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            border: 1px solid rgba(201, 169, 89, 0.15);
+            border-radius: 50%;
+        }
+
+        .hero-visual::after {
+            content: '';
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            border: 1px solid rgba(201, 169, 89, 0.1);
+            border-radius: 50%;
+        }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--dark);
+            padding: 60px;
+            border-top: 1px solid rgba(201, 169, 89, 0.1);
+            border-bottom: 1px solid rgba(201, 169, 89, 0.1);
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .proof-item {
+            position: relative;
+        }
+
+        .proof-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 1px;
+            background: rgba(201, 169, 89, 0.2);
+        }
+
+        .proof-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .proof-label {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(245, 240, 232, 0.6);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 60px;
+            background: var(--primary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(180deg, rgba(61, 61, 61, 0.5) 0%, rgba(45, 45, 45, 0.3) 100%);
+            border: 1px solid rgba(201, 169, 89, 0.15);
+            padding: 50px 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(201, 169, 89, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 30px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--cream);
+        }
+
+        .service-card p {
+            color: rgba(245, 240, 232, 0.6);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 60px;
+            background: var(--dark);
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 200px;
+            color: rgba(201, 169, 89, 0.05);
+            line-height: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-card {
+            padding: 40px;
+            background: rgba(45, 45, 45, 0.3);
+            border: 1px solid rgba(201, 169, 89, 0.1);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial-card blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--cream);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--cream);
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: rgba(245, 240, 232, 0.5);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 89, 0.03) 0%, transparent 50%);
+            animation: pulse 10s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--cream);
+        }
+
+        .cta-banner p {
+            font-size: 16px;
+            color: rgba(245, 240, 232, 0.6);
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 80px 60px 40px;
+            border-top: 1px solid rgba(201, 169, 89, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .footer-brand .logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: rgba(245, 240, 232, 0.5);
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--cream);
+            margin-bottom: 25px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(245, 240, 232, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-hours {
+            color: rgba(245, 240, 232, 0.5);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-hours span {
+            color: var(--cream);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 169, 89, 0.1);
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(245, 240, 232, 0.4);
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        .chat-toggle {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(201, 169, 89, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-toggle svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--dark);
+        }
+
+        .chat-panel {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 340px;
+            height: 480px;
+            background: var(--dark);
+            border: 1px solid rgba(201, 169, 89, 0.2);
+            border-radius: 12px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .chat-panel.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--charcoal), var(--primary));
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(201, 169, 89, 0.2);
+        }
+
+        .chat-avatar {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .chat-info h4 {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--cream);
+            margin-bottom: 3px;
+        }
+
+        .chat-info p {
+            font-size: 12px;
+            color: var(--gold);
+        }
+
+        .chat-status {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            margin-left: auto;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            background: rgba(201, 169, 89, 0.1);
+            border: 1px solid rgba(201, 169, 89, 0.2);
+            padding: 15px 18px;
+            border-radius: 12px;
+            border-top-left-radius: 4px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--cream);
+        }
+
+        .chat-input-area {
+            padding: 15px;
+            border-top: 1px solid rgba(201, 169, 89, 0.1);
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(45, 45, 45, 0.5);
+            border: 1px solid rgba(201, 169, 89, 0.2);
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 14px;
+            color: var(--cream);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .chat-input::placeholder {
+            color: rgba(245, 240, 232, 0.4);
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .chat-send {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send:hover {
+            transform: scale(1.05);
+        }
+
+        .chat-send svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .proof-item:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lvrg-bar {
+                padding: 10px 20px;
+                font-size: 11px;
+            }
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 140px 20px 60px;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .services,
+            .testimonials,
+            .cta-banner {
+                padding: 80px 20px;
+            }
+
+            footer {
+                padding: 60px 20px 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .chat-panel {
+                width: 300px;
+                height: 420px;
+                right: -10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- LVRG CLAIM BAR -->
-  <div id="lvrg-bar" style="
-    position:fixed;top:0;left:0;right:0;z-index:99999;
-    background:rgba(0,0,0,0.92);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #c9a96140;
-    padding:10px 24px;
-    display:flex;align-items:center;justify-content:space-between;
-    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
-    font-size:13px;
-  ">
-    <span style="color:rgba(255,255,255,0.6);letter-spacing:0.3px;">
-      This site was built for <strong style="color:#fff;">Bar Kamon</strong> by 
-      <strong style="color:#c9a961;">LVRG Agency</strong>.
-    </span>
-    <a href="https://theresandiego.com/advertise/" target="_blank" style="
-      background:#c9a961;
-      color:#000;
-      padding:7px 18px;
-      border-radius:3px;
-      font-size:12px;
-      font-weight:600;
-      letter-spacing:0.8px;
-      text-decoration:none;
-      white-space:nowrap;
-      margin-left:20px;
-      transition:opacity .2s;
-    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-      Claim This Site →
-    </a>
-  </div>
-  <script>
-    // Push page content down by bar height
-    document.addEventListener('DOMContentLoaded', function() {
-      var bar = document.getElementById('lvrg-bar');
-      var h = bar ? bar.offsetHeight : 44;
-      document.body.style.paddingTop = h + 'px';
-      // Also push any fixed nav down
-      var nav = document.querySelector('nav, .nav, header');
-      if (nav && nav.style.position === 'fixed' || (nav && getComputedStyle(nav).position === 'fixed')) {
-        nav.style.top = h + 'px';
-      }
-    });
-  </script>
-
-
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="logo">BAR <span>KAMON</span></div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#events">Private Events</a>
-      <a href="#book" class="btn btn-primary">Reserve</a>
+    <!-- LVRG Claim Bar -->
+    <div class="lvrg-bar">
+        <p>This site was built for <span>Bar Kamon</span> by LVRG Agency.</p>
+        <a href="https://theresandiego.com/advertise/" class="lvrg-btn">Claim This Site →</a>
     </div>
-  </div>
-</nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-deco" aria-hidden="true">
-    <svg viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="95" fill="none" stroke="#c9a961" stroke-width="0.5"/>
-      <circle cx="100" cy="100" r="70" fill="none" stroke="#c9a961" stroke-width="0.5"/>
-      <circle cx="100" cy="100" r="45" fill="none" stroke="#c9a961" stroke-width="0.5"/>
-      <path d="M100 5 L100 195 M5 100 L195 100 M30 30 L170 170 M170 30 L30 170" stroke="#c9a961" stroke-width="0.3"/>
-      <polygon points="100,25 115,85 175,85 127,120 145,180 100,145 55,180 73,120 25,85 85,85" fill="none" stroke="#c9a961" stroke-width="0.6"/>
-    </svg>
-  </div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="eyebrow">Est. A Hidden Door</div>
-      <h1 class="hero-title">Behind the door, <em>a quieter</em> San Diego.</h1>
-      <p class="hero-sub">A Taisho Roman-inspired Japanese cocktail bar tucked inside East Village. Crystal chandeliers, wood-paneled walls, and cocktails that take thirty years of craft to pour in four minutes.</p>
-      <div class="hero-ctas">
-        <a href="#events" class="btn btn-primary">Book a Private Event</a>
-        <a href="#menu" class="btn btn-ghost">Explore the Menu</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="proof">
-  <div class="container">
-    <div class="proof-grid">
-      <div class="proof-item"><div class="proof-num">6</div><div class="proof-label">Master Bartenders</div></div>
-      <div class="proof-item"><div class="proof-num">15<span style="font-size:24px">yrs</span></div><div class="proof-label">Peak Craft Experience</div></div>
-      <div class="proof-item"><div class="proof-num">10</div><div class="proof-label">Guest Buyouts</div></div>
-      <div class="proof-item"><div class="proof-num">1920</div><div class="proof-label">Taisho Roman Era</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="menu" class="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">The Experience</div>
-      <h2>Three ways to find the door.</h2>
-      <p class="section-sub">Whether you're a regular, a first-timer, or planning the night of someone's life — Bar Kamon opens for each differently.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <div class="svc-num">Ⅰ · Signature</div>
-        <h3 class="svc-title">Clarified Craft Cocktails</h3>
-        <p class="svc-desc">Clarified Tokyo Banana. Hojicha-Infused Negroni. Every pour on our menu is the result of months of testing, layered ingredients, and Japanese precision — served at exactly the temperature the drink was designed for.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">Ⅱ · Private</div>
-        <h3 class="svc-title">Intimate Buyouts for 10</h3>
-        <p class="svc-desc">Birthdays that feel like a film set. Anniversaries with a bespoke menu. Corporate nights where no one checks their phone. Take the entire room — we'll tailor the cocktails to your guest list.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">Ⅲ · Discover</div>
-        <h3 class="svc-title">The Secret Door</h3>
-        <p class="svc-desc">Enter through Asa Cafe &amp; Bakery. Push the right panel. Step into a world of crystal, brass, and dim amber light. First-timers welcome — the staff will guide you to your first pour.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tests">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Whispered About</div>
-      <h2>What guests say after the door closes.</h2>
-    </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="test-quote-mark">"</div>
-        <p class="test-quote">A speakeasy tucked behind a secret door — the kind of place you end up telling everyone about, quietly.</p>
-        <div class="test-who">— East Village Regular</div>
-      </div>
-      <div class="test-card">
-        <div class="test-quote-mark">"</div>
-        <p class="test-quote">The atmosphere is unreal. Every cocktail feels like it was designed just for you. San Diego's best-kept secret.</p>
-        <div class="test-who">— Yelp Review</div>
-      </div>
-      <div class="test-card">
-        <div class="test-quote-mark">"</div>
-        <p class="test-quote">We booked the buyout for my wife's 40th. Bartenders wrote us a custom menu. She still talks about it.</p>
-        <div class="test-who">— Private Event Guest</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="chat-banner" id="book">
-  <div class="container">
-    <div class="chat-banner-inner">
-      <div class="section-kicker">Ask the Bar</div>
-      <h3>Questions about the menu? Planning an event?</h3>
-      <p>Chat with our AI cocktail guide — available 24/7. Book a private event, ask about the menu, or get directions to the secret door.</p>
-      <div class="arrow">Tap the chat icon below ↘</div>
-    </div>
-  </div>
-</div>
-
-<footer id="events">
-  <div class="container">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="foot-logo">BAR KAMON</div>
-        <p class="foot-desc">A 1920's Taisho Roman–inspired Japanese craft cocktail bar, hidden in East Village San Diego behind the door at Asa Cafe &amp; Bakery.</p>
-      </div>
-      <div>
-        <div class="foot-h">Visit</div>
-        <ul class="foot-list">
-          <li>East Village</li>
-          <li>San Diego, CA</li>
-          <li>Enter via Asa Cafe</li>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">BAR KAMON</a>
+        <ul class="nav-links">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#cocktails">Cocktails</a></li>
+            <li><a href="#events">Private Events</a></li>
+            <li><a href="#visit">Visit</a></li>
         </ul>
-      </div>
-      <div>
-        <div class="foot-h">Hours</div>
-        <ul class="foot-list">
-          <li>Wed–Thu · 5:30–10pm</li>
-          <li>Fri–Sat · 5:30–11pm</li>
-          <li>Sun · 5:30–10pm</li>
-          <li>Closed Mondays &amp; Tuesdays</li>
-          <li style="color:var(--gold)">21+ Only</li>
-        </ul>
-      </div>
-      <div>
-        <div class="foot-h">Site</div>
-        <ul class="foot-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#events">Private Events</a></li>
-          <li><a href="#book">Reservations</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div>© Bar Kamon · All rights reserved</div>
-      <div>Site crafted by <a href="#">LVRG Agency</a></div>
-    </div>
-  </div>
-</footer>
+        <a href="#reserve" class="nav-cta">Reserve a Table</a>
+    </nav>
 
-<!-- Chat Widget -->
-<div id="lvrg-chat-widget">
-  <button id="lvrg-chat-toggle" aria-label="Open chat">
-    <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-    <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-  <div id="lvrg-chat-panel" aria-hidden="true">
-    <div class="lvrg-chat-header">
-      <div class="lvrg-chat-avatar">K</div>
-      <div class="lvrg-chat-meta">
-        <div class="lvrg-chat-title">Bar Kamon</div>
-        <div class="lvrg-chat-sub"><span class="lvrg-chat-dot"></span>AI Cocktail Guide · Online</div>
-      </div>
-    </div>
-    <div class="lvrg-chat-messages" id="lvrg-chat-messages">
-      <div class="lvrg-msg lvrg-msg-bot">
-        <div class="lvrg-msg-bubble">Welcome — step through the door. I can help you book a private event for up to 10 guests, recommend a cocktail from tonight's menu, or tell you how to find us behind Asa Cafe. Where shall we begin?</div>
-      </div>
-    </div>
-    <form class="lvrg-chat-input" id="lvrg-chat-form">
-      <input type="text" id="lvrg-chat-field" placeholder="Ask about a cocktail or event…" autocomplete="off" />
-      <button type="submit" aria-label="Send">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      </button>
-    </form>
-  </div>
-</div>
-<style>
-  #lvrg-chat-widget{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter',sans-serif}
-  #lvrg-chat-toggle{width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;background:var(--gold);color:var(--navy-deep);box-shadow:0 10px 30px rgba(201,169,97,0.35),0 2px 6px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}
-  #lvrg-chat-toggle:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(201,169,97,0.45)}
-  #lvrg-chat-toggle:active{transform:scale(0.96)}
-  #lvrg-chat-panel{position:absolute;bottom:78px;right:0;width:320px;height:440px;background:#f5ede0;border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 6px 18px rgba(0,0,0,0.3);display:flex;flex-direction:column;transform:translateY(16px) scale(.96);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.2,.9,.3,1.2)}
-  #lvrg-chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
-  .lvrg-chat-header{padding:18px;display:flex;align-items:center;gap:12px;background:#0a1628;color:#f5ede0;border-bottom:2px solid var(--gold)}
-  .lvrg-chat-avatar{width:40px;height:40px;border-radius:50%;background:var(--gold);color:#0a1628;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;font-family:'Cinzel',serif}
-  .lvrg-chat-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;letter-spacing:1px}
-  .lvrg-chat-sub{font-size:11px;letter-spacing:1.5px;color:var(--gold);display:flex;align-items:center;gap:6px;margin-top:2px;text-transform:uppercase}
-  .lvrg-chat-dot{width:7px;height:7px;border-radius:50%;background:#22c55e}
-  .lvrg-chat-messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;background:#f5ede0}
-  .lvrg-msg{display:flex}
-  .lvrg-msg-bot{justify-content:flex-start}
-  .lvrg-msg-user{justify-content:flex-end}
-  .lvrg-msg-bubble{max-width:78%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5}
-  .lvrg-msg-bot .lvrg-msg-bubble{background:#fff;color:#0a1628;border:1px solid rgba(201,169,97,0.3);border-bottom-left-radius:4px}
-  .lvrg-msg-user .lvrg-msg-bubble{background:#0a1628;color:var(--gold);border-bottom-right-radius:4px}
-  .lvrg-chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(10,22,40,0.15);background:#f5ede0}
-  .lvrg-chat-input input{flex:1;border:1px solid rgba(10,22,40,0.2);border-radius:6px;padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;background:#fff;color:#0a1628}
-  .lvrg-chat-input input:focus{border-color:var(--gold)}
-  .lvrg-chat-input button{width:40px;border:none;border-radius:6px;cursor:pointer;background:#0a1628;color:var(--gold);display:flex;align-items:center;justify-content:center}
-  .lvrg-chat-input button:hover{background:var(--gold);color:#0a1628}
-  @media(max-width:480px){#lvrg-chat-panel{width:calc(100vw - 32px);right:-8px}}
-</style>
-<script>
-(function(){
-  var t=document.getElementById('lvrg-chat-toggle'),p=document.getElementById('lvrg-chat-panel'),o=document.getElementById('chat-icon-open'),c=document.getElementById('chat-icon-close'),f=document.getElementById('lvrg-chat-form'),i=document.getElementById('lvrg-chat-field'),m=document.getElementById('lvrg-chat-messages');
-  t.addEventListener('click',function(){var k=p.classList.toggle('open');p.setAttribute('aria-hidden',!k);o.style.display=k?'none':'block';c.style.display=k?'block':'none';if(k)setTimeout(function(){i.focus()},250)});
-  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;var u=document.createElement('div');u.className='lvrg-msg lvrg-msg-user';u.innerHTML='<div class="lvrg-msg-bubble"></div>';u.querySelector('.lvrg-msg-bubble').textContent=v;m.appendChild(u);i.value='';m.scrollTop=m.scrollHeight;setTimeout(function(){var b=document.createElement('div');b.className='lvrg-msg lvrg-msg-bot';b.innerHTML='<div class="lvrg-msg-bubble">Lovely question. A member of our team will follow up shortly — or you can reserve directly for your evening above. In the meantime, tell me: is this for an intimate pair or a private buyout?</div>';m.appendChild(b);m.scrollTop=m.scrollHeight},700)});
-})();
-</script>
-
-  <script>
-  // Inject real reviews
-  (function() {
-    var reviews = [{text: "The hidden-door entrance alone is worth the visit. Once you're inside, the atmosphere is unlike anything else in San Diego — wood paneling, chandeliers, and cocktails that actually surprise you.", author: 'Google Reviewer', stars: "★★★★★"},
-{text: 'Booked the Kamon Lounge for a birthday. The team went above and beyond — intimate, sophisticated, and the cocktail menu blew everyone away.', author: 'Google Reviewer', stars: "★★★★★"},
-{text: 'Best speakeasy experience in East Village. The Hojicha Negroni is something special. Staff clearly know their craft.', author: 'Google Reviewer', stars: "★★★★★"}];
-    var accent = '#c9a961';
-    
-    // Find testimonial/review containers
-    var selectors = ['.testimonials', '.reviews', '.review-grid', '.testimonial-grid', 
-                     '[class*="testimonial"]', '[class*="review"]', '#testimonials', '#reviews'];
-    var container = null;
-    for (var s of selectors) {
-      container = document.querySelector(s);
-      if (container) break;
-    }
-    
-    if (!container) return; // fallback: just add to footer
-    
-    // Build review cards HTML
-    var html = reviews.map(function(r) {
-      return `
-        <div style="
-          background:rgba(255,255,255,0.04);
-          border:1px solid rgba(255,255,255,0.1);
-          border-radius:8px;padding:32px;
-          display:flex;flex-direction:column;gap:16px;
-          position:relative;
-        ">
-          <div style="color:${accent};font-size:20px;letter-spacing:2px;">${r.stars}</div>
-          <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);font-style:italic;">
-            "${r.text}"
-          </p>
-          <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">
-            — ${r.author}
-          </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-visual"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">East Village's Hidden Secret</p>
+            <h1>Where Every Cocktail Tells a <span>Story</span></h1>
+            <p class="hero-sub">Step through the secret door into San Diego's most sophisticated speakeasy. Japanese-inspired craft cocktails await behind the unassuming facade of Asa Cafe.</p>
+            <div class="hero-ctas">
+                <a href="#reserve" class="btn-primary">Book Your Experience</a>
+                <a href="#cocktails" class="btn-secondary">Explore Our Craft</a>
+            </div>
         </div>
-      `;
-    }).join('');
-    
-    // Try to find review cards inside and replace, or append
-    var existingCards = container.querySelectorAll('[class*="card"], [class*="item"], [class*="block"]');
-    if (existingCards.length > 0) {
-      // Replace existing card container's inner html
-      var grid = existingCards[0].parentElement;
-      grid.innerHTML = html;
-    } else {
-      // Just append a grid
-      var grid = document.createElement('div');
-      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;';
-      grid.innerHTML = html;
-      container.appendChild(grid);
-    }
-  })();
-  </script>
+    </section>
 
-  <!-- NEW / OLD SITE TOGGLE -->
-  <div id="site-toggle" style="
-    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
-    z-index:99998;
-    background:rgba(0,0,0,0.88);
-    backdrop-filter:blur(14px);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:40px;
-    padding:6px 8px;
-    display:flex;gap:6px;align-items:center;
-    font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
-    box-shadow:0 8px 32px rgba(0,0,0,0.5);
-  ">
-    <button onclick="showNewSite()" id="btn-new" style="
-      background:#c9a961;color:#000;border:none;
-      padding:9px 22px;border-radius:32px;
-      font-size:12px;font-weight:700;letter-spacing:0.8px;cursor:pointer;
-      transition:all .2s;
-    ">✦ New Site</button>
-    <button onclick="showOldSite()" id="btn-old" style="
-      background:transparent;color:rgba(255,255,255,0.5);border:none;
-      padding:9px 22px;border-radius:32px;
-      font-size:12px;font-weight:500;letter-spacing:0.8px;cursor:pointer;
-      transition:all .2s;
-    ">Old Site</button>
-  </div>
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <div class="proof-number">15+</div>
+                <div class="proof-label">Years Master Bartending</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">1920s</div>
+                <div class="proof-label">Authentic Speakeasy Era</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">21+</div>
+                <div class="proof-label">Exclusive Adult Experience</div>
+            </div>
+        </div>
+    </section>
 
-      <iframe id="old-iframe" src="" style="flex:1;border:none;width:100%;background:#fff;" 
-      title="Bar Kamon current website"></iframe>
-  </div>
+    <!-- Services Section -->
+    <section class="services" id="cocktails">
+        <div class="section-header">
+            <span class="section-tag">Our Offerings</span>
+            <h2 class="section-title">Crafted for the Discerning Palate</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🥃</div>
+                <h3>Japanese Craft Cocktails</h3>
+                <p>Innovative libations blending traditional Japanese techniques with premium spirits. Each cocktail is a masterwork of balance, precision, and artistry.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍱</div>
+                <h3>Japanese Cuisine</h3>
+                <p>Elevated small plates designed to complement your cocktail journey. Authentic Japanese flavors meet contemporary San Diego sensibilities.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎊</div>
+                <h3>Private Events</h3>
+                <p>Transform our intimate speakeasy into your exclusive venue. Full buyouts available for celebrations, corporate gatherings, and unforgettable moments.</p>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function showNewSite() {
-      document.getElementById('old-site-overlay').style.display = 'none';
-      var btnNew = document.getElementById('btn-new');
-      var btnOld = document.getElementById('btn-old');
-      btnNew.style.background = '#c9a961';
-      btnNew.style.color = '#000';
-      btnOld.style.background = 'transparent';
-      btnOld.style.color = 'rgba(255,255,255,0.5)';
-    }
-    function showOldSite() {
-      window.open('https://barkamon.com', '_blank');
-    }
-      overlay.style.display = 'flex';
-      var btnNew = document.getElementById('btn-new');
-      var btnOld = document.getElementById('btn-old');
-      btnOld.style.background = 'rgba(255,255,255,0.15)';
-      btnOld.style.color = '#fff';
-      btnNew.style.background = 'transparent';
-      btnNew.style.color = 'rgba(255,255,255,0.5)';
-    }
-  </script>
-
-</body>
-</html>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div
