@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE BOTTLE HOUSE | San Diego's Premier Spirits Destination</title>
+    <title>Kafesito | San Diego's Premier Coffee Experience</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -14,13 +14,14 @@
         }
 
         :root {
-            --primary: #1a1a1a;
-            --gold: #c9a962;
-            --gold-light: #d4b978;
-            --cream: #f8f6f1;
+            --primary: #1a1a2e;
+            --primary-light: #2d2d4a;
+            --accent: #c4a574;
+            --accent-light: #d4b896;
             --white: #ffffff;
-            --gray: #6b6b6b;
-            --gray-light: #e8e8e8;
+            --off-white: #f8f7f4;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
         }
 
         html {
@@ -29,29 +30,26 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--white);
             color: var(--primary);
             line-height: 1.6;
-            overflow-x: hidden;
+            background: var(--white);
         }
 
         /* LVRG Claim Bar */
         .claim-bar {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
+            z-index: 1000;
+            background: #000000;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
             font-size: 13px;
         }
 
         .claim-bar-text {
-            color: #888;
+            color: rgba(255, 255, 255, 0.7);
             font-weight: 400;
         }
 
@@ -61,8 +59,8 @@
         }
 
         .claim-btn {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--primary);
+            background: linear-gradient(135deg, #c4a574 0%, #d4b896 100%);
+            color: #000;
             padding: 8px 18px;
             border-radius: 4px;
             text-decoration: none;
@@ -76,42 +74,34 @@
 
         .claim-btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
+            box-shadow: 0 4px 15px rgba(196, 165, 116, 0.4);
         }
 
         /* Navigation */
-        .nav {
-            position: fixed;
-            top: 42px;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.97);
+        nav {
+            position: sticky;
+            top: 41px;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             padding: 18px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 999;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .nav.scrolled {
-            padding: 14px 60px;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(26, 26, 46, 0.08);
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: -0.5px;
         }
 
         .logo span {
-            color: var(--gold);
+            color: var(--accent);
         }
 
         .nav-links {
@@ -129,6 +119,10 @@
             position: relative;
         }
 
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -136,12 +130,8 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gold);
+            background: var(--accent);
             transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
         }
 
         .nav-links a:hover::after {
@@ -151,8 +141,8 @@
         .nav-cta {
             background: var(--primary);
             color: var(--white);
-            padding: 14px 28px;
-            border-radius: 4px;
+            padding: 12px 28px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
@@ -160,20 +150,20 @@
         }
 
         .nav-cta:hover {
-            background: var(--gold);
-            color: var(--primary);
+            background: var(--primary-light);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 26, 46, 0.25);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 160px 60px 100px;
+            padding: 80px 60px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--cream) 0%, #fff 50%, var(--cream) 100%);
+            background: var(--off-white);
         }
 
         .hero-bg {
@@ -182,120 +172,148 @@
             right: 0;
             width: 55%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 50%, var(--primary) 100%);
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-            z-index: 1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #3d3d5c 100%);
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
         }
 
         .hero-pattern {
             position: absolute;
             top: 50%;
-            right: 15%;
+            right: 10%;
             transform: translateY(-50%);
             width: 400px;
             height: 400px;
-            z-index: 2;
+            opacity: 0.15;
         }
 
-        .bottle-visual {
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .hero-pattern::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite 0.5s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.05); }
+        }
+
+        .geometric-shape {
+            position: absolute;
+            right: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            height: 320px;
+        }
+
+        .coffee-cup {
             position: relative;
             width: 100%;
             height: 100%;
         }
 
-        .bottle-shape {
+        .cup-body {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120px;
-            height: 320px;
-            background: linear-gradient(180deg, #2a2a2a 0%, var(--primary) 20%, #0a0a0a 100%);
-            border-radius: 10px 10px 20px 20px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.1);
-        }
-
-        .bottle-shape::before {
-            content: '';
-            position: absolute;
-            top: -50px;
+            bottom: 20%;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
-            height: 50px;
-            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 100%);
-            border-radius: 4px 4px 0 0;
+            width: 180px;
+            height: 140px;
+            background: linear-gradient(180deg, var(--accent) 0%, #a08050 100%);
+            border-radius: 10px 10px 60px 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
 
-        .bottle-shape::after {
-            content: '';
+        .cup-handle {
             position: absolute;
-            top: 30%;
-            left: 15%;
-            width: 70%;
-            height: 40%;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            bottom: 30%;
+            right: 15%;
+            width: 50px;
+            height: 80px;
+            border: 12px solid var(--accent);
+            border-left: none;
+            border-radius: 0 50px 50px 0;
+        }
+
+        .steam {
+            position: absolute;
+            bottom: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .steam-line {
+            width: 4px;
+            height: 60px;
+            background: linear-gradient(to top, rgba(255,255,255,0.6), transparent);
             border-radius: 4px;
+            animation: steam 2s ease-in-out infinite;
         }
 
-        .circle-accent {
-            position: absolute;
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            opacity: 0.3;
+        .steam-line:nth-child(2) {
+            animation-delay: 0.3s;
+            height: 80px;
         }
 
-        .circle-1 {
-            width: 500px;
-            height: 500px;
-            top: -50px;
-            right: -100px;
+        .steam-line:nth-child(3) {
+            animation-delay: 0.6s;
+            height: 50px;
         }
 
-        .circle-2 {
-            width: 350px;
-            height: 350px;
-            top: 25px;
-            right: -25px;
-        }
-
-        .circle-3 {
-            width: 200px;
-            height: 200px;
-            top: 100px;
-            right: 50px;
+        @keyframes steam {
+            0%, 100% { transform: translateY(0) scaleY(1); opacity: 0.6; }
+            50% { transform: translateY(-15px) scaleY(1.1); opacity: 0.3; }
         }
 
         .hero-content {
-            max-width: 600px;
             position: relative;
             z-index: 10;
+            max-width: 580px;
         }
 
-        .hero-tag {
+        .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: var(--white);
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 13px;
-            font-weight: 600;
-            color: var(--gold);
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
-        .hero-tag::before {
+        .hero-badge::before {
             content: '';
             width: 8px;
             height: 8px;
-            background: var(--gold);
+            background: #22c55e;
             border-radius: 50%;
-            animation: pulse 2s infinite;
+            animation: blink 2s ease-in-out infinite;
         }
 
-        @keyframes pulse {
+        @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
@@ -310,28 +328,29 @@
         }
 
         .hero h1 span {
-            color: var(--gold);
-            font-style: italic;
+            color: var(--accent);
+            position: relative;
         }
 
-        .hero-sub {
+        .hero p {
             font-size: 18px;
             color: var(--gray);
             margin-bottom: 40px;
             line-height: 1.8;
-            max-width: 500px;
+            max-width: 480px;
         }
 
         .hero-ctas {
             display: flex;
             gap: 16px;
+            flex-wrap: wrap;
         }
 
         .btn-primary {
             background: var(--primary);
             color: var(--white);
-            padding: 18px 36px;
-            border-radius: 4px;
+            padding: 16px 36px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
@@ -342,22 +361,24 @@
         }
 
         .btn-primary:hover {
-            background: var(--gold);
-            color: var(--primary);
+            background: var(--primary-light);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 35px rgba(26, 26, 46, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--primary);
-            padding: 18px 36px;
-            border-radius: 4px;
+            padding: 16px 36px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
             border: 2px solid var(--primary);
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .btn-secondary:hover {
@@ -369,63 +390,68 @@
         /* Social Proof Bar */
         .social-proof {
             background: var(--primary);
-            padding: 60px;
-            display: flex;
-            justify-content: center;
-            gap: 100px;
+            padding: 50px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
         .proof-item {
             text-align: center;
+            padding: 20px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .proof-item:last-child {
+            border-right: none;
         }
 
         .proof-number {
             font-family: 'Playfair Display', serif;
             font-size: 48px;
             font-weight: 700;
-            color: var(--gold);
+            color: var(--accent);
             margin-bottom: 8px;
         }
 
         .proof-label {
             font-size: 14px;
-            color: var(--gray-light);
-            font-weight: 500;
-            letter-spacing: 1px;
+            color: rgba(255,255,255,0.8);
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Services Section */
         .services {
-            padding: 120px 60px;
+            padding: 100px 60px;
             background: var(--white);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .section-tag {
-            display: inline-block;
             font-size: 12px;
-            font-weight: 700;
-            color: var(--gold);
-            letter-spacing: 3px;
             text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            font-weight: 600;
             margin-bottom: 16px;
+            display: block;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
+            font-size: 44px;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-subtitle {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--gray);
             max-width: 600px;
             margin: 0 auto;
@@ -435,14 +461,12 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .service-card {
-            background: var(--cream);
+            background: var(--off-white);
             padding: 50px 40px;
-            border-radius: 8px;
+            border-radius: 16px;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -455,15 +479,14 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
             transform: scaleX(0);
-            transform-origin: left;
             transition: transform 0.4s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(26, 26, 46, 0.12);
         }
 
         .service-card:hover::before {
@@ -473,8 +496,8 @@
         .service-icon {
             width: 70px;
             height: 70px;
-            background: var(--primary);
-            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -485,7 +508,6 @@
         .service-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
-            font-weight: 600;
             margin-bottom: 16px;
             color: var(--primary);
         }
@@ -493,14 +515,14 @@
         .service-card p {
             color: var(--gray);
             font-size: 15px;
-            line-height: 1.8;
+            line-height: 1.7;
             margin-bottom: 24px;
         }
 
         .service-link {
-            color: var(--gold);
-            font-weight: 600;
+            color: var(--accent);
             text-decoration: none;
+            font-weight: 600;
             font-size: 14px;
             display: inline-flex;
             align-items: center;
@@ -509,52 +531,47 @@
         }
 
         .service-link:hover {
-            gap: 14px;
+            gap: 12px;
         }
 
-        /* Testimonials Section */
+        /* Testimonials */
         .testimonials {
-            padding: 120px 60px;
-            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+            padding: 100px 60px;
+            background: var(--off-white);
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .testimonial-card {
             background: var(--white);
             padding: 45px;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(26, 26, 46, 0.06);
+            position: relative;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-        }
-
-        .stars {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 24px;
-        }
-
-        .star {
-            color: var(--gold);
-            font-size: 18px;
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: var(--accent);
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            line-height: 1;
         }
 
         .testimonial-text {
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.8;
             color: var(--primary);
-            margin-bottom: 28px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
             font-style: italic;
         }
 
@@ -567,22 +584,20 @@
         .author-avatar {
             width: 50px;
             height: 50px;
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--gold);
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            color: var(--white);
             font-weight: 600;
+            font-size: 18px;
         }
 
         .author-info h4 {
             font-weight: 600;
-            font-size: 15px;
             color: var(--primary);
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
 
         .author-info span {
@@ -590,10 +605,17 @@
             color: var(--gray);
         }
 
+        .stars {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
         /* CTA Banner */
         .cta-banner {
-            background: var(--primary);
             padding: 100px 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -602,115 +624,80 @@
         .cta-banner::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(196, 165, 116, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
         }
 
-        .cta-content {
-            position: relative;
-            z-index: 1;
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .cta-banner h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            font-weight: 700;
+            font-size: 48px;
             color: var(--white);
             margin-bottom: 20px;
-        }
-
-        .cta-banner h2 span {
-            color: var(--gold);
+            position: relative;
+            z-index: 1;
         }
 
         .cta-banner p {
             font-size: 18px;
-            color: var(--gray-light);
+            color: rgba(255,255,255,0.8);
             margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
 
-        .cta-btn {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+        .cta-banner .btn-primary {
+            background: var(--accent);
             color: var(--primary);
-            padding: 20px 50px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.4);
+        .cta-banner .btn-primary:hover {
+            background: var(--accent-light);
         }
 
         /* Footer */
-        .footer {
-            background: #0a0a0a;
+        footer {
+            background: #0d0d1a;
             padding: 80px 60px 40px;
+            color: var(--white);
         }
 
-        .footer-grid {
+        .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 60px;
-            max-width: 1200px;
-            margin: 0 auto 60px;
+            margin-bottom: 60px;
         }
 
         .footer-brand .logo {
             color: var(--white);
-            margin-bottom: 20px;
             display: inline-block;
+            margin-bottom: 20px;
         }
 
         .footer-brand p {
-            color: var(--gray);
+            color: rgba(255,255,255,0.6);
             font-size: 15px;
             line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-link {
-            width: 42px;
-            height: 42px;
-            background: var(--primary);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--gold);
-            color: var(--primary);
+            max-width: 300px;
         }
 
         .footer-col h4 {
             font-size: 14px;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: 2px;
             text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 24px;
+            color: var(--accent);
         }
 
         .footer-col ul {
@@ -718,55 +705,41 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .footer-col ul li a {
-            color: var(--gray);
+            color: rgba(255,255,255,0.6);
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s ease;
         }
 
         .footer-col ul li a:hover {
-            color: var(--gold);
+            color: var(--white);
         }
 
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 18px;
-        }
-
-        .contact-item span {
-            color: var(--gold);
-            font-size: 16px;
-        }
-
-        .contact-item p {
-            color: var(--gray);
+        .footer-col p {
+            color: rgba(255,255,255,0.6);
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .footer-bottom {
-            border-top: 1px solid #222;
-            padding-top: 30px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .footer-bottom p {
-            color: var(--gray);
+            color: rgba(255,255,255,0.4);
             font-size: 13px;
         }
 
         .footer-bottom a {
-            color: var(--gold);
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -775,26 +748,26 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            z-index: 1001;
+            z-index: 9999;
         }
 
         .chat-toggle {
             width: 65px;
             height: 65px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             border-radius: 50%;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 30px rgba(201, 169, 98, 0.4);
+            box-shadow: 0 8px 30px rgba(196, 165, 116, 0.4);
             transition: all 0.3s ease;
         }
 
         .chat-toggle:hover {
             transform: scale(1.08);
-            box-shadow: 0 12px 40px rgba(201, 169, 98, 0.5);
+            box-shadow: 0 12px 40px rgba(196, 165, 116, 0.5);
         }
 
         .chat-toggle svg {
@@ -810,7 +783,7 @@
             width: 360px;
             height: 480px;
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             display: none;
             flex-direction: column;
@@ -834,7 +807,7 @@
         }
 
         .chat-header {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             padding: 20px;
             display: flex;
             align-items: center;
@@ -844,92 +817,99 @@
         .chat-avatar {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: var(--accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 700;
             color: var(--primary);
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Playfair Display', serif;
         }
 
         .chat-header-info h4 {
             color: var(--white);
-            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .chat-header-info span {
-            color: var(--gold);
             font-size: 12px;
-            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .chat-status {
-            width: 10px;
-            height: 10px;
-            background: #4ade80;
+        .chat-header-info span::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
             border-radius: 50%;
+        }
+
+        .chat-close {
             margin-left: auto;
-            animation: pulse 2s infinite;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            font-size: 24px;
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .chat-close:hover {
+            color: var(--white);
         }
 
         .chat-messages {
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background: #f9f9f9;
+            background: #f9f9fb;
         }
 
-        .message {
+        .chat-message {
             margin-bottom: 16px;
             display: flex;
             gap: 10px;
         }
 
-        .message-avatar {
+        .chat-message.bot .message-avatar {
             width: 32px;
             height: 32px;
-            background: var(--gold);
+            background: var(--accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
-            font-weight: 700;
             color: var(--primary);
+            font-weight: 600;
+            font-size: 12px;
             flex-shrink: 0;
         }
 
-        .message-content {
+        .message-bubble {
             background: var(--white);
             padding: 14px 18px;
-            border-radius: 4px 16px 16px 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            max-width: 85%;
-        }
-
-        .message-content p {
+            border-radius: 18px;
+            border-top-left-radius: 4px;
             font-size: 14px;
-            color: var(--primary);
             line-height: 1.6;
-        }
-
-        .message-time {
-            font-size: 11px;
-            color: var(--gray);
-            margin-top: 6px;
+            color: var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            max-width: 260px;
         }
 
         .chat-input-area {
-            padding: 16px 20px;
+            padding: 16px;
+            background: var(--white);
             border-top: 1px solid var(--gray-light);
             display: flex;
             gap: 12px;
-            background: var(--white);
         }
 
         .chat-input {
@@ -944,7 +924,7 @@
         }
 
         .chat-input:focus {
-            border-color: var(--gold);
+            border-color: var(--accent);
         }
 
         .chat-send {
@@ -961,7 +941,8 @@
         }
 
         .chat-send:hover {
-            background: var(--gold);
+            background: var(--primary-light);
+            transform: scale(1.05);
         }
 
         .chat-send svg {
@@ -970,130 +951,136 @@
             fill: var(--white);
         }
 
-        .chat-send:hover svg {
-            fill: var(--primary);
-        }
-
-        /* Mobile Responsive */
+        /* Responsive */
         @media (max-width: 1024px) {
+            nav {
+                padding: 18px 30px;
+            }
+            
+            .hero {
+                padding: 60px 30px;
+            }
+            
             .hero h1 {
                 font-size: 48px;
             }
-
+            
+            .hero-bg {
+                width: 45%;
+            }
+            
+            .geometric-shape {
+                right: 5%;
+                width: 250px;
+                height: 250px;
+            }
+            
             .services-grid,
             .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .footer-grid {
+            
+            .footer-content {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero-bg {
-                width: 45%;
-            }
-
-            .hero-pattern {
-                right: 5%;
-                width: 300px;
-                height: 300px;
-            }
-
-            .bottle-shape {
-                width: 90px;
-                height: 240px;
-            }
-
-            .bottle-shape::before {
-                width: 30px;
-                height: 40px;
-                top: -40px;
             }
         }
 
         @media (max-width: 768px) {
-            .nav {
-                padding: 16px 24px;
+            .claim-bar {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
-
+            
+            nav {
+                padding: 15px 20px;
+            }
+            
             .nav-links {
                 display: none;
             }
-
+            
             .hero {
-                padding: 140px 24px 80px;
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
             }
-
+            
             .hero h1 {
                 font-size: 36px;
             }
-
-            .hero-bg {
-                display: none;
+            
+            .hero-content {
+                max-width: 100%;
             }
-
+            
+            .hero p {
+                max-width: 100%;
+            }
+            
+            .hero-ctas {
+                justify-content: center;
+            }
+            
+            .hero-bg,
+            .geometric-shape,
             .hero-pattern {
                 display: none;
             }
-
-            .hero-ctas {
-                flex-direction: column;
-            }
-
+            
             .social-proof {
-                flex-direction: column;
-                gap: 40px;
-                padding: 50px 24px;
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
             }
-
+            
+            .proof-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding-bottom: 30px;
+            }
+            
+            .proof-item:last-child {
+                border-bottom: none;
+            }
+            
             .services,
-            .testimonials {
-                padding: 80px 24px;
+            .testimonials,
+            .cta-banner {
+                padding: 60px 20px;
             }
-
+            
             .services-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-
+            
             .section-title {
-                font-size: 36px;
+                font-size: 32px;
             }
-
-            .cta-banner {
-                padding: 80px 24px;
-            }
-
+            
             .cta-banner h2 {
-                font-size: 36px;
+                font-size: 32px;
             }
-
-            .footer {
-                padding: 60px 24px 30px;
+            
+            footer {
+                padding: 60px 20px 30px;
             }
-
-            .footer-grid {
+            
+            .footer-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-
+            
             .footer-bottom {
                 flex-direction: column;
-                gap: 16px;
+                gap: 15px;
                 text-align: center;
             }
-
+            
             .chat-panel {
                 width: 320px;
                 height: 420px;
                 right: -10px;
-            }
-
-            .claim-bar {
-                flex-direction: column;
-                gap: 8px;
-                padding: 8px 16px;
-                text-align: center;
             }
         }
     </style>
@@ -1101,43 +1088,55 @@
 <body>
     <!-- LVRG Claim Bar -->
     <div class="claim-bar">
-        <p class="claim-bar-text">This site was built for <span>THE BOTTLE HOUSE</span> by LVRG Agency.</p>
+        <span class="claim-bar-text">This site was built for <span>Kafesito</span> by LVRG Agency.</span>
         <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
     </div>
 
     <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <a href="#" class="logo">THE BOTTLE <span>HOUSE</span></a>
+    <nav>
+        <a href="#" class="logo">Kafe<span>sito</span></a>
         <ul class="nav-links">
-            <li><a href="#spirits">Spirits</a></li>
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#exclusive">Exclusives</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#services">Menu</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Find Us</a></li>
         </ul>
-        <a href="#shop" class="nav-cta">Shop Now</a>
+        <a href="#contact" class="nav-cta">Visit Today</a>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-pattern">
-            <div class="bottle-visual">
-                <div class="bottle-shape"></div>
-                <div class="circle-accent circle-1"></div>
-                <div class="circle-accent circle-2"></div>
-                <div class="circle-accent circle-3"></div>
+        <div class="hero-pattern"></div>
+        <div class="geometric-shape">
+            <div class="coffee-cup">
+                <div class="steam">
+                    <div class="steam-line"></div>
+                    <div class="steam-line"></div>
+                    <div class="steam-line"></div>
+                </div>
+                <div class="cup-body"></div>
+                <div class="cup-handle"></div>
             </div>
         </div>
         <div class="hero-content">
-            <div class="hero-tag">San Diego's Premier Spirits Destination</div>
-            <h1>Discover <span>Exceptional</span> Spirits, Delivered.</h1>
-            <p class="hero-sub">From rare whiskey allocations to curated wine collections, THE BOTTLE HOUSE brings San Diego's finest selection straight to your door—with nationwide shipping available.</p>
+            <div class="hero-badge">Now Open in San Diego</div>
+            <h1>Your Perfect Cup <span>Awaits</span> in San Diego</h1>
+            <p>Experience artisanal coffee crafted with passion. At Kafesito, every sip tells a story of quality beans, expert roasting, and authentic San Diego warmth.</p>
             <div class="hero-ctas">
-                <a href="#shop" class="btn-primary">
-                    Browse Collection
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <a href="#menu" class="btn-primary">
+                    Explore Our Menu
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                 </a>
-                <a href="#exclusive" class="btn-secondary">View Exclusives</a>
+                <a href="#contact" class="btn-secondary">
+                    Find Our Location
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -1145,104 +1144,89 @@
     <!-- Social Proof Bar -->
     <section class="social-proof">
         <div class="proof-item">
-            <div class="proof-number">5★</div>
+            <div class="proof-number">4.9★</div>
             <div class="proof-label">Customer Rating</div>
         </div>
         <div class="proof-item">
-            <div class="proof-number">50+</div>
-            <div class="proof-label">Exclusive Allocations</div>
+            <div class="proof-number">5K+</div>
+            <div class="proof-label">Happy Customers</div>
         </div>
         <div class="proof-item">
-            <div class="proof-number">All 50</div>
-            <div class="proof-label">States Shipped</div>
+            <div class="proof-number">100%</div>
+            <div class="proof-label">Locally Sourced</div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="spirits">
+    <section class="services" id="services">
         <div class="section-header">
             <span class="section-tag">What We Offer</span>
-            <h2 class="section-title">Curated Collections</h2>
-            <p class="section-subtitle">Hand-selected spirits and wines for discerning palates, with exclusive allocations you won't find anywhere else.</p>
+            <h2 class="section-title">Crafted With Care</h2>
+            <p class="section-subtitle">From our signature espresso drinks to fresh-baked pastries, every item is made with love and attention to detail.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🥃</div>
-                <h3>Premium Spirits</h3>
-                <p>From single malt scotch to small-batch bourbon, explore our extensive collection of whiskey, tequila, rum, gin, vodka, and cognac.</p>
-                <a href="#" class="service-link">Explore Spirits →</a>
+                <div class="service-icon">☕</div>
+                <h3>Artisan Coffee</h3>
+                <p>Hand-selected beans from around the world, expertly roasted and brewed to perfection. From classic espresso to creative specialty drinks.</p>
+                <a href="#menu" class="service-link">View Menu →</a>
             </div>
             <div class="service-card">
-                <div class="service-icon">🍷</div>
-                <h3>Wine & Champagne</h3>
-                <p>Discover exceptional vintages and celebrated champagnes, carefully selected from renowned regions around the world.</p>
-                <a href="#" class="service-link">Browse Wines →</a>
+                <div class="service-icon">🥐</div>
+                <h3>Fresh Pastries</h3>
+                <p>Baked fresh daily using traditional recipes and quality ingredients. Pair your coffee with our delicious croissants, muffins, and more.</p>
+                <a href="#menu" class="service-link">See Selection →</a>
             </div>
             <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Exclusive Allocations</h3>
-                <p>Access rare, limited-edition bottles and collectible releases reserved for true enthusiasts. New drops added regularly.</p>
-                <a href="#" class="service-link">View Exclusives →</a>
+                <div class="service-icon">🌿</div>
+                <h3>Community Space</h3>
+                <p>More than a coffee shop—a gathering place for San Diego's creative community. Free WiFi, cozy seating, and welcoming vibes.</p>
+                <a href="#about" class="service-link">Our Story →</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="section-header">
-            <span class="section-tag">Customer Love</span>
-            <h2 class="section-title">What San Diego Says</h2>
-            <p class="section-subtitle">Join thousands of satisfied customers who trust THE BOTTLE HOUSE for their spirits.</p>
+            <span class="section-tag">What People Say</span>
+            <h2 class="section-title">Loved by San Diego</h2>
+            <p class="section-subtitle">Don't just take our word for it—hear from our amazing community of coffee lovers.</p>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"Finally found a local spot with an incredible whiskey selection. Scored a Pappy Van Winkle allocation I'd been hunting for years. The Bottle House is a game-changer."</p>
+                <span class="quote-mark">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">The best coffee I've found in San Diego, hands down. The atmosphere is perfect for working or catching up with friends. Kafesito has become my second home!</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">M</div>
+                    <div class="author-avatar">MR</div>
                     <div class="author-info">
-                        <h4>Marcus Chen</h4>
-                        <span>La Jolla, CA</span>
+                        <h4>Maria Rodriguez</h4>
+                        <span>Local Regular</span>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"Ordered a birthday gift for my husband—a rare Japanese whisky. Next-day delivery in San Diego and the packaging was impeccable. Will absolutely be back!"</p>
+                <span class="quote-mark">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Finally, a coffee shop that gets it right. The baristas actually care about their craft. The oat milk latte is perfection, and their pastries are dangerously good.</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">S</div>
+                    <div class="author-avatar">JC</div>
                     <div class="author-info">
-                        <h4>Sarah Mitchell</h4>
-                        <span>Del Mar, CA</span>
+                        <h4>James Chen</h4>
+                        <span>Remote Worker</span>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"As a collector, I'm impressed by their exclusive allocations. The team really understands what serious spirits enthusiasts are looking for. Top-tier service."</p>
+                <span class="quote-mark">"</span>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">From the moment you walk in, you feel the warmth. Kafesito isn't just serving coffee—they're building community. This place is a San Diego gem!</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">J</div>
+                    <div class="author-avatar">SK</div>
                     <div class="author-info">
-                        <h4>James Rodriguez</h4>
-                        <span>North Park, SD</span>
+                        <h4>Sarah Kim</h4>
+                        <span>Neighborhood Resident</span>
                     </div>
                 </div>
             </div>
@@ -1250,31 +1234,153 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="cta-content">
-            <h2>Ask Us <span>Anything</span></h2>
-            <p>Looking for a specific bottle? Need a recommendation? Our spirits experts are here to help you find exactly what you're looking for.</p>
-            <a href="#" class="cta-btn" onclick="toggleChat(); return false;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-                Start Chat Now
-            </a>
-        </div>
+    <section class="cta-banner" id="contact">
+        <h2>Ask Us Anything</h2>
+        <p>Have questions about our menu, hours, or events? Our team is here to help!</p>
+        <a href="#" class="btn-primary" onclick="toggleChat(); return false;">
+            Start a Conversation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </a>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
+    <footer>
+        <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">THE BOTTLE <span>HOUSE</span></a>
-                <p>San Diego's trusted destination for premium spirits, fine wines, and exclusive allocations. Serving enthusiasts locally and nationwide since day one.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-link">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.
+                <a href="#" class="logo">Kafe<span>sito</span></a>
+                <p>Bringing San Diego together, one cup at a time. Quality coffee, warm hospitality, and a space to call your own.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Our Menu</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Monday – Friday<br>7:00 AM – 7:00 PM</p>
+                <br>
+                <p>Saturday – Sunday<br>8:00 AM – 6:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Find Us</h4>
+                <p>San Diego, CA<br><br>
+                <a href="https://www.kafesito.com" style="color: var(--accent);">www.kafesito.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Kafesito. All rights reserved.</p>
+            <p>Designed by <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div class="chat-avatar">K</div>
+                <div class="chat-header-info">
+                    <h4>Kafesito</h4>
+                    <span>AI Assistant • Online</span>
+                </div>
+                <button class="chat-close" onclick="toggleChat()">×</button>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-avatar">K</div>
+                    <div class="message-bubble">
+                        ¡Hola! Welcome to Kafesito! ☕ I'm here to help you discover our artisan coffee, fresh pastries, and cozy San Diego vibes. What can I help you with today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" placeholder="Type your message..." id="chatInput" onkeypress="handleKeyPress(event)">
+                <button class="chat-send" onclick="sendMessage()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button class="chat-toggle" onclick="toggleChat()" id="chatToggle">
+            <svg viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const panel = document.getElementById('chatPanel');
+            panel.classList.toggle('active');
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                const messagesContainer = document.querySelector('.chat-messages');
+                
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'chat-message user';
+                userMsg.innerHTML = `
+                    <div class="message-bubble" style="margin-left: auto; background: var(--primary); color: white; border-radius: 18px; border-top-right-radius: 4px; border-top-left-radius: 18px;">
+                        ${message}
+                    </div>
+                `;
+                messagesContainer.appendChild(userMsg);
+                
+                // Clear input
+                input.value = '';
+                
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Simulate bot response
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'chat-message bot';
+                    botMsg.innerHTML = `
+                        <div class="message-avatar">K</div>
+                        <div class="message-bubble">
+                            Thanks for reaching out! Our team at Kafesito will get back to you shortly. In the meantime, feel free to visit us in San Diego or browse our menu!
+                        </div>
+                    `;
+                    messagesContainer.appendChild(botMsg);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
