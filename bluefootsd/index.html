@@ -1,481 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluefoot Bar + Lounge | North Park's Late Night Living Room</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { brand: '#0066cc' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Playfair Display', serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluefoot Bar + Lounge | North Park's Premier Nightlife Destination</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; }
+    :root { --primary: #0066cc; --secondary: #ffffff; --dark: #0a0a0a; --gold: #d4a853; }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100">
-    
-    <!-- CLAIM BAR -->
-    <div class="sticky top-0 z-50 bg-black border-b border-neutral-800">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center gap-3 flex-wrap text-sm">
-            <span class="text-neutral-400">This site was built for <strong class="text-white">Bluefoot Bar + Lounge</strong> by LVRG Agency</span>
-            <a href="https://theresandiego.com/advertise/" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-600 to-amber-500 text-black px-4 py-1.5 rounded-full text-xs font-semibold hover:from-amber-500 hover:to-amber-400 transition-all">
-                Claim This Site →
-            </a>
-        </div>
+<body style="background-color: #0a0a0a; color: #ffffff;">
+
+  <!-- CLAIM BAR -->
+  <div style="position: sticky; top: 0; z-index: 1000; background-color: #000000; padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; text-align: center;">
+      <span style="color: #a0a0a0; font-size: 14px;">This site was built for <strong style="color: #ffffff;">Bluefoot Bar + Lounge</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #d4a853, #b8923f); color: #000000; padding: 8px 20px; border-radius: 50px; text-decoration: none; font-size: 13px; font-weight: 600; transition: transform 0.3s;">Claim This Site →</a>
     </div>
-
-    <!-- NAV -->
-    <nav class="bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-900 sticky top-12 z-40">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" class="font-display text-2xl font-semibold tracking-tight text-white">
-                Bluefoot<span class="text-amber-500">.</span>
-            </a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#vibe" class="text-neutral-400 hover:text-white transition-colors text-sm">The Vibe</a>
-                <a href="#drinks" class="text-neutral-400 hover:text-white transition-colors text-sm">Drinks</a>
-                <a href="#hours" class="text-neutral-400 hover:text-white transition-colors text-sm">Hours</a>
-                <a href="#visit" class="bg-amber-500 text-black px-5 py-2.5 rounded text-sm font-semibold hover:bg-amber-400 transition-colors">
-                    Visit Tonight
-                </a>
-            </div>
-            <button class="md:hidden text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background gradient simulating moody bar atmosphere -->
-        <div class="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/50"></div>
-        
-        <!-- Decorative elements -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
-        
-        <!-- Subtle pattern overlay -->
-        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-        
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
-            <p class="text-amber-500 uppercase tracking-widest text-sm mb-6 font-medium">North Park • San Diego</p>
-            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-medium leading-tight mb-8">
-                Where the regulars<br>
-                <span class="italic text-amber-500">send their friends</span>
-            </h1>
-            <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                Late nights, live DJs, and the kind of happy hour that keeps 30th Street's best-kept secret not so secret anymore.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#visit" class="bg-amber-500 text-black px-8 py-4 rounded text-sm font-semibold hover:bg-amber-400 transition-all hover:shadow-lg hover:shadow-amber-500/20">
-                    Stop By Tonight
-                </a>
-                <a href="#drinks" class="border border-neutral-700 text-white px-8 py-4 rounded text-sm font-medium hover:border-neutral-500 hover:bg-neutral-900 transition-all">
-                    See Happy Hour
-                </a>
-            </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF BAR -->
-    <section class="bg-neutral-900 border-y border-neutral-800">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <p class="font-display text-3xl md:text-4xl text-amber-500 mb-1">2AM</p>
-                    <p class="text-neutral-500 text-sm uppercase tracking-wider">Weekend Closing</p>
-                </div>
-                <div>
-                    <p class="font-display text-3xl md:text-4xl text-amber-500 mb-1">11AM</p>
-                    <p class="text-neutral-500 text-sm uppercase tracking-wider">Doors Open Daily</p>
-                </div>
-                <div>
-                    <p class="font-display text-3xl md:text-4xl text-amber-500 mb-1">Live</p>
-                    <p class="text-neutral-500 text-sm uppercase tracking-wider">DJ Entertainment</p>
-                </div>
-                <div>
-                    <p class="font-display text-3xl md:text-4xl text-amber-500 mb-1">30th St</p>
-                    <p class="text-neutral-500 text-sm uppercase tracking-wider">North Park</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES/FEATURES -->
-    <section id="vibe" class="py-24 md:py-32 bg-neutral-950">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <p class="text-amber-500 uppercase tracking-widest text-sm mb-4">What We're About</p>
-                <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium">
-                    The neighborhood's<br><span class="italic">living room</span>
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1: Bar Service -->
-                <div class="group bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-lg p-8 hover:border-amber-500/30 transition-all duration-500">
-                    <div class="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-display text-2xl mb-3">Full Bar Service</h3>
-                    <p class="text-neutral-400 leading-relaxed">
-                        Cold drinks, good pours, and a bartender who remembers your name. Extended happy hour pricing that makes your wallet happy too.
-                    </p>
-                </div>
-                
-                <!-- Card 2: Lounge Seating -->
-                <div class="group bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-lg p-8 hover:border-amber-500/30 transition-all duration-500">
-                    <div class="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-display text-2xl mb-3">Lounge Seating</h3>
-                    <p class="text-neutral-400 leading-relaxed">
-                        Comfortable spots to post up with friends. Whether you're here for one drink or closing the place down, there's room to spread out.
-                    </p>
-                </div>
-                
-                <!-- Card 3: Live DJ -->
-                <div class="group bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-lg p-8 hover:border-amber-500/30 transition-all duration-500">
-                    <div class="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
-                        <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-display text-2xl mb-3">Live DJ Entertainment</h3>
-                    <p class="text-neutral-400 leading-relaxed">
-                        The soundtrack to your night out. Our DJs know how to read a room and keep the energy exactly where it needs to be.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DRINKS MENU STYLE SECTION -->
-    <section id="drinks" class="py-24 md:py-32 bg-neutral-900">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <p class="text-amber-500 uppercase tracking-widest text-sm mb-4">Happy Hour & Beyond</p>
-                <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-                    The <span class="italic">good stuff</span>
-                </h2>
-                <p class="text-neutral-400 max-w-xl mx-auto">
-                    Extended happy hour pricing keeps things friendly. Stop by early, stay late, or just swing through whenever the mood hits.
-                </p>
-            </div>
-            
-            <!-- Menu-style display -->
-            <div class="bg-gradient-to-br from-neutral-950 to-neutral-900 border border-neutral-800 rounded-lg p-8 md:p-12">
-                <div class="border-b border-neutral-800 pb-8 mb-8">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-display text-xl text-white">Happy Hour Drinks</h3>
-                        <span class="text-amber-500 font-display italic">Extended Hours</span>
-                    </div>
-                    <p class="text-neutral-500 text-sm">Our best deals, available longer than you'd expect</p>
-                </div>
-                
-                <div class="border-b border-neutral-800 pb-8 mb-8">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-display text-xl text-white">Full Bar Selection</h3>
-                        <span class="text-amber-500 font-display italic">Always Pouring</span>
-                    </div>
-                    <p class="text-neutral-500 text-sm">Whatever you're drinking, we've got you covered</p>
-                </div>
-                
-                <div class="border-b border-neutral-800 pb-8 mb-8">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-display text-xl text-white">Weekend Vibes</h3>
-                        <span class="text-amber-500 font-display italic">Until 2AM</span>
-                    </div>
-                    <p class="text-neutral-500 text-sm">Live DJs and late nights when it matters most</p>
-                </div>
-                
-                <div>
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="font-display text-xl text-white">Soccer Mornings</h3>
-                        <span class="text-amber-500 font-display italic">Early Opens</span>
-                    </div>
-                    <p class="text-neutral-500 text-sm">Sometimes we open earlier — catch the game with us</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF BLOCK (Instead of fake testimonials) -->
-    <section class="py-24 md:py-32 bg-neutral-950">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <p class="text-amber-500 uppercase tracking-widest text-sm mb-4">Why North Park Loves Us</p>
-                <h2 class="font-display text-4xl md:text-5xl font-medium">
-                    A neighborhood <span class="italic">staple</span>
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                    <p class="font-display text-5xl text-amber-500 mb-4">7</p>
-                    <p class="text-neutral-300 font-medium mb-2">Days a Week</p>
-                    <p class="text-neutral-500 text-sm">Open daily for your late-night plans</p>
-                </div>
-                <div class="text-center p-8 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                    <p class="font-display text-5xl text-amber-500 mb-4">15+</p>
-                    <p class="text-neutral-300 font-medium mb-2">Hours Daily</p>
-                    <p class="text-neutral-500 text-sm">From morning soccer to last call</p>
-                </div>
-                <div class="text-center p-8 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                    <p class="font-display text-5xl text-amber-500 mb-4">∞</p>
-                    <p class="text-neutral-300 font-medium mb-2">Good Times</p>
-                    <p class="text-neutral-500 text-sm">That's what we're really counting</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRESS / AS SEEN IN -->
-    <section class="py-16 bg-neutral-900 border-y border-neutral-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center">
-                <p class="text-neutral-500 uppercase tracking-widest text-xs mb-8">Featured In</p>
-                <div class="flex items-center justify-center gap-12 flex-wrap">
-                    <span class="text-neutral-400 font-display text-xl md:text-2xl hover:text-amber-500 transition-colors">Thrillist</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section id="visit" class="py-24 md:py-32 bg-gradient-to-br from-neutral-950 via-brand/5 to-neutral-950 relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-brand/10 rounded-full blur-3xl"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <p class="text-amber-500 uppercase tracking-widest text-sm mb-6">Tonight's the Night</p>
-            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-                Stop by for happy hour<br><span class="italic">and live DJ entertainment</span>
-            </h2>
-            <p class="text-neutral-400 text-lg max-w-2xl mx-auto mb-10">
-                North Park's favorite late-night spot is waiting. Whether it's your first time or your hundredth, the vibe is always right at Bluefoot.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://maps.google.com/?q=3404+30th+Street+San+Diego+CA+92104" target="_blank" class="bg-amber-500 text-black px-8 py-4 rounded text-sm font-semibold hover:bg-amber-400 transition-all hover:shadow-lg hover:shadow-amber-500/20 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                    Get Directions
-                </a>
-                <a href="#hours" class="border border-neutral-700 text-white px-8 py-4 rounded text-sm font-medium hover:border-neutral-500 hover:bg-neutral-900 transition-all">
-                    View Hours
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOURS SECTION -->
-    <section id="hours" class="py-24 bg-neutral-900">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-amber-500 uppercase tracking-widest text-sm mb-4">When to Find Us</p>
-                    <h2 class="font-display text-4xl md:text-5xl font-medium mb-6">
-                        Hours
-                    </h2>
-                    <p class="text-neutral-400 leading-relaxed">
-                        We open at 11am most days — sometimes earlier when there's soccer on. Weekends we're here until 2am. During the week, we close at midnight. Either way, the door's open and the drinks are cold.
-                    </p>
-                </div>
-                <div class="bg-neutral-950 border border-neutral-800 rounded-lg p-8">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center pb-4 border-b border-neutral-800">
-                            <span class="text-neutral-300">Monday – Thursday</span>
-                            <span class="text-amber-500 font-display">11am – Midnight</span>
-                        </div>
-                        <div class="flex justify-between items-center pb-4 border-b border-neutral-800">
-                            <span class="text-neutral-300">Friday – Saturday</span>
-                            <span class="text-amber-500 font-display">11am – 2am</span>
-                        </div>
-                        <div class="flex justify-between items-center pb-4 border-b border-neutral-800">
-                            <span class="text-neutral-300">Sunday</span>
-                            <span class="text-amber-500 font-display">11am – 2am</span>
-                        </div>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-neutral-500 text-sm">Soccer days</span>
-                            <span class="text-neutral-500 text-sm italic">Earlier opens</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-neutral-950 border-t border-neutral-800 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <a href="#" class="font-display text-3xl font-semibold tracking-tight text-white mb-4 block">
-                        Bluefoot<span class="text-amber-500">.</span>
-                    </a>
-                    <p class="text-neutral-500 leading-relaxed">
-                        North Park's neighborhood bar. Late nights, live DJs, and the kind of atmosphere that keeps you coming back.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-display text-lg mb-4 text-white">Location</h4>
-                    <address class="not-italic text-neutral-400 leading-relaxed">
-                        3404 30th Street<br>
-                        San Diego, CA 92104<br>
-                        <span class="text-amber-500">North Park</span>
-                    </address>
-                </div>
-                
-                <div>
-                    <h4 class="font-display text-lg mb-4 text-white">Hours</h4>
-                    <p class="text-neutral-400 leading-relaxed">
-                        Opens 11am daily<br>
-                        (Earlier for soccer)<br>
-                        <span class="text-amber-500">Open until 2am weekends</span>
-                    </p>
-                </div>
-            </div>
-            
-            <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-neutral-600 text-sm">
-                    © 2024 Bluefoot Bar + Lounge. All rights reserved.
-                </p>
-                <div class="flex items-center gap-6">
-                    <a href="#" class="text-neutral-500 hover:text-amber-500 transition-colors text-sm">Privacy</a>
-                    <a href="#" class="text-neutral-500 hover:text-amber-500 transition-colors text-sm">Terms</a>
-                    <a href="https://maps.google.com/?q=3404+30th+Street+San+Diego+CA+92104" target="_blank" class="text-neutral-500 hover:text-amber-500 transition-colors text-sm">Directions</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-<!-- LVRG AI Chat Widget -->
-<style>
-  #lvrg-chat-btn {
-    position: fixed; bottom: 24px; right: 24px;
-    width: 56px; height: 56px; border-radius: 50%;
-    background: #0066cc; color: #000;
-    border: none; cursor: pointer; z-index: 2147483647;
-    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    display: flex; align-items: center; justify-content: center;
-    transition: transform 0.2s;
-  }
-  #lvrg-chat-btn:hover { transform: scale(1.1); }
-  #lvrg-chat-panel {
-    position: fixed; bottom: 92px; right: 24px;
-    width: 340px; max-height: 480px;
-    background: #18181b; border: 1px solid #3f3f46;
-    border-radius: 16px; z-index: 2147483647;
-    display: none; flex-direction: column;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    overflow: hidden;
-  }
-  #lvrg-chat-panel.open { display: flex; }
-  #lvrg-chat-header {
-    padding: 14px 16px; background: #0066cc;
-    font-weight: 700; font-size: 13px; color: #000;
-  }
-  #lvrg-chat-messages {
-    flex: 1; overflow-y: auto; padding: 12px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .lvrg-msg {
-    max-width: 85%; padding: 8px 12px; border-radius: 12px;
-    font-size: 13px; line-height: 1.4;
-  }
-  .lvrg-msg.bot {
-    background: #27272a; color: #e4e4e7; align-self: flex-start;
-    border-bottom-left-radius: 4px;
-  }
-  .lvrg-msg.user {
-    background: #0066cc; color: #000; align-self: flex-end;
-    border-bottom-right-radius: 4px;
-  }
-  #lvrg-chat-input-row {
-    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
-  }
-  #lvrg-chat-input {
-    flex: 1; background: #27272a; border: 1px solid #3f3f46;
-    border-radius: 8px; padding: 8px 10px; font-size: 13px;
-    color: #fff; outline: none;
-  }
-  #lvrg-chat-send {
-    background: #0066cc; border: none; border-radius: 8px;
-    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
-  }
-</style>
-
-<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
-
-<div id="lvrg-chat-panel">
-  <div id="lvrg-chat-header">Chat with Bluefoot Bar + Lounge</div>
-  <div id="lvrg-chat-messages">
-    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Bluefoot Bar + Lounge. How can I help you today?</div>
   </div>
-  <div id="lvrg-chat-input-row">
-    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
-    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+
+  <!-- NAV -->
+  <nav style="background-color: rgba(10,10,10,0.95); padding: 20px 40px; position: sticky; top: 52px; z-index: 999; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a href="#" style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #ffffff; text-decoration: none; letter-spacing: 2px;">BLUEFOOT<span style="color: #0066cc;">.</span></a>
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="#about" style="color: #a0a0a0; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s;">About</a>
+        <a href="#services" style="color: #a0a0a0; text-decoration: none; font-size: 14px; font-weight: 500;">What We Offer</a>
+        <a href="#visit" style="color: #a0a0a0; text-decoration: none; font-size: 14px; font-weight: 500;">Visit Us</a>
+        <a href="#visit" style="background-color: #0066cc; color: #ffffff; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600;">Visit Tonight</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="min-height: 90vh; background: linear-gradient(135deg, #0a0a0a 0%, #001a33 50%, #0066cc 100%); display: flex; align-items: center; padding: 80px 40px; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 80% 20%, rgba(0,102,204,0.3) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(212,168,83,0.1) 0%, transparent 40%);"></div>
+    <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+      <p style="color: #0066cc; font-size: 14px; font-weight: 600; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase;">North Park's Social Hub</p>
+      <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 10vw, 100px); line-height: 1; margin-bottom: 24px; letter-spacing: 2px;">HAPPY HOUR IS<br><span style="color: #0066cc;">EVERY HOUR</span> HERE</h1>
+      <p style="font-size: 20px; color: #b0b0b0; max-width: 550px; line-height: 1.7; margin-bottom: 40px;">Live DJs. Craft drinks. Dang good people. Experience North Park's most vibrant bar and lounge at the corner of 30th and Upas.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="#visit" style="background-color: #0066cc; color: #ffffff; padding: 18px 36px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px;">Visit Us Tonight <span style="font-size: 20px;">→</span></a>
+        <a href="#services" style="background-color: transparent; color: #ffffff; padding: 18px 36px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600; border: 2px solid rgba(255,255,255,0.3);">Explore Our Vibe</a>
+      </div>
+    </div>
+    <div style="position: absolute; right: -100px; bottom: -100px; width: 500px; height: 500px; border-radius: 50%; background: linear-gradient(135deg, rgba(0,102,204,0.2), transparent); filter: blur(60px);"></div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section style="background-color: #0d0d0d; padding: 60px 40px; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center;">
+      <div>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #0066cc; margin-bottom: 8px;">10+</p>
+        <p style="color: #808080; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Years in North Park</p>
+      </div>
+      <div>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #0066cc; margin-bottom: 8px;">21+</p>
+        <p style="color: #808080; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Exclusive Crowd</p>
+      </div>
+      <div>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #0066cc; margin-bottom: 8px;">2AM</p>
+        <p style="color: #808080; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Weekend Close</p>
+      </div>
+      <div>
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #0066cc; margin-bottom: 8px;">11AM</p>
+        <p style="color: #808080; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Doors Open Daily</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding: 120px 40px; background-color: #0a0a0a;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      <div>
+        <p style="color: #0066cc; font-size: 13px; font-weight: 600; letter-spacing: 3px; margin-bottom: 16px; text-transform: uppercase;">About Bluefoot</p>
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 52px; margin-bottom: 24px; letter-spacing: 1px;">WHERE NORTH PARK<br>COMES TO PLAY</h2>
+        <p style="color: #a0a0a0; font-size: 17px; line-height: 1.8; margin-bottom: 20px;">Nestled at the iconic corner of 30th and Upas, Bluefoot Bar + Lounge has become the heartbeat of North Park's nightlife scene. We're not just a bar—we're a destination for those who appreciate quality drinks, incredible music, and genuine connections.</p>
+        <p style="color: #a0a0a0; font-size: 17px; line-height: 1.8; margin-bottom: 32px;">From early morning soccer watch parties to late-night DJ sets, we've created a space where every hour feels like happy hour and every guest becomes family.</p>
+        <div style="display: flex; gap: 40px;">
+          <div>
+            <p style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: #d4a853;">Open Daily</p>
+            <p style="color: #606060; font-size: 14px;">By 11AM</p>
+          </div>
+          <div>
+            <p style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: #d4a853;">Live DJs</p>
+            <p style="color: #606060; font-size: 14px;">Every Weekend</p>
+          </div>
+        </div>
+      </div>
+      <div style="background: linear-gradient(135deg, #001a33, #0066cc); border-radius: 20px; padding: 60px; position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: flex-end;">
+        <div style="position: absolute; top: 30px; right: 30px; width: 100px; height: 100px; border-radius: 50%; background: rgba(212,168,83,0.2); filter: blur(30px);"></div>
+        <div style="position: absolute; bottom: 100px; left: 30px; width: 150px; height: 150px; border-radius: 50%; background: rgba(0,102,204,0.4); filter: blur(40px);"></div>
+        <div style="position: relative; z-index: 1;">
+          <p style="font-family: 'Bebas Neue', sans-serif; font-size: 120px; line-height: 0.9; opacity: 0.1; position: absolute; top: -200px; left: 0;">BF</p>
+          <p style="font-size: 24px; font-weight: 300; font-style: italic; line-height: 1.6;">"Live DJs, Drinks, and Dang Good People"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding: 120px 40px; background: linear-gradient(180deg, #0a0a0a 0%, #0d1117 100%);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <p style="color: #0066cc; font-size: 13px; font-weight: 600; letter-spacing: 3px; margin-bottom: 16px; text-transform: uppercase;">What We Offer</p>
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 1px;">YOUR PERFECT NIGHT OUT</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Service 1 -->
+        <div style="background: linear-gradient(180deg, rgba(0,102,204,0.1) 0%, rgba(0,0,0,0) 100%); border: 1px solid rgba(0,102,204,0.2); border-radius: 16px; padding: 50px 40px; transition: transform 0.3s;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066cc, #004d99); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+            <span style="font-size: 32px;">🍸</span>
+          </div>
+          <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; margin-bottom: 16px; letter-spacing: 1px;">Premium Bar Service</h3>
+          <p style="color: #a0a0a0; font-size: 15px; line-height: 1.7;">Craft cocktails, local brews, and top-shelf spirits expertly prepared by our skilled bartenders. Every drink made with care.</p>
+        </div>
+        <!-- Service 2 -->
+        <div style="background: linear-gradient(180deg, rgba(212,168,83,0.1) 0%, rgba(0,0,0,0) 100%); border: 1px solid rgba(212,168,83,0.2); border-radius: 16px; padding: 50px 40px; transform: translateY(-20px);">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #d4a853, #b8923f); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+            <span style="font-size: 32px;">🎉</span>
+          </div>
+          <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; margin-bottom: 16px; letter-spacing: 1px;">All-Day Happy Hour</h3>
+          <p style="color: #a0a0a0; font-size: 15px; line-height: 1.7;">Why wait? At Bluefoot, happy hour is every hour. Enjoy great prices on drinks from the moment we open until close.</p>
+        </div>
+        <!-- Service 3 -->
+        <div style="background: linear-gradient(180deg, rgba(0,102,204,0.1) 0%, rgba(0,0,0,0) 100%); border: 1px solid rgba(0,102,204,0.2); border-radius: 16px; padding: 50px 40px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066cc, #004d99); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+            <span style="font-size: 32px;">🎧</span>
+          </div>
+          <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; margin-bottom: 16px; letter-spacing: 1px;">Live DJ Entertainment</h3>
+          <p style="color: #a0a0a0; font-size: 15px; line-height: 1.7;">Feel the beat with our resident and guest DJs spinning the best tracks to keep the energy high all night long.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding: 120px 40px; background-color: #0a0a0a;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <p style="color: #0066cc; font-size: 13px; font-weight: 600; letter-spacing: 3px; margin-bottom: 16px; text-transform: uppercase;">What People Say</p>
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 1px;">LOVED BY NORTH PARK</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Testimonial 1 -->
+        <div style="background-color: #111111; border-radius: 16px; padding: 40px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+          </div>
+          <p style="color: #d0d0d0; font-size: 16px; line-height: 1.8; margin-bottom: 24px; font-style: italic;">"The vibe at Bluefoot is unmatched. Great drinks, amazing DJs, and the staff makes you feel like a regular from day one. This is my go-to spot in North Park!"</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #0066cc, #004d99); display: flex; align-items: center; justify-content: center; font-weight: 700;">MR</div>
+            <div>
+              <p style="font-weight: 600; font-size: 15px;">Marcus R.</p>
+              <p style="color: #606060; font-size: 13px;">North Park Local</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div style="background-color: #111111; border-radius: 16px; padding: 40px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+          </div>
+          <p style="color: #d0d0d0; font-size: 16px; line-height: 1.8; margin-bottom: 24px; font-style: italic;">"Best happy hour in San Diego—literally every hour! The corner location is perfect for people watching and the energy on weekend nights is incredible."</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #d4a853, #b8923f); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000;">JT</div>
+            <div>
+              <p style="font-weight: 600; font-size: 15px;">Jessica T.</p>
+              <p style="color: #606060; font-size: 13px;">Weekend Regular</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div style="background-color: #111111; border-radius: 16px; padding: 40px; border: 1px solid rgba(255,255,255,0.05);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+            <span style="color: #d4a853; font-size: 20px;">★</span>
+          </div>
+          <p style="color: #d0d0d0; font-size: 16px; line-height: 1.8; margin-bottom: 24px; font-style: italic;">"Whether I'm here for early soccer games or late-night DJ sets, Bluefoot always delivers. The drinks are strong, the music is perfect, and the people are dang good!"</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #0066cc, #004d99); display: flex; align-items: center; justify-content: center; font-weight: 700;">DK</div>
+            <div>
+              <p style="font-weight: 600; font-size: 15px;">David K.</p>
+              <p style="color: #606060; font-size: 13px;">Soccer Fan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="visit" style="padding: 120px 40px; background: linear-gradient(135deg, #001a33 0%, #0066cc 50%, #004080 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; left: -20%; width: 600px; height: 600px; border-radius: 50%; background: rgba(255,255,255,0.03);"></div>
+    <div style="position: absolute; bottom: -30%; right: -10%; width: 400px; height: 400px; border-radius: 50%; background: rgba(212,168,83,0.1);"></div>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 8vw, 64px); margin-bottom: 24px; letter-spacing: 2px;">READY FOR THE BEST<br>NIGHT IN NORTH PARK?</h2>
+      <p style="font-size: 20px; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 40px; line-height: 1.7;">Come experience the live music and vibrant crowd at 3404 30th Street. Your new favorite spot is waiting.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://maps.google.com/?q=3404+30th+Street+San+Diego+CA+92104" target="_blank" style="background-color: #ffffff; color: #0066cc; padding: 18px 40px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">Get Directions <span>📍</span></a>
+        <a href="https://www.yelp.com/biz/bluefoot-bar-and-lounge-san-diego" target="_blank" style="background-color: transparent; color: #ffffff; padding: 18px 40px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600; border: 2px solid rgba(255,255,255,0.4);">Check Hours on Yelp</a>
+      </div>
+      <div style="margin-top: 60px; padding: 30px 40px; background: rgba(0,0,0,0.2); border-radius: 12px; display: inline-block;">
+        <p style="font-size: 18px; color: rgba(255,255,255,0.9);"><strong>📍 3404 30th Street, San Diego, CA 92104</strong></p>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.7); margin-top: 8px;">Corner of 30th and Upas • North Park</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS SECTION -->
+  <section style="padding: 80px 40px; background-color: #0d0d0d;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; margin-bottom: 40px; letter-spacing: 1px;">HOURS OF OPERATION</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <div style="background-color: #111111; border-radius: 12px; padding: 30px; border: 1px solid rgba(0,102,204,0.2);">
+          <p style="color: #0066cc; font-size: 14px; font-weight: 600; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase;">Weekdays</p>
+          <p style="font-family: 'Bebas Neue', sans-serif; font-size: 32px;">11AM – MIDNIGHT</p>
+        </div>
+        <div style="background-color: #111111; border-radius: 12px; padding: 30px; border: 1px solid rgba(212,168,83,0.2);">
+          <p style="color: #d4a853; font-size: 14px; font-weight: 600; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase;">Weekends</p>
+          <p style="font-family: 'Bebas Neue', sans-serif; font-size: 32px;">11AM – 2AM</p>
+        </div>
+      </div>
+      <p style="color: #606060; font-size: 14px; margin-top: 24px;">⚽ Opens early for soccer events – check Google or Yelp for updates</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #050505; padding: 80px 40px 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+        <!-- Brand -->
+        <div>
+          <a href="#" style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #ffffff; text-decoration: none; letter-spacing: 2px; display: inline-block; margin-bottom: 20px;">BLUEFOOT<span style="color: #0066cc;">.</span></a>
+          <p style="color: #707070; font-size: 15px; line-height: 1.7; margin-bottom: 20px;">North Park's premier bar and lounge. Live DJs, craft drinks, and dang good people since day one.</p>
+          <p style="color: #505050; font-size: 13px;">21+ Only</p>
+        </div>
+        <!-- Location -->
+        <div>
+          <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 18px; margin-bottom: 20px; letter-spacing: 1px; color: #0066cc;">Location</h4>
+          <p style="color: #909090; font-size: 14px; line-height: 2;">3404 30th Street<br>San Diego, CA 92104<br>Corner of 30th & Upas</p>
+        </div>
+        <!-- Hours -->
+        <div>
+          <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 18px; margin-bottom: 20px; letter-spacing: 1px; color: #0066cc;">Hours</h4>
+          <p style="color: #909090; font-size: 14px; line-height: 2;">Mon–Thu: 11am–12am<br>Fri–Sat: 11am–2am<br>Sun: 11am–12am</p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 18px; margin-bottom: 20px; letter-spacing: 1px; color: #0066cc;">Quick Links</h4>
+          <a href="#about" style="color: #909090; font-size: 14px; text-decoration: none; display: block; line-height: 2.2;">About</a>
+          <a href="#services" style="color: #909090; font-size: 14px; text-decoration: none; display: block; line-height: 2.2;">What We Offer</a>
+          <a href="#visit" style="color: #909090; font-size: 14px; text-decoration: none; display: block; line-height: 2.2;">Visit Us</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <p style="color: #505050; font-size: 13px;">© 2024 Bluefoot Bar + Lounge. Site by <a href="https://theresandiego.com/advertise/" style="color: #0066cc; text-decoration: none;">LVRG Agency</a></p>
+        <p style="color: #404040; font-size: 12px;">Please drink responsibly.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#0066cc;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">B</div>
+      <div><div style="font-weight:700;font-size:15px;">Bluefoot Bar + Lounge</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly and energetic, welcoming customers to join the party while providing practical info about hours, location, and what to expect.! I can help answer questions about Bluefoot Bar + Lounge. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
   </div>
 </div>
-
 <script>
-const LVRG_PERSONA = "Friendly and casual, welcoming regulars and newcomers alike with an emphasis on good vibes and the social atmosphere of the bar.";
-const LVRG_BIZ = "Bluefoot Bar + Lounge";
-const LVRG_BOOKING = "https://theresandiego.com/advertise/";
-let lvrgHistory = [];
-
-async function lvrgSend() {
-  const inp = document.getElementById('lvrg-chat-input');
-  const msg = inp.value.trim();
-  if (!msg) return;
-  inp.value = '';
-  lvrgAddMsg(msg, 'user');
-  lvrgHistory.push({"role":"user","content":msg});
-  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      messages: lvrgHistory,
-      persona: LVRG_PERSONA,
-      business_name: LVRG_BIZ,
-      booking_url: LVRG_BOOKING
-    })
-  });
-  const data = await resp.json();
-  const reply = data.reply || "Let me connect you with our team!";
-  lvrgHistory.push({"role":"assistant","content":reply});
-  lvrgAddMsg(reply, 'bot');
-}
-
-function lvrgAddMsg(text, role) {
-  const msgs = document.getElementById('lvrg-chat-messages');
-  const div = document.createElement('div');
-  div.className = 'lvrg-msg ' + role;
-  div.textContent = text;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
+var _lvrgIntel={"domain": "bluefootsd.com", "url": "https://bluefootsd.com", "business_name": "Bluefoot Bar + Lounge", "tagline": "Happy hour is every hour here at bluefoot", "description": "Bluefoot Bar + Lounge is a lively bar and lounge located in North Park, San Diego. They feature live DJs, craft drinks, and a vibrant social atmosphere. Open late into the night, they cater to the 21+ crowd looking for quality entertainment and good company.", "services": ["Bar service", "Happy hour", "Live DJ entertainment", "Lounge seating"], "location": "3404 30th Street, San Diego, CA 92104", "phone": "", "email": "", "hours": "Opens by 11am (earlier for soccer events). Open until 2am on weekends, midnight during the week", "social_proof": "", "key_cta": "", "missing": "No phone number, no email contact, no social media links, no menu or drink list, no photos, no reviews or testimonials, no online booking or reservation system, no event information", "brand_vibe": "Casual, lively, social, music-forward nightlife spot", "primary_color": "#0066cc", "secondary_color": "#ffffff", "business_type": "bar", "pain_point": "No contact information, phone number, or clear way for customers to reach them or make reservations.", "chat_persona": "Friendly and energetic, welcoming customers to join the party while providing practical info about hours, location, and what to expect.", "cta_angle": "Come experience the live music and vibrant crowd - visit us tonight", "owner_name": "", "neighborhood": "North Park"};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#0066cc;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
 </script>
-
 </body>
 </html>
