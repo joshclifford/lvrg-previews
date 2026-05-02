@@ -3,241 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluefoot Bar + Lounge | Happy Hour is Every Hour in North Park</title>
+  <title>Bluefoot Bar + Lounge | North Park's Happy Hour Headquarters</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Inter', sans-serif; }
-    :root { --primary: #0066cc; --secondary: #333333; --gold: #d4a853; }
+    body { font-family: 'Inter', sans-serif; background:#0a0a0a; color:#fff; }
+    :root { --primary: #0047AB; --secondary: #1a1a1a; --gold: #D4AF37; }
     html { scroll-behavior: smooth; }
     a { text-decoration: none; }
   </style>
 </head>
 <body>
-
-<div style="position:sticky; top:0; z-index:1000; background:#000; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-  <span style="color:#888; font-size:12px;">There San Diego Smart Sites · Created by LVRG AI</span>
-  <a href="https://theresandiego.com/advertise/" style="background:linear-gradient(135deg, #d4a853, #b8943f); color:#000; padding:8px 16px; border-radius:4px; font-size:12px; font-weight:600; transition:transform 0.2s;">Claim This Site →</a>
-</div>
-
-<nav style="background:#111; padding:18px 40px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; position:sticky; top:44px; z-index:999;">
-  <a href="#" style="font-family:'Bebas Neue', sans-serif; font-size:28px; color:#fff; letter-spacing:2px;">BLUEFOOT <span style="color:#0066cc;">BAR + LOUNGE</span></a>
-  <div style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;">
-    <a href="#about" style="color:#ccc; font-size:14px; font-weight:500; transition:color 0.2s;">About</a>
-    <a href="#vibes" style="color:#ccc; font-size:14px; font-weight:500;">What We Offer</a>
-    <a href="#visit" style="color:#ccc; font-size:14px; font-weight:500;">Visit Us</a>
-    <a href="#visit" style="background:#0066cc; color:#fff; padding:12px 24px; border-radius:6px; font-size:14px; font-weight:600;">Come Hang Out</a>
+  <div style="position:fixed; top:0; left:0; right:0; background:#000; padding:10px 24px; display:flex; justify-content:space-between; align-items:center; z-index:1000; border-bottom:1px solid #222;">
+    <span style="font-size:12px; color:#666;">There San Diego Smart Sites · Created by LVRG AI</span>
+    <a href="https://theresandiego.com/advertise/" style="background:linear-gradient(135deg, #D4AF37, #B8962E); color:#000; padding:8px 16px; border-radius:4px; font-size:12px; font-weight:600; transition:transform 0.2s;">Claim This Site →</a>
   </div>
-</nav>
 
-<section style="background:linear-gradient(135deg, #0066cc 0%, #004499 40%, #1a1a2e 100%); min-height:90vh; display:flex; align-items:center; justify-content:center; padding:80px 20px; position:relative; overflow:hidden;">
-  <div style="position:absolute; top:20%; left:10%; width:300px; height:300px; background:rgba(255,255,255,0.03); border-radius:50%; filter:blur(60px);"></div>
-  <div style="position:absolute; bottom:10%; right:5%; width:400px; height:400px; background:rgba(0,102,204,0.2); border-radius:50%; filter:blur(80px);"></div>
-  <div style="text-align:center; max-width:900px; position:relative; z-index:1;">
-    <p style="color:#d4a853; font-size:14px; letter-spacing:4px; text-transform:uppercase; margin-bottom:20px; font-weight:600;">North Park's Favorite Neighborhood Bar</p>
-    <h1 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(48px, 10vw, 96px); color:#fff; line-height:1.1; letter-spacing:3px; margin-bottom:24px;">HAPPY HOUR IS<br><span style="color:#d4a853;">EVERY HOUR</span> HERE</h1>
-    <p style="color:rgba(255,255,255,0.85); font-size:20px; line-height:1.7; max-width:600px; margin:0 auto 40px;">Live DJs spinning. Craft drinks flowing. Great people vibing. Join us at the corner of 30th and Upas for San Diego's most welcoming late-night scene.</p>
-    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="#visit" style="background:#fff; color:#0066cc; padding:18px 40px; border-radius:8px; font-size:16px; font-weight:700; box-shadow:0 4px 20px rgba(0,0,0,0.3);">Experience the Vibe</a>
-      <a href="#vibes" style="background:transparent; color:#fff; padding:18px 40px; border-radius:8px; font-size:16px; font-weight:600; border:2px solid rgba(255,255,255,0.4);">See What's On</a>
+  <nav style="position:fixed; top:42px; left:0; right:0; background:rgba(10,10,10,0.95); backdrop-filter:blur(10px); padding:16px 48px; display:flex; justify-content:space-between; align-items:center; z-index:999; border-bottom:1px solid #222;">
+    <div style="font-family:'Bebas Neue', sans-serif; font-size:28px; letter-spacing:2px; color:#fff;">BLUEFOOT <span style="color:#0047AB;">BAR + LOUNGE</span></div>
+    <div style="display:flex; gap:32px; align-items:center;">
+      <a href="#about" style="color:#ccc; font-size:14px; font-weight:500; transition:color 0.2s;">About</a>
+      <a href="#drinks" style="color:#ccc; font-size:14px; font-weight:500;">Happy Hour</a>
+      <a href="#visit" style="color:#ccc; font-size:14px; font-weight:500;">Visit Us</a>
+      <a href="#visit" style="background:#0047AB; color:#fff; padding:12px 24px; border-radius:4px; font-size:14px; font-weight:600;">Come Hang Out</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section style="background:#111; padding:40px 20px;">
-  <div style="max-width:1000px; margin:0 auto; display:flex; justify-content:center; align-items:center; gap:50px; flex-wrap:wrap; text-align:center;">
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span style="font-size:32px;">🎧</span>
-      <span style="color:#fff; font-size:15px; font-weight:500;">Live DJs Every Weekend</span>
-    </div>
-    <div style="width:1px; height:30px; background:#333; display:none;"></div>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span style="font-size:32px;">🍸</span>
-      <span style="color:#fff; font-size:15px; font-weight:500;">Craft Drinks Daily</span>
-    </div>
-    <div style="width:1px; height:30px; background:#333; display:none;"></div>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span style="font-size:32px;">⭐</span>
-      <span style="color:#fff; font-size:15px; font-weight:500;">North Park Favorite Since Day One</span>
-    </div>
-    <div style="width:1px; height:30px; background:#333; display:none;"></div>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span style="font-size:32px;">🌙</span>
-      <span style="color:#fff; font-size:15px; font-weight:500;">Open Late 'Til 2AM</span>
-    </div>
-  </div>
-</section>
-
-<section id="about" style="background:#fafafa; padding:100px 20px;">
-  <div style="max-width:800px; margin:0 auto; text-align:center;">
-    <p style="color:#0066cc; font-size:13px; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; font-weight:600;">About Bluefoot</p>
-    <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); color:#222; margin-bottom:24px; letter-spacing:1px;">Where North Park Comes to Unwind</h2>
-    <p style="color:#555; font-size:18px; line-height:1.8;">Bluefoot Bar + Lounge isn't just a bar—it's your neighborhood living room with better drinks and killer beats. Located at the heart of North Park on 30th Street, we've created a space where everyone's welcome, the music's always right, and the drinks keep flowing. Whether you're catching an early soccer match or dancing 'til 2AM, the foot's got you covered.</p>
-  </div>
-</section>
-
-<section id="vibes" style="background:#fff; padding:100px 20px;">
-  <div style="max-width:1200px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:60px;">
-      <p style="color:#0066cc; font-size:13px; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; font-weight:600;">What We Offer</p>
-      <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); color:#222; letter-spacing:1px;">Your Perfect Night Out</h2>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
-      <div style="background:linear-gradient(180deg, #f8f9fa 0%, #fff 100%); border:1px solid #eee; border-radius:16px; padding:50px 40px; text-align:center; transition:transform 0.3s, box-shadow 0.3s;">
-        <div style="width:80px; height:80px; background:linear-gradient(135deg, #0066cc, #004499); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 28px; font-size:36px;">🍹</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; color:#222; margin-bottom:16px; letter-spacing:1px;">Full Bar Service</h3>
-        <p style="color:#666; font-size:15px; line-height:1.7;">From classic cocktails to local craft beers, our bartenders know how to pour 'em right. Whatever your poison, we've got you covered.</p>
+  <section style="min-height:100vh; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #0a0a0a 0%, #0047AB 50%, #002255 100%); position:relative; overflow:hidden; padding:120px 24px 80px;">
+    <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.03)%22 stroke-width=%220.5%22/></svg>') repeat; opacity:0.5;"></div>
+    <div style="position:absolute; top:20%; left:10%; width:300px; height:300px; background:radial-gradient(circle, rgba(0,71,171,0.4) 0%, transparent 70%); filter:blur(60px);"></div>
+    <div style="position:absolute; bottom:20%; right:10%; width:400px; height:400px; background:radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%); filter:blur(80px);"></div>
+    <div style="text-align:center; max-width:900px; position:relative; z-index:1;">
+      <div style="display:inline-block; background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); padding:8px 20px; border-radius:50px; margin-bottom:24px; border:1px solid rgba(255,255,255,0.2);">
+        <span style="font-size:14px; color:#D4AF37; font-weight:500;">📍 North Park's Favorite Neighborhood Bar</span>
       </div>
-      <div style="background:linear-gradient(180deg, #0066cc 0%, #004499 100%); border-radius:16px; padding:50px 40px; text-align:center; transform:scale(1.02); box-shadow:0 20px 60px rgba(0,102,204,0.3);">
-        <div style="width:80px; height:80px; background:rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 28px; font-size:36px;">🎧</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; color:#fff; margin-bottom:16px; letter-spacing:1px;">Live DJ Performances</h3>
-        <p style="color:rgba(255,255,255,0.85); font-size:15px; line-height:1.7;">The beats that make North Park move. Our rotating lineup of local DJs keeps the energy high every weekend. Come dance with us.</p>
-      </div>
-      <div style="background:linear-gradient(180deg, #f8f9fa 0%, #fff 100%); border:1px solid #eee; border-radius:16px; padding:50px 40px; text-align:center; transition:transform 0.3s, box-shadow 0.3s;">
-        <div style="width:80px; height:80px; background:linear-gradient(135deg, #d4a853, #b8943f); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 28px; font-size:36px;">🎉</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; color:#222; margin-bottom:16px; letter-spacing:1px;">Happy Hour Drinks</h3>
-        <p style="color:#666; font-size:15px; line-height:1.7;">Plot twist: every hour is happy hour at Bluefoot. Swing by anytime for great deals on drinks and even better company.</p>
+      <h1 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(48px, 10vw, 96px); line-height:1; letter-spacing:3px; margin-bottom:24px; text-shadow:0 4px 30px rgba(0,0,0,0.5);">LIVE DJs, DRINKS &<br><span style="color:#D4AF37;">DANG GOOD PEOPLE</span></h1>
+      <p style="font-size:20px; color:rgba(255,255,255,0.85); max-width:600px; margin:0 auto 40px; line-height:1.7;">Happy hour is every hour at Bluefoot. Join us at the corner of 30th and Upas for ice-cold drinks, killer beats, and the best vibes in San Diego.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="#visit" style="background:#D4AF37; color:#000; padding:18px 40px; border-radius:4px; font-size:16px; font-weight:700; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 20px rgba(212,175,55,0.4);">🍻 Visit Bluefoot Tonight</a>
+        <a href="#drinks" style="background:transparent; color:#fff; padding:18px 40px; border-radius:4px; font-size:16px; font-weight:600; border:2px solid rgba(255,255,255,0.3); display:inline-flex; align-items:center; gap:8px;">View Happy Hour →</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="background:#111; padding:100px 20px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:60px;">
-      <p style="color:#d4a853; font-size:13px; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; font-weight:600;">What People Say</p>
-      <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); color:#fff; letter-spacing:1px;">The Word on the Street</h2>
+  <section style="background:#0a0a0a; padding:40px 24px; border-top:1px solid #222; border-bottom:1px solid #222;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue', sans-serif; font-size:42px; color:#0047AB;">11AM</div>
+        <div style="font-size:13px; color:#888; text-transform:uppercase; letter-spacing:1px;">Opens Daily</div>
+      </div>
+      <div style="width:1px; height:40px; background:#333;"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue', sans-serif; font-size:42px; color:#0047AB;">21+</div>
+        <div style="font-size:13px; color:#888; text-transform:uppercase; letter-spacing:1px;">Adults Only</div>
+      </div>
+      <div style="width:1px; height:40px; background:#333;"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue', sans-serif; font-size:42px; color:#0047AB;">7</div>
+        <div style="font-size:13px; color:#888; text-transform:uppercase; letter-spacing:1px;">Days a Week</div>
+      </div>
+      <div style="width:1px; height:40px; background:#333;"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue', sans-serif; font-size:42px; color:#D4AF37;">⭐ 4.5</div>
+        <div style="font-size:13px; color:#888; text-transform:uppercase; letter-spacing:1px;">Star Reviews</div>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px;">
-      <div style="background:linear-gradient(135deg, #1a1a1a, #222); border-radius:16px; padding:40px; border-left:4px solid #0066cc;">
-        <p style="color:#ddd; font-size:17px; line-height:1.8; margin-bottom:24px; font-style:italic;">"Best neighborhood bar in North Park, hands down. The DJs always bring it, drinks are solid, and the staff makes you feel like family. This is my go-to spot every weekend."</p>
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div style="width:50px; height:50px; background:linear-gradient(135deg, #0066cc, #004499); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:18px;">M</div>
-          <div>
-            <p style="color:#fff; font-weight:600; font-size:15px;">Marcus T.</p>
-            <p style="color:#888; font-size:13px;">North Park Local</p>
-          </div>
+  </section>
+
+  <section id="about" style="padding:100px 24px; background:#1a1a1a;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;">
+        <span style="color:#D4AF37; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">North Park Since Day One</span>
+        <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); margin-top:12px; letter-spacing:2px;">YOUR NEIGHBORHOOD<br><span style="color:#0047AB;">HAPPY HOUR HEADQUARTERS</span></h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+        <div style="background:linear-gradient(180deg, #252525 0%, #1a1a1a 100%); border:1px solid #333; border-radius:12px; padding:40px 32px; text-align:center; position:relative; overflow:hidden;">
+          <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #0047AB, #D4AF37);"></div>
+          <div style="width:70px; height:70px; background:linear-gradient(135deg, #0047AB, #003080); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:32px;">🍺</div>
+          <h3 style="font-family:'Bebas Neue', sans-serif; font-size:26px; margin-bottom:16px; letter-spacing:1px;">Premium Bar Service</h3>
+          <p style="color:#aaa; line-height:1.7; font-size:15px;">From craft cocktails to ice-cold beers on tap, our bartenders pour with precision and personality. Every drink served with San Diego hospitality.</p>
         </div>
-      </div>
-      <div style="background:linear-gradient(135deg, #1a1a1a, #222); border-radius:16px; padding:40px; border-left:4px solid #d4a853;">
-        <p style="color:#ddd; font-size:17px; line-height:1.8; margin-bottom:24px; font-style:italic;">"Love catching soccer here in the mornings and coming back for the DJ sets at night. Bluefoot has this amazing energy—casual but always a good time. The corner of 30th and Upas is where it's at!"</p>
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div style="width:50px; height:50px; background:linear-gradient(135deg, #d4a853, #b8943f); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#000; font-weight:700; font-size:18px;">S</div>
-          <div>
-            <p style="color:#fff; font-weight:600; font-size:15px;">Sarah K.</p>
-            <p style="color:#888; font-size:13px;">Regular Guest</p>
-          </div>
+        <div style="background:linear-gradient(180deg, #252525 0%, #1a1a1a 100%); border:1px solid #333; border-radius:12px; padding:40px 32px; text-align:center; position:relative; overflow:hidden;">
+          <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #D4AF37, #0047AB);"></div>
+          <div style="width:70px; height:70px; background:linear-gradient(135deg, #D4AF37, #B8962E); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:32px;">🍸</div>
+          <h3 style="font-family:'Bebas Neue', sans-serif; font-size:26px; margin-bottom:16px; letter-spacing:1px;">Craft Cocktails</h3>
+          <p style="color:#aaa; line-height:1.7; font-size:15px;">Classic recipes and creative concoctions made fresh. Whether you're a whiskey lover or vodka enthusiast, we've got your perfect pour.</p>
         </div>
-      </div>
-      <div style="background:linear-gradient(135deg, #1a1a1a, #222); border-radius:16px; padding:40px; border-left:4px solid #0066cc;">
-        <p style="color:#ddd; font-size:17px; line-height:1.8; margin-bottom:24px; font-style:italic;">"Finally, a bar that doesn't try too hard. Just great drinks, great music, and genuinely good people. The late-night weekend vibes here are unmatched in San Diego."</p>
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div style="width:50px; height:50px; background:linear-gradient(135deg, #0066cc, #004499); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:18px;">J</div>
-          <div>
-            <p style="color:#fff; font-weight:600; font-size:15px;">James R.</p>
-            <p style="color:#888; font-size:13px;">Weekend Regular</p>
-          </div>
+        <div style="background:linear-gradient(180deg, #252525 0%, #1a1a1a 100%); border:1px solid #333; border-radius:12px; padding:40px 32px; text-align:center; position:relative; overflow:hidden;">
+          <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #0047AB, #D4AF37);"></div>
+          <div style="width:70px; height:70px; background:linear-gradient(135deg, #0047AB, #003080); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:32px;">🕐</div>
+          <h3 style="font-family:'Bebas Neue', sans-serif; font-size:26px; margin-bottom:16px; letter-spacing:1px;">All-Day Happy Hour</h3>
+          <p style="color:#aaa; line-height:1.7; font-size:15px;">Happy hour is every hour at Bluefoot. No need to watch the clock — just walk in and enjoy unbeatable drink specials all day long.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="background:linear-gradient(135deg, #0066cc 0%, #004499 50%, #002255 100%); padding:100px 20px; position:relative; overflow:hidden;">
-  <div style="position:absolute; top:-50%; right:-10%; width:500px; height:500px; background:rgba(255,255,255,0.05); border-radius:50%;"></div>
-  <div style="position:absolute; bottom:-30%; left:-5%; width:400px; height:400px; background:rgba(212,168,83,0.1); border-radius:50%;"></div>
-  <div style="max-width:800px; margin:0 auto; text-align:center; position:relative; z-index:1;">
-    <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(40px, 7vw, 64px); color:#fff; margin-bottom:24px; letter-spacing:2px;">Ready for Live DJs, Drinks<br>& Dang Good People?</h2>
-    <p style="color:rgba(255,255,255,0.85); font-size:18px; line-height:1.7; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto;">Pull up to 3404 30th Street and experience what makes Bluefoot the heartbeat of North Park nightlife. No reservations needed—just show up and join the party.</p>
-    <a href="#visit" style="display:inline-block; background:#fff; color:#0066cc; padding:20px 50px; border-radius:8px; font-size:18px; font-weight:700; box-shadow:0 8px 30px rgba(0,0,0,0.3);">Come Experience the Live DJ Scene</a>
-  </div>
-</section>
+  <section id="drinks" style="padding:100px 24px; background:linear-gradient(180deg, #0a0a0a 0%, #0d1a2d 100%); position:relative;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:600px; height:600px; background:radial-gradient(circle, rgba(0,71,171,0.15) 0%, transparent 70%); filter:blur(100px);"></div>
+    <div style="max-width:1000px; margin:0 auto; position:relative; z-index:1;">
+      <div style="text-align:center; margin-bottom:60px;">
+        <span style="color:#D4AF37; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">Live Entertainment</span>
+        <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); margin-top:12px; letter-spacing:2px;">MORE THAN JUST A BAR</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px;">
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:48px 32px; backdrop-filter:blur(10px);">
+          <div style="font-size:48px; margin-bottom:20px;">🎧</div>
+          <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; margin-bottom:16px; color:#0047AB;">Live DJs</h3>
+          <p style="color:#999; line-height:1.8;">Our resident DJs keep the energy high with the perfect mix of hip-hop, house, and party anthems. The dance floor heats up every weekend.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:48px 32px; backdrop-filter:blur(10px);">
+          <div style="font-size:48px; margin-bottom:20px;">⚽</div>
+          <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; margin-bottom:16px; color:#0047AB;">Soccer Central</h3>
+          <p style="color:#999; line-height:1.8;">We open early for the big matches. Catch Premier League, Liga MX, Champions League, and more with fellow fans over cold brews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="visit" style="background:#fafafa; padding:100px 20px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:60px;">
-      <p style="color:#0066cc; font-size:13px; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; font-weight:600;">Find Us</p>
-      <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); color:#222; letter-spacing:1px;">Visit Bluefoot</h2>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:40px;">
-      <div style="background:#fff; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
-        <div style="width:70px; height:70px; background:linear-gradient(135deg, #0066cc, #004499); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:30px;">📍</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#222; margin-bottom:12px; letter-spacing:1px;">Location</h3>
-        <p style="color:#555; font-size:16px; line-height:1.6;">3404 30th Street<br>San Diego, CA 92104</p>
-        <p style="color:#0066cc; font-size:14px; margin-top:8px; font-weight:500;">Corner of 30th and Upas, North Park</p>
+  <section style="padding:100px 24px; background:#1a1a1a;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;">
+        <span style="color:#D4AF37; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">What People Say</span>
+        <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(36px, 6vw, 56px); margin-top:12px; letter-spacing:2px;">NORTH PARK'S<br><span style="color:#0047AB;">FAVORITE SPOT</span></h2>
       </div>
-      <div style="background:#fff; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
-        <div style="width:70px; height:70px; background:linear-gradient(135deg, #d4a853, #b8943f); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:30px;">🕐</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#222; margin-bottom:12px; letter-spacing:1px;">Hours</h3>
-        <p style="color:#555; font-size:16px; line-height:1.8;">Opens by 11am daily<br>(Earlier for soccer!)<br><strong>Weekends:</strong> Open 'til 2am<br><strong>Weekdays:</strong> Open 'til Midnight</p>
-      </div>
-      <div style="background:#fff; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
-        <div style="width:70px; height:70px; background:linear-gradient(135deg, #0066cc, #004499); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:30px;">🎵</div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#222; margin-bottom:12px; letter-spacing:1px;">The Vibe</h3>
-        <p style="color:#555; font-size:16px; line-height:1.6;">21+ • Live DJs<br>Craft Drinks • Lounge Seating<br>Good Times Guaranteed</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px;">
+        <div style="background:linear-gradient(135deg, #252525 0%, #1f1f1f 100%); border-radius:16px; padding:36px; border-left:4px solid #0047AB;">
+          <div style="display:flex; gap:4px; margin-bottom:16px;">
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+          </div>
+          <p style="color:#ddd; font-size:17px; line-height:1.8; font-style:italic; margin-bottom:24px;">"Best happy hour in North Park, hands down. The bartenders are friendly, drinks are strong, and the vibe is always on point. My go-to spot on 30th Street!"</p>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:48px; height:48px; background:linear-gradient(135deg, #0047AB, #003080); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">MR</div>
+            <div>
+              <div style="font-weight:600;">Mike R.</div>
+              <div style="color:#888; font-size:13px;">Local Regular</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg, #252525 0%, #1f1f1f 100%); border-radius:16px; padding:36px; border-left:4px solid #D4AF37;">
+          <div style="display:flex; gap:4px; margin-bottom:16px;">
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+          </div>
+          <p style="color:#ddd; font-size:17px; line-height:1.8; font-style:italic; margin-bottom:24px;">"Love coming here for soccer games! They open early, the crowd is amazing, and it feels like a real community. Plus the DJs on weekend nights are fire."</p>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:48px; height:48px; background:linear-gradient(135deg, #D4AF37, #B8962E); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; color:#000;">JT</div>
+            <div>
+              <div style="font-weight:600;">Jessica T.</div>
+              <div style="color:#888; font-size:13px;">Soccer Fan</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg, #252525 0%, #1f1f1f 100%); border-radius:16px; padding:36px; border-left:4px solid #0047AB;">
+          <div style="display:flex; gap:4px; margin-bottom:16px;">
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+            <span style="color:#D4AF37; font-size:20px;">★</span>
+          </div>
+          <p style="color:#ddd; font-size:17px; line-height:1.8; font-style:italic; margin-bottom:24px;">"If you're looking for a chill bar with great people and even better drinks, Bluefoot is it. Been coming here for years and it never disappoints."</p>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:48px; height:48px; background:linear-gradient(135deg, #0047AB, #003080); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">DK</div>
+            <div>
+              <div style="font-weight:600;">David K.</div>
+              <div style="color:#888; font-size:13px;">North Park Resident</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div style="background:linear-gradient(135deg, #222, #333); border-radius:16px; padding:50px; margin-top:50px; text-align:center;">
-      <p style="color:#d4a853; font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; font-weight:600;">Pro Tip</p>
-      <p style="color:#fff; font-size:20px; line-height:1.7;">Check our Google or Yelp listings for the most up-to-date hours and upcoming DJ lineups. See you at the foot! 🦶</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer style="background:#0a0a0a; padding:60px 20px 30px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:40px; margin-bottom:50px;">
-      <div>
-        <h3 style="font-family:'Bebas Neue', sans-serif; font-size:28px; color:#fff; letter-spacing:2px; margin-bottom:16px;">BLUEFOOT <span style="color:#0066cc;">BAR + LOUNGE</span></h3>
-        <p style="color:#888; font-size:14px; line-height:1.7;">Live DJs, Drinks, and Dang Good People. Your neighborhood bar in the heart of North Park.</p>
+  <section id="visit" style="padding:100px 24px; background:linear-gradient(135deg, #0047AB 0%, #003080 50%, #001540 100%); position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-100px; right:-100px; width:400px; height:400px; background:radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%); filter:blur(80px);"></div>
+    <div style="position:absolute; bottom:-100px; left:-100px; width:400px; height:400px; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); filter:blur(80px);"></div>
+    <div style="max-width:800px; margin:0 auto; text-align:center; position:relative; z-index:1;">
+      <div style="font-size:64px; margin-bottom:24px;">🍻</div>
+      <h2 style="font-family:'Bebas Neue', sans-serif; font-size:clamp(40px, 8vw, 64px); letter-spacing:3px; margin-bottom:20px; text-shadow:0 4px 30px rgba(0,0,0,0.3);">COME HANG OUT<br>WITH US TONIGHT</h2>
+      <p style="font-size:20px; color:rgba(255,255,255,0.9); max-width:550px; margin:0 auto 40px; line-height:1.7;">Stop by 3404 30th Street in North Park. Live DJs, strong drinks, and the best people in San Diego are waiting for you.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:48px;">
+        <a href="https://maps.google.com/?q=3404+30th+Street+San+Diego+CA+92104" target="_blank" style="background:#D4AF37; color:#000; padding:20px 48px; border-radius:4px; font-size:18px; font-weight:700; display:inline-flex; align-items:center; gap:10px; box-shadow:0 8px 30px rgba(0,0,0,0.3);">📍 Get Directions</a>
+        <a href="https://www.yelp.com/biz/bluefoot-bar-lounge-san-diego" target="_blank" style="background:rgba(255,255,255,0.15); color:#fff; padding:20px 48px; border-radius:4px; font-size:18px; font-weight:600; border:2px solid rgba(255,255,255,0.3); backdrop-filter:blur(10px);">Check Yelp Reviews</a>
       </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px;">Location</h4>
-        <p style="color:#888; font-size:14px; line-height:1.8;">3404 30th Street<br>San Diego, CA 92104<br>Corner of 30th and Upas<br>North Park</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px;">Hours</h4>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Open Daily by 11am<br>(Earlier for soccer)<br>Weekends: 'Til 2am<br>Weekdays: 'Til Midnight</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px;">21+</h4>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Bluefoot is a 21+ establishment.<br>Please drink responsibly.</p>
+      <div style="background:rgba(0,0,0,0.2); border-radius:12px; padding:32px; backdrop-filter:blur(10px); display:inline-block;">
+        <div style="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+          <div>
+            <div style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#D4AF37;">WEEKDAYS</div>
+            <div style="color:rgba(255,255,255,0.8); margin-top:4px;">11am – Midnight</div>
+          </div>
+          <div style="width:1px; background:rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#D4AF37;">WEEKENDS</div>
+            <div style="color:rgba(255,255,255,0.8); margin-top:4px;">11am – 2am</div>
+          </div>
+          <div style="width:1px; background:rgba(255,255,255,0.2);"></div>
+          <div>
+            <div style="font-family:'Bebas Neue', sans-serif; font-size:24px; color:#D4AF37;">SOCCER DAYS</div>
+            <div style="color:rgba(255,255,255,0.8); margin-top:4px;">Opens Early!</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div style="border-top:1px solid #222; padding-top:30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-      <p style="color:#555; font-size:13px;">© 2024 LVRG Agency. All rights reserved.</p>
-      <p style="color:#555; font-size:13px;">Website designed for Bluefoot Bar + Lounge</p>
-    </div>
-  </div>
-</footer>
+  </section>
 
+  <footer style="background:#0a0a0a; padding:60px 24px 30px; border-top:1px solid #222;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:48px; margin-bottom:48px;">
+        <div>
+          <div style="font-family:'Bebas Neue', sans-serif; font-size:28px; letter-spacing:2px; margin-bottom:16px;">BLUEFOOT <span style="color:#0047AB;">BAR + LOUNGE</span></div>
+          <p style="color:#888; line-height:1.7; font-size:14px;">North Park's favorite neighborhood bar. Live DJs, drinks, and dang good people at the corner of 30th and Upas.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Bebas Neue', sans-serif; font-size:20px; margin-bottom:16px; color:#D4AF37;">Location</h4>
+          <p style="color:#888; line-height:1.8; font-size:14px;">
+            3404 30th Street<br>
+            San Diego, CA 92104<br>
+            Corner of 30th and Upas<br>
+            North Park
+          </p>
+        </div>
+        <div>
+          <h4 style="font-family:'Bebas Neue', sans-serif; font-size:20px; margin-bottom:16px; color:#D4AF37;">Hours</h4>
+          <p style="color:#888; line-height:1.8; font-size:14px;">
+            Mon – Thu: 11am – Midnight<br>
+            Fri – Sat: 11am – 2am<br>
+            Sunday: 11am – Midnight<br>
+            <span style="color:#0047AB;">Opens early for soccer!</span>
+          </p>
+        </div>
+      </div>
+      <div style="border-top:1px solid #222; padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+        <p style="color:#666; font-size:13px;">© 2024 LVRG Agency. All rights reserved.</p>
+        <p style="color:#666; font-size:13px;">21+ Only · Please Drink Responsibly</p>
+      </div>
+    </div>
+  </footer>
 
 <div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
-  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#0047AB;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
     <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </button>
   <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
-    <div style="background:#0066cc;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+    <div style="background:#0047AB;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
       <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">B</div>
       <div><div style="font-weight:700;font-size:15px;">Bluefoot Bar + Lounge</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
     </div>
     <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
-      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly and casual, like talking to a bartender at the bar, enthusiastic about the vibe and atmosphere while being helpful about hours and location.! I can help answer questions about Bluefoot Bar + Lounge. What can I help you with?</div>
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly and laid-back, knowledgeable about drink specials, happy hour timing, and the vibe of the bar, speaking in casual San Diego language.! I can help answer questions about Bluefoot Bar + Lounge. What can I help you with?</div>
     </div>
     <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
       <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
-      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#0047AB;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
         <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
       </button>
     </div>
   </div>
 </div>
 <script>
-var _lvrgIntel={"domain": "bluefootsd.com", "url": "https://bluefootsd.com", "business_name": "Bluefoot Bar + Lounge", "tagline": "Happy hour is every hour here at bluefoot", "description": "Bluefoot Bar + Lounge is a lively bar and lounge located in North Park, San Diego. They feature live DJs, craft drinks, and a welcoming atmosphere. Open late into the evenings, they cater to a 21+ crowd looking for quality drinks and great people.", "services": ["Full bar service", "Live DJ performances", "Happy hour drinks", "Lounge seating"], "location": "3404 30th Street, San Diego, CA 92104 (Corner of 30th and Upas, North Park)", "phone": "", "email": "", "hours": "Opens by 11am (earlier for soccer), open until 2am on weekends and midnight during the week", "social_proof": "", "key_cta": "Visit Bluefoot for live DJs, drinks, and great people", "missing": "No phone number, no email contact, no menu listed, no social media links, no online ordering or reservations, no staff information, no event booking details", "brand_vibe": "Casual, social, fun neighborhood bar with live DJ energy", "primary_color": "#0066cc", "secondary_color": "#333333", "business_type": "bar", "pain_point": "No contact information, phone number, or way for customers to inquire about events, reservations, or get in touch directly.", "chat_persona": "Friendly and casual, like talking to a bartender at the bar, enthusiastic about the vibe and atmosphere while being helpful about hours and location.", "cta_angle": "Come Experience the Live DJ Scene", "owner_name": "", "neighborhood": "North Park"};
+var _lvrgIntel={"domain": "bluefootsd.com", "url": "https://bluefootsd.com", "business_name": "Bluefoot Bar + Lounge", "tagline": "Live DJs, Drinks, and Dang Good People", "description": "Bluefoot is a bar and lounge located in San Diego's North Park neighborhood. They offer happy hour drinks throughout the day with live DJs and a welcoming atmosphere for guests 21 and older.", "services": ["Bar service", "Cocktails", "Happy hour", "Live DJ entertainment"], "location": "3404 30th Street, San Diego, CA 92104", "phone": "", "email": "", "hours": "Opens at 11am (earlier for soccer), closes at 2am on weekends and midnight during the week", "social_proof": "", "key_cta": "", "missing": "No phone number, no email contact, no menu or drink specials listed, no social media links, no online reservations, no event booking information, no photos or imagery", "brand_vibe": "Casual neighborhood bar with sports and nightlife energy", "primary_color": "#0047AB", "secondary_color": "#1a1a1a", "business_type": "bar", "pain_point": "No contact information or call-to-action makes it difficult for customers to reach out or book events.", "chat_persona": "Friendly and laid-back, knowledgeable about drink specials, happy hour timing, and the vibe of the bar, speaking in casual San Diego language.", "cta_angle": "Come hang out with live DJs and great people during happy hour", "owner_name": "", "neighborhood": "North Park"};
 var _lvrgHistory=[];
 var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
 function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
-function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#0066cc;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#0047AB;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
 async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
 </script>
 </body>
