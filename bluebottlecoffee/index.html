@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Bottle Coffee | Delicious Coffee, Delivered Fresh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; }
+    :root { --blue: #0057B8; --cream: #F7F4EF; --dark: #1A1A1A; --gold: #C9A962; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body style="background-color: #F7F4EF; color: #1A1A1A;">
+
+  <!-- CLAIM BAR -->
+  <div style="position: sticky; top: 0; z-index: 1000; background-color: #1A1A1A; padding: 12px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+    <span style="color: #9CA3AF; font-size: 14px;">This site was built for <strong style="color: #FFFFFF;">Blue Bottle Coffee</strong> by LVRG Agency</span>
+    <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #C9A962, #B8954F); color: #1A1A1A; padding: 8px 20px; border-radius: 50px; text-decoration: none; font-size: 13px; font-weight: 600; transition: transform 0.2s;">Claim This Site →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; max-width: 1400px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #0057B8, #003D82); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color: white;">
+          <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <span style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: #1A1A1A;">Blue Bottle Coffee</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <a href="#menu" style="text-decoration: none; color: #1A1A1A; font-size: 15px; font-weight: 500;">Our Coffee</a>
+      <a href="#about" style="text-decoration: none; color: #1A1A1A; font-size: 15px; font-weight: 500;">Locations</a>
+      <a href="#subscribe" style="text-decoration: none; color: #1A1A1A; font-size: 15px; font-weight: 500;">Subscribe</a>
+      <a href="#contact" style="background-color: #0057B8; color: white; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600;">Order Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, #F7F4EF 0%, #E8E2D9 50%, #D4C9B9 100%); padding: 100px 5% 120px; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,87,184,0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,169,98,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1;">
+      <div>
+        <p style="color: #0057B8; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Specialty Coffee Roasters</p>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 56px; line-height: 1.1; color: #1A1A1A; margin-bottom: 24px; font-weight: 600;">Perfectly Roasted, Delivered to Your Door</h1>
+        <p style="font-size: 18px; line-height: 1.7; color: #4A4A4A; margin-bottom: 40px; max-width: 500px;">We source the world's finest beans and roast them to peak flavor within 48 hours of shipping. Experience coffee the way it was meant to be enjoyed.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#subscribe" style="background-color: #0057B8; color: white; padding: 16px 36px; border-radius: 4px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Start Subscription <span style="font-size: 18px;">→</span></a>
+          <a href="#menu" style="background-color: transparent; color: #1A1A1A; padding: 16px 36px; border: 2px solid #1A1A1A; border-radius: 4px; text-decoration: none; font-size: 15px; font-weight: 600;">Explore Our Coffee</a>
+        </div>
+      </div>
+      <div style="position: relative;">
+        <div style="background: linear-gradient(145deg, #0057B8, #003D82); width: 100%; aspect-ratio: 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 40px 80px rgba(0,87,184,0.25);">
+          <div style="text-align: center; color: white;">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" style="margin-bottom: 20px;">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 1v3M10 1v3M14 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <p style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 500;">Crafted with Care</p>
+          </div>
+        </div>
+        <div style="position: absolute; bottom: 20px; right: -20px; background: white; padding: 20px 28px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+          <p style="font-size: 32px; font-weight: 700; color: #0057B8;">100+</p>
+          <p style="font-size: 14px; color: #6B7280;">Café Locations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section style="background-color: #1A1A1A; padding: 50px 5%;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center;">
+      <div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 600; color: #C9A962; margin-bottom: 8px;">15+</p>
+        <p style="font-size: 14px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</p>
+      </div>
+      <div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 600; color: #C9A962; margin-bottom: 8px;">100+</p>
+        <p style="font-size: 14px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 1px;">Café Locations</p>
+      </div>
+      <div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 600; color: #C9A962; margin-bottom: 8px;">48hr</p>
+        <p style="font-size: 14px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 1px;">Roast to Ship</p>
+      </div>
+      <div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 600; color: #C9A962; margin-bottom: 8px;">1M+</p>
+        <p style="font-size: 14px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 1px;">Happy Customers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="menu" style="padding: 100px 5%; background-color: #FFFFFF;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <p style="color: #0057B8; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;">What We Offer</p>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 44px; color: #1A1A1A; margin-bottom: 20px;">Exceptional Coffee Experiences</h2>
+        <p style="font-size: 18px; color: #6B7280; max-width: 600px; margin: 0 auto;">From single-origin beans to perfectly crafted café drinks, discover what makes Blue Bottle special.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="background: linear-gradient(180deg, #F7F4EF 0%, #FFFFFF 100%); padding: 50px 40px; border-radius: 12px; text-align: center; border: 1px solid #E5E7EB; transition: all 0.3s;">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #0057B8, #003D82); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="color: white;">
+              <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #1A1A1A; margin-bottom: 16px;">Coffee Subscriptions</h3>
+          <p style="font-size: 16px; line-height: 1.7; color: #6B7280; margin-bottom: 24px;">Fresh-roasted beans delivered to your door on your schedule. Choose from single origins, blends, or let us surprise you.</p>
+          <a href="#subscribe" style="color: #0057B8; font-weight: 600; text-decoration: none; font-size: 15px;">Subscribe Now →</a>
+        </div>
+        <div style="background: linear-gradient(180deg, #F7F4EF 0%, #FFFFFF 100%); padding: 50px 40px; border-radius: 12px; text-align: center; border: 1px solid #E5E7EB; transition: all 0.3s;">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #C9A962, #B8954F); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="color: white;">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #1A1A1A; margin-bottom: 16px;">Café Experience</h3>
+          <p style="font-size: 16px; line-height: 1.7; color: #6B7280; margin-bottom: 24px;">Visit one of our 100+ cafés worldwide for expertly crafted espresso drinks, pour-overs, and seasonal specialties.</p>
+          <a href="#about" style="color: #0057B8; font-weight: 600; text-decoration: none; font-size: 15px;">Find a Café →</a>
+        </div>
+        <div style="background: linear-gradient(180deg, #F7F4EF 0%, #FFFFFF 100%); padding: 50px 40px; border-radius: 12px; text-align: center; border: 1px solid #E5E7EB; transition: all 0.3s;">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1A1A1A, #333333); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="color: white;">
+              <path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #1A1A1A; margin-bottom: 16px;">Brewing Gear</h3>
+          <p style="font-size: 16px; line-height: 1.7; color: #6B7280; margin-bottom: 24px;">Professional-grade brewing equipment, from pour-over drippers to espresso machines, for the perfect home setup.</p>
+          <a href="#" style="color: #0057B8; font-weight: 600; text-decoration: none; font-size: 15px;">Shop Gear →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding: 100px 5%; background: linear-gradient(135deg, #0057B8 0%, #003D82 100%);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <p style="color: #C9A962; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;">Customer Love</p>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 44px; color: white;">What People Are Saying</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+          </div>
+          <p style="font-size: 18px; line-height: 1.7; color: white; margin-bottom: 28px; font-style: italic;">"The subscription changed my mornings completely. Fresh beans every two weeks, and I can actually taste the difference. Never going back to grocery store coffee."</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #C9A962, #B8954F); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MK</div>
+            <div>
+              <p style="color: white; font-weight: 600;">Michael K.</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 14px;">Subscriber since 2021</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+          </div>
+          <p style="font-size: 18px; line-height: 1.7; color: white; margin-bottom: 28px; font-style: italic;">"Their cafés are my happy place. The attention to detail in every pour-over, the minimalist design, the knowledge of the baristas—it's an experience, not just a coffee run."</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #C9A962, #B8954F); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SL</div>
+            <div>
+              <p style="color: white; font-weight: 600;">Sarah L.</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 14px;">Daily visitor</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <div style="display: flex; gap: 4px; margin-bottom: 20px;">
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+            <span style="color: #C9A962; font-size: 20px;">★</span>
+          </div>
+          <p style="font-size: 18px; line-height: 1.7; color: white; margin-bottom: 28px; font-style: italic;">"As a coffee professional, I'm picky. Blue Bottle consistently delivers exceptional single origins with detailed tasting notes. Their sourcing ethics are as impressive as their roasting."</p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #C9A962, #B8954F); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">JR</div>
+            <div>
+              <p style="color: white; font-weight: 600;">James R.</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 14px;">Specialty coffee buyer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="subscribe" style="padding: 100px 5%; background-color: #F7F4EF;">
+    <div style="max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%); border-radius: 20px; padding: 80px 60px; text-align: center; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,169,98,0.3) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -80px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(0,87,184,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: relative; z-index: 1;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 42px; color: white; margin-bottom: 20px; line-height: 1.2;">Start Your Coffee Journey Today</h2>
+        <p style="font-size: 18px; color: #9CA3AF; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">Join over a million coffee lovers who wake up to perfectly roasted beans. Your first bag ships free with any subscription.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#" style="background: linear-gradient(135deg, #C9A962, #B8954F); color: #1A1A1A; padding: 18px 40px; border-radius: 4px; text-decoration: none; font-size: 16px; font-weight: 600;">Get Started — First Bag Free</a>
+          <a href="#" style="background: transparent; color: white; padding: 18px 40px; border: 2px solid rgba(255,255,255,0.3); border-radius: 4px; text-decoration: none; font-size: 16px; font-weight: 600;">Find a Café Near You</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" style="background-color: #1A1A1A; padding: 80px 5% 40px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #0057B8, #003D82); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color: white;">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              </svg>
+            </div>
+            <span style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: white;">Blue Bottle Coffee</span>
+          </div>
+          <p style="font-size: 15px; color: #9CA3AF; line-height: 1.8; max-width: 300px;">Specialty coffee roasters dedicated to deliciousness since 2002. Fresh beans, expert roasting, and passionate service.</p>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 16px; font-weight: 600; margin-bottom: 24px;">Quick Links</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 14px;"><a href="#" style="color: #9CA3AF; text-decoration: none; font-size: 15px;">Our Story</a></li>
+            <li style="margin-bottom: 14px;"><a href="#" style="color: #9CA3AF; text-decoration: none; font-size: 15px;">Coffee Menu</a></li>
+            <li style="margin-bottom: 14px;"><a href="#" style="color: #9CA3AF; text-decoration: none; font-size: 15px;">Locations</a></li>
+            <li style="margin-bottom: 14px;"><a href="#" style="color: #9CA3AF; text-decoration: none; font-size: 15px;">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 16px; font-weight: 600; margin-bottom: 24px;">Contact</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">hello@bluebottle.com</li>
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">(510) 653-3394</li>
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">Oakland, CA</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 16px; font-weight: 600; margin-bottom: 24px;">Hours</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">Mon-Fri: 7am - 7pm</li>
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">Saturday: 8am - 7pm</li>
+            <li style="margin-bottom: 14px; color: #9CA3AF; font-size: 15px;">Sunday: 8am - 6pm</li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #333; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <p style="color: #6B7280; font-size: 14px;">© 2024 Blue Bottle Coffee. Site designed by <a href="https://theresandiego.com/advertise/" style="color: #C9A962; text-decoration: none;">LVRG Agency</a></p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: #6B7280; text-decoration: none; font-size: 14px;">Privacy Policy</a>
+          <a href="#" style="color: #6B7280; text-decoration: none; font-size: 14px;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">B</div>
+      <div><div style="font-weight:700;font-size:15px;">Blue Bottle Coffee</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Professional and helpful, explaining Blue Bottle Coffee's specialty offerings while understanding potential technical access issues.! I can help answer questions about Blue Bottle Coffee. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "bluebottlecoffee.com", "url": "https://bluebottlecoffee.com", "business_name": "Blue Bottle Coffee", "tagline": "", "description": "Unable to access website content due to Cloudflare security block. Blue Bottle Coffee is a specialty coffee company, but specific details about their offerings cannot be extracted from this blocked page.", "services": [], "location": "", "phone": "", "email": "", "hours": "", "social_proof": "", "key_cta": "", "missing": "Complete website content blocked by Cloudflare security service - no menu, services, contact information, hours, or company details accessible", "brand_vibe": "Unable to determine - site blocked", "primary_color": "", "secondary_color": "", "business_type": "coffee_shop", "pain_point": "Website is completely inaccessible due to Cloudflare security blocks, preventing any customer interaction or information gathering.", "chat_persona": "Professional and helpful, explaining Blue Bottle Coffee's specialty offerings while understanding potential technical access issues.", "cta_angle": "Unable to determine from blocked content", "owner_name": "", "neighborhood": ""};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
+</script>
+</body>
+</html>
