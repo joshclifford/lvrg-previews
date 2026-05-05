@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>787 Coffee | Farm-to-Cup Puerto Rican Coffee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Montserrat', sans-serif; }
+    :root { --primary: #8B4513; --secondary: #FFD700; --dark: #1a1a1a; --cream: #FFF8F0; }
+    html { scroll-behavior: smooth; }
+    a { text-decoration: none; }
+  </style>
+</head>
+<body style="background-color: #FFF8F0; color: #1a1a1a;">
+
+  <!-- CLAIM BAR -->
+  <div style="position: sticky; top: 0; z-index: 1000; background-color: #1a1a1a; padding: 12px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+    <span style="color: #a0a0a0; font-size: 14px;">This site was built for <strong style="color: #ffffff;">787 Coffee</strong> by LVRG Agency</span>
+    <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a1a; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; transition: transform 0.3s;">Claim This Site →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav style="background-color: rgba(255, 248, 240, 0.95); backdrop-filter: blur(10px); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 52px; z-index: 999; border-bottom: 1px solid rgba(139, 69, 19, 0.1);">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B4513, #5D2E0C); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <span style="color: #FFD700; font-weight: 700; font-size: 16px;">787</span>
+      </div>
+      <span style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #8B4513;">Coffee</span>
+    </div>
+    <div style="display: flex; gap: 35px; align-items: center;">
+      <a href="#services" style="color: #1a1a1a; font-weight: 500; font-size: 15px; transition: color 0.3s;">Our Coffee</a>
+      <a href="#experiences" style="color: #1a1a1a; font-weight: 500; font-size: 15px;">Experiences</a>
+      <a href="#locations" style="color: #1a1a1a; font-weight: 500; font-size: 15px;">Locations</a>
+      <a href="#subscribe" style="background-color: #8B4513; color: #ffffff; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);">Subscribe Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, #8B4513 0%, #5D2E0C 50%, #3D1F08 100%); min-height: 90vh; display: flex; align-items: center; padding: 80px 5%; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; right: -20%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -30%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="max-width: 700px; position: relative; z-index: 10;">
+      <div style="display: inline-block; background: rgba(255, 215, 0, 0.2); border: 1px solid rgba(255, 215, 0, 0.4); padding: 8px 20px; border-radius: 50px; margin-bottom: 25px;">
+        <span style="color: #FFD700; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Farm-to-Cup Excellence</span>
+      </div>
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 64px; color: #ffffff; line-height: 1.1; margin-bottom: 25px; font-weight: 700;">Fresh Puerto Rican Coffee, Grown With Purpose</h1>
+      <p style="font-size: 20px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin-bottom: 40px; max-width: 550px;">Experience the taste of Puerto Rico's mountains in every cup. We handpick, roast, and deliver premium single-origin Arabica beans directly from our sustainable farm to your door.</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="#subscribe" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a1a; padding: 18px 40px; border-radius: 50px; font-weight: 700; font-size: 16px; box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4); display: inline-flex; align-items: center; gap: 10px;">Start Your Subscription <span style="font-size: 20px;">→</span></a>
+        <a href="#experiences" style="border: 2px solid rgba(255, 255, 255, 0.4); color: #ffffff; padding: 18px 40px; border-radius: 50px; font-weight: 600; font-size: 16px; backdrop-filter: blur(10px);">Book Farm Experience</a>
+      </div>
+    </div>
+    <div style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: 450px; height: 450px; background: linear-gradient(145deg, rgba(255, 215, 0, 0.3), rgba(139, 69, 19, 0.5)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+      <div style="width: 350px; height: 350px; background: linear-gradient(145deg, #5D2E0C, #8B4513); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+        <div style="text-align: center; color: #ffffff;">
+          <div style="font-size: 80px; margin-bottom: 10px;">☕</div>
+          <span style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 600;">Since 2015</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section style="background-color: #1a1a1a; padding: 50px 5%;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; text-align: center;">
+      <div style="border-right: 1px solid rgba(255,255,255,0.1); padding-right: 20px;">
+        <div style="color: #FFD700; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">🌱</div>
+        <p style="color: #ffffff; font-size: 14px; font-weight: 500;">Farm-to-Cup Process</p>
+      </div>
+      <div style="border-right: 1px solid rgba(255,255,255,0.1); padding-right: 20px;">
+        <div style="color: #FFD700; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">🌿</div>
+        <p style="color: #ffffff; font-size: 14px; font-weight: 500;">Sustainable Farming</p>
+      </div>
+      <div style="border-right: 1px solid rgba(255,255,255,0.1); padding-right: 20px;">
+        <div style="color: #FFD700; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">🔥</div>
+        <p style="color: #ffffff; font-size: 14px; font-weight: 500;">Small-Batch Roasted</p>
+      </div>
+      <div style="border-right: 1px solid rgba(255,255,255,0.1); padding-right: 20px;">
+        <div style="color: #FFD700; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">🥃</div>
+        <p style="color: #ffffff; font-size: 14px; font-weight: 500;">Rum & Tequila Infusions</p>
+      </div>
+      <div>
+        <div style="color: #FFD700; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">⭐</div>
+        <p style="color: #ffffff; font-size: 14px; font-weight: 500;">Limited-Edition Blends</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding: 100px 5%; background-color: #FFF8F0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span style="color: #8B4513; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;">What We Offer</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; color: #1a1a1a; margin-top: 15px;">Premium Puerto Rican Coffee</h2>
+        <p style="color: #666; font-size: 18px; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">From our mountain farm to your morning ritual — discover the authentic taste of Puerto Rico</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Card 1 -->
+        <div style="background: #ffffff; border-radius: 20px; padding: 50px 40px; box-shadow: 0 10px 40px rgba(139, 69, 19, 0.08); transition: transform 0.3s; border: 1px solid rgba(139, 69, 19, 0.1);">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #8B4513, #5D2E0C); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+            <span style="font-size: 36px;">☕</span>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #1a1a1a; margin-bottom: 15px;">Whole Bean & Ground</h3>
+          <p style="color: #666; line-height: 1.7; margin-bottom: 25px;">Premium single-origin Arabica beans, handpicked from Puerto Rico's mountains. Choose whole bean or freshly ground to your preference.</p>
+          <a href="#subscribe" style="color: #8B4513; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Shop Now <span>→</span></a>
+        </div>
+        <!-- Card 2 -->
+        <div style="background: linear-gradient(135deg, #8B4513, #5D2E0C); border-radius: 20px; padding: 50px 40px; box-shadow: 0 15px 50px rgba(139, 69, 19, 0.3); transform: scale(1.02);">
+          <div style="width: 80px; height: 80px; background: rgba(255, 215, 0, 0.2); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; border: 1px solid rgba(255, 215, 0, 0.3);">
+            <span style="font-size: 36px;">📦</span>
+          </div>
+          <div style="display: inline-block; background: #FFD700; color: #1a1a1a; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 20px;">MOST POPULAR</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #ffffff; margin-bottom: 15px;">Coffee Subscription</h3>
+          <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin-bottom: 25px;">Fresh roasted coffee delivered monthly to your door. Never run out of your favorite Puerto Rican beans again.</p>
+          <a href="#subscribe" style="color: #FFD700; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Subscribe Now <span>→</span></a>
+        </div>
+        <!-- Card 3 -->
+        <div style="background: #ffffff; border-radius: 20px; padding: 50px 40px; box-shadow: 0 10px 40px rgba(139, 69, 19, 0.08); transition: transform 0.3s; border: 1px solid rgba(139, 69, 19, 0.1);">
+          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #8B4513, #5D2E0C); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+            <span style="font-size: 36px;">🎉</span>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #1a1a1a; margin-bottom: 15px;">Catering Services</h3>
+          <p style="color: #666; line-height: 1.7; margin-bottom: 25px;">Elevate your events with premium 787 Coffee. Full-service coffee catering for corporate events, weddings, and special occasions.</p>
+          <a href="#contact" style="color: #8B4513; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Book Catering <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences" style="padding: 100px 5%; background: linear-gradient(180deg, #FFF8F0, #F5E6D3);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span style="color: #8B4513; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;">Coffee Adventures</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; color: #1a1a1a; margin-top: 15px;">Immersive Coffee Experiences</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="background: linear-gradient(180deg, rgba(139, 69, 19, 0.9), rgba(93, 46, 12, 0.95)); border-radius: 20px; padding: 40px; text-align: center;">
+          <div style="font-size: 50px; margin-bottom: 20px;">🏔️</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #ffffff; margin-bottom: 12px;">Coffee Farm Weekend</h3>
+          <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Visit our Puerto Rican farm. Walk the fields, pick beans, and experience the complete farm-to-cup journey.</p>
+          <a href="#subscribe" style="color: #FFD700; font-weight: 600; font-size: 14px;">Book Experience →</a>
+        </div>
+        <div style="background: linear-gradient(180deg, rgba(139, 69, 19, 0.9), rgba(93, 46, 12, 0.95)); border-radius: 20px; padding: 40px; text-align: center;">
+          <div style="font-size: 50px; margin-bottom: 20px;">🫖</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #ffffff; margin-bottom: 12px;">V-60 Pour Over Workshop</h3>
+          <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Master the art of pour over coffee. Learn techniques from our expert baristas at any of our locations.</p>
+          <a href="#subscribe" style="color: #FFD700; font-weight: 600; font-size: 14px;">Book Workshop →</a>
+        </div>
+        <div style="background: linear-gradient(180deg, rgba(139, 69, 19, 0.9), rgba(93, 46, 12, 0.95)); border-radius: 20px; padding: 40px; text-align: center;">
+          <div style="font-size: 50px; margin-bottom: 20px;">👅</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #ffffff; margin-bottom: 12px;">Bean to Brew Tasting</h3>
+          <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">A guided tasting adventure through our single-origin coffees and specialty rum & tequila infusions.</p>
+          <a href="#subscribe" style="color: #FFD700; font-weight: 600; font-size: 14px;">Book Tasting →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding: 100px 5%; background-color: #1a1a1a;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span style="color: #FFD700; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;">Customer Love</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; color: #ffffff; margin-top: 15px;">What Coffee Lovers Say</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div style="background: linear-gradient(145deg, #252525, #1f1f1f); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 215, 0, 0.1);">
+          <div style="color: #FFD700; font-size: 32px; margin-bottom: 20px;">★★★★★</div>
+          <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.8; font-style: italic; margin-bottom: 25px;">"The subscription is a game-changer. Every month I get incredibly fresh coffee delivered straight from Puerto Rico. The small-batch roasting makes all the difference."</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8B4513, #FFD700); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700;">MR</div>
+            <div>
+              <p style="color: #ffffff; font-weight: 600;">Maria R.</p>
+              <p style="color: rgba(255,255,255,0.5); font-size: 13px;">Subscription Member, NYC</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: linear-gradient(145deg, #252525, #1f1f1f); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 215, 0, 0.1);">
+          <div style="color: #FFD700; font-size: 32px; margin-bottom: 20px;">★★★★★</div>
+          <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.8; font-style: italic; margin-bottom: 25px;">"The rum-infused coffee is unlike anything I've tasted. You can tell this comes from a real farm with people who care about sustainable, quality coffee."</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8B4513, #FFD700); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700;">JT</div>
+            <div>
+              <p style="color: #ffffff; font-weight: 600;">James T.</p>
+              <p style="color: rgba(255,255,255,0.5); font-size: 13px;">Coffee Enthusiast, Texas</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: linear-gradient(145deg, #252525, #1f1f1f); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 215, 0, 0.1);">
+          <div style="color: #FFD700; font-size: 32px; margin-bottom: 20px;">★★★★★</div>
+          <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.8; font-style: italic; margin-bottom: 25px;">"Visited the farm in Puerto Rico — absolutely incredible experience. Seeing the sustainable practices firsthand made me a customer for life."</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8B4513, #FFD700); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700;">SC</div>
+            <div>
+              <p style="color: #ffffff; font-weight: 600;">Sofia C.</p>
+              <p style="color: rgba(255,255,255,0.5); font-size: 13px;">Farm Visitor, New Jersey</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="subscribe" style="padding: 100px 5%; background: linear-gradient(135deg, #8B4513 0%, #5D2E0C 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"none\" stroke=\"rgba(255,215,0,0.05)\" stroke-width=\"0.5\"/></svg>') repeat; opacity: 0.5;"></div>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+      <div style="display: inline-block; background: rgba(255, 215, 0, 0.2); border: 1px solid rgba(255, 215, 0, 0.4); padding: 10px 25px; border-radius: 50px; margin-bottom: 30px;">
+        <span style="color: #FFD700; font-size: 14px; font-weight: 600;">🎁 Free Shipping on Subscriptions</span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 52px; color: #ffffff; margin-bottom: 25px; line-height: 1.2;">Join the 787 Coffee Family</h2>
+      <p style="font-size: 20px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Subscribe today and receive fresh-roasted Puerto Rican coffee delivered monthly. Experience the difference of true farm-to-cup coffee with every sip.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://787coffee.com" style="background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a1a; padding: 20px 50px; border-radius: 50px; font-weight: 700; font-size: 18px; box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4); display: inline-flex; align-items: center; gap: 12px;">Start Your Subscription <span style="font-size: 22px;">☕</span></a>
+        <a href="https://787coffee.com" style="border: 2px solid rgba(255,255,255,0.5); color: #ffffff; padding: 20px 50px; border-radius: 50px; font-weight: 600; font-size: 18px;">Book Farm Experience</a>
+      </div>
+      <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 30px;">Cancel anytime • Skip months • Change your blend</p>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section id="locations" style="padding: 80px 5%; background-color: #FFF8F0;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <span style="color: #8B4513; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;">Find Us</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 42px; color: #1a1a1a; margin-top: 15px; margin-bottom: 50px;">Coffee Shops Across the Americas</h2>
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        <div style="background: #ffffff; padding: 30px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); min-width: 180px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">🇵🇷</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #1a1a1a;">Puerto Rico</h3>
+          <p style="color: #8B4513; font-size: 14px; font-weight: 500;">Multiple Locations</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); min-width: 180px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">🗽</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #1a1a1a;">New York</h3>
+          <p style="color: #8B4513; font-size: 14px; font-weight: 500;">Multiple Locations</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); min-width: 180px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">🏖️</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #1a1a1a;">New Jersey</h3>
+          <p style="color: #8B4513; font-size: 14px; font-weight: 500;">Coffee Shops</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); min-width: 180px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">⛳</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #1a1a1a;">Texas</h3>
+          <p style="color: #8B4513; font-size: 14px; font-weight: 500;">Coffee Shops</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); min-width: 180px;">
+          <div style="font-size: 32px; margin-bottom: 10px;">🇲🇽</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #1a1a1a;">Mexico</h3>
+          <p style="color: #8B4513; font-size: 14px; font-weight: 500;">Coffee Shop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #1a1a1a; padding: 60px 5% 30px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B4513, #5D2E0C); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: #FFD700; font-weight: 700; font-size: 14px;">787</span>
+            </div>
+            <span style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #ffffff;">Coffee</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 300px;">Farm-to-cup Puerto Rican coffee. Handpicked, small-batch roasted, and delivered with love from our sustainable mountain farm.</p>
+        </div>
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 600; margin-bottom: 20px;">Quick Links</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;"><a href="#services" style="color: rgba(255,255,255,0.6); font-size: 14px;">Shop Coffee</a></li>
+            <li style="margin-bottom: 12px;"><a href="#subscribe" style="color: rgba(255,255,255,0.6); font-size: 14px;">Subscriptions</a></li>
+            <li style="margin-bottom: 12px;"><a href="#experiences" style="color: rgba(255,255,255,0.6); font-size: 14px;">Experiences</a></li>
+            <li style="margin-bottom: 12px;"><a href="#locations" style="color: rgba(255,255,255,0.6); font-size: 14px;">Locations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 600; margin-bottom: 20px;">Locations</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">Puerto Rico</li>
+            <li style="margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">New York</li>
+            <li style="margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">New Jersey</li>
+            <li style="margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">Texas</li>
+            <li style="margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">Mexico</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 600; margin-bottom: 20px;">Contact</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 12px;">Visit 787coffee.com for location details and contact info</p>
+          <a href="https://787coffee.com" style="color: #FFD700; font-size: 14px; font-weight: 500;">Visit Website →</a>
+        </div>
+      </div>
+      <div style="padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <p style="color: rgba(255,255,255,0.4); font-size: 13px;">© 2025 787 Coffee. Website designed by <a href="https://theresandiego.com/advertise/" style="color: #FFD700;">LVRG Agency</a></p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: rgba(255,255,255,0.4); font-size: 13px;">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.4); font-size: 13px;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#8B4513;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#8B4513;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">7</div>
+      <div><div style="font-weight:700;font-size:15px;">787 Coffee</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">A knowledgeable, friendly coffee expert who speaks passionately about Puerto Rican coffee heritage, sustainability, and specialty infusions while helping customers discover their perfect brew.! I can help answer questions about 787 Coffee. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#8B4513;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "787coffee.com", "url": "https://787coffee.com", "business_name": "787 Coffee", "tagline": "Best Coffee Shop in New York City & Puerto Rico | Fresh Single Origin Puerto Rican Coffee", "description": "787 Coffee is a farm-to-cup coffee company specializing in fresh, single-origin Puerto Rican coffee. They grow, handpick, and roast their premium Arabica beans on a sustainable farm in Puerto Rico's mountains. The company offers specialty infused coffees, coffee experiences, and operates multiple locations across the US and Puerto Rico.", "services": ["Coffee sales (whole bean and ground)", "Coffee subscription service", "Catering", "Coffee farm weekend experiences", "V-60 pour over workshop", "Bean to brew coffee tasting adventure", "Coffee shop locations"], "location": "Multiple locations: Puerto Rico, New York, New Jersey, Texas, Mexico", "phone": "", "email": "", "hours": "", "social_proof": "Farm-to-cup process, sustainable farming practices, small-batch roasting, specialty infusions (rum and tequila), limited-edition products", "key_cta": "Order now and join our 787 Coffee subscription for monthly deliveries", "missing": "Phone number, email address, business hours, specific addresses for locations, customer testimonials, about the owner/team section, pricing for experiences, online booking system for farm visits or workshops", "brand_vibe": "Premium artisanal Puerto Rican coffee with adventurous spirit and sustainable farming ethos", "primary_color": "#8B4513", "secondary_color": "#FFD700", "business_type": "coffee_shop", "pain_point": "No contact information, hours, or specific location details provided, making it difficult for customers to visit physical locations or reach customer service.", "chat_persona": "A knowledgeable, friendly coffee expert who speaks passionately about Puerto Rican coffee heritage, sustainability, and specialty infusions while helping customers discover their perfect brew.", "cta_angle": "Join the 787 Coffee subscription for fresh monthly deliveries from their farm, or book a coffee farm weekend experience", "owner_name": "", "neighborhood": ""};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#8B4513;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
+</script>
+</body>
+</html>
