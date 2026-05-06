@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xometry | Custom Manufacturing on Demand</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0d0d1a; color: #ffffff; }
+    :root { --primary: #1a1a2e; --secondary: #0066cc; --accent: #00d4ff; --gold: #d4a012; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+<!-- CLAIM BAR -->
+<div style="position: sticky; top: 0; z-index: 1000; background: #000000; padding: 12px 20px; display: flex; justify-content: center; align-items: center; gap: 16px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+  <span style="color: #a0a0a0; font-size: 14px;">This site was built for <strong style="color: #ffffff;">Xometry</strong> by LVRG Agency</span>
+  <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #d4a012, #f4c542); color: #000; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; transition: transform 0.2s;">Claim This Site →</a>
+</div>
+
+<!-- NAV -->
+<nav style="background: rgba(26, 26, 46, 0.95); backdrop-filter: blur(20px); padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 49px; z-index: 999; border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #0066cc, #00d4ff); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 18px; color: #fff;">X</span>
+    </div>
+    <span style="font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">Xometry</span>
+  </div>
+  <div style="display: flex; gap: 40px; align-items: center;">
+    <a href="#services" style="color: #c0c0c0; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;">Services</a>
+    <a href="#precision" style="color: #c0c0c0; text-decoration: none; font-size: 15px; font-weight: 500;">Why Xometry</a>
+    <a href="#testimonials" style="color: #c0c0c0; text-decoration: none; font-size: 15px; font-weight: 500;">Testimonials</a>
+    <a href="#quote" style="background: linear-gradient(135deg, #0066cc, #0088ff); color: #fff; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.4);">Get Instant Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 50%, #0a1628 100%); padding: 120px 60px 140px; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0, 102, 204, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
+  <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
+  <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+      <div style="width: 12px; height: 12px; background: #00d4ff; border-radius: 50%; animation: pulse 2s infinite;"></div>
+      <span style="color: #00d4ff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">AI-Powered Manufacturing Platform</span>
+    </div>
+    <h1 style="font-size: 72px; font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 28px; max-width: 900px;">Custom Manufacturing<br><span style="background: linear-gradient(135deg, #0066cc, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">On Demand</span></h1>
+    <p style="font-size: 22px; color: #a0a0b0; line-height: 1.7; max-width: 680px; margin-bottom: 48px;">From startups to Fortune 500 enterprises — get precision parts manufactured with sub ±0.001″ accuracy. Upload your design, receive an instant quote, and connect with our vetted network of certified suppliers.</p>
+    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <a href="#quote" style="background: linear-gradient(135deg, #0066cc, #0088ff); color: #fff; padding: 18px 40px; border-radius: 10px; font-size: 17px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 8px 30px rgba(0, 102, 204, 0.5); transition: transform 0.2s;">
+        <span>Upload Design File</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 18px 40px; border-radius: 10px; font-size: 17px; font-weight: 600; text-decoration: none; backdrop-filter: blur(10px);">Explore Services</a>
+    </div>
+    <div style="margin-top: 60px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <span style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); color: #00d4ff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 500;">STEP • STP • SLDPRT</span>
+      <span style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); color: #00d4ff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 500;">STL • DXF • IPT</span>
+      <span style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); color: #00d4ff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 500;">X_T • CATPART • 3MF</span>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<section style="background: #0a0a14; padding: 60px; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <p style="text-align: center; color: #666; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 32px;">Certified & Trusted by Industry Leaders</p>
+    <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 48px;">
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">ISO 9001:2015</span>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">ISO 13485:2016</span>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">AS9100D</span>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">IATF 16949:2016</span>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">ITAR</span>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.3); padding: 14px 24px; border-radius: 8px;">
+        <span style="color: #0088ff; font-size: 14px; font-weight: 600;">CMMC Level 2</span>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #fff, #a0a0a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">10,000+</div>
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">Buyers Served</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #fff, #a0a0a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">5,000+</div>
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">Vetted Suppliers</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #fff, #a0a0a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">50M+</div>
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">Parts Shipped</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #00d4ff, #0066cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">4.7/5</div>
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">Trustpilot Score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background: linear-gradient(180deg, #0d0d1a, #1a1a2e); padding: 120px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 80px;">
+      <span style="color: #0066cc; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;">Manufacturing Capabilities</span>
+      <h2 style="font-size: 52px; font-weight: 800; margin-top: 16px; letter-spacing: -1px;">Precision Engineering Services</h2>
+      <p style="color: #888; font-size: 20px; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">From prototype to production, our AI-powered platform matches your project with the right manufacturing process.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <!-- CNC Machining -->
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #0066cc, transparent);"></div>
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(0, 102, 204, 0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px;">
+          <svg width="36" height="36" fill="none" stroke="#0088ff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 16px;">CNC Machining</h3>
+        <p style="color: #888; font-size: 16px; line-height: 1.7; margin-bottom: 24px;">Precision milling, turning, and drilling with tolerances as tight as ±0.001″. Ideal for metal and plastic prototypes and production parts.</p>
+        <ul style="list-style: none; margin-bottom: 28px;">
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            3-Axis, 4-Axis & 5-Axis Milling
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            CNC Turning & Wire EDM
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            50+ Material Options
+          </li>
+        </ul>
+        <a href="#quote" style="color: #0088ff; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          Get CNC Quote
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <!-- 3D Printing -->
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #00d4ff, transparent);"></div>
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(0, 212, 255, 0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px;">
+          <svg width="36" height="36" fill="none" stroke="#00d4ff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 16px;">3D Printing</h3>
+        <p style="color: #888; font-size: 16px; line-height: 1.7; margin-bottom: 24px;">Rapid prototyping and end-use parts with industrial-grade additive manufacturing. No minimums required.</p>
+        <ul style="list-style: none; margin-bottom: 28px;">
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            SLS, SLA, FDM, MJF, DMLS
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Metal & Plastic Materials
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#00d4ff" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Same-Day Quoting
+          </li>
+        </ul>
+        <a href="#quote" style="color: #00d4ff; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          Get 3D Print Quote
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <!-- Sheet & Tube Fabrication -->
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #8b5cf6, transparent);"></div>
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px;">
+          <svg width="36" height="36" fill="none" stroke="#8b5cf6" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 16px;">Sheet & Tube Fabrication</h3>
+        <p style="color: #888; font-size: 16px; line-height: 1.7; margin-bottom: 24px;">Precision laser cutting, bending, and tube fabrication for enclosures, brackets, and structural components.</p>
+        <ul style="list-style: none; margin-bottom: 28px;">
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#8b5cf6" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Laser Cutting & Tube Cutting
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#8b5cf6" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Bending & Forming
+          </li>
+          <li style="color: #a0a0a0; font-size: 14px; padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="16" height="16" fill="#8b5cf6" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            Welding & Assembly
+          </li>
+        </ul>
+        <a href="#quote" style="color: #8b5cf6; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          Get Fabrication Quote
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECISION SECTION -->
+<section id="precision" style="background: #0d0d1a; padding: 100px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+    <div>
+      <span style="color: #00d4ff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;">Why Xometry</span>
+      <h2 style="font-size: 46px; font-weight: 800; margin-top: 16px; line-height: 1.15; letter-spacing: -1px;">Sub ±0.001″ Accuracy,<br>Zero Guesswork</h2>
+      <p style="color: #888; font-size: 18px; line-height: 1.8; margin-top: 24px;">Our patented Instant Quoting Engine uses AI to analyze your CAD files and match them with the perfect manufacturing process and supplier from our vetted network. Get accurate pricing in seconds, not days.</p>
+      <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="background: rgba(0, 102, 204, 0.1); border: 1px solid rgba(0, 102, 204, 0.2); border-radius: 12px; padding: 24px;">
+          <div style="font-size: 32px; font-weight: 800; color: #0088ff;">2-5 Days</div>
+          <div style="color: #888; font-size: 14px; margin-top: 4px;">Average Lead Time</div>
+        </div>
+        <div style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 12px; padding: 24px;">
+          <div style="font-size: 32px; font-weight: 800; color: #00d4ff;">U.S. Patented</div>
+          <div style="color: #888; font-size: 14px; margin-top: 4px;">Quoting Technology</div>
+        </div>
+      </div>
+    </div>
+    <div style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 212, 255, 0.05)); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 48px; position: relative;">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #0066cc, #0088ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span style="color: #fff; font-size: 24px; font-weight: 700;">1</span>
+          </div>
+          <div>
+            <div style="font-size: 18px; font-weight: 600;">Upload Your Design</div>
+            <div style="color: #888; font-size: 14px; margin-top: 4px;">STEP, STL, STP, SLDPRT & more</div>
+          </div>
+        </div>
+        <div style="width: 2px; height: 24px; background: linear-gradient(180deg, #0066cc, rgba(0,102,204,0.2)); margin-left: 27px;"></div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #0066cc, #0088ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span style="color: #fff; font-size: 24px; font-weight: 700;">2</span>
+          </div>
+          <div>
+            <div style="font-size: 18px; font-weight: 600;">Get Instant Quote</div>
+            <div style="color: #888; font-size: 14px; margin-top: 4px;">AI-powered pricing in seconds</div>
+          </div>
+        </div>
+        <div style="width: 2px; height: 24px; background: linear-gradient(180deg, #0066cc, rgba(0,102,204,0.2)); margin-left: 27px;"></div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #0066cc, #0088ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span style="color: #fff; font-size: 24px; font-weight: 700;">3</span>
+          </div>
+          <div>
+            <div style="font-size: 18px; font-weight: 600;">Parts Delivered</div>
+            <div style="color: #888; font-size: 14px; margin-top: 4px;">Quality-inspected & shipped fast</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background: linear-gradient(180deg, #1a1a2e, #0d0d1a); padding: 120px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 80px;">
+      <span style="color: #0066cc; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;">Customer Stories</span>
+      <h2 style="font-size: 52px; font-weight: 800; margin-top: 16px; letter-spacing: -1px;">Trusted by Industry Leaders</h2>
+      <p style="color: #888; font-size: 20px; margin-top: 20px;">From aerospace to medical devices, see why top companies choose Xometry.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <!-- Testimonial 1 -->
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px;">
+        <div style="display: flex; gap: 4px; margin-bottom: 24px;">
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p style="color: #c0c0c0; font-size: 17px; line-height: 1.8; font-style: italic; margin-bottom: 28px;">"The precision and accuracy exceeded our expectations. Every part came back exactly to spec with sub-thousandth tolerances. Xometry has become our go-to manufacturing partner."</p>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0066cc, #00d4ff); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #fff; font-weight: 700; font-size: 18px;">S</span>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 16px;">Engineering Lead</div>
+            <div style="color: #666; font-size: 14px;">SentriLock</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div style="background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px;">
+        <div style="display: flex; gap: 4px; margin-bottom: 24px;">
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="20" height="20" fill="#d4a012" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#1a1a2e;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#1a1a2e;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">X</div>
+      <div><div style="font-weight:700;font-size:15px;">Xometry</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Act as a knowledgeable manufacturing expert who understands design specifications and production capabilities, guiding users through the quoting process with technical confidence and responsiveness.! I can help answer questions about Xometry. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#1a1a2e;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "factoryfour.com", "url": "https://factoryfour.com", "business_name": "Xometry", "tagline": "Custom Manufacturing on Demand", "description": "Xometry is an AI-powered manufacturing platform that provides on-demand custom manufacturing services including CNC machining, 3D printing, sheet and tube fabrication, and injection molding. The platform connects customers from startups to global enterprises with a vetted network of certified suppliers to produce precision parts and prototypes at scale without minimums.", "services": ["CNC Machining", "3D Printing", "Sheet & Tube Fabrication", "Injection Molding", "High-Volume Metal Production", "Wire EDM", "CNC Milling", "CNC Turning", "CNC Drilling", "Laser Tube Cutting"], "location": "", "phone": "", "email": "", "hours": "", "social_proof": "ISO 9001:2015, ISO 13485:2016, AS9100D, IATF 16949:2016, ITAR, CMMC Level 2 certifications. Multiple customer testimonials praising precision, accuracy, quality, and fast turnaround. Notable clients include SentriLock, Intuitive Machines, and Sea Box. Xometry Instant Quoting Engine covered by U.S. Patents.", "key_cta": "Get an Instant Quote", "missing": "No physical address or location information, no phone number, no email contact, no business hours, no live chat widget visible, no team member names or bios", "brand_vibe": "Tech-forward, precision-focused, enterprise-grade manufacturing platform", "primary_color": "#1a1a2e", "secondary_color": "#0066cc", "business_type": "service", "pain_point": "No clear contact information or customer support channels visible, making it difficult for users who prefer traditional communication methods beyond the online quote tool.", "chat_persona": "Act as a knowledgeable manufacturing expert who understands design specifications and production capabilities, guiding users through the quoting process with technical confidence and responsiveness.", "cta_angle": "Get an Instant Quote by uploading your design file", "owner_name": "", "neighborhood": ""};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#1a1a2e;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
+</script>
+</body>
+</html>
