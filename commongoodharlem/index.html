@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common Good Harlem | Harlem's Favorite Neighborhood Coffee Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Lato', sans-serif; }
+    :root { --primary: #8B4513; --secondary: #D2B48C; --dark: #2C1810; --cream: #FDF5E6; }
+    html { scroll-behavior: smooth; }
+    a { text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- CLAIM BAR -->
+<div style="position:sticky; top:0; z-index:1000; background:#000; padding:12px 20px; text-align:center;">
+  <span style="color:#aaa; font-size:14px;">This site was built for </span>
+  <span style="color:#fff; font-weight:700; font-size:14px;">Common Good Harlem</span>
+  <span style="color:#aaa; font-size:14px;"> by LVRG Agency </span>
+  <a href="https://theresandiego.com/advertise/" style="display:inline-block; margin-left:15px; background:linear-gradient(135deg,#D4AF37,#F4D03F); color:#000; font-size:13px; font-weight:600; padding:8px 18px; border-radius:50px; transition:transform 0.2s;">Claim This Site →</a>
+</div>
+
+<!-- NAV -->
+<nav style="background:#FDF5E6; padding:20px 5%; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div style="width:45px; height:45px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+      <span style="color:#fff; font-size:20px;">☕</span>
+    </div>
+    <span style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:#2C1810;">Common Good Harlem</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:35px;">
+    <a href="#menu" style="color:#2C1810; font-weight:500; font-size:15px; transition:color 0.2s;">Our Menu</a>
+    <a href="#about" style="color:#2C1810; font-weight:500; font-size:15px;">About Us</a>
+    <a href="#visit" style="color:#2C1810; font-weight:500; font-size:15px;">Visit</a>
+    <a href="tel:9172616996" style="background:#8B4513; color:#fff; padding:12px 28px; border-radius:30px; font-weight:600; font-size:14px; box-shadow:0 4px 15px rgba(139,69,19,0.3);">Call to Order</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background:linear-gradient(135deg,#2C1810 0%,#8B4513 50%,#D2B48C 100%); padding:120px 5% 140px; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"none\" stroke=\"rgba(255,255,255,0.03)\" stroke-width=\"1\"/></svg>'); background-size:100px; opacity:0.5;"></div>
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; position:relative; z-index:1;">
+    <div>
+      <p style="color:#D2B48C; font-size:14px; font-weight:600; letter-spacing:3px; text-transform:uppercase; margin-bottom:20px;">Welcome to Harlem's Favorite Coffee Shop</p>
+      <h1 style="font-family:'Playfair Display',serif; font-size:56px; font-weight:700; color:#fff; line-height:1.15; margin-bottom:25px;">Fresh Brewed Coffee, Warm Hearts, Real Community</h1>
+      <p style="color:rgba(255,255,255,0.85); font-size:19px; line-height:1.7; margin-bottom:40px;">More than just coffee — we're your neighborhood gathering place on Frederick Douglass Boulevard. Great coffee, fresh pastries, and the warmest welcome in Harlem. Now serving beer & wine with free WiFi for remote workers.</p>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <a href="#visit" style="background:#fff; color:#8B4513; padding:16px 36px; border-radius:30px; font-weight:700; font-size:16px; display:inline-block; box-shadow:0 8px 25px rgba(0,0,0,0.2); transition:transform 0.2s;">Visit Us Today</a>
+        <a href="tel:9172616996" style="background:transparent; color:#fff; padding:16px 36px; border-radius:30px; font-weight:600; font-size:16px; display:inline-block; border:2px solid rgba(255,255,255,0.4);">Call (917) 261-6996</a>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; align-items:center;">
+      <div style="width:380px; height:380px; background:linear-gradient(145deg,#D2B48C,#8B4513); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 30px 60px rgba(0,0,0,0.3); position:relative;">
+        <div style="width:320px; height:320px; background:linear-gradient(145deg,#FDF5E6,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+          <div style="text-align:center;">
+            <span style="font-size:80px;">☕</span>
+            <p style="font-family:'Playfair Display',serif; font-size:24px; color:#2C1810; margin-top:10px;">Est. Harlem, NY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<section style="background:#2C1810; padding:50px 5%;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:40px; text-align:center;">
+    <div>
+      <p style="font-family:'Playfair Display',serif; font-size:42px; font-weight:700; color:#D2B48C;">★★★★★</p>
+      <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:8px;">5-Star Reviews</p>
+    </div>
+    <div>
+      <p style="font-family:'Playfair Display',serif; font-size:42px; font-weight:700; color:#D2B48C;">7</p>
+      <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:8px;">Days Open Weekly</p>
+    </div>
+    <div>
+      <p style="font-family:'Playfair Display',serif; font-size:42px; font-weight:700; color:#D2B48C;">100%</p>
+      <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:8px;">Fresh Daily Pastries</p>
+    </div>
+    <div>
+      <p style="font-family:'Playfair Display',serif; font-size:42px; font-weight:700; color:#D2B48C;">Free</p>
+      <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:8px;">WiFi for Everyone</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="menu" style="background:#FDF5E6; padding:100px 5%;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:60px;">
+      <p style="color:#8B4513; font-size:14px; font-weight:600; letter-spacing:3px; text-transform:uppercase; margin-bottom:15px;">Our Menu</p>
+      <h2 style="font-family:'Playfair Display',serif; font-size:44px; font-weight:700; color:#2C1810; margin-bottom:20px;">Crafted With Care, Served With Love</h2>
+      <p style="color:#666; font-size:18px; max-width:600px; margin:0 auto;">From your morning latte to an evening glass of wine, we've got something for every moment of your day.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08); transition:transform 0.3s;">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">☕</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Fresh Brewed Coffee</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Our signature fresh brewed coffee is made daily from premium beans. The perfect start to your Harlem morning.</p>
+      </div>
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08); transform:translateY(-10px);">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#D2B48C,#8B4513); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">🍵</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Hot Beverages</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Lattes, cappuccinos, chai, matcha and more. Handcrafted with care by our friendly baristas.</p>
+      </div>
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08);">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">🧊</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Cold Beverages</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Iced coffee, cold brew, iced tea — refreshing options perfect for warm Harlem days.</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:30px;">
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08);">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#D2B48C,#8B4513); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">🥐</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Pastries & Baked Goods</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Scones, cookies, muffins and more. Fresh daily selections to pair perfectly with your drink.</p>
+      </div>
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08);">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">🍷</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Beer & Wine</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Stay for happy hour! We serve beer and wine for those evening gatherings with friends.</p>
+      </div>
+      <div style="background:#fff; padding:50px 40px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.08);">
+        <div style="width:90px; height:90px; background:linear-gradient(135deg,#D2B48C,#8B4513); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 25px;">
+          <span style="font-size:40px;">📶</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:#2C1810; margin-bottom:15px;">Free WiFi</h3>
+        <p style="color:#666; font-size:16px; line-height:1.7;">Work remotely in comfort. High-speed WiFi is free for all our patrons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" style="background:linear-gradient(135deg,#8B4513,#2C1810); padding:100px 5%; position:relative;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+    <div style="background:linear-gradient(145deg,#D2B48C,#FDF5E6); padding:60px; border-radius:20px; text-align:center;">
+      <div style="font-size:100px; margin-bottom:20px;">🏠</div>
+      <p style="font-family:'Playfair Display',serif; font-size:28px; color:#2C1810; font-weight:600;">"We keep it simple — great coffee, great food, and great people."</p>
+    </div>
+    <div>
+      <p style="color:#D2B48C; font-size:14px; font-weight:600; letter-spacing:3px; text-transform:uppercase; margin-bottom:15px;">About Common Good</p>
+      <h2 style="font-family:'Playfair Display',serif; font-size:42px; font-weight:700; color:#fff; margin-bottom:25px; line-height:1.2;">Your Neighborhood Gathering Place</h2>
+      <p style="color:rgba(255,255,255,0.85); font-size:18px; line-height:1.8; margin-bottom:25px;">We've created a warm and welcoming atmosphere right here on Frederick Douglass Boulevard for you to enjoy fresh brewed coffee and baked goods.</p>
+      <p style="color:rgba(255,255,255,0.85); font-size:18px; line-height:1.8; margin-bottom:35px;">Whether you're grabbing a quick morning coffee, settling in for a remote work session, or meeting friends for an evening glass of wine — Common Good Harlem is your place.</p>
+      <a href="tel:9172616996" style="background:#D2B48C; color:#2C1810; padding:16px 36px; border-radius:30px; font-weight:700; font-size:16px; display:inline-block;">Call Us Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:#FDF5E6; padding:100px 5%;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:60px;">
+      <p style="color:#8B4513; font-size:14px; font-weight:600; letter-spacing:3px; text-transform:uppercase; margin-bottom:15px;">What Our Neighbors Say</p>
+      <h2 style="font-family:'Playfair Display',serif; font-size:44px; font-weight:700; color:#2C1810;">A True Neighborhood Gem</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
+      <div style="background:#fff; padding:45px; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.06); position:relative;">
+        <div style="position:absolute; top:25px; right:30px; font-size:60px; color:#D2B48C; opacity:0.3; font-family:serif;">"</div>
+        <div style="display:flex; gap:5px; margin-bottom:20px;">
+          <span style="color:#D4AF37; font-size:20px;">★★★★★</span>
+        </div>
+        <p style="color:#444; font-size:17px; line-height:1.8; margin-bottom:25px; font-style:italic;">"The coffee here is incredible — so much better than any big box coffee shop. It's become my daily morning ritual. The pastries are always fresh and the staff remembers my order!"</p>
+        <div style="display:flex; align-items:center; gap:15px;">
+          <div style="width:50px; height:50px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600;">MJ</div>
+          <div>
+            <p style="font-weight:600; color:#2C1810;">Marcus J.</p>
+            <p style="color:#888; font-size:14px;">Harlem Resident</p>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff; padding:45px; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.06); position:relative;">
+        <div style="position:absolute; top:25px; right:30px; font-size:60px; color:#D2B48C; opacity:0.3; font-family:serif;">"</div>
+        <div style="display:flex; gap:5px; margin-bottom:20px;">
+          <span style="color:#D4AF37; font-size:20px;">★★★★★</span>
+        </div>
+        <p style="color:#444; font-size:17px; line-height:1.8; margin-bottom:25px; font-style:italic;">"This place is a true neighborhood gem! The warm atmosphere makes it perfect for working remotely. Great WiFi, amazing lattes, and the friendliest service in Harlem."</p>
+        <div style="display:flex; align-items:center; gap:15px;">
+          <div style="width:50px; height:50px; background:linear-gradient(135deg,#D2B48C,#8B4513); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600;">SR</div>
+          <div>
+            <p style="font-weight:600; color:#2C1810;">Sabrina R.</p>
+            <p style="color:#888; font-size:14px;">Remote Worker</p>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff; padding:45px; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.06); position:relative;">
+        <div style="position:absolute; top:25px; right:30px; font-size:60px; color:#D2B48C; opacity:0.3; font-family:serif;">"</div>
+        <div style="display:flex; gap:5px; margin-bottom:20px;">
+          <span style="color:#D4AF37; font-size:20px;">★★★★★</span>
+        </div>
+        <p style="color:#444; font-size:17px; line-height:1.8; margin-bottom:25px; font-style:italic;">"Finally, a real community coffee shop in Harlem! The quality outperforms any chain and you can feel the love in every cup. The scones are to die for!"</p>
+        <div style="display:flex; align-items:center; gap:15px;">
+          <div style="width:50px; height:50px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600;">DW</div>
+          <div>
+            <p style="font-weight:600; color:#2C1810;">Derek W.</p>
+            <p style="color:#888; font-size:14px;">Local Regular</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="visit" style="background:linear-gradient(135deg,#D2B48C 0%,#8B4513 100%); padding:100px 5%; text-align:center;">
+  <div style="max-width:800px; margin:0 auto;">
+    <h2 style="font-family:'Playfair Display',serif; font-size:48px; font-weight:700; color:#fff; margin-bottom:25px;">Ready for Great Coffee?</h2>
+    <p style="color:rgba(255,255,255,0.9); font-size:20px; line-height:1.7; margin-bottom:40px;">Skip the line — call ahead and we'll have your order ready when you arrive. Visit us at 2801 Frederick Douglass Boulevard, just steps from your daily routine.</p>
+    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+      <a href="tel:9172616996" style="background:#fff; color:#8B4513; padding:18px 45px; border-radius:30px; font-weight:700; font-size:18px; display:inline-block; box-shadow:0 10px 30px rgba(0,0,0,0.2);">Call (917) 261-6996</a>
+      <a href="https://maps.google.com/?q=2801+Frederick+Douglass+Boulevard+New+York+NY+10039" target="_blank" style="background:transparent; color:#fff; padding:18px 45px; border-radius:30px; font-weight:600; font-size:18px; display:inline-block; border:2px solid rgba(255,255,255,0.5);">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section style="background:#2C1810; padding:80px 5%;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px;">
+    <div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:32px; font-weight:600; color:#fff; margin-bottom:30px;">Visit Us</h3>
+      <div style="background:rgba(255,255,255,0.05); padding:35px; border-radius:15px; margin-bottom:25px;">
+        <p style="color:#D2B48C; font-size:14px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">Address</p>
+        <p style="color:#fff; font-size:18px; line-height:1.6;">2801 Frederick Douglass Boulevard<br>New York, NY 10039</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.05); padding:35px; border-radius:15px;">
+        <p style="color:#D2B48C; font-size:14px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">Phone</p>
+        <a href="tel:9172616996" style="color:#fff; font-size:22px; font-weight:600;">(917) 261-6996</a>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:32px; font-weight:600; color:#fff; margin-bottom:30px;">Hours</h3>
+      <div style="background:rgba(255,255,255,0.05); padding:35px; border-radius:15px;">
+        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span style="color:rgba(255,255,255,0.7);">Monday</span>
+          <span style="color:#fff; font-weight:500;">7:30am - 7:00pm</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span style="color:rgba(255,255,255,0.7);">Tuesday - Wednesday</span>
+          <span style="color:#fff; font-weight:500;">7:30am - 6:00pm</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span style="color:rgba(255,255,255,0.7);">Thursday</span>
+          <span style="color:#fff; font-weight:500;">7:30am - 7:00pm</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span style="color:rgba(255,255,255,0.7);">Friday</span>
+          <span style="color:#fff; font-weight:500;">7:30am - 10:00pm</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span style="color:rgba(255,255,255,0.7);">Saturday</span>
+          <span style="color:#fff; font-weight:500;">8:30am - 7:00pm</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:12px 0;">
+          <span style="color:rgba(255,255,255,0.7);">Sunday</span>
+          <span style="color:#fff; font-weight:500;">9:00am - 4:00pm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a0f0a; padding:50px 5% 30px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:30px; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:40px; height:40px; background:linear-gradient(135deg,#8B4513,#D2B48C); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+          <span style="color:#fff; font-size:18px;">☕</span>
+        </div>
+        <span style="font-family:'Playfair Display',serif; font-size:20px; font-weight:600; color:#fff;">Common Good Harlem</span>
+      </div>
+      <div style="display:flex; gap:25px;">
+        <a href="#menu" style="color:rgba(255,255,255,0.6); font-size:14px;">Menu</a>
+        <a href="#about" style="color:rgba(255,255,255,0.6); font-size:14px;">About</a>
+        <a href="#visit" style="color:rgba(255,255,255,0.6); font-size:14px;">Visit</a>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+      <div>
+        <p style="color:rgba(255,255,255,0.5); font-size:13px;">2801 Frederick Douglass Boulevard, New York, NY 10039 | (917) 261-6996</p>
+      </div>
+      <p style="color:rgba(255,255,255,0.5); font-size:13px;">© 2025 Common Good Harlem. Website by <a href="https://theresandiego.com/advertise/" style="color:#D2B48C;">LVRG Agency</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#8B4513;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#8B4513;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">C</div>
+      <div><div style="font-weight:700;font-size:15px;">Common Good Harlem</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">A friendly, knowledgeable barista who warmly welcomes customers, knows the coffee offerings intimately, and genuinely cares about the neighborhood community.! I can help answer questions about Common Good Harlem. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#8B4513;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "commongoodharlem.org", "url": "https://commongoodharlem.org", "business_name": "Common Good Harlem", "tagline": "Enjoy Fresh Brewed Coffee at Harlem's Favorite Coffee Shop", "description": "Common Good Harlem is a neighborhood coffee shop in Harlem, New York that serves fresh brewed coffee, tea, pastries, and baked goods in a warm and welcoming atmosphere. They also serve beer and wine, and offer free WiFi for remote workers. The shop emphasizes quality, friendly service, and community connection.", "services": ["Fresh Brewed Coffee", "Hot Beverages (Lattes, Cappuccinos, Chai, Matcha, etc.)", "Cold Beverages (Iced Coffee, Cold Brew, Iced Tea)", "Pastries and Baked Goods", "Tea", "Beer and Wine", "Free WiFi"], "location": "2801 Frederick Douglass Boulevard, New York, NY 10039", "phone": "(917) 261-6996", "email": "", "hours": "Monday: 7:30am - 7:00pm, Tuesday - Wednesday: 7:30am - 6:00pm, Thursday: 7:30am - 7:00pm, Friday: 7:30am - 10:00pm, Saturday: 8:30am - 7:00pm, Sunday: 9:00am - 4:00pm", "social_proof": "Three detailed customer testimonials praising coffee quality, pastries, service, and neighborhood appeal. Customers describe it as a 'neighborhood gem' that outperforms big box coffee shops.", "key_cta": "Come Visit Us / Call Us", "missing": "No email contact option, no online ordering despite 'ORDER ONLINE' buttons present, no detailed food menu (only beverages listed), no photos of food/pastries, no staff information, no loyalty program mentioned, incomplete social media links", "brand_vibe": "Warm, welcoming neighborhood coffee shop with community focus", "primary_color": "#8B4513", "secondary_color": "#D2B48C", "business_type": "coffee_shop", "pain_point": "The website has 'ORDER ONLINE' buttons but no actual online ordering system implemented, creating friction in the customer journey.", "chat_persona": "A friendly, knowledgeable barista who warmly welcomes customers, knows the coffee offerings intimately, and genuinely cares about the neighborhood community.", "cta_angle": "Visit Us Today / Call to Order", "owner_name": "", "neighborhood": "Harlem"};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#8B4513;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at (917) 261-6996.');}}
+</script>
+</body>
+</html>
