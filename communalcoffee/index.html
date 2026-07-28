@@ -3,249 +3,426 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Communal Coffee | Where Community Meets Coffee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Communal Coffee | Where Coffee Brings Us Together</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B4513', cream: '#FDF8F3', warmwhite: '#FEFCF9', deepbrown: '#3D2314', caramel: '#C4883A', mocha: '#5D3A1A' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Inter', sans-serif; }
-    :root { --primary: #2C1810; --secondary: #D4A574; --accent: #8B4513; --cream: #FDF8F3; }
-    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; }
   </style>
 </head>
-<body>
-  <!-- CLAIM BAR -->
-  <div style="position: sticky; top: 0; z-index: 1000; background: #000; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-    <span style="color: #999; font-size: 14px;">This site was built for <strong style="color: #fff;">Communal Coffee</strong> by LVRG Agency</span>
-    <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #D4A574, #B8956A); color: #000; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; transition: transform 0.2s;">Claim This Site →</a>
+<body class="bg-warmwhite text-deepbrown">
+
+  <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
+      <span>This site was built for <strong>Communal Coffee</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-semibold px-4 py-1 rounded-full text-xs hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300">Claim This Site →</a>
+    </div>
   </div>
 
-  <!-- NAV -->
-  <nav style="background: #FDF8F3; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(44,24,16,0.1);">
-    <div style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #2C1810; letter-spacing: -0.5px;">Communal Coffee</div>
-    <div style="display: flex; align-items: center; gap: 40px;">
-      <a href="#menu" style="text-decoration: none; color: #2C1810; font-size: 15px; font-weight: 500; opacity: 0.8;">Menu</a>
-      <a href="#about" style="text-decoration: none; color: #2C1810; font-size: 15px; font-weight: 500; opacity: 0.8;">Our Story</a>
-      <a href="#visit" style="text-decoration: none; color: #2C1810; font-size: 15px; font-weight: 500; opacity: 0.8;">Visit Us</a>
-      <a href="#contact" style="background: #2C1810; color: #FDF8F3; padding: 12px 28px; border-radius: 30px; font-size: 14px; font-weight: 600; text-decoration: none;">Order Now</a>
+  <nav class="bg-warmwhite/95 backdrop-blur-sm sticky top-10 z-40 border-b border-deepbrown/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-semibold text-deepbrown" style="font-family: 'DM Serif Display', serif;">Communal Coffee</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#menu" class="text-mocha hover:text-deepbrown transition-colors">Menu</a>
+        <a href="#about" class="text-mocha hover:text-deepbrown transition-colors">Our Story</a>
+        <a href="#visit" class="text-mocha hover:text-deepbrown transition-colors">Visit</a>
+        <a href="#visit" class="bg-deepbrown text-warmwhite px-5 py-2 rounded-full hover:bg-mocha transition-colors font-medium">Find Us</a>
+      </div>
+      <button class="md:hidden text-deepbrown">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section style="background: linear-gradient(135deg, #2C1810 0%, #4A2C20 50%, #2C1810 100%); min-height: 85vh; display: flex; align-items: center; justify-content: center; padding: 80px 60px; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; right: -20%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -30%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(212,165,116,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="text-align: center; max-width: 900px; position: relative; z-index: 1;">
-      <div style="display: inline-block; background: rgba(212,165,116,0.2); padding: 8px 24px; border-radius: 50px; margin-bottom: 30px;">
-        <span style="color: #D4A574; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Specialty Coffee & Community</span>
-      </div>
-      <h1 style="font-family: 'Playfair Display', serif; font-size: 72px; color: #FDF8F3; font-weight: 700; line-height: 1.1; margin-bottom: 24px; letter-spacing: -2px;">Where Every Cup Brings Us Together</h1>
-      <p style="font-size: 20px; color: rgba(253,248,243,0.8); line-height: 1.7; max-width: 600px; margin: 0 auto 45px; font-weight: 300;">Handcrafted coffee, locally sourced pastries, and a warm space designed for connection. This is more than coffee — it's community.</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="#menu" style="background: #D4A574; color: #2C1810; padding: 18px 40px; border-radius: 50px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">View Our Menu <span style="font-size: 20px;">→</span></a>
-        <a href="#visit" style="background: transparent; color: #FDF8F3; padding: 18px 40px; border-radius: 50px; font-size: 16px; font-weight: 600; text-decoration: none; border: 2px solid rgba(253,248,243,0.3);">Find Our Location</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF BAR -->
-  <section style="background: #FDF8F3; padding: 50px 60px; border-bottom: 1px solid rgba(44,24,16,0.08);">
-    <div style="display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: center;">
-        <div style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: #2C1810;">5000+</div>
-        <div style="font-size: 14px; color: #8B4513; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Happy Customers</div>
-      </div>
-      <div style="width: 1px; height: 60px; background: rgba(44,24,16,0.15);"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: #2C1810;">4.9★</div>
-        <div style="font-size: 14px; color: #8B4513; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Average Rating</div>
-      </div>
-      <div style="width: 1px; height: 60px; background: rgba(44,24,16,0.15);"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: #2C1810;">100%</div>
-        <div style="font-size: 14px; color: #8B4513; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Ethically Sourced</div>
-      </div>
-      <div style="width: 1px; height: 60px; background: rgba(44,24,16,0.15);"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: #2C1810;">Local</div>
-        <div style="font-size: 14px; color: #8B4513; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">San Diego Favorite</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES / MENU -->
-  <section id="menu" style="background: #fff; padding: 120px 60px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 70px;">
-        <span style="color: #D4A574; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">What We Offer</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 52px; color: #2C1810; font-weight: 700; margin-top: 15px; letter-spacing: -1px;">Crafted With Care</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
-        <!-- Card 1 -->
-        <div style="background: linear-gradient(180deg, #FDF8F3 0%, #F5EDE4 100%); padding: 50px 40px; border-radius: 20px; text-align: center; transition: transform 0.3s;">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #2C1810, #4A2C20); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
-            <span style="font-size: 36px;">☕</span>
-          </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #2C1810; margin-bottom: 15px; font-weight: 600;">Specialty Coffee</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.7;">Single-origin beans, expertly roasted and brewed to perfection. From espresso to pour-over, every cup tells a story.</p>
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-cream via-warmwhite to-caramel/20"></div>
+    <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-caramel/30 to-deepbrown/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-mocha/20 to-caramel/30 rounded-full blur-3xl"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl text-deepbrown leading-tight">
+          The table where<br>strangers become<br><span class="text-caramel">neighbors</span>
+        </h1>
+        <p class="text-xl text-mocha max-w-lg leading-relaxed">
+          More than a coffee shop. A gathering place where every cup comes with a conversation waiting to happen.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#visit" class="bg-deepbrown text-warmwhite px-8 py-4 rounded-full font-semibold hover:bg-mocha transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Come Say Hello</a>
+          <a href="#menu" class="border-2 border-deepbrown text-deepbrown px-8 py-4 rounded-full font-semibold hover:bg-deepbrown hover:text-warmwhite transition-all duration-300">See the Menu</a>
         </div>
-        <!-- Card 2 -->
-        <div style="background: linear-gradient(180deg, #FDF8F3 0%, #F5EDE4 100%); padding: 50px 40px; border-radius: 20px; text-align: center; transition: transform 0.3s;">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #D4A574, #B8956A); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
-            <span style="font-size: 36px;">🥐</span>
+      </div>
+      
+      <div class="relative">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-deepbrown via-mocha to-caramel shadow-2xl flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-4 rounded-2xl bg-gradient-to-tr from-caramel/40 to-warmwhite/20 backdrop-blur-sm"></div>
+          <div class="relative text-center text-warmwhite p-8">
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-warmwhite/30 to-caramel/50 flex items-center justify-center">
+              <svg class="w-16 h-16 text-warmwhite" fill="currentColor" viewBox="0 0 24 24"><path d="M2 21V19H4V12C4 9.87 4.63 7.96 5.88 6.27C7.13 4.58 8.8 3.47 10.88 2.93C10.63 2.68 10.43 2.38 10.28 2.03C10.13 1.68 10.05 1.32 10.05 0.95C10.05 0.68 10.1 0.42 10.2 0.18C10.3 -0.06 10.45 -0.27 10.65 -0.45C10.85 -0.63 11.08 -0.78 11.33 -0.88C11.58 -0.98 11.85 -1.03 12.13 -1.03C12.93 -1.03 13.6 -0.75 14.13 -0.2C14.66 0.35 14.93 1.03 14.93 1.83C14.93 2.18 14.85 2.52 14.7 2.85C14.55 3.18 14.35 3.47 14.1 3.7C16.18 4.22 17.87 5.32 19.15 7C20.43 8.68 21.07 10.58 21.07 12.7V19H23.07V21H2ZM12 12C12.83 12 13.54 11.71 14.12 11.12C14.71 10.54 15 9.83 15 9C15 8.17 14.71 7.46 14.12 6.88C13.54 6.29 12.83 6 12 6C11.17 6 10.46 6.29 9.88 6.88C9.29 7.46 9 8.17 9 9C9 9.83 9.29 10.54 9.88 11.12C10.46 11.71 11.17 12 12 12Z"/></svg>
+            </div>
+            <p class="text-lg opacity-90" style="font-family: 'DM Serif Display', serif;">Every cup tells a story</p>
           </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #2C1810; margin-bottom: 15px; font-weight: 600;">Fresh Pastries</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.7;">Locally baked goods delivered daily. Croissants, muffins, and seasonal treats that pair perfectly with your favorite brew.</p>
         </div>
-        <!-- Card 3 -->
-        <div style="background: linear-gradient(180deg, #FDF8F3 0%, #F5EDE4 100%); padding: 50px 40px; border-radius: 20px; text-align: center; transition: transform 0.3s;">
-          <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #8B4513, #A0522D); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
-            <span style="font-size: 36px;">🤝</span>
-          </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; color: #2C1810; margin-bottom: 15px; font-weight: 600;">Community Space</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.7;">Free WiFi, cozy seating, and a welcoming atmosphere. Perfect for remote work, catch-ups, or quiet moments.</p>
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-gradient-to-br from-caramel to-deepbrown shadow-xl flex items-center justify-center">
+          <span class="text-warmwhite text-3xl" style="font-family: 'DM Serif Display', serif;">☕</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="background: #2C1810; padding: 120px 60px; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"none\" stroke=\"rgba(212,165,116,0.05)\" stroke-width=\"0.5\"/></svg>') repeat; opacity: 0.5;"></div>
-    <div style="max-width: 1000px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
-      <span style="color: #D4A574; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Our Story</span>
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; color: #FDF8F3; font-weight: 700; margin: 20px 0 30px; letter-spacing: -1px;">More Than Just a Coffee Shop</h2>
-      <p style="font-size: 20px; color: rgba(253,248,243,0.8); line-height: 1.8; font-weight: 300;">Communal Coffee was founded on a simple belief: that great coffee has the power to bring people together. We source our beans from ethical farms, roast them with intention, and serve them in a space designed for genuine connection. Whether you're a freelancer seeking focus, friends catching up, or neighbors meeting for the first time — you belong here.</p>
+  <section class="bg-deepbrown py-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="space-y-1">
+          <p class="text-3xl font-bold text-caramel" style="font-family: 'DM Serif Display', serif;">100%</p>
+          <p class="text-warmwhite/80 text-sm">Specialty Coffee</p>
+        </div>
+        <div class="space-y-1">
+          <p class="text-3xl font-bold text-caramel" style="font-family: 'DM Serif Display', serif;">Local</p>
+          <p class="text-warmwhite/80 text-sm">Roasters & Bakers</p>
+        </div>
+        <div class="space-y-1">
+          <p class="text-3xl font-bold text-caramel" style="font-family: 'DM Serif Display', serif;">Daily</p>
+          <p class="text-warmwhite/80 text-sm">Fresh Pastries</p>
+        </div>
+        <div class="space-y-1">
+          <p class="text-3xl font-bold text-caramel" style="font-family: 'DM Serif Display', serif;">All</p>
+          <p class="text-warmwhite/80 text-sm">Are Welcome Here</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section style="background: #FDF8F3; padding: 120px 60px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 70px;">
-        <span style="color: #D4A574; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Customer Love</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 52px; color: #2C1810; font-weight: 700; margin-top: 15px; letter-spacing: -1px;">What People Are Saying</h2>
+  <section id="menu" class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl text-deepbrown mb-4">What's Brewing</h2>
+        <p class="text-mocha text-lg max-w-2xl mx-auto">Every drink crafted with intention. Every bite made with care.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
-        <!-- Testimonial 1 -->
-        <div style="background: #fff; padding: 45px; border-radius: 20px; box-shadow: 0 20px 60px rgba(44,24,16,0.08);">
-          <div style="font-size: 48px; color: #D4A574; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
-          <p style="font-size: 17px; color: #444; line-height: 1.8; margin-bottom: 30px;">The best coffee shop in San Diego, hands down. The atmosphere is so welcoming, and their oat milk lattes are absolutely perfect. I've made this my daily work spot.</p>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #D4A574, #8B4513); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600;">SM</div>
-            <div>
-              <div style="font-weight: 600; color: #2C1810;">Sarah M.</div>
-              <div style="font-size: 13px; color: #888;">Regular Customer</div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-warmwhite rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-mocha via-deepbrown to-caramel/80 mb-6 flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-warmwhite/20 flex items-center justify-center">
+              <svg class="w-10 h-10 text-warmwhite" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v-2h2v-6h-2V8zM3 18h14a2 2 0 002-2v-4a2 2 0 00-2-2H3v8z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 8V6a2 2 0 012-2h0a2 2 0 012 2v2"></path></svg>
             </div>
           </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Handcrafted Espresso</h3>
+          <p class="text-mocha leading-relaxed">From classic cortados to signature lattes, each pull is a small act of love.</p>
         </div>
-        <!-- Testimonial 2 -->
-        <div style="background: #fff; padding: 45px; border-radius: 20px; box-shadow: 0 20px 60px rgba(44,24,16,0.08);">
-          <div style="font-size: 48px; color: #D4A574; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
-          <p style="font-size: 17px; color: #444; line-height: 1.8; margin-bottom: 30px;">Finally, a coffee shop that gets it right. Great beans, friendly baristas, and that warm community vibe you just can't fake. This place feels like home.</p>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #2C1810, #4A2C20); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600;">JK</div>
-            <div>
-              <div style="font-weight: 600; color: #2C1810;">James K.</div>
-              <div style="font-size: 13px; color: #888;">Local Resident</div>
+        
+        <div class="bg-warmwhite rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-caramel via-mocha/80 to-deepbrown/90 mb-6 flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-warmwhite/20 flex items-center justify-center">
+              <svg class="w-10 h-10 text-warmwhite" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.5a2.5 2.5 0 01-2.5 2.5H6l-4 4V5a2 2 0 012-2h15a2 2 0 012 2v10.5z"></path></svg>
             </div>
           </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Fresh Pastries</h3>
+          <p class="text-mocha leading-relaxed">Baked daily by local artisans. The perfect companion to your morning ritual.</p>
         </div>
-        <!-- Testimonial 3 -->
-        <div style="background: #fff; padding: 45px; border-radius: 20px; box-shadow: 0 20px 60px rgba(44,24,16,0.08);">
-          <div style="font-size: 48px; color: #D4A574; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
-          <p style="font-size: 17px; color: #444; line-height: 1.8; margin-bottom: 30px;">I brought my whole team here for our morning meeting. The space is perfect, coffee was incredible, and we left feeling inspired. Will definitely be back!</p>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8B4513, #A0522D); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600;">AL</div>
-            <div>
-              <div style="font-weight: 600; color: #2C1810;">Amanda L.</div>
-              <div style="font-size: 13px; color: #888;">Business Owner</div>
+        
+        <div class="bg-warmwhite rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-deepbrown via-caramel/70 to-mocha mb-6 flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-warmwhite/20 flex items-center justify-center">
+              <svg class="w-10 h-10 text-warmwhite" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             </div>
           </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Community Space</h3>
+          <p class="text-mocha leading-relaxed">A place to work, meet, or simply be. Because good coffee is better shared.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section style="background: linear-gradient(135deg, #D4A574 0%, #B8956A 100%); padding: 100px 60px; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: rgba(44,24,16,0.1); border-radius: 50%;"></div>
-    <div style="max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 48px; color: #2C1810; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px;">Your Table Is Waiting</h2>
-      <p style="font-size: 20px; color: rgba(44,24,16,0.8); line-height: 1.7; margin-bottom: 40px;">Stop by today and experience what makes Communal Coffee the heart of our neighborhood. Great coffee, good people, and a space that feels like home.</p>
-      <a href="#visit" style="display: inline-block; background: #2C1810; color: #FDF8F3; padding: 20px 50px; border-radius: 50px; font-size: 18px; font-weight: 600; text-decoration: none;">Visit Us Today</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="visit" style="background: #1A0F0A; padding: 80px 60px 40px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
-        <!-- Brand -->
+  <section id="about" class="py-24 bg-warmwhite relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-caramel/10 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #FDF8F3; margin-bottom: 20px;">Communal Coffee</div>
-          <p style="font-size: 15px; color: rgba(253,248,243,0.6); line-height: 1.8;">Where community meets coffee. Serving San Diego with specialty brews, local pastries, and a whole lot of heart.</p>
+          <h2 class="text-4xl md:text-5xl text-deepbrown mb-6 leading-tight">Coffee shops should feel like home</h2>
+          <p class="text-mocha text-lg leading-relaxed mb-6">
+            At Communal Coffee, we believe the best things in life happen around a shared table. We're not just serving coffee — we're creating space for connection, creativity, and community.
+          </p>
+          <p class="text-mocha text-lg leading-relaxed mb-8">
+            Every bean is carefully sourced, every drink thoughtfully prepared, and every guest welcomed like family.
+          </p>
+          <div class="flex items-center gap-6">
+            <div class="flex -space-x-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-caramel to-deepbrown border-2 border-warmwhite"></div>
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-mocha to-caramel border-2 border-warmwhite"></div>
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-deepbrown to-mocha border-2 border-warmwhite"></div>
+            </div>
+            <p class="text-mocha text-sm">Served by people who genuinely care</p>
+          </div>
         </div>
-        <!-- Hours -->
-        <div>
-          <h4 style="font-size: 14px; color: #D4A574; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Hours</h4>
-          <p style="font-size: 15px; color: rgba(253,248,243,0.7); line-height: 2;">Mon - Fri: 7am - 6pm<br>Saturday: 8am - 6pm<br>Sunday: 8am - 5pm</p>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-mocha to-deepbrown"></div>
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-caramel to-mocha mt-8"></div>
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-deepbrown/80 to-caramel/60 -mt-8"></div>
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-mocha/70 to-deepbrown"></div>
         </div>
-        <!-- Contact -->
-        <div id="contact">
-          <h4 style="font-size: 14px; color: #D4A574; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Contact</h4>
-          <p style="font-size: 15px; color: rgba(253,248,243,0.7); line-height: 2;">
-            <a href="https://communalcoffee.com" style="color: rgba(253,248,243,0.7); text-decoration: none;">communalcoffee.com</a><br>
-            San Diego, CA
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-br from-deepbrown via-mocha to-deepbrown">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-8">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-caramel/30 flex items-center justify-center">
+            <svg class="w-8 h-8 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          </div>
+          <h3 class="text-xl text-warmwhite mb-2" style="font-family: 'DM Serif Display', serif;">Made With Love</h3>
+          <p class="text-warmwhite/70">Every cup crafted by hands that care about the details.</p>
+        </div>
+        
+        <div class="p-8">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-caramel/30 flex items-center justify-center">
+            <svg class="w-8 h-8 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl text-warmwhite mb-2" style="font-family: 'DM Serif Display', serif;">Sourced Responsibly</h3>
+          <p class="text-warmwhite/70">Direct trade beans from farmers we know and trust.</p>
+        </div>
+        
+        <div class="p-8">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-caramel/30 flex items-center justify-center">
+            <svg class="w-8 h-8 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </div>
+          <h3 class="text-xl text-warmwhite mb-2" style="font-family: 'DM Serif Display', serif;">Community First</h3>
+          <p class="text-warmwhite/70">Your neighborhood gathering place, rain or shine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-warmwhite rounded-3xl shadow-2xl overflow-hidden">
+        <div class="grid lg:grid-cols-2">
+          <div class="p-12 lg:p-16 flex flex-col justify-center">
+            <h2 class="text-4xl md:text-5xl text-deepbrown mb-6">Pull up a chair</h2>
+            <p class="text-mocha text-lg mb-8 leading-relaxed">
+              The best way to experience Communal Coffee is to walk through our doors. We'll save you a spot at the table.
+            </p>
+            
+            <div class="space-y-6 mb-10">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-caramel/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-deepbrown">Find Us</h4>
+                  <p class="text-mocha">Visit communalcoffee.com for locations</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-caramel/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-deepbrown">Hours</h4>
+                  <p class="text-mocha">Open daily — check our site for times</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-caramel/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-deepbrown">Say Hello</h4>
+                  <p class="text-mocha">hello@communalcoffee.com</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="https://communalcoffee.com" target="_blank" class="inline-flex items-center justify-center gap-2 bg-deepbrown text-warmwhite px-8 py-4 rounded-full font-semibold hover:bg-mocha transition-all duration-300 w-fit">
+              Visit Our Website
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+          
+          <div class="bg-gradient-to-br from-deepbrown via-mocha to-caramel min-h-96 flex items-center justify-center p-12">
+            <div class="text-center text-warmwhite">
+              <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-warmwhite/20 flex items-center justify-center">
+                <span class="text-4xl">☕</span>
+              </div>
+              <p class="text-2xl mb-2" style="font-family: 'DM Serif Display', serif;">Your seat is waiting</p>
+              <p class="text-warmwhite/80">Come as you are</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-caramel via-mocha to-deepbrown">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl text-warmwhite mb-6">Ready to join the community?</h2>
+      <p class="text-warmwhite/90 text-xl mb-10 max-w-2xl mx-auto">
+        Great coffee is just the beginning. Come for the espresso, stay for the conversation.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://communalcoffee.com" target="_blank" class="bg-warmwhite text-deepbrown px-8 py-4 rounded-full font-semibold hover:bg-cream transition-all duration-300 hover:shadow-lg">
+          Find a Location
+        </a>
+        <a href="#menu" class="border-2 border-warmwhite text-warmwhite px-8 py-4 rounded-full font-semibold hover:bg-warmwhite hover:text-deepbrown transition-all duration-300">
+          Explore the Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-deepbrown text-warmwhite py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl mb-4" style="font-family: 'DM Serif Display', serif;">Communal Coffee</h3>
+          <p class="text-warmwhite/70 max-w-md leading-relaxed">
+            A neighborhood coffee shop where every cup comes with a story and every visit feels like coming home.
           </p>
         </div>
-        <!-- Links -->
+        
         <div>
-          <h4 style="font-size: 14px; color: #D4A574; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Quick Links</h4>
-          <p style="font-size: 15px; line-height: 2.2;">
-            <a href="#menu" style="color: rgba(253,248,243,0.7); text-decoration: none; display: block;">Menu</a>
-            <a href="#about" style="color: rgba(253,248,243,0.7); text-decoration: none; display: block;">Our Story</a>
-            <a href="#contact" style="color: rgba(253,248,243,0.7); text-decoration: none; display: block;">Contact</a>
-          </p>
+          <h4 class="font-semibold mb-4 text-caramel">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#menu" class="text-warmwhite/70 hover:text-warmwhite transition-colors">Menu</a></li>
+            <li><a href="#about" class="text-warmwhite/70 hover:text-warmwhite transition-colors">Our Story</a></li>
+            <li><a href="#visit" class="text-warmwhite/70 hover:text-warmwhite transition-colors">Visit Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4 text-caramel">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="https://communalcoffee.com" target="_blank" class="text-warmwhite/70 hover:text-warmwhite transition-colors">communalcoffee.com</a></li>
+            <li><a href="#" class="text-warmwhite/70 hover:text-warmwhite transition-colors">Instagram</a></li>
+            <li><a href="#" class="text-warmwhite/70 hover:text-warmwhite transition-colors">Facebook</a></li>
+          </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(253,248,243,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-        <p style="font-size: 14px; color: rgba(253,248,243,0.5);">© 2024 Communal Coffee. Site by <a href="https://theresandiego.com/advertise/" style="color: #D4A574; text-decoration: none;">LVRG Agency</a></p>
-        <div style="display: flex; gap: 20px;">
-          <a href="#" style="width: 40px; height: 40px; background: rgba(253,248,243,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #FDF8F3; font-size: 18px;">f</a>
-          <a href="#" style="width: 40px; height: 40px; background: rgba(253,248,243,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #FDF8F3; font-size: 18px;">ig</a>
-        </div>
+      
+      <div class="border-t border-warmwhite/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-warmwhite/50 text-sm">© 2024 Communal Coffee. All rights reserved.</p>
+        <p class="text-warmwhite/50 text-sm">Preview site by <a href="https://theresandiego.com/advertise/" class="text-caramel hover:text-warmwhite transition-colors">LVRG Agency</a></p>
       </div>
     </div>
   </footer>
 
-<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
-  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
-    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  </button>
-  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
-    <div style="background:;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
-      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">C</div>
-      <div><div style="font-weight:700;font-size:15px;">Communal Coffee</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
-    </div>
-    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
-      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Unable to determine without access to website content and brand voice.! I can help answer questions about Communal Coffee. What can I help you with?</div>
-    </div>
-    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
-      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
-      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
-        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-      </button>
-    </div>
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: ; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: ;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: ; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: ; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Communal Coffee</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Communal Coffee. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
   </div>
 </div>
+
 <script>
-var _lvrgIntel={"domain": "communalcoffee.com", "url": "https://communalcoffee.com", "business_name": "Communal Coffee", "tagline": "", "description": "", "services": [], "location": "", "phone": "", "email": "", "hours": "", "social_proof": "", "key_cta": "", "missing": "Unable to extract - content blocked by rate limiting. No access to business name, description, services, location, contact information, hours, social proof, CTAs, or any other website content.", "brand_vibe": "unknown", "primary_color": "", "secondary_color": "", "business_type": "coffee_shop", "pain_point": "Website content is not accessible due to rate limiting, preventing any analysis of conversion optimization.", "chat_persona": "Unable to determine without access to website content and brand voice.", "cta_angle": "unknown", "owner_name": "", "neighborhood": ""};
-var _lvrgHistory=[];
-var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
-function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
-function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
-async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
+const LVRG_PERSONA = "";
+const LVRG_BIZ = "Communal Coffee";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
 </script>
+
 </body>
 </html>
