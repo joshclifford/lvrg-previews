@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Technolabs | AI-Powered Software Development Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; }
+    :root { --primary: #0066cc; --secondary: #ff6b35; --dark: #0a1628; --light: #f8fafc; }
+    html { scroll-behavior: smooth; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.7} }
+  </style>
+</head>
+<body style="background-color: #0a1628; color: #ffffff; overflow-x: hidden;">
+
+  <!-- CLAIM BAR -->
+  <div style="position: fixed; top: 0; left: 0; right: 0; background: #000000; padding: 10px 20px; z-index: 9999; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+    <span style="color: #a0a0a0; font-size: 14px;">This site was built for <strong style="color: #ffffff;">Moon Technolabs</strong> by LVRG Agency</span>
+    <a href="https://theresandiego.com/advertise/" style="background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000000; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none; transition: transform 0.2s;">Claim This Site →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav style="position: fixed; top: 44px; left: 0; right: 0; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(20px); padding: 15px 5%; z-index: 9998; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #0066cc, #00aaff); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;">M</span>
+      </div>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #ffffff;">Moon Technolabs</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 35px;">
+      <a href="#services" style="color: #c0d0e0; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.3s;">Services</a>
+      <a href="#testimonials" style="color: #c0d0e0; text-decoration: none; font-size: 15px; font-weight: 500;">Testimonials</a>
+      <a href="#contact" style="color: #c0d0e0; text-decoration: none; font-size: 15px; font-weight: 500;">Contact</a>
+      <a href="#contact" style="background: linear-gradient(135deg, #0066cc, #0088ff); color: #ffffff; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,102,204,0.4);">Get Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 160px 5% 100px; background: linear-gradient(135deg, #0a1628 0%, #0d2240 30%, #0066cc 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 20%; right: 10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: 10%; left: 5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0,102,204,0.2) 0%, transparent 70%); border-radius: 50%; animation: float 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"rgba(255,255,255,0.03)\"/></svg>'); background-size: 50px 50px;"></div>
+    
+    <div style="max-width: 900px; text-align: center; position: relative; z-index: 10;">
+      <div style="display: inline-block; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); padding: 8px 20px; border-radius: 50px; margin-bottom: 25px;">
+        <span style="color: #ff6b35; font-size: 14px; font-weight: 600;">🚀 Trusted by CEOs across USA, France & Germany</span>
+      </div>
+      <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 1.1; margin-bottom: 25px; background: linear-gradient(135deg, #ffffff 0%, #c0d8f0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI-Powered Software Development Solutions</h1>
+      <p style="font-size: 20px; color: #a0b8d0; line-height: 1.7; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">From Ahmedabad to Chicago, we transform complex technical challenges into innovative AI solutions. Generative AI, custom software, and 24/7 expert support—all under one roof.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="#contact" style="background: linear-gradient(135deg, #ff6b35, #ff8555); color: #ffffff; padding: 18px 36px; border-radius: 10px; font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 30px rgba(255,107,53,0.4); transition: transform 0.3s;">Schedule Meeting with AI Experts →</a>
+        <a href="#services" style="background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.3); color: #ffffff; padding: 16px 34px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; backdrop-filter: blur(10px);">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section style="background: linear-gradient(90deg, #0066cc 0%, #0088ff 50%, #0066cc 100%); padding: 50px 5%; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
+      <div style="padding: 20px;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: #ffffff;">24/7</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.85); margin-top: 5px;">Customer Support</div>
+      </div>
+      <div style="padding: 20px;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: #ffffff;">100%</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.85); margin-top: 5px;">On-Time Delivery</div>
+      </div>
+      <div style="padding: 20px;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: #ffffff;">3+</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.85); margin-top: 5px;">Global Regions Served</div>
+      </div>
+      <div style="padding: 20px;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: #ffffff;">★★★★★</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.85); margin-top: 5px;">Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding: 120px 5%; background: #0a1628;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 70px;">
+        <span style="color: #ff6b35; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;">Our Expertise</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(36px, 4vw, 50px); font-weight: 700; color: #ffffff; margin-top: 15px;">AI-Powered Solutions for Modern Business</h2>
+        <p style="font-size: 18px; color: #8099b3; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">Stop searching for fragmented solutions. Get comprehensive AI development, transparent communication, and proven expertise—all from one trusted partner.</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        <!-- Card 1 -->
+        <div style="background: linear-gradient(145deg, #0d2240, #0a1a30); border: 1px solid rgba(0,102,204,0.3); border-radius: 20px; padding: 45px 35px; position: relative; overflow: hidden; transition: transform 0.3s;">
+          <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0,102,204,0.1) 0%, transparent 70%);"></div>
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066cc, #0088ff); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+            <span style="font-size: 32px;">🧠</span>
+          </div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Generative AI Development</h3>
+          <p style="font-size: 16px; color: #8099b3; line-height: 1.7; margin-bottom: 25px;">Harness the power of GPT, LLMs, and custom AI models to automate content creation, enhance decision-making, and transform your business processes.</p>
+          <a href="#contact" style="color: #ff6b35; font-weight: 600; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">Learn More <span style="transition: transform 0.3s;">→</span></a>
+        </div>
+        
+        <!-- Card 2 -->
+        <div style="background: linear-gradient(145deg, #0d2240, #0a1a30); border: 1px solid rgba(255,107,53,0.3); border-radius: 20px; padding: 45px 35px; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%);"></div>
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ff6b35, #ff8855); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+            <span style="font-size: 32px;">🤖</span>
+          </div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Agentic AI Development</h3>
+          <p style="font-size: 16px; color: #8099b3; line-height: 1.7; margin-bottom: 25px;">Build autonomous AI agents that reason, plan, and execute complex tasks. Perfect for workflow automation, customer service, and intelligent process management.</p>
+          <a href="#contact" style="color: #ff6b35; font-weight: 600; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">Learn More <span>→</span></a>
+        </div>
+        
+        <!-- Card 3 -->
+        <div style="background: linear-gradient(145deg, #0d2240, #0a1a30); border: 1px solid rgba(0,102,204,0.3); border-radius: 20px; padding: 45px 35px; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0,102,204,0.1) 0%, transparent 70%);"></div>
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0066cc, #0088ff); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+            <span style="font-size: 32px;">💬</span>
+          </div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">AI Chatbot Development</h3>
+          <p style="font-size: 16px; color: #8099b3; line-height: 1.7; margin-bottom: 25px;">Deploy intelligent conversational AI that understands context, handles complex queries, and delivers personalized experiences 24/7—just like our support team.</p>
+          <a href="#contact" style="color: #ff6b35; font-weight: 600; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;">Learn More <span>→</span></a>
+        </div>
+      </div>
+      
+      <!-- Additional Services Tag Cloud -->
+      <div style="margin-top: 60px; text-align: center;">
+        <p style="color: #5a7a9a; font-size: 14px; margin-bottom: 20px;">Also specializing in:</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">Machine Learning</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">Custom Software</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">Web & Mobile Apps</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">Cloud & DevOps</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">SaaS Development</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">RAG Development</span>
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 14px; color: #8099b3;">RPA Solutions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="padding: 120px 5%; background: linear-gradient(180deg, #0d2240 0%, #0a1628 100%);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 70px;">
+        <span style="color: #ff6b35; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;">Client Success Stories</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(36px, 4vw, 50px); font-weight: 700; color: #ffffff; margin-top: 15px;">Trusted by Leaders Worldwide</h2>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        <!-- Testimonial 1 -->
+        <div style="background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; position: relative;">
+          <div style="color: #ff6b35; font-size: 48px; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
+          <p style="font-size: 18px; color: #c0d0e0; line-height: 1.8; margin-bottom: 30px;">I highly recommend Moon Technolabs as the quality of service is wonderful. We hired this company to develop a product based on complex technical issues. We got the best quality services compared to others in the market. The team is always ready to provide solutions.</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #0066cc, #00aaff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">AD</div>
+            <div>
+              <div style="font-weight: 700; color: #ffffff; font-size: 17px;">Ayse D.</div>
+              <div style="color: #8099b3; font-size: 14px;">Co-Founder • France 🇫🇷</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div style="background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; position: relative;">
+          <div style="color: #ff6b35; font-size: 48px; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
+          <p style="font-size: 18px; color: #c0d0e0; line-height: 1.8; margin-bottom: 30px;">Moon Technolabs is a pioneer in WebRTC-based projects. They fixed complicated segments of our module, fulfilled different product lines, and provided 24/7 customer support. They develop products meeting module deadlines and project timelines.</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #ff6b35, #ff8855); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">JG</div>
+            <div>
+              <div style="font-weight: 700; color: #ffffff; font-size: 17px;">Justin G.</div>
+              <div style="color: #8099b3; font-size: 14px;">Founder & CEO • USA 🇺🇸</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div style="background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; position: relative;">
+          <div style="color: #ff6b35; font-size: 48px; font-family: Georgia, serif; line-height: 1; margin-bottom: 20px;">"</div>
+          <p style="font-size: 18px; color: #c0d0e0; line-height: 1.8; margin-bottom: 30px;">I am happy to recommend Moon Technolabs for their app development services. They successfully developed apps for me, and I am highly satisfied with the overall outcomes. Their responsive communication and technical expertise exceeded our expectations.</p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #0066cc, #00aaff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">FS</div>
+            <div>
+              <div style="font-weight: 700; color: #ffffff; font-size: 17px;">Flavio S.</div>
+              <div style="color: #8099b3; font-size: 14px;">Founder & Managing Director • Germany 🇩🇪</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="contact" style="padding: 120px 5%; background: linear-gradient(135deg, #0066cc 0%, #004499 50%, #002266 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,107,53,0.2) 0%, transparent 60%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%); border-radius: 50%;"></div>
+    
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+      <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 10px 25px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 25px;">🎯 Let's Discuss Your Project</span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 25px;">Ready to Transform Your Business with AI?</h2>
+      <p style="font-size: 20px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 45px; max-width: 700px; margin-left: auto; margin-right: auto;">Join industry leaders from USA, France, and Germany who trust Moon Technolabs for complex technical challenges. Get a free consultation with our AI experts—no commitment required.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+16203309814" style="background: #ffffff; color: #0066cc; padding: 20px 40px; border-radius: 12px; font-size: 18px; font-weight: 700; text-decoration: none; box-shadow: 0 10px 40px rgba(0,0,0,0.3); display: inline-flex; align-items: center; gap: 10px;">📞 Get Free Project Consultation</a>
+        <a href="mailto:hello@moontechnolabs.com" style="background: transparent; border: 2px solid rgba(255,255,255,0.5); color: #ffffff; padding: 18px 38px; border-radius: 12px; font-size: 18px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">📧 Schedule a Meeting</a>
+      </div>
+      <p style="margin-top: 30px; color: rgba(255,255,255,0.6); font-size: 14px;">⚡ Response within 24 hours • 🌍 Serving clients globally from Ahmedabad & Chicago</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #050d18; padding: 80px 5% 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 60px;">
+        <!-- Company Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #0066cc, #00aaff); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px;">M</span>
+            </div>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #ffffff;">Moon Technolabs</span>
+          </div>
+          <p style="color: #6a8099; font-size: 15px; line-height: 1.7;">AI-powered software development solutions. Transforming businesses through innovative technology.</p>
+        </div>
+        
+        <!-- Locations -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 20px;">Global Offices</h4>
+          <div style="color: #6a8099; font-size: 15px; line-height: 2;">
+            <p>📍 Ahmedabad, India</p>
+            <p>📍 Chicago, USA</p>
+          </div>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 20px;">Contact Us</h4>
+          <div style="color: #6a8099; font-size: 15px; line-height: 2.2;">
+            <p><a href="tel:+919726055109" style="color: #6a8099; text-decoration: none;">🇮🇳 +91 97260 55109</a></p>
+            <p><a href="tel:+16203309814" style="color: #6a8099; text-decoration: none;">🇺🇸 +1 (620) 330-9814</a></p>
+            <p>⏰ 24/7 Support Available</p>
+          </div>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 20px;">Services</h4>
+          <div style="color: #6a8099; font-size: 15px; line-height: 2.2;">
+            <p>Generative AI Development</p>
+            <p>Agentic AI Solutions</p>
+            <p>Custom Software Development</p>
+            <p>Cloud & DevOps</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <p style="color: #4a6078; font-size: 14px;">© 2024 Moon Technolabs. Site designed by <a href="https://theresandiego.com/advertise/" style="color: #ff6b35; text-decoration: none; font-weight: 600;">LVRG Agency</a></p>
+        <div style="display: flex; gap: 25px;">
+          <a href="#" style="color: #4a6078; text-decoration: none; font-size: 14px;">Privacy Policy</a>
+          <a href="#" style="color: #4a6078; text-decoration: none; font-size: 14px;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#0066cc;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">M</div>
+      <div><div style="font-weight:700;font-size:15px;">Moon Technolabs</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">A knowledgeable and responsive AI assistant that understands complex technical requirements, provides project-focused guidance, and emphasizes Moon Technolabs' 24/7 support commitment and expertise in cutting-edge AI technologies.! I can help answer questions about Moon Technolabs. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#0066cc;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "moontechnolabs.com", "url": "https://moontechnolabs.com", "business_name": "Moon Technolabs", "tagline": "AI-powered Software Development Solutions", "description": "Moon Technolabs is a software development company specializing in AI-powered solutions, custom software development, and digital transformation services. They offer expertise in generative AI, agentic AI, cloud & DevOps, and web/mobile app development with 24/7 customer support.", "services": ["Generative AI Development", "Agentic AI Development", "AI Chatbot Development", "Machine Learning Development", "Custom Software Development", "Web App Development", "Mobile App Development", "Cloud & DevOps", "SaaS Development", "AI Copilot Development", "Robotic Process Automation", "RAG Development Services", "Embedded Software Development", "Digital Transformation"], "location": "Ahmedabad, India; Chicago, USA", "phone": "+91 97260 55109, +1 (620) 330-9814", "email": "sales@moontechnolabs.com", "hours": "", "social_proof": "Multiple client testimonials from founders and CEOs in USA, France, and Germany praising service quality, WebRTC expertise, app development capabilities, and 24/7 support. Clients highlight successful product development, responsive communication, and meeting project deadlines.", "key_cta": "Discuss About Your Project / Schedule Meeting", "missing": "No clear pricing information, no case studies or portfolio links, no team credentials, no company founding year or years in business, no service level agreements details, no blog or thought leadership content, incomplete website content (appears cut off)", "brand_vibe": "Professional tech-forward, client-focused, global reach oriented", "primary_color": "#0066cc", "secondary_color": "#ff6b35", "business_type": "service", "pain_point": "The website appears incomplete and truncated, missing critical information about company background, detailed service descriptions, portfolio examples, and transparent pricing that would help potential clients make informed decisions.", "chat_persona": "A knowledgeable and responsive AI assistant that understands complex technical requirements, provides project-focused guidance, and emphasizes Moon Technolabs' 24/7 support commitment and expertise in cutting-edge AI technologies.", "cta_angle": "Get a Free Project Consultation / Schedule a Meeting with AI Experts", "owner_name": "", "neighborhood": ""};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#0066cc;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at +91 97260 55109, +1 (620) 330-9814.');}}
+</script>
+</body>
+</html>
