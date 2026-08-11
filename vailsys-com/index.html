@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vail Systems | Enterprise Voice Technology Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #000000;
+      --secondary: #0066cc;
+      --secondary-dark: #0052a3;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --gold: #d4a846;
+      --gold-hover: #c49a3a;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-800);
+      line-height: 1.6;
+      background: var(--white);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1.2;
+    }
+    
+    /* Claim Bar */
+    .claim-bar {
+      background: var(--primary);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .claim-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .claim-bar-text {
+      color: var(--gray-400);
+      font-size: 14px;
+    }
+    
+    .claim-bar-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    
+    .claim-btn {
+      background: var(--gold);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .claim-btn:hover {
+      background: var(--gold-hover);
+      transform: translateX(2px);
+    }
+    
+    /* Navigation */
+    .nav {
+      background: var(--white);
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 44px;
+      z-index: 999;
+    }
+    
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    
+    .nav-logo span {
+      color: var(--secondary);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+    
+    .nav-cta {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a1a2e 50%, var(--secondary-dark) 100%);
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 102, 204, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 102, 204, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+    }
+    
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .hero-badge-text {
+      color: var(--gray-300);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--secondary) 0%, #4da3ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--gray-300);
+      max-width: 720px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.4);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    /* Social Proof Bar */
+    .social-proof {
+      background: var(--gray-50);
+      padding: 60px 24px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .social-proof-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .social-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    
+    .proof-item {
+      text-align: center;
+      padding: 24px;
+    }
+    
+    .proof-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    
+    .proof-number span {
+      color: var(--secondary);
+    }
+    
+    .proof-label {
+      font-size: 14px;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    
+    .compliance-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+    }
+    
+    .badge-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .badge-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--white);
+    }
+    
+    .badge-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 24px;
+      background: var(--white);
+    }
+    
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      background: rgba(0, 102, 204, 0.1);
+      color: var(--secondary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--secondary) 0%, #4da3ff 100%);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--secondary);
+    }
+    
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    
+    .service-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--white);
+    }
+    
+    .service-number {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--gray-100);
+      line-height: 1;
+    }
+    
+    .service-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    
+    .service-card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: gap 0.3s ease;
+    }
+    
+    .service-link:hover {
+      gap: 10px;
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a1a2e 100%);
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse at 100% 0%, rgba(0, 102, 204, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 0% 100%, rgba(0, 102, 204, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cta-banner h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    
+    .cta-banner p {
+      font-size: 18px;
+      color: var(--gray-300);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-btn {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 18px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .cta-btn:hover {
+      background: #0077ee;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 102, 204, 0.5);
+    }
+    
+    .cta-note {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--gray-400);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--gray-900);
+      padding: 60px 24px 32px;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--gray-700);
+    }
+    
+    .footer-brand h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    
+    .footer-brand h3 span {
+      color: var(--secondary);
+    }
+    
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    
+    .footer-column h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-column a {
+      color: var(--gray-400);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-column a:hover {
+      color: var(--secondary);
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .footer-copyright {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+    
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    
+    .footer-legal a {
+      font-size: 14px;
+      color: var(--gray-500);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-legal a:hover {
+      color: var(--gray-300);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+      
+      .social-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .claim-bar {
+        padding: 10px 16px;
+      }
+      
+      .claim-bar-text {
+        font-size: 12px;
+      }
+      
+      .nav {
+        padding: 12px 16px;
+        top: 40px;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        padding: 70px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+      }
+      
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .btn-primary, .btn-secondary {
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .proof-number {
+        font-size: 36px;
+      }
+      
+      .services {
+        padding: 60px 20px;
+      }
+      
+      .section-title {
+        font-size: 32px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-banner {
+        padding: 60px 20px;
+      }
+      
+      .cta-banner h2 {
+        font-size: 28px;
+      }
+      
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .social-proof-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      
+      .proof-item {
+        padding: 16px;
+      }
+      
+      .compliance-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .service-card {
+        padding: 32px 24px;
+      }
+      
+      .service-number {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Claim Bar -->
+  <div class="claim-bar">
+    <div class="claim-bar-content">
+      <span class="claim-bar-text">This site was built for <strong>Vail Systems</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">VAIL<span>SYSTEMS</span></a>
+      <ul class="nav-links">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:sales@vailsys.com" class="nav-cta">Schedule Demo</a>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">Trusted by Fortune 500 Enterprises</span>
+      </div>
+      <h1>The Future-Proof <span>Enterprise Voice</span> Platform</h1>
+      <p class="hero-subtitle">Power the entire customer call lifecycle with carrier-grade reliability. From pre-call authentication to AI-driven insights, Vail processes over 12 billion minutes annually—routing 1 in 10 U.S. support calls.</p>
+      <div class="hero-ctas">
+        <a href="mailto:sales@vailsys.com" class="btn-primary">
+          Schedule a Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#solutions" class="btn-secondary">Explore Solutions</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Social Proof Bar -->
+  <section class="social-proof">
+    <div class="social-proof-container">
+      <div class="social-proof-grid">
+        <div class="proof-item">
+          <div class="proof-number">35<span>+</span></div>
+          <div class="proof-label">Years of Voice Expertise Since 1991</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">1 in 10</div>
+          <div class="proof-label">U.S. Support Calls Routed Through Vail</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">12B<span>+</span></div>
+          <div class="proof-label">Minutes Processed Annually</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">99.999<span>%</span></div>
+          <div class="proof-label">Platform Uptime Guaranteed</div>
+        </div>
+      </div>
+      <div class="compliance-badges">
+        <div class="badge-item">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <span class="badge-text">HIPAA Compliant</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <span class="badge-text">PCI DSS Certified</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <span class="badge-text">SOC 1 & 2 Compliant</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <span class="badge-text">FCC Compliant</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="solutions">
+    <div class="services-container">
+      <div class="section-header">
+        <span class="section-tag">Core Solutions</span>
+        <h2 class="section-title">Create Better Conversations at Every Stage</h2>
+        <p class="section-subtitle">Built on carrier-grade infrastructure and backed by 200+ in-house engineers dedicated to voice innovation.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-number">01</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </div>
+          <h3>Pre-Call Authentication & Risk Detection</h3>
+          <p>Identify callers before the interaction starts using signal-level risk intelligence. Stop fraud earlier and verify legitimate users faster with real-time risk scoring and authentication.</p>
+          <a href="mailto:sales@vailsys.com" class="service-link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <span class="service-number">02</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 8.5c0-.28-.22-.5-.5-.5h-3.25L22 4.25V4h-5v.75h3.25L16.5 8.5V9h5c.28 0 .5-.22.5-.5zM6.5 9H2c-.28 0-.5.22-.5.5s.22.5.5.5h3.25L1.5 13.75V14H7v-.75H3.75l3.75-3.75V9zm14 6h-3.25L21.5 10.75V10h-5.5v.75h3.25L15.5 14.5V15h5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5zM6 19h-.25l3.5-3.5v-.5H4c-.28 0-.5.22-.5.5s.22.5.5.5h3.25L3.5 19.75V20H9v-.75H5.75L9.5 15.5V15H4c-.28 0-.5.22-.5.5s.22.5.5.5h4.25L4.5 19.75V20H10v-.75H6.25L10 15.5V15H5c-.28 0-.5.22-.5.5s.22.5.5.5h3.5L5 19.5v.5h5v-.75H6.5L10 15.75V15H5c-.28 0-.5.22-.5.5s.22.5.5.5h3.75L5.25 19.5V20H10v-.75H6z"/></svg>
+          </div>
+          <h3>Intelligent Call Routing</h3>
+          <p>Route every caller to the right destination using flexible logic and advanced call treatment. Our intuitive portal enables precise control over call flows with enterprise-scale reliability.</p>
+          <a href="mailto:sales@vailsys.com" class="service-link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <span class="service-number">03</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          </div>
+          <h3>Voice Enhancement Technology</h3>
+          <p>Ensure every caller is heard clearly with patented voice measurement and enhancement. Optimize audio quality despite background noise, weak connections, or challenging environments.</p>
+          <a href="mailto:sales@vailsys.com" class="service-link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="contact">
+    <div class="cta-container">
+      <h2>See What Vail Can Do for Your Voice Strategy</h2>
+      <p>Get a personalized 30-minute walkthrough of how Vail can strengthen your customer call experience—from pre-call authentication to AI-powered insights. Discover how Fortune 500 enterprises achieve better outcomes with carrier-grade voice infrastructure.</p>
+      <div class="cta-form">
+        <a href="mailto:sales@vailsys.com" class="cta-btn">
+          Schedule Your Demo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <p class="cta-note">No long-term contracts required • Enterprise-grade solutions that scale</p>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>VAIL<span>SYSTEMS</span></h3>
+          <p>Enterprise-grade voice technology platform powering the end-to-end call lifecycle. Trusted by Fortune 500 enterprises for over 35 years.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">Pre-Call Authentication</a></li>
+            <li><a href="#">Intelligent Routing</a></li>
+            <li><a href="#">Voice Enhancement</a></li>
+            <li><a href="#">Interaction Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Vail</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="mailto:sales@vailsys.com">Sales Inquiries</a></li>
+            <li><a href="#">Client Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 LVRG Agency. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#000000;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#000000;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">V</div>
+      <div><div style="font-weight:700;font-size:15px;">Vail Systems</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Be professional, technically knowledgeable, and solution-focused; position Vail as a reliable enterprise partner with deep telecom expertise while guiding prospects toward scheduling demos or contacting sales.! I can help answer questions about Vail Systems. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#000000;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "vailsys.com", "url": "https://vailsys.com", "business_name": "Vail Systems", "tagline": "The Trusted, Future-Proofed Enhanced Voice Network Solution", "description": "Vail Systems is an enterprise-grade voice technology platform that supports the end-to-end call lifecycle for contact centers and businesses. Built on decades of carrier-grade voice expertise, the platform helps organizations improve customer interactions through pre-call authentication, intelligent routing, voice enhancement, and AI-powered interaction insights. Vail processes over 12 billion minutes annually and routes 1 in 10 U.S. support calls.", "services": ["Pre-Call Authentication & Risk Detection", "Intelligent Call Routing", "Voice Enhancement Technology", "Interaction Insights (Prosodica™)", "Conversational AI Agents", "Call Center Integration", "Fraud Prevention & Mitigation"], "location": "", "phone": "", "email": "sales@vailsys.com", "hours": "", "social_proof": "35+ years of voice expertise since 1991; 1 in 10 U.S. support calls routed through Vail; 12B+ minutes processed annually; 99.999% platform uptime; 200+ in-house engineers; Trusted by Fortune 500 enterprises; HIPAA, PCI DSS, SOC 1/2, and FCC compliant", "key_cta": "Schedule a Demo", "missing": "Physical office location/address, phone number, specific customer testimonials or case studies, pricing information, team member names, blog or resource center", "brand_vibe": "Professional, enterprise-focused, technical, reliable, modern", "primary_color": "#000000", "secondary_color": "#0066cc", "business_type": "service", "pain_point": "The site lacks specific pricing, concrete customer testimonials, or visible case studies that would help prospects quickly assess ROI before scheduling a demo.", "chat_persona": "Be professional, technically knowledgeable, and solution-focused; position Vail as a reliable enterprise partner with deep telecom expertise while guiding prospects toward scheduling demos or contacting sales.", "cta_angle": "Schedule a 30-minute demo to see how Vail can strengthen your voice strategy and improve customer call experiences end-to-end", "owner_name": "", "neighborhood": "", "photos": [], "rating": null, "review_count": null};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#000000;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at .');}}
+</script>
+</body>
+</html>
