@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP 1 Expert Home Improvement | We Do Roofing, and We Do It Right!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #1a5490;
+      --primary-dark: #133d6b;
+      --primary-light: #2a6fb8;
+      --secondary: #ffffff;
+      --accent: #d4a853;
+      --accent-hover: #e6bc6a;
+      --dark: #1a1a1a;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --gray-300: #dee2e6;
+      --gray-500: #6c757d;
+      --gray-700: #495057;
+      --gray-800: #343a40;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.15);
+      --shadow-xl: 0 20px 50px rgba(0,0,0,0.2);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 20px;
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--gray-800);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Claim Bar */
+    .claim-bar {
+      background: var(--dark);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .claim-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .claim-bar-text {
+      color: #a0a0a0;
+      font-size: 14px;
+    }
+    
+    .claim-bar-text strong {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+    
+    .claim-btn {
+      background: linear-gradient(135deg, var(--accent) 0%, #c49a45 100%);
+      color: var(--dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    
+    .claim-btn:hover {
+      background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(212, 168, 83, 0.4);
+    }
+    
+    /* Navigation */
+    .nav {
+      background: var(--secondary);
+      padding: 16px 0;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 44px;
+      z-index: 999;
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+      font-weight: 800;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+    }
+    
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--gray-700);
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--secondary);
+      box-shadow: 0 4px 15px rgba(26, 84, 144, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(26, 84, 144, 0.4);
+    }
+    
+    .btn-secondary {
+      background: var(--secondary);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+    
+    .btn-white {
+      background: var(--secondary);
+      color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-white:hover {
+      background: var(--gray-100);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .mobile-menu-btn span {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(26, 84, 144, 0.92) 0%, rgba(19, 61, 107, 0.85) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 60px 0;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-badge svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero h1 span {
+      color: var(--accent);
+    }
+    
+    .hero-subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-stat {
+      text-align: left;
+    }
+    
+    .hero-stat-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+    
+    .hero-stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 4px;
+    }
+    
+    /* Social Proof Bar */
+    .social-proof {
+      background: var(--gray-100);
+      padding: 40px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: var(--secondary);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .proof-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .proof-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--secondary);
+    }
+    
+    .proof-content h4 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    
+    .proof-content p {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+    
+    .proof-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 6px;
+    }
+    
+    .proof-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: var(--secondary);
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(26, 84, 144, 0.1) 0%, rgba(26, 84, 144, 0.05) 100%);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    
+    .section-header h2 {
+      font-size: 42px;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    
+    .section-header p {
+      font-size: 18px;
+      color: var(--gray-500);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .service-card {
+      background: var(--secondary);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-image {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+    
+    .service-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 50%, rgba(26, 84, 144, 0.8) 100%);
+    }
+    
+    .service-content {
+      padding: 28px;
+    }
+    
+    .service-content h3 {
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    
+    .service-content p {
+      font-size: 15px;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+    }
+    
+    .service-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      transition: var(--transition);
+    }
+    
+    .service-link:hover {
+      color: var(--primary-light);
+    }
+    
+    .service-link:hover svg {
+      transform: translateX(4px);
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+    
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .cta-content h2 {
+      font-size: 40px;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+    
+    .cta-content p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 32px;
+    }
+    
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .cta-phone svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent);
+    }
+    
+    .cta-phone a {
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 20px;
+    }
+    
+    .cta-phone a:hover {
+      color: var(--accent);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-300);
+      padding: 60px 0 0;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-brand .logo {
+      margin-bottom: 20px;
+    }
+    
+    .footer-brand .logo-icon {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    }
+    
+    .footer-brand .logo-text {
+      color: var(--secondary);
+    }
+    
+    .footer-brand .logo-text span {
+      color: var(--gray-500);
+    }
+    
+    .footer-brand p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .footer h4 {
+      font-size: 16px;
+      color: var(--secondary);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: var(--gray-300);
+      font-size: 15px;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+    
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .footer-contact-item svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--primary-light);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .footer-contact-item p {
+      font-size: 15px;
+    }
+    
+    .footer-contact-item a {
+      color: var(--gray-300);
+    }
+    
+    .footer-contact-item a:hover {
+      color: var(--secondary);
+    }
+    
+    .footer-bottom {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .footer-bottom p {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+    
+    .footer-bottom a {
+      color: var(--primary-light);
+    }
+    
+    .footer-bottom a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 46px;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .proof-item:last-child {
+        grid-column: span 2;
+        max-width: 400px;
+        justify-self: center;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .claim-bar {
+        padding: 10px 15px;
+      }
+      
+      .claim-bar-content {
+        gap: 8px;
+      }
+      
+      .claim-bar-text {
+        font-size: 12px;
+      }
+      
+      .claim-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+      }
+      
+      .nav {
+        top: 38px;
+        padding: 12px 0;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: var(--shadow-lg);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-cta {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
+      
+      .hero {
+        min-height: 70vh;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero-subtitle {
+        font-size: 17px;
+      }
+      
+      .hero-stats {
+        flex-direction: column;
+        gap: 24px;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+      }
+      
+      .hero-btns .btn {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .section-header h2 {
+        font-size: 32px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .proof-item:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+      }
+      
+      .cta-content h2 {
+        font-size: 30px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+      
+      .hero-badge {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+      
+      .section-header h2 {
+        font-size: 28px;
+      }
+      
+      .services {
+        padding: 60px 0;
+      }
+      
+      .cta-banner {
+        padding: 60px 0;
+      }
+      
+      .proof-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Claim Bar -->
+  <div class="claim-bar">
+    <div class="claim-bar-content">
+      <span class="claim-bar-text">This site was built for <strong>TOP 1 Expert Home Improvement</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">
+        Claim This Site
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">T1</div>
+        <div class="logo-text">
+          TOP 1 Expert
+          <span>Home Improvement</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <a href="tel:3479257622" class="btn btn-primary nav-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Get Free Estimate
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://www.top1expert.com/wp-content/uploads/2021/06/roofer-header2.jpg" alt="Professional roofing services in New York">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Family-Owned & Operated Since Decades
+        </div>
+        
+        <h1>We Do Roofing, and <span>We Do It Right!</span></h1>
+        
+        <p class="hero-subtitle">TOP 1 Expert Home Improvement delivers superior roofing repair, replacement, and comprehensive home improvement services to homeowners and businesses across the greater New York metropolitan area.</p>
+        
+        <div class="hero-btns">
+          <a href="tel:3479257622" class="btn btn-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Get Your Free Estimate
+          </a>
+          <a href="#services" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.5); color: #fff;">
+            View Our Services
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">5.0★</div>
+            <div class="hero-stat-label">Rating from 433 Reviews</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Decades</div>
+            <div class="hero-stat-label">of Industry Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">NYC</div>
+            <div class="hero-stat-label">Metro Area Coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="proof-content">
+            <div class="proof-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h4>5.0 Star Rating</h4>
+            <p>From 433 Verified Reviews</p>
+          </div>
+        </div>
+        
+        <div class="proof-item">
+          <div class="proof-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div class="proof-content">
+            <h4>Decades of Experience</h4>
+            <p>Serving Metro NY Homeowners</p>
+          </div>
+        </div>
+        
+        <div class="proof-item">
+          <div class="proof-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="proof-content">
+            <h4>Family-Owned Business</h4>
+            <p>Based in College Point, NY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Expertise</span>
+        <h2>Comprehensive Home Improvement Services</h2>
+        <p>From roofing to masonry, we deliver exceptional craftsmanship that protects and enhances your home.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://www.top1expert.com/wp-content/uploads/2021/06/roofer-header2.jpg" alt="Professional roofing services">
+            <div class="service-image-overlay"></div>
+          </div>
+          <div class="service-content">
+            <h3>Roofing Repair & Replacement</h3>
+            <p>Whether you've spotted leaks, holes, or other roof damage, our skilled technicians handle repairs and full replacements promptly and professionally across the New York metro area.</p>
+            <a href="tel:3479257622" class="service-link">
+              Get Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://www.top1expert.com/wp-content/uploads/2021/06/skylight-pic.jpg" alt="Skylight installation services">
+            <div class="service-image-overlay"></div>
+          </div>
+          <div class="service-content">
+            <h3>Skylight Installation & Repair</h3>
+            <p>Harness nature's most abundant resource with expert skylight services. We install, repair, and replace skylights for homes and offices, bringing natural light into your space.</p>
+            <a href="tel:3479257622" class="service-link">
+              Get Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://www.top1expert.com/wp-content/uploads/2021/06/chimney-pic.jpg" alt="Chimney maintenance services">
+            <div class="service-image-overlay"></div>
+          </div>
+          <div class="service-content">
+            <h3>Chimney Maintenance & Restoration</h3>
+            <p>Keep your chimney in safe, working condition with our comprehensive services including cleaning, routine maintenance, restoration, and complete rebuilding when needed.</p>
+            <a href="tel:3479257622" class="service-link">
+              Get Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="contact">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Improve Your Home?</h2>
+        <p>From our family to yours, we're committed to delivering exceptional workmanship and honest service. Contact us today for a free, no-obligation estimate on your next project.</p>
+        
+        <div class="cta-btns">
+          <a href="tel:3479257622" class="btn btn-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Schedule Free Estimate
+          </a>
+        </div>
+        
+        <div class="cta-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>Or call us directly:</span>
+          <a href="tel:3479257622">(347) 925-7622</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">T1</div>
+            <div class="logo-text">
+              TOP 1 Expert
+              <span>Home Improvement</span>
+            </div>
+          </a>
+          <p>A family-owned and operated business proudly serving the greater New York and metropolitan area with decades of experience in delivering top-quality roofing and home improvement services.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Roofing</a></li>
+            <li><a href="#services">Skylights</a></li>
+            <li><a href="#services">Chimneys</a></li>
+            <li><a href="#services">Gutters</a></li>
+            <li><a href="#services">Masonry</a></li>
+            <li><a href="#services">Siding</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:3479257622">Free Estimate</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <p>14-21 110th St<br>College Point, NY 11356</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <p><a href="tel:3479257622">(347) 925-7622</a></p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <p>Serving Greater NYC<br>Metro Area</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 TOP 1 Expert Home Improvement. All rights reserved.</p>
+        <p>Website by <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            navLinks.classList.remove('active');
+          }
+        }
+      });
+    });
+  </script>
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#1a5490;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#1a5490;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">T</div>
+      <div><div style="font-weight:700;font-size:15px;">TOP 1 Expert Home Improvement</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly, knowledgeable professional who educates customers about home improvement services, provides quick responses to estimate requests, and emphasizes quality craftsmanship and decades of experience.! I can help answer questions about TOP 1 Expert Home Improvement. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#1a5490;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "top1expert.com", "url": "https://top1expert.com", "business_name": "TOP 1 Expert Home Improvement", "tagline": "We do roofing, and we do it right!", "description": "TOP 1 Expert Home Improvement is a family-owned and operated home improvement contractor serving the greater New York and metropolitan area. With decades of experience, they provide top-quality roofing repair, replacement, and various home improvement services including skylights, chimneys, gutters, masonry, siding, and painting.", "services": ["Roofing repair and replacement", "Skylight installation, repair, and replacement", "Chimney maintenance, cleaning, restoration, and rebuilding", "Gutter installation and seamless gutter systems", "Masonry and concrete work", "Siding installation and replacement", "Interior and exterior painting"], "location": "14-21 110th St, College Point, NY 11356", "phone": "(347) 925-7622", "email": "top1expertconst@gmail.com", "hours": "", "social_proof": "Decades of experience serving businesses and homeowners in the metro area; family-owned and operated business", "key_cta": "FREE ESTIMATE", "missing": "No business hours listed, no online booking system, no customer testimonials or ratings displayed, no physical address provided, no information about licenses or certifications", "brand_vibe": "Professional, trustworthy, experienced home improvement contractor", "primary_color": "#1a5490", "secondary_color": "#ffffff", "business_type": "service", "pain_point": "The site lacks specific customer testimonials and ratings that would build trust and conversion, and offers no online booking capability for estimates.", "chat_persona": "Friendly, knowledgeable professional who educates customers about home improvement services, provides quick responses to estimate requests, and emphasizes quality craftsmanship and decades of experience.", "cta_angle": "Get a Free Estimate", "owner_name": "", "neighborhood": "", "photos": ["https://www.top1expert.com/wp-content/uploads/2021/06/worker2.jpg", "https://www.top1expert.com/wp-content/uploads/2021/06/roofer-header2.jpg", "https://www.top1expert.com/wp-content/uploads/2021/06/skylight-pic.jpg", "https://www.top1expert.com/wp-content/uploads/2021/06/chimney-pic.jpg", "https://www.top1expert.com/wp-content/uploads/2021/06/gutter-pic.jpg", "https://www.top1expert.com/wp-content/uploads/2021/06/masonry-pic.jpg"], "rating": 5, "review_count": 433};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#1a5490;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at (347) 925-7622.');}}
+</script>
+</body>
+</html>
