@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fort-Cica Roofing & General Contractors, Inc. | The Name to Look Up To</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #003366;
+      --primary-dark: #002244;
+      --secondary: #FFFFFF;
+      --gold: #C9A227;
+      --gold-hover: #B8911F;
+      --gray-light: #F5F7FA;
+      --gray-medium: #6B7280;
+      --gray-dark: #374151;
+      --text-dark: #1F2937;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      line-height: 1.2;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Claim Bar */
+    .claim-bar {
+      background: #000;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .claim-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    
+    .claim-bar-text {
+      color: #9CA3AF;
+      font-size: 14px;
+    }
+    
+    .claim-bar-text strong {
+      color: #FFFFFF;
+    }
+    
+    .claim-btn {
+      background: var(--gold);
+      color: #000;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .claim-btn:hover {
+      background: var(--gold-hover);
+      transform: translateX(3px);
+    }
+    
+    /* Navigation */
+    .nav {
+      background: var(--secondary);
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 40px;
+      z-index: 999;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    
+    .logo-sub {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--gray-medium);
+      letter-spacing: 0.5px;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--gray-dark);
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: var(--secondary);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,51,102,0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+    
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .mobile-menu span {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0,51,102,0.92) 0%, rgba(0,34,68,0.85) 100%);
+    }
+    
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 1;
+      color: var(--secondary);
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .hero-badge span {
+      color: var(--gold);
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 900;
+      max-width: 700px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .hero-subtitle {
+      font-size: 20px;
+      max-width: 550px;
+      margin-bottom: 35px;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+    
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-white {
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+    
+    .btn-outline-white {
+      background: transparent;
+      color: var(--secondary);
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--secondary);
+    }
+    
+    .btn-outline-white:hover {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+    
+    /* Social Proof Bar */
+    .social-proof {
+      background: var(--gray-light);
+      padding: 40px 20px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    
+    .proof-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+    
+    .proof-item {
+      padding: 20px;
+    }
+    
+    .proof-number {
+      font-family: 'Merriweather', serif;
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .proof-number .stars {
+      color: var(--gold);
+      font-size: 24px;
+    }
+    
+    .proof-label {
+      font-size: 14px;
+      color: var(--gray-medium);
+      font-weight: 500;
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 20px;
+      background: var(--secondary);
+    }
+    
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      background: rgba(0,51,102,0.1);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+    
+    .section-header h2 {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .section-header p {
+      color: var(--gray-medium);
+      font-size: 17px;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .service-card {
+      background: var(--secondary);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,51,102,0.15);
+    }
+    
+    .service-img {
+      height: 220px;
+      overflow: hidden;
+    }
+    
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .service-card:hover .service-img img {
+      transform: scale(1.08);
+    }
+    
+    .service-content {
+      padding: 30px;
+    }
+    
+    .service-content h3 {
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    
+    .service-content p {
+      color: var(--gray-medium);
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .service-link {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.3s ease;
+    }
+    
+    .service-link:hover {
+      gap: 12px;
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--secondary);
+    }
+    
+    .cta-content h2 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+    
+    .cta-content p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 35px;
+      line-height: 1.7;
+    }
+    
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #0A0F1A;
+      color: var(--secondary);
+      padding: 80px 20px 30px;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .footer-brand h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+    
+    .footer-brand p {
+      color: #9CA3AF;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+      transition: all 0.3s ease;
+    }
+    
+    .footer-social a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+    
+    .footer-col ul {
+      list-style: none;
+    }
+    
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-col a {
+      color: #9CA3AF;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-col a:hover {
+      color: var(--secondary);
+    }
+    
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 15px;
+      color: #9CA3AF;
+      font-size: 14px;
+    }
+    
+    .footer-contact-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .footer-bottom {
+      padding-top: 30px;
+      text-align: center;
+      color: #6B7280;
+      font-size: 14px;
+    }
+    
+    .footer-bottom a {
+      color: var(--gold);
+    }
+    
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .proof-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .claim-bar {
+        padding: 8px 15px;
+      }
+      
+      .claim-bar-text {
+        font-size: 12px;
+      }
+      
+      .nav {
+        top: 56px;
+        padding: 12px 15px;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu {
+        display: flex;
+      }
+      
+      .hero {
+        min-height: 75vh;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero-subtitle {
+        font-size: 17px;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+      }
+      
+      .btn-white, .btn-outline-white {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .proof-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      
+      .proof-number {
+        font-size: 32px;
+      }
+      
+      .services {
+        padding: 70px 20px;
+      }
+      
+      .section-header h2 {
+        font-size: 32px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .cta-banner {
+        padding: 70px 20px;
+      }
+      
+      .cta-content h2 {
+        font-size: 32px;
+      }
+      
+      .cta-btns {
+        flex-direction: column;
+      }
+      
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      
+      .footer-social {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+      
+      .hero-content {
+        padding: 60px 15px;
+      }
+      
+      .proof-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .proof-item {
+        padding: 15px;
+        border-bottom: 1px solid #E5E7EB;
+      }
+      
+      .proof-item:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Claim Bar -->
+  <div class="claim-bar">
+    <div class="claim-bar-content">
+      <span class="claim-bar-text">This site was built for <strong>Fort-Cica Roofing & General Contractors, Inc.</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        Fort-Cica Roofing
+        <span class="logo-sub">General Contractors, Inc.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:718-585-9188" class="btn-primary">Get Free Estimate</a></li>
+      </ul>
+      <div class="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/johnsmanville1-464w.jpg" alt="Fort-Cica Roofing Professional Roofing Services">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <span>Serving NYC Since 1954 — 70+ Years of Excellence</span>
+      </div>
+      <h1>The Name to Look Up To in NYC Roofing</h1>
+      <p class="hero-subtitle">Family-owned roofing and masonry experts serving Manhattan, the Boroughs, and Westchester County. Fully licensed, bonded, and insured — delivering quality you can trust.</p>
+      <div class="hero-btns">
+        <a href="tel:718-585-9188" class="btn-white">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Get a FREE Estimate
+        </a>
+        <a href="#services" class="btn-outline-white">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Social Proof Bar -->
+  <section class="social-proof">
+    <div class="proof-container">
+      <div class="proof-item">
+        <div class="proof-number">70+</div>
+        <div class="proof-label">Years in Business</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">4.3<span class="stars">★</span></div>
+        <div class="proof-label">Rating from 20 Reviews</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">NRCA</div>
+        <div class="proof-label">Certified Member</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">100%</div>
+        <div class="proof-label">Licensed, Bonded & Insured</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Expertise</span>
+        <h2>Complete Roofing Solutions for Every Need</h2>
+        <p>From residential homes to commercial buildings and industrial facilities, our expert team delivers exceptional roofing services throughout the NYC metro area.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/johnsmanville1-464w.jpg" alt="Commercial Roofing Services">
+          </div>
+          <div class="service-content">
+            <h3>Commercial Roofing</h3>
+            <p>We understand that long-term roof performance depends on meeting the unique needs of every commercial building. Our skilled professionals deliver expert solutions that stand the test of time.</p>
+            <a href="tel:718-585-9188" class="service-link">Get a Quote →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/firestone-464w.jpg" alt="Residential Roofing Services">
+          </div>
+          <div class="service-content">
+            <h3>Residential Roofing</h3>
+            <p>Whether your home needs simple resurfacing or complete roof replacement, our team has the capabilities and knowledge to protect your most valuable investment.</p>
+            <a href="tel:718-585-9188" class="service-link">Get a Quote →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/HIP-Skylight-160-Clay-Street-BKLYN-3-a994c384-464w.jpg" alt="Industrial Roofing Services">
+          </div>
+          <div class="service-content">
+            <h3>Industrial Roofing</h3>
+            <p>Our experienced team handles complex industrial roofing projects including flat roofs, skylights, and standing seam systems with precision and professionalism.</p>
+            <a href="tel:718-585-9188" class="service-link">Get a Quote →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="about">
+    <div class="cta-content">
+      <h2>Ready to Protect Your Property?</h2>
+      <p>Join thousands of satisfied customers who trust Fort-Cica for their roofing needs. From our Bronx headquarters at 720 E 141st Street, we serve all five boroughs and Westchester County with excellence.</p>
+      <div class="cta-btns">
+        <a href="tel:718-585-9188" class="btn-white">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call (718) 585-9188
+        </a>
+        <a href="#contact" class="btn-outline-white">Request Your Free Estimate</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <h3>Fort-Cica Roofing</h3>
+          <p>Family-owned and operated since 1954, Fort-Cica Roofing & General Contractors delivers quality roofing and masonry services built on trust, reliability, and respect.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/nicky.cicalodecaro" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Commercial Roofing</a></li>
+            <li><a href="#services">Residential Roofing</a></li>
+            <li><a href="#services">Industrial Roofing</a></li>
+            <li><a href="#services">Roof Repair</a></li>
+            <li><a href="#services">Masonry Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>720 E 141st St<br>Bronx, NY 10454</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>(718) 585-9188</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span>Mon-Fri: 7:30am - 4:00pm<br>Sat-Sun: Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Fort-Cica Roofing & General Contractors, Inc. Website by <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
+      </div>
+    </div>
+  </footer>
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#003366;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#003366;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">F</div>
+      <div><div style="font-weight:700;font-size:15px;">Fort-Cica Roofing & General Contractors, Inc.</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Professional and knowledgeable roofing expert who is helpful, responsive, and emphasizes the company's 70-year track record and commitment to quality while quickly guiding customers toward free estimates.! I can help answer questions about Fort-Cica Roofing & General Contractors, Inc.. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#003366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "fortcica.com", "url": "https://fortcica.com", "business_name": "Fort-Cica Roofing & General Contractors, Inc.", "tagline": "The Name to Look Up To", "description": "Fort-Cica Roofing & General Contractors, Inc. is a locally owned, family-operated roofing and masonry service provider based in Bronx, NY, serving residential, commercial, and industrial customers since 1954. They specialize in new construction, rehabilitations, restoration, and repairs, offering services throughout Manhattan, the Boroughs, and Westchester County, NY.", "services": ["Commercial Roofing", "Residential Roofing", "Industrial Roofing", "Roof Repair and Maintenance", "Roof Inspection", "Roof Installation", "Roof Replacement", "Re-roofing", "Roof Restoration", "Flat Roofs", "Skylights", "Standing Seam Roofing Systems", "Liquid Roofing", "Masonry Services", "Paver Installation", "Brick Pointing", "Local Law Repairs", "Cornice Repairs", "Lintel Repairs", "Parking Lot Repair & Maintenance", "Trafficable Coatings"], "location": "720 E 141st St, Bronx, NY 10454", "phone": "(718) 585-9188", "email": "grivera@fortcica.com", "hours": "Monday - Friday 7:30am - 4:00pm, Saturday - Sunday Closed", "social_proof": "In business since 1954 (70+ years), fully licensed, bonded, and insured, members of National Roofing Contractors Association (NRCA) and North East Roofing Contractors Association (NERCA), multiple 5-star customer testimonials praising professionalism and quality work", "key_cta": "Get a FREE Estimate", "missing": "No online booking system, no live chat widget, no customer review aggregation beyond testimonials, no financing options displayed, no warranty information detailed", "brand_vibe": "Professional, reliable, established, trustworthy, family-oriented", "primary_color": "#003366", "secondary_color": "#FFFFFF", "business_type": "service", "pain_point": "The site lacks an online booking or quote request system, forcing potential customers to call or fill out a form rather than getting instant gratification for quote requests.", "chat_persona": "Professional and knowledgeable roofing expert who is helpful, responsive, and emphasizes the company's 70-year track record and commitment to quality while quickly guiding customers toward free estimates.", "cta_angle": "Get a Free Roofing Estimate", "owner_name": "", "neighborhood": "Bronx", "photos": ["https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/johnsmanville1-464w.jpg", "https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/firestone-464w.jpg", "https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/HIP-Skylight-160-Clay-Street-BKLYN-3-a994c384-464w.jpg", "https://irp.cdn-website.com/b6a0697b/dms3rep/multi/opt/Leave+us+a+review+on+Google-240w.png", "https://cdn.website.thryv.com/-resellers-preview/_widget_builder_files/cash.png", "https://cdn.website.thryv.com/-resellers-preview/_widget_builder_files/check.png"], "rating": 4.3, "review_count": 20, "socials": {"facebook_url": "https://facebook.com/nicky.cicalodecaro"}};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#003366;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at (718) 585-9188.');}}
+</script>
+</body>
+</html>
