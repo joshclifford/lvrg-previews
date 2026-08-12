@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novettino | La Meilleure des Focaccia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>NOVETTINO | La Meilleure des Focaccia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     :root {
-      --primary: #D4AF9A;
-      --secondary: #2C2C2C;
-      --cream: #FDF8F5;
-      --gold: #C9A227;
-      --white: #FFFFFF;
-      --gray-light: #F5F5F5;
-      --gray-text: #666666;
+      --primary: #D4C5B9;
+      --secondary: #2D2D2D;
+      --cream: #F7F4F1;
+      --warm-white: #FDFCFB;
+      --accent: #8B7355;
+      --gold: #C9A962;
+      --text-dark: #1A1A1A;
+      --text-light: #6B6B6B;
     }
     
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--secondary);
+      font-family: 'Raleway', sans-serif;
+      color: var(--text-dark);
       line-height: 1.6;
-      overflow-x: hidden;
+      background-color: var(--warm-white);
     }
     
     h1, h2, h3, h4 {
@@ -46,28 +47,32 @@
     .claim-bar {
       background: #000;
       padding: 12px 20px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+    
+    .claim-bar-content {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
     }
     
     .claim-bar p {
-      color: #999;
+      color: #a0a0a0;
       font-size: 14px;
       margin: 0;
     }
     
     .claim-bar strong {
-      color: var(--white);
+      color: #fff;
     }
     
     .claim-btn {
-      background: linear-gradient(135deg, var(--gold), #E8B923);
+      background: linear-gradient(135deg, var(--gold), #D4AF37);
       color: #000;
       padding: 8px 20px;
       border-radius: 50px;
@@ -81,20 +86,20 @@
     
     .claim-btn:hover {
       transform: translateX(3px);
-      box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+      box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
     }
     
     /* Navigation */
     .nav {
-      background: var(--white);
-      padding: 18px 5%;
+      background: var(--warm-white);
+      padding: 20px 5%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+      justify-content: space-between;
       position: sticky;
       top: 44px;
       z-index: 999;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
     }
     
     .logo {
@@ -102,27 +107,27 @@
       font-size: 28px;
       font-weight: 700;
       color: var(--secondary);
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
     
     .logo span {
-      color: var(--primary);
+      color: var(--accent);
     }
     
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 35px;
+      gap: 40px;
       list-style: none;
     }
     
     .nav-links a {
       font-size: 14px;
       font-weight: 500;
-      color: var(--secondary);
-      position: relative;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      color: var(--text-dark);
+      position: relative;
     }
     
     .nav-links a::after {
@@ -132,7 +137,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--primary);
+      background: var(--accent);
       transition: width 0.3s ease;
     }
     
@@ -141,21 +146,21 @@
     }
     
     .nav-cta {
-      background: var(--primary);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: 50px;
+      background: var(--secondary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 13px;
       font-weight: 600;
-      font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
       transition: all 0.3s ease;
     }
     
     .nav-cta:hover {
-      background: var(--secondary);
+      background: var(--accent);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(44, 44, 44, 0.3);
+      box-shadow: 0 8px 25px rgba(45,45,45,0.2);
     }
     
     .mobile-menu {
@@ -163,7 +168,7 @@
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
-      padding: 5px;
+      padding: 10px;
     }
     
     .mobile-menu span {
@@ -199,7 +204,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(44, 44, 44, 0.85) 0%, rgba(44, 44, 44, 0.6) 50%, rgba(212, 175, 154, 0.4) 100%);
+      background: linear-gradient(135deg, rgba(45,45,45,0.7) 0%, rgba(45,45,45,0.4) 50%, rgba(139,115,85,0.3) 100%);
       z-index: 2;
     }
     
@@ -207,45 +212,48 @@
       position: relative;
       z-index: 3;
       text-align: center;
-      padding: 60px 20px;
+      padding: 40px 20px;
       max-width: 900px;
     }
     
     .hero-badge {
       display: inline-block;
-      background: rgba(212, 175, 154, 0.2);
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      padding: 8px 24px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 10px 25px;
       border-radius: 50px;
+      color: #fff;
       font-size: 13px;
       font-weight: 500;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.2);
     }
     
     .hero h1 {
-      font-size: clamp(42px, 8vw, 72px);
-      color: var(--white);
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+      font-size: 72px;
+      color: #fff;
+      margin-bottom: 25px;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.3);
     }
     
     .hero h1 span {
       color: var(--primary);
-      font-style: italic;
     }
     
-    .hero-sub {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 600px;
-      margin: 0 auto 40px;
+    .hero-subtitle {
+      font-size: 20px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 45px;
+      font-weight: 300;
       line-height: 1.8;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
-    .hero-ctas {
+    .hero-btns {
       display: flex;
       gap: 20px;
       justify-content: center;
@@ -254,11 +262,11 @@
     
     .btn-primary {
       background: var(--primary);
-      color: var(--white);
-      padding: 16px 40px;
-      border-radius: 50px;
+      color: var(--secondary);
+      padding: 18px 40px;
+      border-radius: 4px;
+      font-size: 14px;
       font-weight: 600;
-      font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all 0.3s ease;
@@ -268,28 +276,28 @@
     }
     
     .btn-primary:hover {
-      background: var(--white);
-      color: var(--secondary);
+      background: #fff;
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
     
     .btn-secondary {
       background: transparent;
-      border: 2px solid var(--white);
-      color: var(--white);
-      padding: 14px 38px;
-      border-radius: 50px;
+      color: #fff;
+      padding: 18px 40px;
+      border-radius: 4px;
+      font-size: 14px;
       font-weight: 600;
-      font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      border: 2px solid rgba(255,255,255,0.4);
       transition: all 0.3s ease;
     }
     
     .btn-secondary:hover {
-      background: var(--white);
+      background: #fff;
       color: var(--secondary);
+      border-color: #fff;
       transform: translateY(-3px);
     }
     
@@ -300,16 +308,18 @@
     }
     
     .proof-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-wrap: wrap;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      text-align: center;
     }
     
     .proof-item {
-      padding: 20px;
+      text-align: center;
+      color: #fff;
     }
     
     .proof-number {
@@ -317,141 +327,156 @@
       font-size: 48px;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
     
     .proof-label {
-      color: rgba(255, 255, 255, 0.8);
       font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      opacity: 0.8;
     }
     
     .proof-stars {
       color: var(--gold);
       font-size: 24px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
     
     /* Services Section */
     .services {
-      padding: 100px 5%;
+      padding: 120px 5%;
       background: var(--cream);
     }
     
     .section-header {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 60px;
+      margin: 0 auto 80px;
     }
     
     .section-tag {
-      color: var(--primary);
+      display: inline-block;
+      color: var(--accent);
       font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 15px;
-      display: block;
     }
     
-    .section-title {
-      font-size: clamp(32px, 5vw, 48px);
+    .section-header h2 {
+      font-size: 48px;
       color: var(--secondary);
       margin-bottom: 20px;
     }
     
-    .section-desc {
-      color: var(--gray-text);
-      font-size: 17px;
+    .section-header p {
+      font-size: 18px;
+      color: var(--text-light);
       line-height: 1.8;
     }
     
     .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
+      gap: 40px;
+      max-width: 1300px;
+      margin: 0 auto;
     }
     
     .service-card {
-      background: var(--white);
-      border-radius: 20px;
+      background: var(--warm-white);
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
       transition: all 0.4s ease;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     }
     
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.1);
     }
     
-    .service-image {
-      height: 220px;
+    .service-img {
+      height: 280px;
       overflow: hidden;
-      position: relative;
     }
     
-    .service-image img {
+    .service-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
     
-    .service-card:hover .service-image img {
+    .service-card:hover .service-img img {
       transform: scale(1.08);
     }
     
     .service-content {
-      padding: 35px 30px;
+      padding: 35px;
     }
     
     .service-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, var(--primary), #E8C4B0);
-      border-radius: 15px;
+      background: var(--primary);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
       margin-bottom: 20px;
+      font-size: 24px;
     }
     
     .service-card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
+      font-size: 24px;
+      margin-bottom: 15px;
       color: var(--secondary);
     }
     
     .service-card p {
-      color: var(--gray-text);
+      color: var(--text-light);
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    
+    .service-link {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .service-link:hover {
+      gap: 12px;
+      color: var(--secondary);
     }
     
     /* Gallery Section */
     .gallery {
-      padding: 80px 5%;
-      background: var(--white);
+      padding: 100px 5%;
+      background: var(--warm-white);
     }
     
     .gallery-grid {
-      max-width: 1200px;
-      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     
     .gallery-item {
-      border-radius: 15px;
+      border-radius: 12px;
       overflow: hidden;
       aspect-ratio: 1;
-      position: relative;
     }
     
     .gallery-item img {
@@ -465,34 +490,16 @@
       transform: scale(1.1);
     }
     
-    .gallery-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, rgba(44, 44, 44, 0.7), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-    }
-    
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-    
-    .gallery-overlay span {
-      color: var(--white);
-      font-weight: 500;
-      font-size: 14px;
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
     }
     
     /* CTA Banner */
     .cta-banner {
+      padding: 120px 5%;
       background: linear-gradient(135deg, var(--secondary) 0%, #1a1a1a 100%);
-      padding: 100px 5%;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -502,35 +509,29 @@
       content: '';
       position: absolute;
       top: -50%;
-      right: -20%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(212, 175, 154, 0.1) 0%, transparent 70%);
-      border-radius: 50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(212,197,185,0.1) 0%, transparent 60%);
+      animation: pulse 15s infinite;
     }
     
-    .cta-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(212, 175, 154, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
     
     .cta-content {
-      max-width: 700px;
-      margin: 0 auto;
       position: relative;
       z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
     }
     
     .cta-banner h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      color: var(--white);
-      margin-bottom: 20px;
+      font-size: 52px;
+      color: #fff;
+      margin-bottom: 25px;
     }
     
     .cta-banner h2 span {
@@ -538,99 +539,129 @@
     }
     
     .cta-banner p {
-      color: rgba(255, 255, 255, 0.8);
       font-size: 18px;
-      margin-bottom: 35px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 40px;
       line-height: 1.8;
     }
     
-    .cta-info {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 35px;
-      flex-wrap: wrap;
-    }
-    
-    .cta-info-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: rgba(255, 255, 255, 0.9);
+    .cta-banner .btn-primary {
+      background: var(--primary);
+      padding: 22px 50px;
       font-size: 15px;
     }
     
-    .cta-info-item span {
-      font-size: 20px;
+    .cta-banner .btn-primary:hover {
+      background: var(--gold);
+      color: #fff;
     }
     
-    /* Footer */
-    .footer {
-      background: #1a1a1a;
-      padding: 80px 5% 30px;
+    /* Contact Bar */
+    .contact-bar {
+      background: var(--primary);
+      padding: 60px 5%;
     }
     
-    .footer-grid {
+    .contact-grid {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 50px;
-      margin-bottom: 60px;
     }
     
-    .footer-brand {
-      max-width: 300px;
-    }
-    
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 20px;
-    }
-    
-    .footer-logo span {
-      color: var(--primary);
-    }
-    
-    .footer-brand p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-    
-    .footer-socials {
+    .contact-item {
       display: flex;
-      gap: 12px;
+      align-items: center;
+      gap: 20px;
+      color: var(--secondary);
     }
     
-    .footer-socials a {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.1);
+    .contact-icon {
+      width: 55px;
+      height: 55px;
+      background: var(--warm-white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
+      font-size: 22px;
+    }
+    
+    .contact-item h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+    }
+    
+    .contact-item p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--secondary);
+      padding: 80px 5% 40px;
+      color: #fff;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      max-width: 1300px;
+      margin: 0 auto 60px;
+    }
+    
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .footer-social a {
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
       font-size: 18px;
       transition: all 0.3s ease;
     }
     
-    .footer-socials a:hover {
+    .footer-social a:hover {
       background: var(--primary);
+      color: var(--secondary);
       transform: translateY(-3px);
     }
     
     .footer-col h4 {
-      color: var(--white);
+      color: #fff;
       font-size: 16px;
-      font-weight: 600;
       margin-bottom: 25px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     .footer-col ul {
@@ -642,7 +673,7 @@
     }
     
     .footer-col a {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255,255,255,0.7);
       font-size: 14px;
       transition: all 0.3s ease;
     }
@@ -652,48 +683,42 @@
       padding-left: 5px;
     }
     
-    .footer-contact p {
-      color: rgba(255, 255, 255, 0.6);
+    .footer-col p {
+      color: rgba(255,255,255,0.7);
       font-size: 14px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    
-    .footer-contact span {
-      color: var(--primary);
+      line-height: 2;
     }
     
     .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.1);
       padding-top: 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      text-align: center;
+      max-width: 1300px;
+      margin: 0 auto;
     }
     
     .footer-bottom p {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255,255,255,0.5);
       font-size: 13px;
     }
     
-    .footer-bottom a {
-      color: var(--primary);
-    }
-    
-    .footer-bottom a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Responsive Design */
+    /* Responsive Styles */
     @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 56px;
+      }
+      
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-item:first-child {
+        grid-column: span 1;
+        grid-row: span 1;
       }
       
       .footer-grid {
@@ -704,35 +729,23 @@
     @media (max-width: 768px) {
       .claim-bar {
         padding: 10px 15px;
-        flex-direction: column;
+      }
+      
+      .claim-bar-content {
         gap: 10px;
       }
       
       .claim-bar p {
         font-size: 12px;
-        text-align: center;
       }
       
       .nav {
-        top: 68px;
+        top: 38px;
         padding: 15px 5%;
       }
       
       .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        flex-direction: column;
-        padding: 30px;
-        gap: 25px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      }
-      
-      .nav-links.active {
-        display: flex;
       }
       
       .mobile-menu {
@@ -743,15 +756,15 @@
         min-height: 80vh;
       }
       
-      .hero-content {
-        padding: 40px 20px;
+      .hero h1 {
+        font-size: 40px;
       }
       
-      .hero-sub {
+      .hero-subtitle {
         font-size: 16px;
       }
       
-      .hero-ctas {
+      .hero-btns {
         flex-direction: column;
         align-items: center;
       }
@@ -763,27 +776,42 @@
       }
       
       .proof-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 40px;
       }
       
       .proof-number {
-        font-size: 40px;
+        font-size: 36px;
+      }
+      
+      .section-header h2 {
+        font-size: 36px;
+      }
+      
+      .services {
+        padding: 80px 5%;
       }
       
       .services-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
       }
       
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: 1fr;
       }
       
-      .cta-info {
+      .cta-banner h2 {
+        font-size: 36px;
+      }
+      
+      .contact-grid {
         flex-direction: column;
-        gap: 15px;
+        text-align: center;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        gap: 10px;
       }
       
       .footer-grid {
@@ -792,52 +820,31 @@
         text-align: center;
       }
       
-      .footer-brand {
-        max-width: 100%;
-      }
-      
-      .footer-socials {
+      .footer-social {
         justify-content: center;
-      }
-      
-      .footer-contact p {
-        justify-content: center;
-      }
-      
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
       }
     }
     
     @media (max-width: 480px) {
-      .logo {
-        font-size: 22px;
+      .hero h1 {
+        font-size: 32px;
       }
       
       .hero-badge {
         font-size: 11px;
-        padding: 6px 18px;
+        padding: 8px 18px;
       }
       
-      .section-header {
-        margin-bottom: 40px;
-      }
-      
-      .services {
-        padding: 70px 5%;
-      }
-      
-      .service-content {
-        padding: 25px 20px;
-      }
-      
-      .gallery-grid {
-        grid-template-columns: 1fr;
+      .section-header h2 {
+        font-size: 28px;
       }
       
       .cta-banner {
-        padding: 70px 5%;
+        padding: 80px 5%;
+      }
+      
+      .cta-banner h2 {
+        font-size: 28px;
       }
     }
   </style>
@@ -846,19 +853,21 @@
 
   <!-- Claim Bar -->
   <div class="claim-bar">
-    <p>This site was built for <strong>Novettino</strong> by LVRG Agency</p>
-    <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    <div class="claim-bar-content">
+      <p>This site was built for <strong>NOVETTINO</strong> by LVRG Agency</p>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
   </div>
 
   <!-- Navigation -->
   <nav class="nav">
-    <a href="#" class="logo">NOVET<span>TINO</span></a>
+    <a href="#" class="logo">NOVETTINO</a>
     <ul class="nav-links">
       <li><a href="#menu">Menu</a></li>
-      <li><a href="#locations">Nos Restaurants</a></li>
+      <li><a href="#restaurants">Restaurants</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#order" class="nav-cta">Commander</a></li>
     </ul>
+    <a href="#commander" class="nav-cta">Commander</a>
     <div class="mobile-menu">
       <span></span>
       <span></span>
@@ -868,17 +877,17 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://static.wixstatic.com/media/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg/v1/crop/x_0,y_1434,w_4672,h_2879/fill/w_1417,h_909,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg" alt="Novettino Focaccia Restaurant" class="hero-bg">
+    <img src="https://static.wixstatic.com/media/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg/v1/crop/x_0,y_1434,w_4672,h_2879/fill/w_1417,h_909,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg" alt="NOVETTINO Focaccia" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="hero-badge">🇮🇹 Authentique Italien</span>
+      <span class="hero-badge">🇮🇹 Tradition Italienne Authentique</span>
       <h1>La Meilleure des <span>Focaccia</span></h1>
-      <p class="hero-sub">Des focaccia généreuses et gourmandes, garnies de produits frais sourcés directement au cœur de l'Italie. Prêtes en 40 secondes chrono.</p>
-      <div class="hero-ctas">
-        <a href="#order" class="btn-primary">
-          <span>🍽️</span> Commander Maintenant
+      <p class="hero-subtitle">Focaccia artisanale préparée quotidiennement avec des ingrédients de saison sourcés au cœur de l'Italie. Prête en 40 secondes chrono.</p>
+      <div class="hero-btns">
+        <a href="#commander" class="btn-primary">
+          <span>🍕</span> Commander Maintenant
         </a>
-        <a href="#locations" class="btn-secondary">Trouver un Restaurant</a>
+        <a href="#menu" class="btn-secondary">Découvrir le Menu</a>
       </div>
     </div>
   </section>
@@ -889,7 +898,7 @@
       <div class="proof-item">
         <div class="proof-stars">★★★★★</div>
         <div class="proof-number">4.8</div>
-        <div class="proof-label">sur 602 avis clients</div>
+        <div class="proof-label">Note sur 602 avis</div>
       </div>
       <div class="proof-item">
         <div class="proof-number">17</div>
@@ -897,7 +906,11 @@
       </div>
       <div class="proof-item">
         <div class="proof-number">40s</div>
-        <div class="proof-label">Prêt en un éclair</div>
+        <div class="proof-label">Temps de préparation</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">100%</div>
+        <div class="proof-label">Produits Italiens</div>
       </div>
     </div>
   </section>
@@ -905,104 +918,92 @@
   <!-- Services Section -->
   <section class="services" id="menu">
     <div class="section-header">
-      <span class="section-tag">Nos Spécialités</span>
-      <h2 class="section-title">L'Art de la Focaccia Italienne</h2>
-      <p class="section-desc">Pain de forme plate et cuit au four quotidiennement. Issue de la tradition italienne, elle est agrémentée de produits frais et de saison.</p>
+      <span class="section-tag">Notre Carte</span>
+      <h2>Des Recettes Originales et Gourmandes</h2>
+      <p>À composer par vos soins ou déjà pensées pour vous. Des focaccia généreuses garnies de produits frais et de qualité.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-image">
-          <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/749055444_18147998872516398_296587869991314229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9AzDjJMm7lEQ7kNvwHrBgMi&_nc_oc=AdpkIkZBBZH2YCiIM0xbw8VVNXh4DCnU2O9B4tSWiUNTQL8hsM_pWIDIlL8N1kr0EP0&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQJ3xqsGNMOKKoLR2s2IYN-63jN82sISdPK5DVRmqr1iBlSdR65rFHOLdiKedjQwj6QDGQndJTJo&oh=00_AQGLrmK_sJwPQxyrFF4sEQ_vuPDYoH1f3kETmJweBQvNXg&oe=6A82176C" alt="Focaccia Sandwich">
+        <div class="service-img">
+          <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/749055444_18147998872516398_296587869991314229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9AzDjJMm7lEQ7kNvwHrBgMi&_nc_oc=AdpkIkZBBZH2YCiIM0xbw8VVNXh4DCnU2O9B4tSWiUNTQL8hsM_pWIDIlL8N1kr0EP0&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQJ3xqsGNMOKKoLR2s2IYN-63jN82sISdPK5DVRmqr1iBlSdR65rFHOLdiKedjQwj6QDGQndJTJo&oh=00_AQGLrmK_sJwPQxyrFF4sEQ_vuPDYoH1f3kETmJweBQvNXg&oe=6A82176C" alt="Focaccia Piccante">
         </div>
         <div class="service-content">
-          <div class="service-icon">🥪</div>
-          <h3>Focaccia Sandwiches</h3>
-          <p>Nos focaccias signature garnies généreusement avec des ingrédients premium importés d'Italie. Une explosion de saveurs à chaque bouchée.</p>
+          <div class="service-icon">🍕</div>
+          <h3>Focaccia Signature</h3>
+          <p>Recettes originales ou personnalisables avec des garnitures premium. Parmesan, pesto, dinde, roquette et plus encore. Cuites au four quotidiennement.</p>
+          <a href="#commander" class="service-link">Voir les recettes →</a>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-image">
-          <img src="https://static.wixstatic.com/media/98af5c_7b2f94d3549a497dbbd36eac4676e42f~mv2.jpg/v1/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC00777_JPG.jpg" alt="Custom Focaccia Composition">
+        <div class="service-img">
+          <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/759611176_18149444374516398_4335775699490827775_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H5aNSpGGKfAQ7kNvwHCIBCM&_nc_oc=Adpsb8ln2ZFpyzlY9PVcu80doFK_g5zQ3tYi8DmK6rOpTPb7Ey6sJquMBj7Hjn6jKYQ&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQK1wfduZEtt3SF0Pu13SN_tMhIpCrOv1p8_SQbzLeXQBv0pncjdWakWINbBIVDKe5of_eCzedPL&oh=00_AQG4g8JKNVfzcvF69PfGGrsxe4I7YQO5bU57pqGRqx0PMg&oe=6A823C73" alt="Citronnades fraîches">
         </div>
         <div class="service-content">
-          <div class="service-icon">✨</div>
-          <h3>Composition Sur Mesure</h3>
-          <p>Créez votre focaccia parfaite en choisissant parmi notre sélection d'ingrédients frais. Votre créativité, notre savoir-faire italien.</p>
+          <div class="service-icon">🍋</div>
+          <h3>Boissons de Saison</h3>
+          <p>La Verde au basilic et citron, La Pink à l'hibiscus. Nos citronnades rafraîchissantes accompagnent parfaitement chaque focaccia.</p>
+          <a href="#commander" class="service-link">Découvrir →</a>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-image">
-          <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/759611176_18149444374516398_4335775699490827775_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H5aNSpGGKfAQ7kNvwHCIBCM&_nc_oc=Adpsb8ln2ZFpyzlY9PVcu80doFK_g5zQ3tYi8DmK6rOpTPb7Ey6sJquMBj7Hjn6jKYQ&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQK1wfduZEtt3SF0Pu13SN_tMhIpCrOv1p8_SQbzLeXQBv0pncjdWakWINbBIVDKe5of_eCzedPL&oh=00_AQG4g8JKNVfzcvF69PfGGrsxe4I7YQO5bU57pqGRqx0PMg&oe=6A823C73" alt="Pre-designed Focaccia Recipes">
+        <div class="service-img">
+          <img src="https://static.wixstatic.com/media/98af5c_7b2f94d3549a497dbbd36eac4676e42f~mv2.jpg/v1/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC00777_JPG.jpg" alt="Restaurant NOVETTINO">
         </div>
         <div class="service-content">
-          <div class="service-icon">📋</div>
-          <h3>Recettes Signature</h3>
-          <p>Découvrez nos recettes originales et gourmandes, pensées par nos chefs. La Piccante, la Classica, et bien d'autres saveurs vous attendent.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Section -->
-  <section class="gallery">
-    <div class="section-header">
-      <span class="section-tag">Notre Savoir-Faire</span>
-      <h2 class="section-title">Saveurs d'Italie</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/749055444_18147998872516398_296587869991314229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9AzDjJMm7lEQ7kNvwHrBgMi&_nc_oc=AdpkIkZBBZH2YCiIM0xbw8VVNXh4DCnU2O9B4tSWiUNTQL8hsM_pWIDIlL8N1kr0EP0&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQJ3xqsGNMOKKoLR2s2IYN-63jN82sISdPK5DVRmqr1iBlSdR65rFHOLdiKedjQwj6QDGQndJTJo&oh=00_AQGLrmK_sJwPQxyrFF4sEQ_vuPDYoH1f3kETmJweBQvNXg&oe=6A82176C" alt="La Piccante Focaccia">
-        <div class="gallery-overlay">
-          <span>La Piccante</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/759611176_18149444374516398_4335775699490827775_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H5aNSpGGKfAQ7kNvwHCIBCM&_nc_oc=Adpsb8ln2ZFpyzlY9PVcu80doFK_g5zQ3tYi8DmK6rOpTPb7Ey6sJquMBj7Hjn6jKYQ&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQK1wfduZEtt3SF0Pu13SN_tMhIpCrOv1p8_SQbzLeXQBv0pncjdWakWINbBIVDKe5of_eCzedPL&oh=00_AQG4g8JKNVfzcvF69PfGGrsxe4I7YQO5bU57pqGRqx0PMg&oe=6A823C73" alt="Nos Citronnades">
-        <div class="gallery-overlay">
-          <span>Nos Citronnades</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://static.wixstatic.com/media/98af5c_7b2f94d3549a497dbbd36eac4676e42f~mv2.jpg/v1/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC00777_JPG.jpg" alt="Intérieur Restaurant">
-        <div class="gallery-overlay">
-          <span>Nos Restaurants</span>
+          <div class="service-icon">📦</div>
+          <h3>Click & Collect</h3>
+          <p>Commandez en ligne et récupérez votre focaccia en moins de 5 minutes. Également disponible en livraison via Uber Eats et Deliveroo.</p>
+          <a href="#commander" class="service-link">Commander →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="cta-banner" id="order">
+  <section class="cta-banner" id="commander">
     <div class="cta-content">
-      <h2>Prêt pour une <span>Focaccia</span> Authentique ?</h2>
-      <p>Commandez en ligne et récupérez votre focaccia prête en 40 secondes. Livraison disponible via Uber Eats et Deliveroo, ou Click & Collect dans nos 17 restaurants.</p>
-      <div class="cta-info">
-        <div class="cta-info-item">
-          <span>📍</span>
-          26 Rue Deguingand, Levallois-Perret
-        </div>
-        <div class="cta-info-item">
-          <span>📞</span>
-          +33 1 47 90 60 46
-        </div>
-        <div class="cta-info-item">
-          <span>🕐</span>
-          11h - 22h
-        </div>
-      </div>
-      <a href="#" class="btn-primary">
-        <span>🛒</span> Commander Maintenant
+      <h2>Prêt à Goûter la <span>Différence</span> ?</h2>
+      <p>Commandez maintenant pour emporter ou en livraison et découvrez une focaccia artisanale prête en 40 secondes. Appelez-nous directement au <strong>+33 1 47 90 60 46</strong> ou passez nous voir à Levallois.</p>
+      <a href="tel:+33147906046" class="btn-primary">
+        <span>📞</span> Appeler pour Commander
       </a>
     </div>
   </section>
 
+  <!-- Contact Bar -->
+  <section class="contact-bar" id="contact">
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Notre Adresse</h4>
+          <p>26 Rue Deguingand<br>92300 Levallois-Perret</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Téléphone</h4>
+          <p><a href="tel:+33147906046">+33 1 47 90 60 46</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <h4>Horaires</h4>
+          <p>11h - 19h / 22h<br>Selon les restaurants</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer" id="restaurants">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">NOVET<span>TINO</span></div>
-        <p>Des focaccia généreuses et gourmandes, garnies de produits frais et de qualité sourcés par des passionnés au cœur de l'Italie.</p>
-        <div class="footer-socials">
+        <span class="logo">NOVETTINO</span>
+        <p>La focaccia italienne authentique, préparée quotidiennement avec des ingrédients de saison sourcés au cœur de l'Italie. 17 restaurants à travers la France pour vous servir.</p>
+        <div class="footer-social">
           <a href="https://www.facebook.com/novettino" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           <a href="https://www.instagram.com/novettino" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
         </div>
@@ -1011,67 +1012,63 @@
         <h4>Navigation</h4>
         <ul>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#locations">Nos Restaurants</a></li>
-          <li><a href="#order">Commander</a></li>
-          <li><a href="#">Traiteur</a></li>
+          <li><a href="#restaurants">Nos Restaurants</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#commander">Commander</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Nos Villes</h4>
         <ul>
-          <li><a href="#">Click & Collect</a></li>
-          <li><a href="#">Uber Eats</a></li>
-          <li><a href="#">Deliveroo</a></li>
-          <li><a href="#">Franchise</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Lyon</a></li>
+          <li><a href="#">Bordeaux</a></li>
+          <li><a href="#">Lille</a></li>
+          <li><a href="#">Et 13 autres...</a></li>
         </ul>
       </div>
-      <div class="footer-col footer-contact" id="locations">
+      <div class="footer-col">
         <h4>Contact</h4>
-        <p><span>📍</span> 26 Rue Deguingand<br>92300 Levallois-Perret, France</p>
-        <p><span>📞</span> +33 1 47 90 60 46</p>
-        <p><span>🕐</span> Lundi - Samedi: 11h - 22h</p>
+        <p>
+          26 Rue Deguingand<br>
+          92300 Levallois-Perret<br>
+          France<br><br>
+          <a href="tel:+33147906046">+33 1 47 90 60 46</a>
+        </p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 Novettino. Tous droits réservés.</p>
-      <p>Site créé par <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
+      <p>© 2024 NOVETTINO. Site créé par LVRG Agency. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    document.querySelector('.mobile-menu').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-  </script>
-
 
 <div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
-  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#D4AF9A;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#D4C5B9;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
     <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </button>
   <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
-    <div style="background:#D4AF9A;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+    <div style="background:#D4C5B9;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
       <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">N</div>
-      <div><div style="font-weight:700;font-size:15px;">Novettino</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+      <div><div style="font-weight:700;font-size:15px;">NOVETTINO</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
     </div>
     <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
-      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly and efficient Italian-inspired assistant that guides customers through focaccia options, provides location information, and directs orders to the appropriate delivery or takeout channel.! I can help answer questions about Novettino. What can I help you with?</div>
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly and efficient Italian-inspired host who excels at quick order recommendations, location details, and explaining the artisanal focaccia-making process with genuine passion! I can help answer questions about NOVETTINO. What can I help you with?</div>
     </div>
     <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
       <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
-      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#D4AF9A;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#D4C5B9;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
         <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
       </button>
     </div>
   </div>
 </div>
 <script>
-var _lvrgIntel={"domain": "novettino.com", "url": "https://novettino.com", "business_name": "Novettino", "tagline": "La Meilleure des Focaccia", "description": "Novettino is an Italian focaccia restaurant chain specializing in fresh, generously-filled focaccias made daily. They source quality ingredients from Italy and prepare custom or pre-designed focaccias ready in 40 seconds. The brand combines traditional Italian recipes with modern quick-service dining.", "services": ["Focaccia sandwiches", "Custom focaccia composition", "Pre-designed focaccia recipes", "Beverages (citronnade)", "Takeout orders", "Catering (traiteur)", "Delivery via Uber Eats and Deliveroo"], "location": "26 Rue Deguingand, 92300 Levallois-Perret, France", "phone": "+33 1 47 90 60 46", "email": "contact@novettino.com", "hours": "Varies by location; generally 11h-22h most days", "social_proof": "17 restaurant locations across France, sources ingredients directly from Italy", "key_cta": "COMMANDER (Order)", "missing": "No phone number, no email contact, no online chat support, no customer testimonials, no menu details visible on main page, no reservation system mentioned, no franchise information details visible", "brand_vibe": "Modern Italian casual, warm and inviting, fresh and quality-focused", "primary_color": "#D4AF9A", "secondary_color": "#2C2C2C", "business_type": "restaurant", "pain_point": "No visible contact phone number or email makes it difficult for customers to reach the business directly outside of ordering platforms.", "chat_persona": "Friendly and efficient Italian-inspired assistant that guides customers through focaccia options, provides location information, and directs orders to the appropriate delivery or takeout channel.", "cta_angle": "Order now via their click-and-collect system or find the nearest Novettino location to experience fresh focaccia in 40 seconds.", "owner_name": "", "neighborhood": "", "photos": ["https://static.wixstatic.com/media/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg/v1/crop/x_0,y_1434,w_4672,h_2879/fill/w_1417,h_909,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg", "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/759611176_18149444374516398_4335775699490827775_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H5aNSpGGKfAQ7kNvwHCIBCM&_nc_oc=Adpsb8ln2ZFpyzlY9PVcu80doFK_g5zQ3tYi8DmK6rOpTPb7Ey6sJquMBj7Hjn6jKYQ&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQK1wfduZEtt3SF0Pu13SN_tMhIpCrOv1p8_SQbzLeXQBv0pncjdWakWINbBIVDKe5of_eCzedPL&oh=00_AQG4g8JKNVfzcvF69PfGGrsxe4I7YQO5bU57pqGRqx0PMg&oe=6A823C73", "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/749055444_18147998872516398_296587869991314229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9AzDjJMm7lEQ7kNvwHrBgMi&_nc_oc=AdpkIkZBBZH2YCiIM0xbw8VVNXh4DCnU2O9B4tSWiUNTQL8hsM_pWIDIlL8N1kr0EP0&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQJ3xqsGNMOKKoLR2s2IYN-63jN82sISdPK5DVRmqr1iBlSdR65rFHOLdiKedjQwj6QDGQndJTJo&oh=00_AQGLrmK_sJwPQxyrFF4sEQ_vuPDYoH1f3kETmJweBQvNXg&oe=6A82176C", "https://static.wixstatic.com/media/98af5c_7b2f94d3549a497dbbd36eac4676e42f~mv2.jpg/v1/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC00777_JPG.jpg", "https://static.wixstatic.com/media/98af5c_32c274f29ce444fb9e769ab9320a690b~mv2.jpg/v1/crop/x_0,y_169,w_3882,h_3882/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC02714_JPG.jpg", "https://static.wixstatic.com/media/98af5c_ea530e58f9214ad6b4f9253a0aa91182~mv2.jpg/v1/crop/x_0,y_0,w_4000,h_4488/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC03388.jpg"], "rating": 4.8, "review_count": 602, "socials": {"facebook_url": "https://www.facebook.com/novettino", "instagram_url": "https://www.instagram.com/novettino"}};
+var _lvrgIntel={"domain": "novettino.com", "url": "https://novettino.com", "business_name": "NOVETTINO", "tagline": "La Meilleure des Focaccia", "description": "NOVETTINO is an Italian focaccia restaurant chain with 17 locations across France. They specialize in fresh, artisanal focaccias baked daily and topped with quality seasonal ingredients sourced from Italy. Orders are prepared in under 5 minutes with warm, fast service.", "services": ["Focaccia sandwiches (customizable or pre-designed recipes)", "Fresh seasonal beverages (citronnade, etc.)", "Takeout ordering", "Catering/Traiteur services", "Delivery via Uber Eats and Deliveroo"], "location": "26 Rue Deguingand, 92300 Levallois-Perret, France", "phone": "+33 1 47 90 60 46", "email": "contact@novettino.com", "hours": "Varies by location; typically 11h-19h to 11h-22h, with some limited lunch hours", "social_proof": "17 restaurant locations across France; established focaccia chain with strong social media presence", "key_cta": "COMMANDER (Order)", "missing": "No phone number or email contact information visible; no online booking system; no customer testimonials or reviews embedded; limited menu details on homepage; no catering pricing or packages listed", "brand_vibe": "Fresh Italian casual, warm approachable, quality-focused, beige and minimalist aesthetic", "primary_color": "#D4C5B9", "secondary_color": "#2D2D2D", "business_type": "restaurant", "pain_point": "No direct contact phone number or email visible on the site, forcing customers to use third-party delivery apps or contact pages to reach them", "chat_persona": "Friendly and efficient Italian-inspired host who excels at quick order recommendations, location details, and explaining the artisanal focaccia-making process with genuine passion", "cta_angle": "Order now for pickup or delivery and experience fresh focaccia ready in 40 seconds", "owner_name": "", "neighborhood": "", "photos": ["https://static.wixstatic.com/media/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg/v1/crop/x_0,y_1434,w_4672,h_2879/fill/w_1417,h_909,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/98af5c_e1e97dd262ba41fb901c007392b02731~mv2.jpg", "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/759611176_18149444374516398_4335775699490827775_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=H5aNSpGGKfAQ7kNvwHCIBCM&_nc_oc=Adpsb8ln2ZFpyzlY9PVcu80doFK_g5zQ3tYi8DmK6rOpTPb7Ey6sJquMBj7Hjn6jKYQ&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQK1wfduZEtt3SF0Pu13SN_tMhIpCrOv1p8_SQbzLeXQBv0pncjdWakWINbBIVDKe5of_eCzedPL&oh=00_AQG4g8JKNVfzcvF69PfGGrsxe4I7YQO5bU57pqGRqx0PMg&oe=6A823C73", "https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/749055444_18147998872516398_296587869991314229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=9AzDjJMm7lEQ7kNvwHrBgMi&_nc_oc=AdpkIkZBBZH2YCiIM0xbw8VVNXh4DCnU2O9B4tSWiUNTQL8hsM_pWIDIlL8N1kr0EP0&_nc_zt=23&_nc_ht=scontent-den2-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=-YauV2aMkrNXFyiNSMLfoA&_nc_tpa=Q5bMBQJ3xqsGNMOKKoLR2s2IYN-63jN82sISdPK5DVRmqr1iBlSdR65rFHOLdiKedjQwj6QDGQndJTJo&oh=00_AQGLrmK_sJwPQxyrFF4sEQ_vuPDYoH1f3kETmJweBQvNXg&oe=6A82176C", "https://static.wixstatic.com/media/98af5c_7b2f94d3549a497dbbd36eac4676e42f~mv2.jpg/v1/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC00777_JPG.jpg", "https://static.wixstatic.com/media/98af5c_32c274f29ce444fb9e769ab9320a690b~mv2.jpg/v1/crop/x_0,y_169,w_3882,h_3882/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC02714_JPG.jpg", "https://static.wixstatic.com/media/98af5c_ea530e58f9214ad6b4f9253a0aa91182~mv2.jpg/v1/crop/x_0,y_0,w_4000,h_4488/fill/w_340,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC03388.jpg"], "rating": 4.8, "review_count": 602, "socials": {"facebook_url": "https://www.facebook.com/novettino", "instagram_url": "https://www.instagram.com/novettino"}};
 var _lvrgHistory=[];
 var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
 function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
-function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#D4AF9A;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#D4C5B9;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
 async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at +33 1 47 90 60 46.');}}
 </script>
 </body>
