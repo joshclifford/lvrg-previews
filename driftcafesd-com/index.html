@@ -4,65 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drift Cafe SD | Good Vibes That Roll With The Tides</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     :root {
       --primary: #8B7355;
-      --secondary: #D4A574;
-      --dark: #2C2416;
-      --cream: #FDF8F3;
-      --warm-white: #FFFBF7;
-      --text-dark: #3D3426;
-      --text-light: #6B5D4D;
-      --gold: #C9A961;
+      --secondary: #2D5016;
+      --cream: #F5F1EB;
+      --warm-white: #FFFDF9;
+      --dark: #2C2C2C;
+      --gold: #D4A853;
+      --light-green: #4A7C23;
     }
     
     body {
-      font-family: 'Nunito', sans-serif;
-      color: var(--text-dark);
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
       line-height: 1.6;
-      background-color: var(--warm-white);
-    }
-    
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
+      background: var(--warm-white);
     }
     
     /* Claim Bar */
     .claim-bar {
       background: #000;
-      padding: 12px 20px;
+      padding: 10px 20px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      text-align: center;
-    }
-    
-    .claim-bar-content {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 15px;
       flex-wrap: wrap;
     }
     
     .claim-bar p {
-      color: #9CA3AF;
+      color: #aaa;
       font-size: 14px;
       margin: 0;
     }
@@ -72,47 +51,42 @@
     }
     
     .claim-btn {
-      background: linear-gradient(135deg, var(--gold) 0%, #E0BE7A 100%);
+      background: linear-gradient(135deg, var(--gold), #C49B3D);
       color: #000;
-      padding: 8px 20px;
+      padding: 6px 18px;
       border-radius: 50px;
+      text-decoration: none;
       font-size: 13px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      font-weight: 600;
       transition: all 0.3s ease;
+      white-space: nowrap;
     }
     
     .claim-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+      box-shadow: 0 4px 15px rgba(212, 168, 83, 0.4);
     }
     
     /* Navigation */
-    .nav {
+    nav {
       background: var(--warm-white);
-      padding: 16px 24px;
-      position: sticky;
-      top: 48px;
-      z-index: 999;
-      box-shadow: 0 2px 20px rgba(139, 115, 85, 0.08);
-    }
-    
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 15px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 42px;
+      z-index: 999;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
     }
     
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: var(--primary);
-      letter-spacing: 1px;
+      text-decoration: none;
+      letter-spacing: -0.5px;
     }
     
     .logo span {
@@ -122,59 +96,68 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 35px;
       list-style: none;
     }
     
     .nav-links a {
-      color: var(--text-dark);
+      text-decoration: none;
+      color: var(--dark);
       font-weight: 500;
       font-size: 15px;
+      transition: color 0.3s ease;
       position: relative;
     }
     
-    .nav-links a::after {
+    .nav-links a:not(.nav-cta):after {
       content: '';
       position: absolute;
-      bottom: -4px;
+      bottom: -5px;
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--secondary);
+      background: var(--primary);
       transition: width 0.3s ease;
     }
     
-    .nav-links a:hover::after {
+    .nav-links a:not(.nav-cta):hover:after {
       width: 100%;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
     }
     
     .nav-cta {
       background: var(--primary);
-      color: #fff;
+      color: #fff !important;
       padding: 12px 28px;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 14px;
       transition: all 0.3s ease;
     }
     
     .nav-cta:hover {
-      background: var(--dark);
+      background: var(--secondary);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(139, 115, 85, 0.25);
+      box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
     }
     
-    .mobile-menu {
+    .nav-cta:after {
+      display: none !important;
+    }
+    
+    .mobile-toggle {
       display: none;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
-      padding: 8px;
+      padding: 5px;
     }
     
-    .mobile-menu span {
-      width: 24px;
-      height: 2px;
+    .mobile-toggle span {
+      width: 25px;
+      height: 3px;
       background: var(--primary);
       border-radius: 2px;
       transition: all 0.3s ease;
@@ -182,10 +165,10 @@
     
     /* Hero Section */
     .hero {
-      position: relative;
       min-height: 90vh;
       display: flex;
       align-items: center;
+      position: relative;
       overflow: hidden;
     }
     
@@ -196,7 +179,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -2;
+      z-index: 0;
     }
     
     .hero-overlay {
@@ -205,14 +188,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(44, 36, 22, 0.75) 0%, rgba(139, 115, 85, 0.5) 100%);
-      z-index: -1;
+      background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(139, 115, 85, 0.75) 100%);
+      z-index: 1;
     }
     
     .hero-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 24px;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 60px 8%;
       color: #fff;
     }
     
@@ -220,54 +204,62 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.15);
       backdrop-filter: blur(10px);
-      padding: 10px 20px;
+      padding: 8px 18px;
       border-radius: 50px;
       font-size: 14px;
-      margin-bottom: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--gold);
     }
     
     .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      max-width: 700px;
-      margin-bottom: 20px;
-      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.2);
     }
     
-    .hero-sub {
+    .hero p {
       font-size: 20px;
-      max-width: 540px;
-      margin-bottom: 36px;
       opacity: 0.95;
-      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 600px;
       font-weight: 300;
+      line-height: 1.7;
     }
     
-    .hero-ctas {
+    .hero-btns {
       display: flex;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
     }
     
     .btn-primary {
-      background: var(--secondary);
-      color: var(--dark);
+      background: var(--gold);
+      color: #000;
       padding: 16px 36px;
       border-radius: 50px;
-      font-weight: 700;
-      font-size: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.3s ease;
     }
     
     .btn-primary:hover {
-      background: #fff;
       transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 25px rgba(212, 168, 83, 0.4);
     }
     
     .btn-secondary {
@@ -275,24 +267,27 @@
       color: #fff;
       padding: 16px 36px;
       border-radius: 50px;
+      text-decoration: none;
       font-weight: 600;
-      font-size: 15px;
-      border: 2px solid rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      border: 2px solid rgba(255,255,255,0.5);
       transition: all 0.3s ease;
     }
     
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: #fff;
+      color: var(--primary);
       border-color: #fff;
     }
     
     /* Social Proof Bar */
     .social-proof {
-      background: var(--dark);
-      padding: 40px 24px;
+      background: var(--cream);
+      padding: 40px 5%;
+      border-bottom: 1px solid rgba(139, 115, 85, 0.15);
     }
     
-    .social-proof-content {
+    .proof-container {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
@@ -304,95 +299,116 @@
     
     .proof-item {
       text-align: center;
-      color: #fff;
+      padding: 10px 30px;
     }
     
-    .proof-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      font-weight: 700;
-      color: var(--secondary);
+    .proof-item:not(:last-child) {
+      border-right: 1px solid rgba(139, 115, 85, 0.2);
+    }
+    
+    .proof-rating {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      margin-bottom: 5px;
     }
     
-    .proof-number .star {
+    .proof-rating .stars {
       color: var(--gold);
-      font-size: 28px;
+      font-size: 22px;
+      letter-spacing: 2px;
     }
     
-    .proof-label {
+    .proof-rating .score {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .proof-item p {
+      color: #666;
       font-size: 14px;
-      opacity: 0.8;
-      margin-top: 6px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
     
-    .proof-divider {
-      width: 1px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.2);
+    .proof-highlight {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .proof-highlight svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--secondary);
+    }
+    
+    .proof-highlight-text h4 {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 16px;
+    }
+    
+    .proof-highlight-text p {
+      font-size: 13px;
     }
     
     /* Services Section */
     .services {
-      padding: 100px 24px;
-      background: var(--cream);
-    }
-    
-    .services-container {
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 100px 5%;
+      background: var(--warm-white);
     }
     
     .section-header {
       text-align: center;
-      margin-bottom: 60px;
+      max-width: 700px;
+      margin: 0 auto 60px;
     }
     
     .section-tag {
       display: inline-block;
       color: var(--secondary);
       font-weight: 600;
-      font-size: 13px;
+      font-size: 14px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
     
-    .section-title {
-      font-size: clamp(32px, 5vw, 48px);
-      color: var(--primary);
-      margin-bottom: 16px;
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.2;
     }
     
-    .section-desc {
-      color: var(--text-light);
+    .section-header p {
+      color: #666;
       font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto;
     }
     
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 35px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     .service-card {
       background: #fff;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 40px rgba(139, 115, 85, 0.1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
       transition: all 0.4s ease;
+      border: 1px solid rgba(139, 115, 85, 0.1);
     }
     
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(139, 115, 85, 0.2);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
     }
     
     .service-img {
@@ -412,29 +428,36 @@
     }
     
     .service-content {
-      padding: 32px;
+      padding: 35px;
     }
     
     .service-icon {
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      border-radius: 14px;
+      width: 55px;
+      height: 55px;
+      background: linear-gradient(135deg, var(--cream), #fff);
+      border-radius: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      font-size: 24px;
+      border: 1px solid rgba(139, 115, 85, 0.15);
+    }
+    
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--primary);
     }
     
     .service-content h3 {
-      font-size: 22px;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
       color: var(--dark);
       margin-bottom: 12px;
     }
     
     .service-content p {
-      color: var(--text-light);
+      color: #666;
       font-size: 15px;
       line-height: 1.7;
       margin-bottom: 20px;
@@ -442,37 +465,50 @@
     
     .service-link {
       color: var(--primary);
+      text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 15px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      transition: gap 0.3s ease;
     }
     
     .service-link:hover {
-      color: var(--secondary);
       gap: 12px;
+      color: var(--secondary);
     }
     
-    /* Gallery Section */
-    .gallery {
-      padding: 80px 24px;
-      background: var(--warm-white);
+    /* Gallery Strip */
+    .gallery-strip {
+      padding: 80px 5%;
+      background: var(--cream);
     }
     
     .gallery-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
+    }
+    
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .gallery-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: var(--dark);
     }
     
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 20px;
     }
     
     .gallery-item {
-      border-radius: 16px;
+      border-radius: 15px;
       overflow: hidden;
       aspect-ratio: 1;
       position: relative;
@@ -493,7 +529,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(44, 36, 22, 0.4) 0%, transparent 50%);
+      background: linear-gradient(to top, rgba(45, 80, 22, 0.4), transparent);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -504,8 +540,8 @@
     
     /* CTA Banner */
     .cta-banner {
-      padding: 100px 24px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+      padding: 100px 5%;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
       position: relative;
       overflow: hidden;
     }
@@ -514,10 +550,21 @@
       content: '';
       position: absolute;
       top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(212, 165, 116, 0.2) 0%, transparent 70%);
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.03);
       border-radius: 50%;
     }
     
@@ -526,78 +573,129 @@
       margin: 0 auto;
       text-align: center;
       position: relative;
-      color: #fff;
+      z-index: 1;
     }
     
     .cta-content h2 {
-      font-size: clamp(32px, 5vw, 52px);
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #fff;
       margin-bottom: 20px;
+      line-height: 1.2;
     }
     
     .cta-content p {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 36px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      color: rgba(255,255,255,0.9);
+      font-size: 20px;
+      margin-bottom: 40px;
       line-height: 1.7;
     }
     
-    .cta-btn {
-      background: var(--secondary);
-      color: var(--dark);
-      padding: 18px 48px;
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-btn-primary {
+      background: var(--gold);
+      color: #000;
+      padding: 18px 40px;
       border-radius: 50px;
-      font-weight: 700;
-      font-size: 16px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 17px;
       transition: all 0.3s ease;
     }
     
-    .cta-btn:hover {
-      background: #fff;
+    .cta-btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .cta-btn-secondary {
+      background: transparent;
+      color: #fff;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 17px;
+      border: 2px solid rgba(255,255,255,0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .cta-btn-secondary:hover {
+      background: #fff;
+      color: var(--secondary);
     }
     
     /* Footer */
-    .footer {
+    footer {
       background: var(--dark);
       color: #fff;
-      padding: 80px 24px 40px;
+      padding: 80px 5% 30px;
     }
     
-    .footer-container {
+    .footer-content {
       max-width: 1200px;
       margin: 0 auto;
-    }
-    
-    .footer-main {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 60px;
+      gap: 50px;
       margin-bottom: 60px;
     }
     
     .footer-brand .logo {
+      color: #fff;
       margin-bottom: 20px;
       display: inline-block;
     }
     
+    .footer-brand .logo span {
+      color: var(--gold);
+    }
+    
     .footer-brand p {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255,255,255,0.7);
       font-size: 15px;
       line-height: 1.8;
-      max-width: 300px;
+      margin-bottom: 25px;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .footer-social a {
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-social a:hover {
+      background: var(--gold);
+      transform: translateY(-3px);
+    }
+    
+    .footer-social svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
     }
     
     .footer-col h4 {
-      font-size: 16px;
-      margin-bottom: 24px;
-      color: var(--secondary);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #fff;
     }
     
     .footer-col ul {
@@ -605,97 +703,73 @@
     }
     
     .footer-col li {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     
     .footer-col a {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
       font-size: 15px;
-      transition: all 0.3s ease;
+      transition: color 0.3s ease;
     }
     
     .footer-col a:hover {
-      color: var(--secondary);
-      padding-left: 6px;
+      color: var(--gold);
     }
     
     .footer-contact p {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255,255,255,0.7);
       font-size: 15px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: flex;
       align-items: flex-start;
       gap: 10px;
     }
     
-    .footer-contact .icon {
-      color: var(--secondary);
-      font-size: 18px;
+    .footer-contact svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold);
       flex-shrink: 0;
+      margin-top: 3px;
     }
     
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255,255,255,0.1);
       padding-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .footer-bottom p {
-      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      color: rgba(255,255,255,0.5);
       font-size: 14px;
     }
     
-    .social-links {
-      display: flex;
-      gap: 16px;
+    .footer-bottom a {
+      color: var(--gold);
+      text-decoration: none;
     }
     
-    .social-links a {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 18px;
-      transition: all 0.3s ease;
+    .footer-bottom a:hover {
+      text-decoration: underline;
     }
     
-    .social-links a:hover {
-      background: var(--secondary);
-      transform: translateY(-4px);
-    }
-    
-    /* Responsive */
+    /* Mobile Responsive */
     @media (max-width: 1024px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       
-      .footer-main {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-      }
-      
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
       }
     }
     
     @media (max-width: 768px) {
       .claim-bar {
-        padding: 10px 16px;
-        top: 0;
-      }
-      
-      .claim-bar-content {
-        gap: 12px;
+        padding: 8px 15px;
+        gap: 10px;
       }
       
       .claim-bar p {
@@ -703,60 +777,95 @@
       }
       
       .claim-btn {
-        padding: 6px 14px;
         font-size: 11px;
+        padding: 5px 14px;
       }
       
-      .nav {
-        top: 42px;
-        padding: 14px 20px;
+      nav {
+        top: 38px;
+        padding: 12px 5%;
+      }
+      
+      .logo {
+        font-size: 22px;
       }
       
       .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--warm-white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       }
       
-      .mobile-menu {
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .mobile-toggle {
         display: flex;
       }
       
       .hero {
-        min-height: 85vh;
+        min-height: 80vh;
       }
       
-      .hero-content {
-        padding: 40px 20px;
+      .hero h1 {
+        font-size: 38px;
       }
       
-      .hero-sub {
-        font-size: 17px;
+      .hero p {
+        font-size: 16px;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+      }
+      
+      .btn-primary, .btn-secondary {
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .proof-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .proof-item {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+        padding-bottom: 25px;
+      }
+      
+      .proof-item:last-child {
+        border-bottom: none;
+      }
+      
+      .section-header h2 {
+        font-size: 32px;
+      }
+      
+      .services {
+        padding: 60px 5%;
       }
       
       .services-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 25px;
       }
       
-      .social-proof-content {
-        gap: 30px;
+      .gallery-strip {
+        padding: 60px 5%;
       }
       
-      .proof-divider {
-        display: none;
-      }
-      
-      .proof-number {
-        font-size: 36px;
-      }
-      
-      .footer-main {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-      
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+      .gallery-header h2 {
+        font-size: 32px;
       }
       
       .gallery-grid {
@@ -764,36 +873,52 @@
         gap: 12px;
       }
       
-      .section-header {
-        margin-bottom: 40px;
-      }
-      
-      .services {
-        padding: 70px 20px;
-      }
-      
       .cta-banner {
-        padding: 70px 20px;
+        padding: 60px 5%;
+      }
+      
+      .cta-content h2 {
+        font-size: 32px;
+      }
+      
+      .cta-content p {
+        font-size: 16px;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
     }
     
     @media (max-width: 480px) {
-      .hero-ctas {
-        flex-direction: column;
-        width: 100%;
+      .hero h1 {
+        font-size: 32px;
       }
       
-      .btn-primary, .btn-secondary {
-        width: 100%;
-        justify-content: center;
+      .hero-content {
+        padding: 40px 6%;
       }
       
-      .proof-item {
-        width: 45%;
+      .section-header h2 {
+        font-size: 28px;
       }
       
-      .logo {
-        font-size: 20px;
+      .service-content {
+        padding: 25px;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      
+      .cta-content h2 {
+        font-size: 26px;
       }
     }
   </style>
@@ -801,192 +926,215 @@
 <body>
   <!-- Claim Bar -->
   <div class="claim-bar">
-    <div class="claim-bar-content">
-      <p>This site was built for <strong>Drift Cafe SD</strong> by LVRG Agency</p>
-      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
-    </div>
+    <p>This site was built for <strong>Drift Cafe SD</strong> by LVRG Agency</p>
+    <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
   </div>
-
+  
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <a href="#" class="logo">Drift<span>Cafe</span></a>
-      <ul class="nav-links">
-        <li><a href="#services">Menu</a></li>
-        <li><a href="#gallery">Catering</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="#book" class="nav-cta">Book Coffee Cart</a>
-      <div class="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <nav>
+    <a href="#" class="logo">Drift <span>Cafe</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Our Offerings</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Visit Us</a></li>
+      <li><a href="https://www.driftcafesd.com/coffeecart" class="nav-cta">Book Our Cart</a></li>
+    </ul>
+    <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </nav>
-
+  
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium" alt="Drift Cafe SD interior" class="hero-bg">
+    <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium" alt="Drift Cafe cozy bohemian interior" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">
-        ☕ Small-Batch Roasted Weekly in San Diego
+        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <span>San Diego's Favorite Beach Café</span>
       </div>
       <h1>Good Vibes That Roll With The Tides</h1>
-      <p class="hero-sub">Specialty coffee, fresh breakfast, and açaí bowls served in our cozy bohemian tropical oasis on Mission Blvd. Open daily 6:30 AM – 2:00 PM.</p>
-      <div class="hero-ctas">
-        <a href="#book" class="btn-primary">Book Our Coffee Cart →</a>
-        <a href="#services" class="btn-secondary">View Our Menu</a>
+      <p>Specialty small-batch roasted coffee, artisanal breakfast bowls, and vegan-friendly eats in our cozy bohemian tropical oasis on Mission Blvd. Wake up and drift in.</p>
+      <div class="hero-btns">
+        <a href="https://www.driftcafesd.com/s/order" class="btn-primary">
+          Order Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://www.driftcafesd.com/coffeecart" class="btn-secondary">Book Our Coffee Cart</a>
       </div>
     </div>
   </section>
-
+  
   <!-- Social Proof Bar -->
   <section class="social-proof">
-    <div class="social-proof-content">
+    <div class="proof-container">
       <div class="proof-item">
-        <div class="proof-number">
-          4.7 <span class="star">★</span>
+        <div class="proof-rating">
+          <span class="score">4.7</span>
+          <span class="stars">★★★★★</span>
         </div>
-        <div class="proof-label">Google Rating</div>
+        <p>Based on 449 Google Reviews</p>
       </div>
-      <div class="proof-divider"></div>
       <div class="proof-item">
-        <div class="proof-number">449+</div>
-        <div class="proof-label">Happy Reviews</div>
+        <div class="proof-highlight">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div class="proof-highlight-text">
+            <h4>Customer Favorite</h4>
+            <p>Acai bowls & specialty lattes</p>
+          </div>
+        </div>
       </div>
-      <div class="proof-divider"></div>
       <div class="proof-item">
-        <div class="proof-number">6:30</div>
-        <div class="proof-label">AM Opening Daily</div>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-number">45</div>
-        <div class="proof-label">Private Event Capacity</div>
+        <div class="proof-highlight">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <div class="proof-highlight-text">
+            <h4>Cozy Atmosphere</h4>
+            <p>Plant-filled bohemian vibes</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
+  
   <!-- Services Section -->
   <section class="services" id="services">
-    <div class="services-container">
-      <div class="section-header">
-        <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Crafted With Love, Served With Aloha</h2>
-        <p class="section-desc">From your morning espresso to private event catering, we bring the beach-side vibes to every experience.</p>
+    <div class="section-header">
+      <span class="section-tag">What We Offer</span>
+      <h2>Crafted With Love, Served With Aloha</h2>
+      <p>From our small-batch roasted beans to our vegan-friendly menu, every detail is designed to make your day brighter.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Latte%20Art_1747586852.jpg?width=2400&optimize=medium" alt="Specialty latte art at Drift Cafe">
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 21V19H20V21H2ZM20 8V5H22V8C22 9.1 21.1 10 20 10H18V8H20ZM18 3V10H2C2 7.79 3.79 6 6 6V3H8V6H14V3H16V6C18.21 6 20 7.79 20 10H18V3Z"/></svg>
+          </div>
+          <h3>Specialty Coffee & Beverages</h3>
+          <p>Small-batch roasted weekly for the freshest cup. Enjoy specialty lattes, cold brews, and artisanal drinks with your choice of oat or almond milk.</p>
+          <a href="https://www.driftcafesd.com/menu" class="service-link">View Full Menu →</a>
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Latte%20Art_1747586852.jpg?width=2400&optimize=medium" alt="Specialty latte art">
-          </div>
-          <div class="service-content">
-            <div class="service-icon">☕</div>
-            <h3>Specialty Coffee</h3>
-            <p>Small-batch roasted weekly for maximum freshness. Rich, bold flavors with non-dairy options including oat and almond milk.</p>
-            <a href="#" class="service-link">View Drinks Menu →</a>
-          </div>
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium" alt="Delicious food at Drift Cafe">
         </div>
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium" alt="Breakfast and acai bowls">
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3L4 9V21H20V9L12 3ZM12 18C10.34 18 9 16.66 9 15C9 13 12 9.75 12 9.75S15 13 15 15C15 16.66 13.66 18 12 18Z"/></svg>
           </div>
-          <div class="service-content">
-            <div class="service-icon">🥣</div>
-            <h3>Breakfast & Food</h3>
-            <p>Fresh breakfast items and açaí bowls with vegan and gluten-free options. Made with love using quality ingredients daily.</p>
-            <a href="#" class="service-link">See Food Menu →</a>
-          </div>
+          <h3>Food & Breakfast Bowls</h3>
+          <p>Fuel your morning with our famous acai bowls, hearty breakfast bowls, and diverse menu options—including vegan and gluten-free choices for every lifestyle.</p>
+          <a href="https://www.driftcafesd.com/s/order" class="service-link">Order Online →</a>
         </div>
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium" alt="Coffee cart for events">
+      </div>
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium" alt="Drift Cafe mobile coffee cart">
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 18C5.9 18 5 18.9 5 20S5.9 22 7 22 9 21.1 9 20 8.1 18 7 18ZM1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1ZM17 18C15.9 18 15 18.9 15 20S15.9 22 17 22 19 21.1 19 20 18.1 18 17 18Z"/></svg>
           </div>
-          <div class="service-content">
-            <div class="service-icon">🎉</div>
-            <h3>Catering & Events</h3>
-            <p>Elevate your special occasion with our stylish coffee cart or host up to 45 guests in our bohemian tropical venue.</p>
-            <a href="#book" class="service-link">Book Your Event →</a>
-          </div>
+          <h3>Mobile Coffee Cart</h3>
+          <p>Elevate your event with our stylish coffee cart! We bring the Drift Cafe experience to weddings, corporate events, and private celebrations throughout San Diego.</p>
+          <a href="https://www.driftcafesd.com/coffeecart" class="service-link">Book Our Cart →</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Gallery Section -->
-  <section class="gallery" id="gallery">
+  
+  <!-- Gallery Strip -->
+  <section class="gallery-strip" id="about">
     <div class="gallery-container">
-      <div class="section-header">
-        <span class="section-tag">The Drift Experience</span>
-        <h2 class="section-title">Your Beach-Side Escape Awaits</h2>
+      <div class="gallery-header">
+        <span class="section-tag">Our Space</span>
+        <h2>Step Into Our Bohemian Oasis</h2>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium" alt="Drift Cafe atmosphere">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium" alt="Drift Cafe interior">
         </div>
         <div class="gallery-item">
           <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Latte%20Art_1747586852.jpg?width=2400&optimize=medium" alt="Latte art">
         </div>
         <div class="gallery-item">
-          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium" alt="Food presentation">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium" alt="Coffee and food">
         </div>
         <div class="gallery-item">
-          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium" alt="Coffee cart service">
+          <img src="https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium" alt="Mobile coffee cart">
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- CTA Banner -->
-  <section class="cta-banner" id="book">
+  <section class="cta-banner">
     <div class="cta-content">
-      <h2>Bring the Drift Vibes to Your Next Event</h2>
-      <p>From corporate gatherings to intimate celebrations, our mobile coffee cart delivers expertly crafted beverages that create unforgettable moments. Book now for your special occasion.</p>
-      <a href="https://www.driftcafesd.com/coffeecart" class="cta-btn">Book Our Coffee Cart →</a>
+      <h2>Ready to Bring Drift Cafe to Your Next Event?</h2>
+      <p>From intimate gatherings in our cozy venue (up to 45 guests) to our mobile coffee cart serving your wedding or corporate event—let us make your occasion unforgettable. Contact us today and we'll handle the rest.</p>
+      <div class="cta-buttons">
+        <a href="https://www.driftcafesd.com/coffeecart" class="cta-btn-primary">Book Our Coffee Cart</a>
+        <a href="https://www.driftcafesd.com/catering-and-events" class="cta-btn-secondary">Reserve Our Venue</a>
+      </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="footer-container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <a href="#" class="logo">Drift<span>Cafe</span></a>
-          <p>A specialty coffee shop serving small-batch roasted coffee, breakfast, and açaí bowls in a cozy bohemian tropical setting. Good vibes that roll with the tides.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Catering & Events</a></li>
-            <li><a href="#">Book Our Cart</a></li>
-            <li><a href="#">Gift Cards</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Hours</h4>
-          <ul>
-            <li><a href="#">Daily: 6:30 AM - 2:00 PM</a></li>
-            <li><a href="#">After Hours Events Available</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-contact">
-          <h4>Visit Us</h4>
-          <p><span class="icon">📍</span> 4652 Mission Blvd<br>San Diego, CA 92109</p>
-          <p><span class="icon">📞</span> <a href="tel:8582634298">(858) 263-4298</a></p>
-          <p><span class="icon">✉️</span> <a href="mailto:drift.marlee@gmail.com">drift.marlee@gmail.com</a></p>
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">Drift <span>Cafe</span></a>
+        <p>Your cozy bohemian tropical escape on Mission Blvd. We started with the simple idea of bringing the best from us to you—with lots of love and careful thought in everything we do.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Drift Cafe SD. Website by LVRG Agency.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="Facebook">👍</a>
-          <a href="#" aria-label="Yelp">⭐</a>
-        </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.driftcafesd.com/menu">Menu</a></li>
+          <li><a href="https://www.driftcafesd.com/s/order">Order Online</a></li>
+          <li><a href="https://www.driftcafesd.com/coffeecart">Book Our Cart</a></li>
+          <li><a href="https://www.driftcafesd.com/catering-and-events">Catering & Events</a></li>
+        </ul>
       </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="https://www.driftcafesd.com/retail-and-merchandise">Merchandise</a></li>
+          <li><a href="https://app.squareup.com/gift/MLWZCMHK9R7SB/order">Gift Cards</a></li>
+          <li><a href="https://www.driftcafesd.com/jobs">Careers</a></li>
+          <li><a href="https://www.driftcafesd.com/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Visit Us</h4>
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          4652 Mission Blvd<br>San Diego, CA 92109
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:8582634298">(858) 263-4298</a>
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          Daily 6:30 AM – 2:00 PM
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Drift Cafe SD. Website designed by <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
     </div>
   </footer>
 
@@ -1000,7 +1148,7 @@
       <div><div style="font-weight:700;font-size:15px;">Drift Cafe SD</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
     </div>
     <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
-      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Friendly, warm, and relaxed like a local San Diego barista who genuinely cares about customer experience and remembers regulars.! I can help answer questions about Drift Cafe SD. What can I help you with?</div>
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Warm, welcoming, laid-back barista who embodies good beach vibes and is knowledgeable about specialty coffee drinks, dietary options, and event hosting.! I can help answer questions about Drift Cafe SD. What can I help you with?</div>
     </div>
     <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
       <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
@@ -1011,7 +1159,7 @@
   </div>
 </div>
 <script>
-var _lvrgIntel={"domain": "driftcafesd.com", "url": "https://driftcafesd.com", "business_name": "Drift Cafe SD", "tagline": "Good Vibes That Roll With The Tides", "description": "Drift Cafe SD is a specialty coffee shop in San Diego that serves small-batch roasted coffee, breakfast items, and acai bowls in a cozy bohemian tropical setting. They offer catering services, coffee cart rentals for events, and venue rentals for intimate gatherings. The cafe emphasizes fresh ingredients, sustainable practices, and diverse menu options including vegan and gluten-free choices.", "services": ["Coffee service", "Breakfast and food", "Catering and events", "Coffee cart rental", "Venue rental for private events", "Retail merchandise", "Gift cards", "Online ordering and delivery"], "location": "4652 Mission Blvd, San Diego, CA 92109", "phone": "(858) 263-4298", "email": "drift.marlee@gmail.com", "hours": "Daily 6:30 AM - 2:00 PM", "social_proof": "Google reviews praising the cozy atmosphere, quality coffee, excellent food presentation, and welcoming vibes from customers like Tina M and Indie Q", "key_cta": "Order Now", "missing": "No online booking system for events or private rentals, no menu preview on homepage, no specific pricing for catering/events, no delivery radius information, no estimated wait times", "brand_vibe": "Bohemian tropical, cozy, welcoming, beach-adjacent laid-back vibes", "primary_color": "#8B7355", "secondary_color": "#D4A574", "business_type": "coffee_shop", "pain_point": "Users cannot book catering, events, or coffee cart services directly online - they must contact manually or visit a separate page without clear booking flow.", "chat_persona": "Friendly, warm, and relaxed like a local San Diego barista who genuinely cares about customer experience and remembers regulars.", "cta_angle": "Book Our Coffee Cart for Your Event", "owner_name": "Marlee", "neighborhood": "Mission Beach", "photos": ["https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Latte%20Art_1747586852.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Above%20Shot2%20%281%29_1724187482.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/IMG_1489_1724183067.jpg?width=2400&optimize=medium"], "rating": 4.7, "review_count": 449};
+var _lvrgIntel={"domain": "driftcafesd.com", "url": "https://driftcafesd.com", "business_name": "Drift Cafe SD", "tagline": "Good Vibes That Roll With The Tides", "description": "Drift Cafe is a specialty coffee shop in San Diego that serves small-batch roasted coffee, artisanal beverages, and food including vegan and gluten-free options. They operate a physical cafe location and offer mobile coffee cart services for events, plus catering and after-hours venue rentals for intimate gatherings up to 45 people.", "services": ["Specialty coffee and beverages", "Food and breakfast items", "Mobile coffee cart booking", "Catering services", "Private event venue rental", "Retail merchandise", "Gift cards", "Online ordering and delivery"], "location": "4652 Mission Blvd, San Diego, CA 92109", "phone": "(858) 263-4298", "email": "drift.marlee@gmail.com", "hours": "Daily 6:30 AM - 2:00 PM", "social_proof": "Multiple 5-star Google reviews praising the cozy atmosphere, quality food, specialty lattes, and welcoming vibes. Customers specifically mention the acai bowls, breakfast bowls, and non-dairy milk options.", "key_cta": "Order Now", "missing": "No online booking system for catering/events (only contact form), no detailed menu visible on homepage, no pricing information, no FAQ section, limited information about coffee cart booking process", "brand_vibe": "Bohemian tropical beach café with cozy plant-filled aesthetic", "primary_color": "#8B7355", "secondary_color": "#2D5016", "business_type": "coffee_shop", "pain_point": "Customers must contact via form or phone to book catering/events with no self-service booking or clear pricing, creating friction in the conversion process.", "chat_persona": "Warm, welcoming, laid-back barista who embodies good beach vibes and is knowledgeable about specialty coffee drinks, dietary options, and event hosting.", "cta_angle": "Book Our Coffee Cart For Your Event or Reserve Our Venue For Your Private Gathering", "owner_name": "Marlee", "neighborhood": "Mission Beach", "photos": ["https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/DSC09548_1724185957.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Table%20Shot1111_1724093547.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Latte%20Art_1747586852.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/A6CB70D8-90C7-4455-83D0-646D7015A543_1_201_a_1748749911.jpeg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/Above%20Shot2%20%281%29_1724187482.jpg?width=2400&optimize=medium", "https://e60c0558f3a53b0556d5.cdn6.editmysite.com/uploads/b/e60c0558f3a53b0556d550829c3ad6d7000e757627c621a3e4739888e5b64b40/IMG_1489_1724183067.jpg?width=2400&optimize=medium"], "rating": 4.7, "review_count": 449};
 var _lvrgHistory=[];
 var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
 function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
