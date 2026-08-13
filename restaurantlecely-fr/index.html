@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Cely | Gastronomie Française Raffinée</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #2d5016;
+      --primary-dark: #1e3a0f;
+      --primary-light: #3d6b1e;
+      --secondary: #d4af37;
+      --secondary-light: #e6c75a;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gray-light: #e8e6e1;
+      --gray: #8a8a8a;
+      --gray-dark: #333333;
+      --black: #0a0a0a;
+    }
+    
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--gray-dark);
+      line-height: 1.6;
+      background-color: var(--off-white);
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Claim Bar */
+    .claim-bar {
+      background: var(--black);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .claim-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .claim-bar p {
+      color: #b0b0b0;
+      font-size: 14px;
+      margin: 0;
+    }
+    
+    .claim-bar strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    
+    .claim-btn {
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .claim-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+    
+    /* Navigation */
+    .nav {
+      background: var(--white);
+      padding: 20px 0;
+      position: sticky;
+      top: 44px;
+      z-index: 999;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+    
+    .logo span {
+      color: var(--secondary);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--gray-dark);
+      position: relative;
+      padding: 8px 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .mobile-menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--gray-dark);
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 85vh;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #0f1f08 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 10px 20px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+    }
+    
+    .hero-badge span {
+      color: var(--secondary);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      color: var(--white);
+      margin-bottom: 24px;
+      max-width: 700px;
+    }
+    
+    .hero h1 span {
+      color: var(--secondary);
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 550px;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--black);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary-light);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Decorative Elements */
+    .hero-decoration {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 300px;
+      border: 2px solid rgba(212, 175, 55, 0.2);
+      border-radius: 50%;
+    }
+    
+    .hero-decoration::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(212, 175, 55, 0.15);
+      border-radius: 50%;
+    }
+    
+    .hero-decoration::after {
+      content: '★';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: var(--secondary);
+      opacity: 0.6;
+    }
+    
+    /* Social Proof Bar */
+    .social-proof {
+      background: var(--white);
+      padding: 40px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    
+    .social-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    
+    .proof-item {
+      padding: 20px;
+    }
+    
+    .proof-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--white);
+      font-size: 20px;
+    }
+    
+    .proof-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .proof-label {
+      font-size: 14px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+    
+    .section-title {
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--gray-dark);
+      margin-bottom: 20px;
+    }
+    
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    
+    .service-card {
+      background: var(--white);
+      padding: 48px 36px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-light);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(45, 80, 22, 0.1), rgba(212, 175, 55, 0.1));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+      transition: all 0.4s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      transform: scale(1.1);
+    }
+    
+    .service-card:hover .service-icon span {
+      filter: brightness(0) invert(1);
+    }
+    
+    .service-card h3 {
+      font-size: 22px;
+      color: var(--gray-dark);
+      margin-bottom: 16px;
+    }
+    
+    .service-card p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .cta-content {
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .cta-content h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .cta-content h2 span {
+      color: var(--secondary);
+    }
+    
+    .cta-content p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+    
+    .cta-features {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 15px;
+    }
+    
+    .cta-feature span {
+      color: var(--secondary);
+      font-size: 18px;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px 0 40px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 60px;
+    }
+    
+    .footer-brand .logo {
+      font-size: 32px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+    
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-social a:hover {
+      background: var(--secondary);
+      color: var(--black);
+      transform: translateY(-3px);
+    }
+    
+    .footer-col h4 {
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+    }
+    
+    .footer-col ul {
+      list-style: none;
+    }
+    
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-col a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+    
+    .footer-contact p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .footer-contact span {
+      color: var(--secondary);
+    }
+    
+    .footer-bottom {
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero-decoration {
+        right: 5%;
+        width: 200px;
+        height: 200px;
+      }
+      
+      .hero-decoration::before {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .social-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .claim-bar {
+        padding: 10px 16px;
+      }
+      
+      .claim-bar p {
+        font-size: 12px;
+      }
+      
+      .claim-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+      }
+      
+      .nav {
+        top: 38px;
+        padding: 16px 0;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
+      
+      .hero {
+        min-height: 70vh;
+      }
+      
+      .hero-content {
+        padding: 60px 24px;
+      }
+      
+      .hero-decoration {
+        display: none;
+      }
+      
+      .hero-ctas {
+        flex-direction: column;
+      }
+      
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .social-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      
+      .proof-item {
+        padding: 16px;
+      }
+      
+      .proof-number {
+        font-size: 26px;
+      }
+      
+      .proof-label {
+        font-size: 12px;
+      }
+      
+      .services {
+        padding: 60px 0;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .service-card {
+        padding: 36px 24px;
+      }
+      
+      .cta-banner {
+        padding: 60px 0;
+      }
+      
+      .cta-features {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+      
+      .footer {
+        padding: 60px 0 30px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      
+      .footer-social {
+        justify-content: center;
+      }
+      
+      .footer-contact p {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .claim-bar-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .logo {
+        font-size: 24px;
+      }
+      
+      .hero h1 {
+        font-size: 32px;
+      }
+      
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      
+      .hero-badge span {
+        font-size: 12px;
+      }
+      
+      .social-proof-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .proof-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Claim Bar -->
+  <div class="claim-bar">
+    <div class="claim-bar-content">
+      <p>This site was built for <strong>Le Cely</strong> by LVRG Agency</p>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">Le <span>Cely</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Nos Services</a></li>
+        <li><a href="#menu">La Carte</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33141219505" class="nav-cta">Réserver</a></li>
+      </ul>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-decoration"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>★ Chef Étoilé Michelin</span>
+      </div>
+      <h1>L'Excellence de la <span>Gastronomie Française</span></h1>
+      <p class="hero-subtitle">Découvrez Le Cely au pied de la Tour d'Asnières — où notre chef étoilé réinvente les classiques français avec modernité et audace. Une expérience culinaire d'exception vous attend.</p>
+      <div class="hero-ctas">
+        <a href="tel:+33141219505" class="btn-primary">
+          <span>★</span> Réserver Votre Table
+        </a>
+        <a href="#menu" class="btn-secondary">Découvrir La Carte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="social-proof-grid">
+        <div class="proof-item">
+          <div class="proof-icon">★</div>
+          <div class="proof-number">4.3★</div>
+          <div class="proof-label">116 Avis Vérifiés</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-icon">⚜</div>
+          <div class="proof-number">★</div>
+          <div class="proof-label">Chef Étoilé Michelin</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-icon">◷</div>
+          <div class="proof-number">15+</div>
+          <div class="proof-label">Années d'Expérience</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-icon">⚐</div>
+          <div class="proof-number">15 min</div>
+          <div class="proof-label">Stade de France / La Défense</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos Services</span>
+        <h2 class="section-title">Une Expérience Sur Mesure</h2>
+        <p class="section-subtitle">Du déjeuner d'affaires au dîner romantique, Le Cely s'adapte à toutes vos envies culinaires.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <span>🍽</span>
+          </div>
+          <h3>À La Carte</h3>
+          <p>Découvrez notre menu raffiné, composé de créations signatures par notre chef étoilé. Chaque plat est une œuvre d'art alliant saveurs françaises traditionnelles et techniques modernes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <span>📦</span>
+          </div>
+          <h3>Service À Emporter</h3>
+          <p>Savourez l'excellence du Cely chez vous. Commandez par téléphone au 01 41 21 95 05 et récupérez vos plats préparés avec le même soin que pour notre service en salle.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <span>📅</span>
+          </div>
+          <h3>Réservation de Table</h3>
+          <p>Assurez votre place dans notre établissement d'exception. Grande terrasse, parking gratuit en soirée, et un cadre élégant au 4 Avenue Laurent Cély à Asnières-sur-Seine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="menu">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Réservez Une <span>Expérience Inoubliable</span></h2>
+        <p>Laissez notre chef étoilé vous transporter dans un voyage culinaire unique. Que ce soit pour un déjeuner, un dîner ou un événement privé, Le Cely vous accueille avec excellence.</p>
+        <div class="cta-features">
+          <div class="cta-feature">
+            <span>✓</span> Grande Terrasse
+          </div>
+          <div class="cta-feature">
+            <span>✓</span> Parking Gratuit le Soir
+          </div>
+          <div class="cta-feature">
+            <span>✓</span> Privatisation Disponible
+          </div>
+          <div class="cta-feature">
+            <span>✓</span> Événements Thématiques
+          </div>
+        </div>
+        <a href="tel:+33141219505" class="btn-primary">
+          <span>★</span> Réserver au 01 41 21 95 05
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">Le <span>Cely</span></a>
+          <p>Restaurant gastronomique au pied de la Tour d'Asnières. Notre chef étoilé réinvente la cuisine française avec modernité et passion depuis plus de 15 ans.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/restaurantlecelyasnieres" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#services">Nos Services</a></li>
+            <li><a href="#menu">La Carte</a></li>
+            <li><a href="tel:+33141219505">Réservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <ul>
+            <li><a href="#">Lun-Ven: 7h00 - 14h30</a></li>
+            <li><a href="#">Lun-Ven: 17h00 - 23h00</a></li>
+            <li><a href="#">Sam-Dim: Sur demande</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p><span>📍</span> 4 Av. Laurent Cély, 92600 Asnières-sur-Seine, France</p>
+          <p><span>📞</span> <a href="tel:+33141219505">+33 1 41 21 95 05</a></p>
+          <p><span>🚇</span> Ligne 13, RER C Les Grésillons</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Restaurant Le Cely. Tous droits réservés. Site créé par <strong>LVRG Agency</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#2d5016;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#2d5016;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">L</div>
+      <div><div style="font-weight:700;font-size:15px;">Le Cely</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">A knowledgeable French hospitality expert who speaks with refined elegance about gastronomy, wine pairings, and event experiences while remaining warmly approachable.! I can help answer questions about Le Cely. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#2d5016;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "restaurantlecely.fr", "url": "https://restaurantlecely.fr", "business_name": "Le Cely", "tagline": "Venez découvrir Le Cely, situé au pied de la Tour d'Asnières !", "description": "Le Cely is a restaurant-bar located at the foot of the Asnières Tower, open daily for lunch, dinner, or drinks with friends. Led by a Michelin-starred chef with 15 years of experience, the restaurant reinvents classic French gastronomy with modern flair. The establishment features a large terrace, free evening parking, and offers privatization options for events.", "services": ["À la carte dining", "Takeout service", "Table reservations", "Event hosting", "Private event space", "Wine tastings", "Culinary masterclasses", "Thematic dinners"], "location": "4 Av. Laurent Cély, 92600 Asnières-sur-Seine, France", "phone": "+33 1 41 21 95 05", "email": "contact@restaurantlecely.fr", "hours": "Lundi - Vendredi: 7h00 - 14h30, 17h00 - 23h00; Samedi et dimanche: Disponibilité sur demande selon les événements", "social_proof": "Michelin-starred chef with 15 years of experience; 5-star customer testimonials praising culinary excellence and service; Located 15 minutes from Stade de France and La Défense", "key_cta": "Réserver une table", "missing": "No online booking system visible, no detailed menu pricing, no chef name initially prominent (only mentions 'Chef Étoilé'), no clearly visible wine list details, limited information about dietary accommodations", "brand_vibe": "Elegant French gastronomy, modern sophistication, refined culinary artistry", "primary_color": "#2d5016", "secondary_color": "#d4af37", "business_type": "restaurant", "pain_point": "The site lacks a functional online booking system despite prominent reservation CTAs, potentially leading to lost reservations from digital-first customers.", "chat_persona": "A knowledgeable French hospitality expert who speaks with refined elegance about gastronomy, wine pairings, and event experiences while remaining warmly approachable.", "cta_angle": "Reserve a Table for an Unforgettable Gastronomic Experience", "owner_name": "", "neighborhood": "Asnières-sur-Seine", "photos": [], "rating": 4.3, "review_count": 116, "socials": {"instagram_url": "https://www.instagram.com/restaurantlecelyasnieres"}};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#2d5016;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at +33 1 41 21 95 05.');}}
+</script>
+</body>
+</html>
