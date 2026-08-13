@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adouna Restaurant | West African & Asian Fusion Dining</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #1a1a1a;
+      --secondary: #d4af37;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-medium: #888888;
+      --gray-dark: #333333;
+      --transition: all 0.3s ease;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Claim Bar */
+    .claim-bar {
+      background-color: var(--primary);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .claim-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .claim-bar-text {
+      color: var(--gray-medium);
+      font-size: 14px;
+    }
+    
+    .claim-bar-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    
+    .claim-btn {
+      background: linear-gradient(135deg, var(--secondary) 0%, #c9a227 100%);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    
+    .claim-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+    
+    /* Navigation */
+    .nav {
+      background-color: var(--white);
+      padding: 20px 0;
+      position: sticky;
+      top: 44px;
+      z-index: 999;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 2px;
+    }
+    
+    .nav-logo span {
+      color: var(--secondary);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .nav-cta {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+    
+    .nav-cta:hover {
+      background-color: var(--secondary);
+      color: var(--primary);
+    }
+    
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .nav-mobile-toggle span {
+      width: 25px;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.6) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 60px 0;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--secondary);
+      color: var(--secondary);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      color: var(--white);
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    
+    .hero h1 span {
+      color: var(--secondary);
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 40px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary) 0%, #c9a227 100%);
+      color: var(--primary);
+      padding: 18px 36px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--white);
+      padding: 18px 36px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid var(--white);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--white);
+      color: var(--primary);
+    }
+    
+    /* Social Proof Bar */
+    .social-proof {
+      background-color: var(--primary);
+      padding: 50px 0;
+    }
+    
+    .social-proof-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    
+    .proof-item {
+      text-align: center;
+    }
+    
+    .proof-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .proof-star {
+      color: var(--secondary);
+      font-size: 32px;
+    }
+    
+    .proof-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 8px;
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 120px 0;
+      background-color: var(--gray-light);
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 70px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    
+    .section-title {
+      font-size: 44px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--gray-medium);
+      line-height: 1.8;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .service-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      transition: var(--transition);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .service-image {
+      height: 240px;
+      overflow: hidden;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .service-card:hover .service-image img {
+      transform: scale(1.08);
+    }
+    
+    .service-content {
+      padding: 35px 30px;
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--secondary) 0%, #c9a227 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .service-title {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .service-desc {
+      font-size: 15px;
+      color: var(--gray-medium);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .service-link {
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .service-link:hover {
+      color: var(--primary);
+    }
+    
+    /* Gallery Section */
+    .gallery {
+      padding: 120px 0;
+      background-color: var(--white);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 1;
+    }
+    
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(26, 26, 26, 0.8) 0%, transparent 60%);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-caption {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .cta-content {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cta-banner h2 {
+      font-size: 48px;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .cta-banner h2 span {
+      color: var(--secondary);
+    }
+    
+    .cta-banner p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    
+    .cta-features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-size: 14px;
+    }
+    
+    .cta-feature-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--primary);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      padding: 80px 0 30px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    
+    .footer-brand h3 {
+      font-size: 32px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    
+    .footer-brand h3 span {
+      color: var(--secondary);
+    }
+    
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 18px;
+      transition: var(--transition);
+    }
+    
+    .footer-social a:hover {
+      background-color: var(--secondary);
+      color: var(--primary);
+    }
+    
+    .footer-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 14px;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+    
+    .footer-contact p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .footer-contact-icon {
+      color: var(--secondary);
+      font-size: 16px;
+      margin-top: 3px;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .footer-bottom p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+    
+    .footer-bottom a {
+      color: var(--secondary);
+    }
+    
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+      
+      .section-title {
+        font-size: 36px;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-item:first-child {
+        grid-column: span 2;
+        aspect-ratio: 16/9;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .claim-bar {
+        padding: 10px 16px;
+      }
+      
+      .claim-bar-content {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .claim-bar-text {
+        font-size: 12px;
+      }
+      
+      .nav {
+        top: 70px;
+        padding: 15px 0;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-mobile-toggle {
+        display: flex;
+      }
+      
+      .hero {
+        min-height: 80vh;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      
+      .hero-ctas {
+        flex-direction: column;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .social-proof-content {
+        gap: 30px;
+      }
+      
+      .proof-number {
+        font-size: 36px;
+      }
+      
+      .services {
+        padding: 80px 0;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section-title {
+        font-size: 32px;
+      }
+      
+      .gallery {
+        padding: 80px 0;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .gallery-item:first-child {
+        grid-column: span 1;
+      }
+      
+      .cta-banner {
+        padding: 60px 0;
+      }
+      
+      .cta-banner h2 {
+        font-size: 32px;
+      }
+      
+      .cta-features {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .footer {
+        padding: 60px 0 30px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      
+      .nav-logo {
+        font-size: 22px;
+      }
+      
+      .hero h1 {
+        font-size: 28px;
+      }
+      
+      .hero-badge {
+        font-size: 10px;
+        padding: 8px 14px;
+      }
+      
+      .proof-number {
+        font-size: 28px;
+      }
+      
+      .proof-label {
+        font-size: 11px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
+      
+      .cta-banner h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Claim Bar -->
+  <div class="claim-bar">
+    <div class="claim-bar-content">
+      <span class="claim-bar-text">This site was built for <strong>Adouna Restaurant</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="claim-btn">Claim This Site →</a>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">ADOUNA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Experiences</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="nav-cta">Reserve Table</a></li>
+      </ul>
+      <div class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-food-122-1-scaled-e1765381288576-896x1024.jpg" alt="Adouna Restaurant Signature Dish" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>★</span> West African & Asian Fusion
+        </div>
+        <h1>Where <span>Africa</span> Meets <span>Asia</span> On Your Plate</h1>
+        <p class="hero-subtitle">Experience the extraordinary fusion of West African and Asian culinary traditions at Adouna. Every dish tells a story of heritage, crafted with passion in the heart of Asnières-sur-Seine.</p>
+        <div class="hero-ctas">
+          <a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="btn-primary">
+            Reserve Your Table
+            <span>→</span>
+          </a>
+          <a href="#services" class="btn-secondary">
+            Explore Our World
+            <span>↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Social Proof Bar -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="social-proof-content">
+        <div class="proof-item">
+          <div class="proof-number">
+            4.6 <span class="proof-star">★</span>
+          </div>
+          <div class="proof-label">Guest Rating</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">995+</div>
+          <div class="proof-label">Happy Guests</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">2</div>
+          <div class="proof-label">Continents, One Table</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">The Adouna Experience</span>
+        <h2 class="section-title">Moments Worth Savoring</h2>
+        <p class="section-subtitle">From intimate dinners to vibrant Sunday brunches, discover the many ways to experience the fusion of flavors at 14 Bis Avenue de la Paix.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-13-683x1024.jpg" alt="À la Carte Dining at Adouna">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🍽</div>
+            <h3 class="service-title">À La Carte Dining</h3>
+            <p class="service-desc">Explore our fusion menu featuring iconic dishes from Thieboudienne to Tigre Qui Pleure. Each plate is a journey through West African and Asian culinary traditions, prepared with precision and passion.</p>
+            <a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="service-link">
+              View Menu & Reserve <span>→</span>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-25-1024x683.jpg" alt="Sunday Brunch at Adouna">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">☀</div>
+            <h3 class="service-title">Sunday Brunch</h3>
+            <p class="service-desc">Every Sunday from 11:00 to 16:00, indulge in our celebrated brunch experience. A fusion feast that brings families and friends together in our elegant, sunlit space.</p>
+            <a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="service-link">
+              Book Brunch <span>→</span>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/DSC06907-scaled-e1765641635938-946x1024.jpg" alt="Live Music Events at Adouna">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🎵</div>
+            <h3 class="service-title">Live Music Events</h3>
+            <p class="service-desc">Let the rhythm move you. Our weekly live music nights transform dining into celebration, with sounds that honor our cultural roots and create unforgettable evenings.</p>
+            <a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="service-link">
+              Join The Experience <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Visual Journey</span>
+        <h2 class="section-title">Step Inside Adouna</h2>
+        <p class="section-subtitle">Where elegance meets warmth, and every corner tells a story of two culinary worlds united.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-food-122-1-scaled-e1765381288576-896x1024.jpg" alt="Adouna Signature Fusion Dish">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Signature Fusion Creations</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-25-1024x683.jpg" alt="Adouna Interior Ambiance">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Refined Interior</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/DSC06907-scaled-e1765641635938-946x1024.jpg" alt="Live Music at Adouna">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Live Music Nights</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-13-683x1024.jpg" alt="Elegant Dining Setting">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Elegant Setting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready For An <span>Unforgettable</span> Culinary Journey?</h2>
+        <p>Reserve your table at Adouna and experience the magic of West African and Asian fusion. Whether it's a business lunch, family celebration, or an evening with friends—we're ready to welcome you.</p>
+        <div class="cta-features">
+          <div class="cta-feature">
+            <span class="cta-feature-icon">✓</span>
+            <span>Fusion Fine Dining</span>
+          </div>
+          <div class="cta-feature">
+            <span class="cta-feature-icon">✓</span>
+            <span>Live Entertainment</span>
+          </div>
+          <div class="cta-feature">
+            <span class="cta-feature-icon">✓</span>
+            <span>Private Events</span>
+          </div>
+        </div>
+        <a href="https://bookings.zenchef.com/results?rid=375950&pid=1001" class="btn-primary">
+          Réservez Votre Table
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>ADOUNA<span>.</span></h3>
+          <p>More than a restaurant—Adouna is a place where life happens, where the flavors of West Africa and Asia meet, and where every meal becomes an experience of sharing and culinary discovery.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="Twitter">x</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Our Experiences</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="https://bookings.zenchef.com/results?rid=375950&pid=1001">Reservations</a></li>
+            <li><a href="#">Private Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Hours</h4>
+          <ul class="footer-links">
+            <li><a href="#">Tuesday - Saturday</a></li>
+            <li><a href="#">12:00 - 23:30</a></li>
+            <li><a href="#">Sunday Brunch</a></li>
+            <li><a href="#">11:00 - 16:00</a></li>
+            <li><a href="#">Monday: Closed</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <span class="footer-contact-icon">📍</span>
+            14 Bis Av. de la Paix<br>92600 Asnières-sur-Seine, France
+          </p>
+          <p>
+            <span class="footer-contact-icon">📞</span>
+            <a href="tel:+33140860444">+33 1 40 86 04 44</a>
+          </p>
+          <p>
+            <span class="footer-contact-icon">✉</span>
+            <a href="mailto:contact@adounarestaurant.com">contact@adounarestaurant.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Adouna Restaurant. All rights reserved.</p>
+        <p>Crafted with passion by <a href="https://theresandiego.com/advertise/">LVRG Agency</a></p>
+      </div>
+    </div>
+  </footer>
+
+<div id="lvrg-chat" style="position:fixed;bottom:24px;right:24px;z-index:2147483647;font-family:sans-serif;">
+  <button id="lvrg-btn" onclick="lvrgToggle()" style="width:60px;height:60px;border-radius:50%;background:#1a1a1a;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+    <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="lvrg-panel" style="display:none;position:fixed;bottom:96px;right:24px;width:320px;height:460px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;z-index:2147483647;">
+    <div style="background:#1a1a1a;padding:16px 20px;color:#fff;display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;">A</div>
+      <div><div style="font-weight:700;font-size:15px;">Adouna Restaurant</div><div style="font-size:12px;opacity:0.85;">AI Assistant &#x2022; Online</div></div>
+    </div>
+    <div id="lvrg-msgs" style="flex:1;padding:16px;overflow-y:auto;background:#f8f8f8;display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Warm, knowledgeable, and welcoming, speaking with culinary passion about West African and Asian fusion while smoothly guiding customers toward table reservations and special events.! I can help answer questions about Adouna Restaurant. What can I help you with?</div>
+    </div>
+    <div style="padding:12px;background:#fff;border-top:1px solid #eee;display:flex;gap:8px;">
+      <input id="lvrg-input" type="text" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')lvrgSend()" style="flex:1;padding:10px 14px;border-radius:20px;border:1px solid #ddd;font-size:14px;outline:none;">
+      <button onclick="lvrgSend()" style="width:40px;height:40px;border-radius:50%;background:#1a1a1a;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+var _lvrgIntel={"domain": "adounarestaurant.com", "url": "https://adounarestaurant.com", "business_name": "Adouna Restaurant", "tagline": "Adouna est plus qu'un restaurant : c'est un lieu de vie où se rencontrent les saveurs d'Afrique de l'Ouest et d'Asie.", "description": "Adouna is a West African and Asian fusion restaurant located in Asnières-sur-Seine offering home-cooked dishes that blend culinary traditions from both regions. The restaurant provides an elegant and welcoming atmosphere perfect for business lunches, family dinners, or evenings with friends. They feature live music, Sunday brunches, and a carefully curated menu celebrating emblematic dishes from their cultural inspirations.", "services": ["À la carte dining", "Sunday brunch", "Live music events", "Private events/privatization", "Table reservations", "West African cuisine", "Asian cuisine", "Fusion cooking"], "location": "14 Bis Av. de la Paix, 92600 Asnières-sur-Seine, France", "phone": "+33 1 40 86 04 44", "email": "contact@adounarestaurant.com", "hours": "Tuesday-Saturday: 12:00-23:30, Sunday: 11:00-16:00 (brunch only)", "social_proof": "", "key_cta": "Réservez votre table", "missing": "No customer testimonials or reviews displayed, no online menu PDF, no owner/chef bio, no story about restaurant origins, no dietary restriction information explicitly stated", "brand_vibe": "Elegant, warm, culturally rich, vibrant, sophisticated fusion dining", "primary_color": "#1a1a1a", "secondary_color": "#d4af37", "business_type": "restaurant", "pain_point": "No visible online menu PDF or detailed dietary information prevents informed decisions before booking, potentially losing health-conscious or restricted-diet customers.", "chat_persona": "Warm, knowledgeable, and welcoming, speaking with culinary passion about West African and Asian fusion while smoothly guiding customers toward table reservations and special events.", "cta_angle": "Reserve a Table for an Authentic African-Asian Culinary Journey", "owner_name": "", "neighborhood": "Asnières-sur-Seine", "photos": ["https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-food-122-1-scaled-e1765381288576-896x1024.jpg", "https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-25-1024x683.jpg", "https://adounarestaurant.com/wp-content/uploads/2025/12/DSC06907-scaled-e1765641635938-946x1024.jpg", "https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-13-683x1024.jpg", "https://adounarestaurant.com/wp-content/uploads/2025/12/2025-12-Adouna-shooting-interieur-32-683x1024.jpg", "https://adounarestaurant.com/wp-content/uploads/2025/11/cropped-o-1-150x150.png"], "rating": 4.6, "review_count": 995};
+var _lvrgHistory=[];
+var _lvrgEndpoint='https://lvrg-engine-production.up.railway.app/chat';
+function lvrgToggle(){var p=document.getElementById('lvrg-panel');p.style.display=p.style.display==='none'?'flex':'none';}
+function lvrgAppend(role,text){var d=document.getElementById('lvrg-msgs');var m=document.createElement('div');m.style.cssText=role==='user'?'background:#1a1a1a;color:#fff;padding:10px 14px;border-radius:12px;border-bottom-right-radius:4px;font-size:14px;line-height:1.5;align-self:flex-end;max-width:85%;':'background:#fff;padding:12px 14px;border-radius:12px;border-bottom-left-radius:4px;font-size:14px;line-height:1.5;box-shadow:0 1px 4px rgba(0,0,0,0.06);max-width:85%;';m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+async function lvrgSend(){var inp=document.getElementById('lvrg-input');var msg=inp.value.trim();if(!msg)return;inp.value='';lvrgAppend('user',msg);_lvrgHistory.push({role:'user',content:msg});try{var r=await fetch(_lvrgEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,business_name:_lvrgIntel.business_name,intel:_lvrgIntel,history:_lvrgHistory.slice(-8)})});var d=await r.json();lvrgAppend('assistant',d.reply);_lvrgHistory.push({role:'assistant',content:d.reply})}catch(e){lvrgAppend('assistant','Sorry, something went wrong. Please call us directly at +33 1 40 86 04 44.');}}
+</script>
+</body>
+</html>
