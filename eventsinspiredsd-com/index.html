@@ -1,254 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Inspired | San Diego Wedding & Event Planning</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { brand: '#1a1a1a' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'DM Sans', sans-serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Inspired | San Diego Event Planning</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#1a1a1a' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'DM Sans', sans-serif; }
+  </style>
 </head>
 <body class="bg-white text-brand">
-    
-    <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
-            <span>This site was built for <strong>Events Inspired</strong> by LVRG Agency</span>
-            <a href="https://theresandiego.com/advertise/" class="bg-yellow-500 text-black px-4 py-1 rounded-full text-xs font-semibold hover:bg-yellow-400 transition-colors">Claim This Site →</a>
-        </div>
+  
+  <!-- CLAIM BAR -->
+  <div class="bg-black py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
+      <span class="text-white text-sm">This site was built for <strong>Events Inspired</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black text-xs font-semibold px-4 py-1.5 rounded-full transition-colors">Claim This Site →</a>
     </div>
+  </div>
 
-    <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-10 z-40">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold tracking-tight">Events Inspired</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#services" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">Services</a>
-                <a href="#about" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">About</a>
-                <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">Contact</a>
-                <a href="#cta" class="bg-brand text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">Get a Free Consultation</a>
-            </div>
-            <button class="md:hidden p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+  <!-- NAV -->
+  <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="text-xl font-bold tracking-tight text-brand">Events Inspired</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">Services</a>
+          <a href="#about" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">About</a>
+          <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">Contact</a>
+          <a href="#cta" class="bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-colors">Free Consultation</a>
         </div>
-    </nav>
+        <button class="md:hidden p-2" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4" id="mobile-menu">
+      <div class="flex flex-col gap-4">
+        <a href="#services" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">Services</a>
+        <a href="#about" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">About</a>
+        <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-brand transition-colors">Contact</a>
+        <a href="#cta" class="bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-colors text-center">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
 
-    <section class="relative min-h-screen flex items-center">
-        <div class="absolute inset-0 z-0">
-            <img src="https://static.wixstatic.com/media/7ff827_acd9b164406540b6aa3e47184a2aac7b~mv2.jpg/v1/crop/x_0,y_0,w_1420,h_1064/fill/w_473,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-768.jpg" alt="San Diego Wedding" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-brand/90 via-brand/70 to-brand/40"></div>
+  <!-- HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://static.wixstatic.com/media/7ff827_acd9b164406540b6aa3e47184a2aac7b~mv2.jpg/v1/crop/x_0,y_0,w_1420,h_1064/fill/w_473,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-768.jpg" alt="Beautiful San Diego wedding" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand/90 via-brand/70 to-brand/40"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Your guests won't remember the centerpieces. They'll remember how it felt.
+        </h1>
+        <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+          San Diego's full-service event planners creating weddings, celebrations, and corporate moments that people actually talk about for years.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#cta" class="bg-white text-brand font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-center">Get a Free Consultation</a>
+          <a href="#services" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-center">View Our Services</a>
         </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 py-32">
-            <div class="max-w-2xl">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-                    Your wedding day shouldn't feel like a job interview
-                </h1>
-                <p class="text-xl text-gray-200 mb-8 leading-relaxed">
-                    Event planning and design team creating events truly inspired by YOU — from intimate elopements to grand celebrations across San Diego and beyond.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#cta" class="bg-white text-brand px-8 py-4 rounded-full font-semibold text-center hover:bg-gray-100 transition-colors">Get a Free Event Consultation</a>
-                    <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-white/10 transition-colors">Explore Our Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="bg-brand text-white py-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                <div class="flex items-center gap-3">
-                    <div class="flex text-yellow-400">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                    </div>
-                    <span class="text-lg font-semibold">5-Star Rated</span>
-                </div>
-                <div class="h-8 w-px bg-white/30 hidden md:block"></div>
-                <div class="text-center">
-                    <span class="text-3xl font-bold">101</span>
-                    <span class="text-gray-300 ml-2">Happy Couples & Clients</span>
-                </div>
-                <div class="h-8 w-px bg-white/30 hidden md:block"></div>
-                <div class="text-center">
-                    <span class="text-gray-300">San Diego's Premier Event Planning Team</span>
-                </div>
-            </div>
+  <!-- SOCIAL PROOF BAR -->
+  <section class="bg-gray-50 py-8 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div class="flex items-center gap-3">
+          <div class="flex text-yellow-400">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <span class="text-brand font-semibold">5.0 Rating</span>
         </div>
-    </section>
-
-    <section id="services" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Services Tailored to You</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">From full planning to day-of coordination, we customize every package to match your vision and budget. Let's discuss what works for you.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow group">
-                    <div class="w-14 h-14 bg-brand/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Full Wedding Planning</h3>
-                    <p class="text-gray-600 mb-6">Complete planning from engagement to "I do." We handle every detail so you can focus on being present with your partner.</p>
-                    <img src="https://static.wixstatic.com/media/7ff827_9853fe258e3749459356df4d7f8b5f1f~mv2.jpg/v1/crop/x_27,y_0,w_999,h_1600/fill/w_222,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-354.jpg" alt="Full Wedding Planning" class="w-full h-48 object-cover rounded-xl">
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow group">
-                    <div class="w-14 h-14 bg-brand/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Day-Of Coordination</h3>
-                    <p class="text-gray-600 mb-6">You've done the planning — we'll execute flawlessly. Perfect for DIY couples who want professional support on the big day.</p>
-                    <img src="https://static.wixstatic.com/media/7ff827_fd95c267433946f7a3f407d7a18baf93~mv2.jpg/v1/crop/x_48,y_30,w_1019,h_1539/fill/w_235,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-295.jpg" alt="Day-Of Coordination" class="w-full h-48 object-cover rounded-xl">
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow group">
-                    <div class="w-14 h-14 bg-brand/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Destination Weddings</h3>
-                    <p class="text-gray-600 mb-6">Dreaming of a beach wedding in Baja or a vineyard celebration in Temecula? We specialize in destination planning near and far.</p>
-                    <img src="https://static.wixstatic.com/media/7ff827_52cf77308d9644c8a2b8bef39f191c12~mv2.jpg/v1/crop/x_0,y_374,w_1067,h_731/fill/w_308,h_211,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-936.jpg" alt="Destination Weddings" class="w-full h-48 object-cover rounded-xl">
-                </div>
-            </div>
-            <div class="mt-12 text-center">
-                <p class="text-gray-600 mb-6">We also offer Partial Planning, Month-Of Coordination, Elopement Packages, Corporate Events, Social Events, and Celebrations of Life.</p>
-                <a href="#cta" class="inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
-                    Get custom pricing for your event
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-            </div>
+        <div class="h-8 w-px bg-gray-300 hidden md:block"></div>
+        <div class="text-center">
+          <span class="text-3xl font-bold text-brand">101</span>
+          <span class="text-gray-600 ml-2">Verified Reviews</span>
         </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Events truly inspired by you</h2>
-                    <p class="text-xl text-gray-600 mb-6">Based in San Diego's Adams Avenue neighborhood, Events Inspired brings a personalized approach to every celebration. We believe your event should reflect who you are — not a template from a planning manual.</p>
-                    <p class="text-gray-600 mb-8">From intimate elopements to grand corporate galas, our team handles the logistics so you can be fully present in every moment. We're proud to serve couples and clients throughout San Diego County and beyond.</p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="border-l-4 border-brand pl-4">
-                            <div class="text-3xl font-bold">100%</div>
-                            <div class="text-gray-600">Customized to You</div>
-                        </div>
-                        <div class="border-l-4 border-brand pl-4">
-                            <div class="text-3xl font-bold">101</div>
-                            <div class="text-gray-600">5-Star Reviews</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="https://static.wixstatic.com/media/7ff827_9853fe258e3749459356df4d7f8b5f1f~mv2.jpg/v1/crop/x_27,y_0,w_999,h_1600/fill/w_222,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-354.jpg" alt="Wedding moment" class="rounded-2xl h-80 object-cover w-full">
-                    <img src="https://static.wixstatic.com/media/7ff827_fd95c267433946f7a3f407d7a18baf93~mv2.jpg/v1/crop/x_48,y_30,w_1019,h_1539/fill/w_235,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-295.jpg" alt="Celebration" class="rounded-2xl h-80 object-cover w-full mt-8">
-                </div>
-            </div>
+        <div class="h-8 w-px bg-gray-300 hidden md:block"></div>
+        <div class="text-center text-gray-600">
+          <span class="font-medium">Event Planning and Design Team creating events truly inspired by YOU!</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">As Featured On</p>
-            </div>
-            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-                <div class="bg-white px-8 py-4 rounded-full shadow-sm">
-                    <span class="font-bold text-gray-700">Yelp</span>
-                    <span class="text-gray-500 ml-2">5.0 ★</span>
-                </div>
-                <div class="bg-white px-8 py-4 rounded-full shadow-sm">
-                    <span class="font-bold text-gray-700">WeddingWire</span>
-                </div>
-                <div class="bg-white px-8 py-4 rounded-full shadow-sm">
-                    <span class="font-bold text-gray-700">Facebook</span>
-                </div>
-            </div>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Based in San Diego</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-brand mt-2 mb-6">We don't just plan events. We design experiences.</h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            From our home base at 3288 Adams Ave, we've spent years mastering every detail — from intimate elopements along the coast to grand corporate galas downtown. Every celebration is unique, and we believe your planning process should be too.
+          </p>
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
+            Skip the endless email chains and phone tag. Our consultation process is designed to understand your vision quickly, give you transparent guidance, and create a planning roadmap that actually makes sense.
+          </p>
+          <a href="#cta" class="inline-flex items-center text-brand font-semibold hover:underline">
+            Start with a free consultation
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
-    </section>
-
-    <section id="cta" class="py-24 bg-brand text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to start planning your perfect event?</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Every event is unique, and so is our pricing. Schedule a free consultation and we'll create a custom package that fits your vision and budget — no pressure, no hidden fees.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:6198404206" class="bg-white text-brand px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                    </svg>
-                    Get a Free Event Consultation
-                </a>
-                <span class="text-gray-400">or call (619) 840-4206</span>
-            </div>
-            <p class="mt-8 text-sm text-gray-400">Serving San Diego and destination events worldwide</p>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://static.wixstatic.com/media/7ff827_9853fe258e3749459356df4d7f8b5f1f~mv2.jpg/v1/crop/x_27,y_0,w_999,h_1600/fill/w_222,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-354.jpg" alt="Wedding ceremony" class="rounded-xl shadow-lg">
+          <img src="https://static.wixstatic.com/media/7ff827_fd95c267433946f7a3f407d7a18baf93~mv2.jpg/v1/crop/x_48,y_30,w_1019,h_1539/fill/w_235,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-295.jpg" alt="Wedding details" class="rounded-xl shadow-lg mt-8">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer id="contact" class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div class="md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4">Events Inspired</h3>
-                    <p class="text-gray-400 mb-6 max-w-md">Event Planning and Design Team creating events truly inspired by YOU. Based in San Diego, serving couples and clients worldwide.</p>
-                    <div class="flex gap-4">
-                        <a href="https://www.facebook.com/eventsinspiredsd" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="http://instagram.com/eventsinspired" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-white transition-colors">Full Wedding Planning</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Day-Of Coordination</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Destination Weddings</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Corporate Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span>3288 Adams Ave #16192<br>San Diego, CA 92176</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                            <a href="tel:6198404206" class="hover:text-white transition-colors">(619) 840-4206</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Events Inspired. All rights reserved. | San Diego Wedding & Event Planning</p>
-            </div>
+  <!-- SERVICES -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Our Services</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand mt-2 mb-4">Planning packages for every celebration</h2>
+        <p class="text-gray-600 text-lg">Whether you need full planning support or just day-of coordination, we have flexible options designed around how you want to plan.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Wedding Planning -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand mb-3">Wedding Planning</h3>
+          <p class="text-gray-600 mb-6">From full planning to day-of coordination, destination weddings to intimate elopements — we craft every wedding around your unique love story.</p>
+          <ul class="space-y-2 text-sm text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Full Wedding Planning
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Partial Planning
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Day-of Coordination
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Elopement Planning
+            </li>
+          </ul>
+          <a href="#cta" class="text-brand font-semibold hover:underline inline-flex items-center">
+            Learn more
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
         </div>
-    </footer>
 
+        <!-- Corporate Events -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand mb-3">Corporate Events</h3>
+          <p class="text-gray-600 mb-6">Elevate your company's presence with professionally planned corporate gatherings, team events, and branded experiences that make an impression.</p>
+          <ul class="space-y-2 text-sm text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Company Events
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Skybox Package
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Team Building Events
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Product Launches
+            </li>
+          </ul>
+          <a href="#cta" class="text-brand font-semibold hover:underline inline-flex items-center">
+            Learn more
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Social & Life Events -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand mb-3">Social & Life Events</h3>
+          <p class="text-gray-600 mb-6">Life's milestones deserve thoughtful celebration. From joyful gatherings to meaningful memorial services, we handle every detail with care.</p>
+          <ul class="space-y-2 text-sm text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Social Events
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Celebrations of Life
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Birthday Parties
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Add-on Services
+            </li>
+          </ul>
+          <a href="#cta" class="text-brand font-semibold hover:underline inline-flex items-center">
+            Learn more
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Our Work</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand mt-2 mb-4">Moments we've helped create</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://static.wixstatic.com/media/7ff827_acd9b164406540b6aa3e47184a2aac7b~mv2.jpg/v1/crop/x_0,y_0,w_1420,h_1064/fill/w_473,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-768.jpg" alt="Wedding reception" class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 col-span-2 h-64 w-full object-cover">
+        <img src="https://static.wixstatic.com/media/7ff827_9853fe258e3749459356df4d7f8b5f1f~mv2.jpg/v1/crop/x_27,y_0,w_999,h_1600/fill/w_222,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-354.jpg" alt="Wedding ceremony" class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover">
+        <img src="https://static.wixstatic.com/media/7ff827_fd95c267433946f7a3f407d7a18baf93~mv2.jpg/v1/crop/x_48,y_30,w_1019,h_1539/fill/w_235,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-295.jpg" alt="Wedding details" class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 h-64 w-full object-cover">
+        <img src="https://static.wixstatic.com/media/7ff827_52cf77308d9644c8a2b8bef39f191c12~mv2.jpg/v1/crop/x_0,y_374,w_1067,h_731/fill/w_308,h_211,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jamie_English_Photography_JuliaKevin_Bldg177_SanDiego_Wedding_Oct2022-936.jpg" alt="Wedding table setup" class="rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 col-span-2 md:col-span-3 h-48 w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS / AS SEEN IN -->
+  <section class="py-12 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-8">Recognized By</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-200">
+          <span class="font-semibold text-gray-700">WeddingWire</span>
+        </div>
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-200">
+          <span class="font-semibold text-gray-700">Three Best Rated</span>
+        </div>
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-200">
+          <span class="font-semibold text-gray-700">Facebook Recommended</span>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-6">Named one of the "3 Best Event Management Companies in San Diego, CA"</p>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="cta" class="py-24 bg-brand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to start planning your event?</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        No more back-and-forth emails wondering about pricing and availability. Book a free consultation and get clear answers about your event within 24 hours.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6198404206" class="bg-white text-brand font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Get a Free Consultation
+        </a>
+        <a href="mailto:hello@eventsinspiredsd.com" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Book Your Planning Package
+        </a>
+      </div>
+      <p class="text-gray-400 text-sm mt-6">Call us directly: (619) 840-4206</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold mb-4">Events Inspired</h3>
+          <p class="text-gray-400 mb-6 max-w-md">Full-service event planning in San Diego. Weddings, corporate events, celebrations of life, and every moment in between.</p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/eventsinspiredsd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="http://instagram.com/eventsinspired" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <div class="space-y-3 text-gray-400">
+            <p class="flex items-start gap-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              3288 Adams Ave #16192<br>San Diego, CA 92176
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              <a href="tel:6198404206" class="hover:text-white transition-colors">(619) 840-4206</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <div class="space-y-3 text-gray-400">
+            <a href="#services" class="block hover:text-white transition-colors">Services</a>
+            <a href="#about" class="block hover:text-white transition-colors">About</a>
+            <a href="#cta" class="block hover:text-white transition-colors">Free Consultation</a>
+            <a href="https://eventsinspiredsd.com" target="_blank" rel="noopener noreferrer" class="block hover:text-white transition-colors">Official Website</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">© 2024 Events Inspired. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Preview site built by <a href="https://theresandiego.com/advertise/" class="text-gray-400 hover:text-white transition-colors">LVRG Agency</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 
 <!-- LVRG AI Chat Widget -->
 <style>
@@ -320,7 +460,7 @@
 </div>
 
 <script>
-const LVRG_PERSONA = "Warm, professional, detail-oriented event planner who listens carefully to client visions and confidently solves problems with expertise.";
+const LVRG_PERSONA = "Professional, detail-oriented event planning expert who asks thoughtful questions to understand the client's vision and seamlessly handles all event logistics.";
 const LVRG_BIZ = "Events Inspired";
 const LVRG_BOOKING = "https://theresandiego.com/advertise/";
 let lvrgHistory = [];
