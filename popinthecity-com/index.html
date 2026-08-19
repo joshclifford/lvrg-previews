@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop In the City | Urban Adventure Rallies for Women</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#FF6B35' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  
+  <!-- CLAIM BAR -->
+  <div class="sticky top-0 z-50 bg-black py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap">
+      <span class="text-white text-sm">This site was built for <strong>Pop In the City</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="inline-flex items-center px-4 py-1.5 bg-yellow-500 hover:bg-yellow-400 text-black text-sm font-semibold rounded-full transition-colors">
+        Claim This Site →
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2">
+          <span class="text-2xl font-bold text-brand">Pop In the City</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#experiences" class="text-gray-700 hover:text-brand transition-colors font-medium">Experiences</a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-brand transition-colors font-medium">How It Works</a>
+          <a href="#corporate" class="text-gray-700 hover:text-brand transition-colors font-medium">Corporate</a>
+          <a href="#reserve" class="bg-brand hover:bg-orange-600 text-white px-5 py-2.5 rounded-full font-semibold transition-colors">
+            Reserve Your Spot
+          </a>
+        </div>
+        <button class="md:hidden p-2 text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://cdn.prod.website-files.com/69f06713a9d30f6ec5380fcb/6a310c89e0ef147b13174d29_54582221450_73ec466d09_k.webp" alt="Pop In the City urban rally" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-brand/20 text-brand px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm border border-brand/30">
+          Urban Adventures Across Europe
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+          The city belongs to those who dare to explore it
+        </h1>
+        <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+          8 hours. 30+ challenges. One unforgettable day. Join thousands of women discovering hidden corners of European cities through our legendary urban rallies.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#reserve" class="inline-flex items-center justify-center bg-brand hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg shadow-brand/30">
+            Reserve Your Spot
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#experiences" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-white/30">
+            View Upcoming Events
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section class="bg-gray-900 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-1 mb-1">
+            <span class="text-4xl font-bold text-white">4.9</span>
+            <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <p class="text-gray-400 text-sm">From 67 Reviews</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-1">30+</div>
+          <p class="text-gray-400 text-sm">Challenges Per Event</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-1">8</div>
+          <p class="text-gray-400 text-sm">Hours of Adventure</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-white mb-1">10+</div>
+          <p class="text-gray-400 text-sm">European Cities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold text-sm uppercase tracking-wider">How It Works</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Your Adventure Awaits</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          From the moment you arrive to the final celebration, every detail is crafted for an unforgettable experience.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="relative">
+          <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white font-bold text-xl mb-4">1</div>
+          <h3 class="text-xl font-bold mb-2">Choose Your City</h3>
+          <p class="text-gray-600">Select from our upcoming events across major European cities.</p>
+          <div class="hidden md:block absolute top-7 left-16 w-full h-0.5 bg-brand/20"></div>
+        </div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white font-bold text-xl mb-4">2</div>
+          <h3 class="text-xl font-bold mb-2">Get Your Roadbook</h3>
+          <p class="text-gray-600">Receive your personal guide filled with enigmas and challenges.</p>
+          <div class="hidden md:block absolute top-7 left-16 w-full h-0.5 bg-brand/20"></div>
+        </div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white font-bold text-xl mb-4">3</div>
+          <h3 class="text-xl font-bold mb-2">Explore & Conquer</h3>
+          <p class="text-gray-600">Navigate the city, complete challenges, discover hidden gems.</p>
+          <div class="hidden md:block absolute top-7 left-16 w-full h-0.5 bg-brand/20"></div>
+        </div>
+        <div>
+          <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white font-bold text-xl mb-4">4</div>
+          <h3 class="text-xl font-bold mb-2">Celebrate Together</h3>
+          <p class="text-gray-600">End the day with fellow adventurers and share your stories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES/EXPERIENCES -->
+  <section id="experiences" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Experiences</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Find Your Perfect Adventure</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Whether solo, with friends, or for your team — we have the perfect urban exploration experience for you.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/69f06713a9d30f6ec5380fcb/6a310cc90674e94fa4044141_48798515642_ffef9b3ff3_k.webp" alt="Urban Rally Experience" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-brand text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Full-Day Urban Rallies</h3>
+            <p class="text-gray-600 mb-4">Our signature 8-hour adventure. Navigate with roadbooks, solve enigmas, and complete 30+ challenges across the city.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Self-paced exploration
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Exclusive location access
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Artistic & cultural challenges
+              </li>
+            </ul>
+            <a href="#reserve" class="inline-flex items-center text-brand font-semibold hover:gap-3 transition-all gap-2">
+              View upcoming dates
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div id="corporate" class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/69f06713a9d30f6ec5380fcb/6a310d0c5dfcddf9192d7103_25739150898_af6a72b590_k.webp" alt="Corporate Team Building" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-semibold">Corporate</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Team Building Experiences</h3>
+            <p class="text-gray-600 mb-4">Transform your corporate events with our customized urban adventures. Build bonds, boost morale, inspire teams.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Custom challenge design
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Group coordination
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Incentive packages available
+              </li>
+            </ul>
+            <a href="#reserve" class="inline-flex items-center text-brand font-semibold hover:gap-3 transition-all gap-2">
+              Request a proposal
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/69f06713a9d30f6ec5380fcb/6a310d51fb3ffd5ef53b61c2_54582207920_0cfb5fa967_k.webp" alt="Gift Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Gift Idea</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Gift Certificates</h3>
+            <p class="text-gray-600 mb-4">Give the gift of adventure. Perfect for birthdays, celebrations, or just because she deserves an unforgettable experience.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Instant digital delivery
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Valid for any city
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-5 h-5 text-brand mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Flexible scheduling
+              </li>
+            </ul>
+            <a href="#reserve" class="inline-flex items-center text-brand font-semibold hover:gap-3 transition-all gap-2">
+              Purchase a gift
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE TYPES -->
+  <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold text-sm uppercase tracking-wider">The Challenges</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Not Your Average City Tour</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+          Every Pop In event features diverse challenges designed to push boundaries, spark creativity, and create lasting memories.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+          <div class="w-12 h-12 bg-brand/20 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Artistic</h3>
+          <p class="text-gray-400 text-sm">Express yourself through creative challenges that tap into your inner artist.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+          <div class="w-12 h-12 bg-brand/20 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Cultural</h3>
+          <p class="text-gray-400 text-sm">Discover hidden histories and local traditions through immersive experiences.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+          <div class="w-12 h-12 bg-brand/20 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Solidarity</h3>
+          <p class="text-gray-400 text-sm">Connect with communities and make a positive impact along your journey.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+          <div class="w-12 h-12 bg-brand/20 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Audacity</h3>
+          <p class="text-gray-400 text-sm">Push your comfort zone with bold challenges that build confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOYALTY SECTION -->
+  <section class="py-16 bg-brand/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Join the Pop In Community</h3>
+          <p class="text-gray-600 max-w-xl">Become part of our loyalty program and unlock exclusive perks, early access to events, and special rewards for our most adventurous members.</p>
+        </div>
+        <a href="#reserve" class="inline-flex items-center bg-brand hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition-colors whitespace-nowrap">
+          Learn About Rewards
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="reserve" class="py-24 bg-gradient-to-br from-brand via-orange-500 to-pink-500 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Your Next Adventure Starts Here
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Reserve your spot for the next Pop In event before places sell out. Spaces are limited — thousands of women are already on the waiting list.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://popinthecity.com" class="inline-flex items-center justify-center bg-white text-brand px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-xl">
+          Reserve Your Spot Now
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="mailto:hello@popinthecity.com" class="inline-flex items-center justify-center bg-transparent text-white px-10 py-4 rounded-full font-bold text-lg transition-all border-2 border-white/50 hover:bg-white/10">
+          Contact Us
+        </a>
+      </div>
+      <p class="mt-6 text-white/70 text-sm">
+        Event times typically run 08:15 - 17:00. Full details provided upon booking.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-2">Stay in the Loop</h3>
+      <p class="text-gray-600 mb-6">Get travel tips, event updates, and exclusive early access delivered to your inbox.</p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-full border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all">
+        <button type="submit" class="bg-brand hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <span class="text-2xl font-bold text-brand">Pop In the City</span>
+          <p class="text-gray-400 mt-4 max-w-md">
+            Empowering women to explore, discover, and connect through unforgettable urban adventures across Europe's most vibrant cities.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <a href="https://www.facebook.com/popinthecity.officiel" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/popinthecity.officiel" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.58-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.65.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.27.2-6.78,2.71-7,7C0,8.33,0,8.74,0,12s0,3.67.07,4.95c.2,4.27,2.71,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.27-.2,6.78-2.71,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.27-2.71-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/pop-in-events" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.33V9h3.41v1.56h.05a3.74,3.74,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46v6.32ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.78A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.78,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#experiences" class="text-gray-400 hover:text-brand transition-colors">Experiences</a></li>
+            <li><a href="#how-it-works" class="text-gray-400 hover:text-brand transition-colors">How It Works</a></li>
+            <li><a href="#corporate" class="text-gray-400 hover:text-brand transition-colors">Corporate Events</a></li>
+            <li><a href="#reserve" class="text-gray-400 hover:text-brand transition-colors">Gift Certificates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>10 Rue Morice<br>92110 Clichy, France</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Events: 08:15 - 17:00<br>(8 hours per event)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+        <p>© 2024 Pop In the City. All rights reserved. Adventure awaits.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #FF6B35; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #FF6B35;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #FF6B35; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #FF6B35; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Pop In the City</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Pop In the City. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "Enthusiastic and encouraging female voice that celebrates boldness, adventure, and female empowerment while providing practical event logistics and city exploration tips.";
+const LVRG_BIZ = "Pop In the City";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
