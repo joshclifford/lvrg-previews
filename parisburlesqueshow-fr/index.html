@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Burlesque Show | L'Art du Spectacle Raffiné</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: '#2a2a2a', gold: '#c9a962', cream: '#f5f0e8', burgundy: '#6b1c3b' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'DM Sans', sans-serif; }
+        .art-deco-border { border: 1px solid rgba(201, 169, 98, 0.3); }
+        .art-deco-corner::before,
+        .art-deco-corner::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: #c9a962;
+        }
+        .art-deco-corner::before {
+            top: -1px;
+            left: -1px;
+            border-top: 2px solid;
+            border-left: 2px solid;
+        }
+        .art-deco-corner::after {
+            bottom: -1px;
+            right: -1px;
+            border-bottom: 2px solid;
+            border-right: 2px solid;
+        }
+    </style>
+</head>
+<body class="bg-brand text-white">
+    <!-- Claim Bar -->
+    <div class="bg-black py-2 px-4 sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
+            <span class="text-gray-300">This site was built for <strong class="text-white">Paris Burlesque Show</strong> by LVRG Agency</span>
+            <a href="https://theresandiego.com/advertise/" class="bg-gradient-to-r from-gold to-yellow-600 text-brand px-4 py-1 rounded-full text-xs font-semibold hover:from-yellow-500 hover:to-gold transition-all duration-300 whitespace-nowrap">Claim This Site →</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="py-4 px-6 border-b border-gold/10 bg-brand/95 backdrop-blur-sm sticky top-10 z-40">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 border-2 border-gold flex items-center justify-center">
+                    <span class="text-gold font-bold text-lg">PBS</span>
+                </div>
+                <span class="text-xl font-bold tracking-wide hidden sm:block">Paris Burlesque Show</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
+                <a href="#experiences" class="text-gray-300 hover:text-gold transition-colors">Expériences</a>
+                <a href="#events" class="text-gray-300 hover:text-gold transition-colors">Événements</a>
+                <a href="#corporate" class="text-gray-300 hover:text-gold transition-colors">Corporate</a>
+            </div>
+            <a href="#reserve" class="bg-gold text-brand px-5 py-2.5 text-sm font-semibold hover:bg-yellow-500 transition-colors tracking-wide">Réserver</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://static.wixstatic.com/media/a84b0e_156d959b2f0d48059e6c81ad4747de2c~mv2.jpeg/v1/fill/w_403,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/19419018_v5.jpeg" alt="Paris Burlesque Show Performance" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand/80 via-brand/70 to-brand"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-burgundy/30 to-transparent"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+            <div class="flex justify-center mb-8">
+                <div class="flex items-center gap-2 text-gold text-sm tracking-widest uppercase border border-gold/30 px-6 py-2">
+                    <span>✦</span>
+                    <span>L'Art du Spectacle Raffiné</span>
+                    <span>✦</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                The kind of evening<br>
+                <span class="text-gold">Paris whispers about</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Immersive dinner-theater experiences where burlesque, live music, and French glamour collide in iconic venues across France.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#reserve" class="bg-gold text-brand px-8 py-4 font-semibold text-lg hover:bg-yellow-500 transition-colors tracking-wide inline-flex items-center justify-center gap-2">
+                    Reserve Your Evening
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="#corporate" class="border border-gold/50 text-gold px-8 py-4 font-semibold text-lg hover:bg-gold/10 transition-colors tracking-wide">
+                    Private Events
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="bg-gradient-to-r from-brand via-zinc-900 to-brand py-12 border-y border-gold/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="relative p-6 art-deco-border art-deco-corner">
+                    <div class="text-4xl font-bold text-gold mb-1">4.9★</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Rating</div>
+                </div>
+                <div class="relative p-6 art-deco-border art-deco-corner">
+                    <div class="text-4xl font-bold text-gold mb-1">32</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Reviews</div>
+                </div>
+                <div class="relative p-6 art-deco-border art-deco-corner">
+                    <div class="text-4xl font-bold text-gold mb-1">50+</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Events Yearly</div>
+                </div>
+                <div class="relative p-6 art-deco-border art-deco-corner">
+                    <div class="text-4xl font-bold text-gold mb-1">France</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Nationwide</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="experiences" class="py-24 px-6 bg-gradient-to-b from-brand to-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold text-sm tracking-widest uppercase mb-4 block">Nos Créations</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Experiences That Linger</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">From intimate cabaret evenings to grand corporate galas, we craft moments that become memories across multiple locations in France.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group relative overflow-hidden bg-zinc-900/50 border border-gold/10 hover:border-gold/40 transition-all duration-500">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a84b0e_43933e630f1f438baf4f1ee2264a161c~mv2.jpg/v1/fill/w_403,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0846_JPG.jpg" alt="Dinner Theater Show" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-gold text-sm tracking-widest uppercase mb-3">Signature Experience</div>
+                        <h3 class="text-2xl font-bold mb-4">Burlesque Dinner-Theater</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">An evening of refined gastronomy paired with captivating performances. Theater, burlesque, and live music intertwine in prestigious venues.</p>
+                        <a href="#reserve" class="inline-flex items-center gap-2 text-gold hover:gap-3 transition-all font-medium">
+                            Reserve a Table
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group relative overflow-hidden bg-zinc-900/50 border border-gold/10 hover:border-gold/40 transition-all duration-500">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a84b0e_9aaa546b85794e76bba50a2ce8f5c40d~mv2.jpg/v1/fill/w_403,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12833-chateau-de-valmousse-1.jpg" alt="Private Events at Chateau" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-gold text-sm tracking-widest uppercase mb-3">Bespoke</div>
+                        <h3 class="text-2xl font-bold mb-4">Corporate & Private Events</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Transform any occasion into an unforgettable spectacle. We bring our roster of international talent to your chosen venue.</p>
+                        <a href="#corporate" class="inline-flex items-center gap-2 text-gold hover:gap-3 transition-all font-medium">
+                            Inquire Now
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group relative overflow-hidden bg-zinc-900/50 border border-gold/10 hover:border-gold/40 transition-all duration-500">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a84b0e_2fda502a51c742888bf93daf920bec54~mv2.jpeg/v1/fill/w_403,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/D8C_8052.jpeg" alt="Cabaret Dance Classes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-gold text-sm tracking-widest uppercase mb-3">Learn the Art</div>
+                        <h3 class="text-2xl font-bold mb-4">Cabaret Dance Classes</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Discover the elegance and confidence of burlesque with our professional instructors. Perfect for team building or personal expression.</p>
+                        <a href="#reserve" class="inline-flex items-center gap-2 text-gold hover:gap-3 transition-all font-medium">
+                            Book a Class
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press / As Seen In -->
+    <section class="py-16 bg-zinc-900 border-y border-gold/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-gray-500 text-sm tracking-widest uppercase">As Featured In</span>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="px-6 py-3 border border-gold/20 text-gold/80 text-sm tracking-wider uppercase hover:border-gold/50 transition-colors">
+                    Inside The Upgrade
+                </div>
+                <div class="px-6 py-3 border border-gold/20 text-gold/80 text-sm tracking-wider uppercase hover:border-gold/50 transition-colors">
+                    Facebook Featured
+                </div>
+                <div class="px-6 py-3 border border-gold/20 text-gold/80 text-sm tracking-wider uppercase hover:border-gold/50 transition-colors">
+                    Instagram Spotlight
+                </div>
+            </div>
+            <p class="text-center mt-8 text-gray-500 italic text-sm">"Creating unforgettable Dinner & Artist experiences."</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section - Addressing Pain Point -->
+    <section class="py-20 px-6 bg-gradient-to-b from-zinc-900 to-brand">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="relative p-12 art-deco-border art-deco-corner">
+                <span class="text-gold text-sm tracking-widest uppercase mb-4 block">Be the First to Know</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Exclusive Invitations</h2>
+                <p class="text-gray-400 mb-8 max-w-lg mx-auto">Join our cercle privé for early access to shows, exclusive events, and behind-the-scenes glimpses of Parisian cabaret culture.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-1 bg-zinc-800 border border-gold/20 px-5 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors">
+                    <button type="submit" class="bg-gold text-brand px-6 py-3 font-semibold hover:bg-yellow-500 transition-colors whitespace-nowrap">
+                        Join the List
+                    </button>
+                </form>
+                <p class="text-gray-600 text-xs mt-4">No spam, only glamour. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section id="reserve" class="py-24 px-6 bg-gradient-to-r from-burgundy/30 via-brand to-burgundy/30 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, #c9a962 0, #c9a962 1px, transparent 0, transparent 50%); background-size: 30px 30px;"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-gold text-sm tracking-widest uppercase mb-6 block">Your Evening Awaits</span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Step Into the Spotlight</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Reserve your place at our next cabaret show, or let us design a bespoke experience for your corporate event or private celebration.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://parisburlesqueshow.fr" target="_blank" class="bg-gold text-brand px-10 py-4 font-semibold text-lg hover:bg-yellow-500 transition-colors tracking-wide inline-flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    View Upcoming Shows
+                </a>
+                <a href="tel:+33688708732" class="border-2 border-gold text-gold px-10 py-4 font-semibold text-lg hover:bg-gold hover:text-brand transition-all tracking-wide inline-flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    Call for Private Events
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Section -->
+    <section id="corporate" class="py-24 px-6 bg-brand">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-gold text-sm tracking-widest uppercase mb-4 block">Corporate Excellence</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Custom Immersive Experiences</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        From product launches to annual galas, we transform corporate events into unforgettable productions. Our international roster of artists, combined with bespoke creative direction, ensures your event stands apart.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <span class="text-gold">✦</span>
+                            Artist booking and custom attractions
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <span class="text-gold">✦</span>
+                            Full production design and direction
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <span class="text-gold">✦</span>
+                            Venues across France and beyond
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <span class="text-gold">✦</span>
+                            Sponsorship and patronage opportunities
+                        </li>
+                    </ul>
+                    <a href="tel:+33688708732" class="inline-flex items-center gap-2 bg-gold text-brand px-8 py-4 font-semibold hover:bg-yellow-500 transition-colors">
+                        Discuss Your Event
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square relative">
+                        <img src="https://static.wixstatic.com/media/a84b0e_9aaa546b85794e76bba50a2ce8f5c40d~mv2.jpg/v1/fill/w_403,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12833-chateau-de-valmousse-1.jpg" alt="Chateau Event Venue" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 border-4 border-gold/20 -translate-x-4 -translate-y-4 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 border-2 border-gold flex items-center justify-center">
+                            <span class="text-gold font-bold text-xl">PBS</span>
+                        </div>
+                        <span class="text-2xl font-bold">Paris Burlesque Show</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
+                        An artistic creation house and immersive experience producer specializing in refined burlesque performances across iconic venues in France.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/Paris-Burlesque-Show-101576112324247" target="_blank" class="w-10 h-10 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-brand transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/paris_burlesqueshow" target="_blank" class="w-10 h-10 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-brand transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.58-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.65.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.27.2-6.78,2.71-7,7C0,8.33,0,8.74,0,12s0,3.67.07,4.95c.2,4.27,2.71,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.27-.2,6.78-2.71,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.27-2.71-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/100607229" target="_blank" class="w-10 h-10 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-brand transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.34V9h3.41v1.56h.05a3.76,3.76,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.77A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.77,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-gold font-semibold mb-6 tracking-wider uppercase text-sm">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            105 Rue de Courcelles<br>75017 Paris, France
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:+33688708732" class="hover:text-gold transition-colors">+33 6 88 70 87 32</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gold font-semibold mb-6 tracking-wider uppercase text-sm">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#experiences" class="hover:text-gold transition-colors">Experiences</a></li>
+                        <li><a href="#events" class="hover:text-gold transition-colors">Upcoming Shows</a></li>
+                        <li><a href="#corporate" class="hover:text-gold transition-colors">Corporate Events</a></li>
+                        <li><a href="https://parisburlesqueshow.fr" target="_blank" class="hover:text-gold transition-colors">Official Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gold/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2024 Paris Burlesque Show. All rights reserved.</p>
+                <p class="text-gray-600 text-xs">L'Art du Spectacle Raffiné</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #2a2a2a; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #2a2a2a;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #2a2a2a; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #2a2a2a; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Paris Burlesque Show</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Paris Burlesque Show. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "Sophisticated and cultured, responding with knowledge of upcoming galas and events while exuding French elegance and helping clients book luxurious burlesque experiences.";
+const LVRG_BIZ = "Paris Burlesque Show";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
