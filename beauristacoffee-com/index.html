@@ -3,134 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beaurista Coffee | Specialty Coffee Roaster in Del Mar, CA</title>
+  <title>Beaurista Coffee | Specialty Coffee Roasted with Intention</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand: '#000000', cream: '#F5F1EB', warmwhite: '#FAF8F5', deepbrown: '#3D2B1F', goldenrod: '#C9A962' } } } }</script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#000000' } } } }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'DM Sans', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; }
+    * { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
 </head>
-<body class="bg-warmwhite text-deepbrown">
-
+<body class="bg-white text-brand">
+  
   <!-- CLAIM BAR -->
-  <div class="sticky top-0 z-50 bg-black py-2 px-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
-      <span class="text-white text-sm">This site was built for <strong>Beaurista Coffee</strong> by LVRG Agency</span>
-      <a href="https://theresandiego.com/advertise/" class="inline-block bg-goldenrod text-black text-sm font-semibold px-4 py-1 rounded-full hover:bg-yellow-500 transition-colors">Claim This Site →</a>
+  <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
+      <span>This site was built for <strong>Beaurista Coffee</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="inline-flex items-center bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-semibold hover:bg-yellow-400 transition-colors">
+        Claim This Site →
+      </a>
     </div>
   </div>
 
   <!-- NAV -->
-  <nav class="bg-warmwhite/95 backdrop-blur-sm border-b border-cream sticky top-10 z-40">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="text-2xl font-bold tracking-tight text-brand">Beaurista Coffee</a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#coffees" class="text-deepbrown hover:text-brand transition-colors font-medium">Our Coffees</a>
-        <a href="#services" class="text-deepbrown hover:text-brand transition-colors font-medium">Services</a>
-        <a href="#contact" class="text-deepbrown hover:text-brand transition-colors font-medium">Visit Us</a>
+  <nav class="bg-white border-b border-gray-100 sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="text-xl font-bold tracking-tight">BEAURISTA COFFEE</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#coffees" class="text-sm font-medium hover:text-gray-600 transition-colors">Coffees</a>
+          <a href="#services" class="text-sm font-medium hover:text-gray-600 transition-colors">Services</a>
+          <a href="#about" class="text-sm font-medium hover:text-gray-600 transition-colors">About</a>
+          <a href="#membership" class="bg-black text-white px-5 py-2.5 text-sm font-semibold rounded-full hover:bg-gray-800 transition-colors">Join Membership</a>
+        </div>
+        <button class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <a href="#membership" class="bg-brand text-white px-5 py-2 rounded-full font-semibold hover:bg-deepbrown transition-colors text-sm">Join Membership</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center">
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0">
       <img src="https://beauristacoffee.com/cdn/shop/files/D3BE2D2E-596D-436B-AE6D-E9D711CB78E5.jpg?v=1786410498&width=3641" alt="Beaurista Coffee" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 py-24">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
       <div class="max-w-2xl">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">The cup that turned your golf buddy into a coffee snob</h1>
-        <p class="text-xl text-cream/90 mb-8 max-w-lg">Specialty beans roasted with intention in Del Mar. Find us at 15555 Jimmy Durante Blvd — or let us roll up to your next event.</p>
+        <p class="text-white/80 text-sm font-semibold tracking-widest uppercase mb-4">Del Mar, California</p>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          Where obsession meets your morning cup
+        </h1>
+        <p class="text-xl text-white/90 mb-8 leading-relaxed">
+          Specialty coffee roasted with intention — every origin traced, every profile perfected, every tasting note documented for the discerning palate.
+        </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#coffees" class="bg-white text-brand px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors text-center">Explore Our Coffees</a>
-          <a href="#membership" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand transition-colors text-center">Become a Member</a>
+          <a href="#membership" class="inline-flex items-center justify-center bg-white text-black px-8 py-4 text-base font-semibold rounded-full hover:bg-gray-100 transition-colors">
+            Join & Save 20%
+          </a>
+          <a href="#coffees" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 text-base font-semibold rounded-full hover:bg-white hover:text-black transition-colors">
+            Explore Origins
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SOCIAL PROOF BAR -->
-  <section class="bg-brand py-8">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-white">
+  <section class="bg-gray-50 py-8 border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
         <div class="flex items-center gap-3">
-          <div class="flex text-goldenrod text-2xl">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          <div class="flex text-yellow-400">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
           </div>
-          <span class="text-lg font-semibold">5-Star Rated</span>
+          <span class="font-bold text-lg">5.0</span>
+          <span class="text-gray-500">from 138 reviews</span>
         </div>
-        <div class="h-8 w-px bg-white/30 hidden md:block"></div>
+        <div class="h-8 w-px bg-gray-300 hidden md:block"></div>
         <div class="text-center">
-          <span class="text-3xl font-bold text-goldenrod">194</span>
-          <span class="text-lg ml-2">Happy Reviews</span>
+          <span class="font-bold">Founded by PGA Tour Pro</span>
+          <span class="text-gray-500 ml-1">Beau Hossler</span>
         </div>
-        <div class="h-8 w-px bg-white/30 hidden md:block"></div>
+        <div class="h-8 w-px bg-gray-300 hidden md:block"></div>
         <div class="text-center">
-          <span class="text-lg">Specialty Coffee Roaster</span>
-          <span class="text-goldenrod ml-2">•</span>
-          <span class="text-lg ml-2">Del Mar, CA</span>
+          <span class="font-bold">Roasted in</span>
+          <span class="text-gray-500 ml-1">Del Mar, CA</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COFFEES SECTION -->
-  <section id="coffees" class="py-20 bg-cream">
-    <div class="max-w-7xl mx-auto px-4">
+  <!-- COFFEE PRODUCTS -->
+  <section id="coffees" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl text-brand mb-4">Roasted with Intention</h2>
-        <p class="text-lg text-deepbrown/80 max-w-2xl mx-auto">Every bean tells a story. From single-origin discoveries to our signature blends, we source and roast coffees that satisfy all preferences.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">The Coffee Collection</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Every bean traced to its origin. Every roast profiled with precision. Finally, the transparency specialty coffee lovers deserve.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-warmwhite rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+        <!-- Single Origins -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <div class="aspect-square overflow-hidden">
-            <img src="https://beauristacoffee.com/cdn/shop/files/E4213B96-B311-4427-BA3A-FE4EB2C00D0A.jpg?v=1773350559&width=4000" alt="Single Origin Coffees" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://beauristacoffee.com/cdn/shop/files/E4213B96-B311-4427-BA3A-FE4EB2C00D0A.jpg?v=1773350559&width=4000" alt="Single Origin Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl text-brand mb-2">Single Origins</h3>
-            <p class="text-deepbrown/70 mb-4">Carefully sourced beans from the world's finest growing regions, each with its own unique character.</p>
-            <a href="#" class="text-brand font-semibold hover:text-goldenrod transition-colors inline-flex items-center gap-2">
-              Shop Singles
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3">Single Origins</h3>
+            <p class="text-gray-600 mb-4">Traceable beans from world-renowned growing regions. Each bag features detailed origin info, elevation, process, and curated tasting notes.</p>
+            <a href="#membership" class="inline-flex items-center font-semibold hover:underline">
+              Explore Origins
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="bg-warmwhite rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+        <!-- Blends -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <div class="aspect-square overflow-hidden">
-            <img src="https://beauristacoffee.com/cdn/shop/files/318A7114.jpg?v=1775008964&width=3995" alt="Signature Blends" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://beauristacoffee.com/cdn/shop/files/318A7114.jpg?v=1775008964&width=3995" alt="Coffee Blends" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl text-brand mb-2">Signature Blends</h3>
-            <p class="text-deepbrown/70 mb-4">Our expertly crafted blends deliver consistent, complex flavors that become your new daily ritual.</p>
-            <a href="#" class="text-brand font-semibold hover:text-goldenrod transition-colors inline-flex items-center gap-2">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3">Signature Blends</h3>
+            <p class="text-gray-600 mb-4">Meticulously crafted combinations with documented roast profiles. Know exactly what you're drinking — light, medium, or dark, with full flavor breakdowns.</p>
+            <a href="#membership" class="inline-flex items-center font-semibold hover:underline">
               Shop Blends
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
           </div>
         </div>
-        <!-- Card 3 -->
-        <div class="bg-warmwhite rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-          <div class="aspect-square overflow-hidden">
-            <img src="https://beauristacoffee.com/cdn/shop/files/318A1576.jpg?v=1770928128&width=4000" alt="Limited Releases" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <!-- Limited Release -->
+        <div class="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="aspect-square overflow-hidden bg-black flex items-center justify-center">
+            <div class="text-center p-8">
+              <span class="inline-block bg-white text-black text-xs font-bold px-3 py-1 rounded-full mb-4">MEMBERS FIRST</span>
+              <h4 class="text-white text-3xl font-bold">Limited Releases</h4>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl text-brand mb-2">Limited Releases</h3>
-            <p class="text-deepbrown/70 mb-4">Exclusive drops and seasonal offerings that members get first access to. Here today, gone tomorrow.</p>
-            <a href="#" class="text-brand font-semibold hover:text-goldenrod transition-colors inline-flex items-center gap-2">
-              See What's New
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3">Limited Drops</h3>
+            <p class="text-gray-600 mb-4">Rare micro-lots and exclusive roasts. Members get first access to these small-batch releases before they sell out.</p>
+            <a href="#membership" class="inline-flex items-center font-semibold hover:underline">
+              Get Access
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
           </div>
         </div>
@@ -138,160 +158,203 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="py-20 bg-warmwhite">
-    <div class="max-w-7xl mx-auto px-4">
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl text-brand mb-4">More Than Just Beans</h2>
-        <p class="text-lg text-deepbrown/80 max-w-2xl mx-auto">From events to everyday essentials, we bring the Beaurista experience wherever you are.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Beyond the Bag</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">From mobile coffee experiences to golf-inspired gear — everything rooted in quality.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="bg-cream p-8 rounded-2xl hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-brand rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        <!-- Mobile Coffee -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           </div>
-          <h3 class="text-2xl text-brand mb-3">Coffee Cart & Trailer</h3>
-          <p class="text-deepbrown/70 mb-4">Bring specialty coffee and matcha to your tournament, corporate event, or private party. We roll up ready to pour.</p>
-          <a href="tel:9493541063" class="text-brand font-semibold hover:text-goldenrod transition-colors">Book Now →</a>
+          <h3 class="text-xl font-bold mb-3">Mobile Coffee Cart & Trailer</h3>
+          <p class="text-gray-600 mb-4">Bring specialty coffee to your event. Full-service cart and trailer rentals with trained baristas for weddings, corporate events, and tournaments.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Coffee Cart Rental
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Coffee Trailer Rental
+            </li>
+          </ul>
         </div>
-        <!-- Service 2 -->
-        <div class="bg-cream p-8 rounded-2xl hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-brand rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <!-- Merchandise -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           </div>
-          <h3 class="text-2xl text-brand mb-3">Merch & Gear</h3>
-          <p class="text-deepbrown/70 mb-4">Golf-inspired apparel, headcovers, ceramics, and Yeti drinkware. Rep the Beaurista lifestyle on and off the course.</p>
-          <a href="#" class="text-brand font-semibold hover:text-goldenrod transition-colors">Shop Merch →</a>
+          <h3 class="text-xl font-bold mb-3">Golf-Inspired Apparel</h3>
+          <p class="text-gray-600 mb-4">Where coffee culture meets the links. Premium branded gear designed for both the course and the coffee shop.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Hats & Visors
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Hoodies & T-Shirts
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Golf Headcovers
+            </li>
+          </ul>
         </div>
-        <!-- Service 3 -->
-        <div class="bg-cream p-8 rounded-2xl hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-brand rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+        <!-- Ceramics -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
           </div>
-          <h3 class="text-2xl text-brand mb-3">Coffee Bundles</h3>
-          <p class="text-deepbrown/70 mb-4">Curated sets perfect for gifting or stocking up. Save when you bundle your favorites together.</p>
-          <a href="#" class="text-brand font-semibold hover:text-goldenrod transition-colors">Shop Bundles →</a>
+          <h3 class="text-xl font-bold mb-3">Ceramics & Bundles</h3>
+          <p class="text-gray-600 mb-4">Curated coffee bundles and artisan mugs. The perfect way to experience or gift Beaurista's specialty selections.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Coffee Bundles
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Mugs & Ceramics
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / STORY -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-sm font-semibold tracking-widest uppercase text-gray-500 mb-4 block">The Story</span>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Born from fascination.<br>Roasted with obsession.</h2>
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+            "Beaurista Coffee was started by PGA Tour Pro Beau Hossler out of a fascination and obsession with specialty coffee."
+          </p>
+          <p class="text-gray-600 mb-8 leading-relaxed">
+            That same precision demanded on the Tour — understanding every variable, perfecting every detail — now drives how we source, roast, and present our coffee. From our roastery near 15555 Jimmy Durante Blvd in Del Mar, we're bringing transparency back to specialty coffee.
+          </p>
+          <div class="flex items-center gap-6">
+            <a href="#membership" class="bg-black text-white px-8 py-4 text-base font-semibold rounded-full hover:bg-gray-800 transition-colors">
+              Join the Membership
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://beauristacoffee.com/cdn/shop/files/318A1576.jpg?v=1770928128&width=4000" alt="Beaurista Coffee Process" class="rounded-2xl shadow-2xl">
+          <div class="absolute -bottom-6 -left-6 bg-black text-white p-6 rounded-xl">
+            <div class="text-3xl font-bold">5★</div>
+            <div class="text-sm text-white/80">138 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS / AS SEEN IN -->
+  <section class="py-16 bg-gray-50 border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold tracking-widest uppercase text-gray-500 mb-8">As Featured On</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
+          <span class="font-bold text-gray-700">Reddit</span>
+        </div>
+        <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
+          <span class="font-bold text-gray-700">Yelp</span>
+        </div>
+        <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
+          <span class="font-bold text-gray-700">Instagram</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MEMBERSHIP CTA BANNER -->
-  <section id="membership" class="py-20 bg-brand relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-0 left-0 w-96 h-96 bg-goldenrod rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div class="absolute bottom-0 right-0 w-96 h-96 bg-goldenrod rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-    </div>
-    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-      <span class="inline-block bg-goldenrod/20 text-goldenrod px-4 py-1 rounded-full text-sm font-semibold mb-6">MEMBERSHIP</span>
-      <h2 class="text-4xl md:text-5xl text-white mb-6">Join the Inner Circle</h2>
-      <p class="text-xl text-cream/90 mb-8 max-w-2xl mx-auto">Explore our carefully curated coffee selection and join our membership for exclusive drops, collaborations, and up to 20% member savings.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="bg-goldenrod text-brand px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 transition-colors">Become a Member</a>
-        <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand transition-colors">Shop All Coffee</a>
+  <section id="membership" class="py-24 bg-black text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">MEMBERSHIP</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Join the Membership</h2>
+      <p class="text-xl text-white/80 mb-4 max-w-2xl mx-auto">
+        Get exclusive drops, first access to limited releases, and save up to 20% on premium specialty coffees.
+      </p>
+      <p class="text-white/60 mb-10">
+        Plus, every order includes detailed origin info, roast profiles, and tasting notes — because you deserve to know exactly what's in your cup.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://beauristacoffee.com" class="w-full sm:w-auto bg-white text-black px-10 py-4 text-lg font-semibold rounded-full hover:bg-gray-100 transition-colors">
+          Join & Save 20%
+        </a>
+        <a href="tel:7604733182" class="w-full sm:w-auto border-2 border-white text-white px-10 py-4 text-lg font-semibold rounded-full hover:bg-white hover:text-black transition-colors">
+          Call (760) 473-3182
+        </a>
       </div>
-      <div class="mt-12 grid grid-cols-3 gap-8 max-w-md mx-auto">
-        <div class="text-center">
-          <div class="text-3xl font-bold text-goldenrod">20%</div>
-          <div class="text-cream/70 text-sm">Member Savings</div>
+      <div class="mt-12 flex items-center justify-center gap-8 text-sm text-white/60">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Free shipping on subscriptions
         </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-goldenrod">First</div>
-          <div class="text-cream/70 text-sm">Access to Drops</div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Cancel anytime
         </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-goldenrod">VIP</div>
-          <div class="text-cream/70 text-sm">Collabs & Events</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCATION SECTION -->
-  <section id="contact" class="py-20 bg-cream">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-4xl md:text-5xl text-brand mb-6">Find Us in Del Mar</h2>
-          <p class="text-lg text-deepbrown/80 mb-8">Stop by our location at 15555 Jimmy Durante Blvd for fresh roasted coffee, merchandise, and a warm welcome. We're just minutes from the Del Mar Fairgrounds.</p>
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand mb-1">Address</h4>
-                <p class="text-deepbrown/80">15555 Jimmy Durante Blvd<br>Del Mar, CA 92014</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand mb-1">Phone</h4>
-                <a href="tel:9493541063" class="text-deepbrown/80 hover:text-brand transition-colors">(949) 354-1063</a>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-goldenrod" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-brand mb-1">Questions?</h4>
-                <p class="text-deepbrown/80">Call us or DM on Instagram — we'd love to hear from you.</p>
-              </div>
-            </div>
-          </div>
-          <a href="https://maps.google.com/?q=15555+Jimmy+Durante+Blvd+Del+Mar+CA+92014" target="_blank" class="inline-block mt-8 bg-brand text-white px-8 py-4 rounded-full font-semibold hover:bg-deepbrown transition-colors">Get Directions</a>
-        </div>
-        <div class="bg-warmwhite rounded-2xl p-8 shadow-lg">
-          <div class="aspect-video bg-cream rounded-xl flex items-center justify-center mb-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8!2d-117.2544!3d32.9534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s15555+Jimmy+Durante+Blvd%2C+Del+Mar%2C+CA+92014!5e0!3m2!1sen!2sus!4v1234567890" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="text-center">
-            <p class="text-deepbrown/70 mb-2">Ready to book our cart or trailer for your event?</p>
-            <a href="tel:9493541063" class="text-brand font-semibold hover:text-goldenrod transition-colors">Give us a call →</a>
-          </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Early access to drops
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-brand text-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-12 mb-12">
+  <footer class="bg-white border-t border-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <!-- Brand -->
         <div class="md:col-span-2">
-          <h3 class="text-2xl font-bold mb-4">Beaurista Coffee</h3>
-          <p class="text-cream/80 mb-6 max-w-md">Specialty coffee roasted with intention. Serving Del Mar and beyond from our home at 15555 Jimmy Durante Blvd.</p>
-          <a href="https://www.instagram.com/beauristacoffee" target="_blank" class="inline-flex items-center gap-2 text-goldenrod hover:text-yellow-400 transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            @beauristacoffee
-          </a>
+          <h3 class="text-2xl font-bold mb-4">BEAURISTA COFFEE</h3>
+          <p class="text-gray-600 mb-6 max-w-md">
+            Specialty coffee roasted with intention. From our Del Mar roastery to your morning ritual — transparency, quality, and passion in every cup.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/beauristacoffee" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
         </div>
+        <!-- Quick Links -->
         <div>
-          <h4 class="font-semibold mb-4 text-goldenrod">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="#coffees" class="text-cream/80 hover:text-white transition-colors">Our Coffees</a></li>
-            <li><a href="#services" class="text-cream/80 hover:text-white transition-colors">Services</a></li>
-            <li><a href="#membership" class="text-cream/80 hover:text-white transition-colors">Membership</a></li>
-            <li><a href="#contact" class="text-cream/80 hover:text-white transition-colors">Contact</a></li>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-3 text-gray-600">
+            <li><a href="#coffees" class="hover:text-black transition-colors">Shop Coffee</a></li>
+            <li><a href="#services" class="hover:text-black transition-colors">Services</a></li>
+            <li><a href="#membership" class="hover:text-black transition-colors">Membership</a></li>
+            <li><a href="#about" class="hover:text-black transition-colors">Our Story</a></li>
           </ul>
         </div>
+        <!-- Contact -->
         <div>
-          <h4 class="font-semibold mb-4 text-goldenrod">Visit Us</h4>
-          <address class="not-italic text-cream/80 space-y-2">
-            <p>15555 Jimmy Durante Blvd</p>
-            <p>Del Mar, CA 92014</p>
-            <p class="pt-2"><a href="tel:9493541063" class="hover:text-white transition-colors">(949) 354-1063</a></p>
+          <h4 class="font-bold mb-4">Visit Us</h4>
+          <address class="not-italic text-gray-600 space-y-3">
+            <p>15555 Jimmy Durante Blvd<br>Del Mar, CA 92014</p>
+            <p>
+              <a href="tel:7604733182" class="hover:text-black transition-colors">(760) 473-3182</a>
+            </p>
+            <p>
+              <a href="https://beauristacoffee.com" class="hover:text-black transition-colors">beauristacoffee.com</a>
+            </p>
           </address>
         </div>
       </div>
-      <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-cream/60 text-sm">&copy; 2024 Beaurista Coffee. All rights reserved.</p>
-        <p class="text-cream/60 text-sm">Specialty Coffee Roaster • Del Mar, California</p>
+      <div class="border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-500">© 2024 Beaurista Coffee. All rights reserved.</p>
+        <p class="text-sm text-gray-500">Specialty coffee roasted in Del Mar, California</p>
       </div>
     </div>
   </footer>
@@ -367,7 +430,7 @@
 </div>
 
 <script>
-const LVRG_PERSONA = "Knowledgeable and enthusiastic coffee expert who can help customers discover their perfect coffee match and explain the sourcing and roasting philosophy behind each bean.";
+const LVRG_PERSONA = "Friendly, knowledgeable coffee expert who can recommend products based on taste preferences and educate customers about Beaurista's sourcing and roasting philosophy.";
 const LVRG_BIZ = "Beaurista Coffee";
 const LVRG_BOOKING = "https://theresandiego.com/advertise/";
 let lvrgHistory = [];
