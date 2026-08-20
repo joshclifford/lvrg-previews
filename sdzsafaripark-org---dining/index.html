@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego Zoo Safari Park | Dining & Safari Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: '#2d5016' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'DM Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Claim Bar -->
+    <div class="sticky top-0 z-50 bg-black py-2 px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
+            <span class="text-white text-sm">This site was built for <strong>San Diego Zoo Safari Park</strong> by LVRG Agency</span>
+            <a href="https://theresandiego.com/advertise/" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black text-xs font-semibold px-4 py-1.5 rounded-full transition-colors">Claim This Site →</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-brand" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span class="font-bold text-xl text-brand">Safari Park</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#dining" class="text-gray-700 hover:text-brand font-medium transition-colors">Dining</a>
+                <a href="#experiences" class="text-gray-700 hover:text-brand font-medium transition-colors">Experiences</a>
+                <a href="#visit" class="text-gray-700 hover:text-brand font-medium transition-colors">Plan Your Visit</a>
+                <a href="https://sdzsafaripark.org/tickets" class="bg-brand hover:bg-green-800 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors">Get Tickets</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center">
+        <img src="https://sdzsafaripark.org/sites/default/files/styles/hero_with_nav_gradient/public/hero/Dining%20%281%29.jpg?itok=ip5Ukw8M" alt="Safari Park Dining Experience" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-brand/90 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6">Escondido's Wildlife Destination</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">Where dinner comes with a view of the savanna</h1>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed">Dine alongside elephants, giraffes, and rhinos at California's premier safari experience. From craft cocktails at Ona Lounge to full-service dining at Mkutano House — your table awaits.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://sdzsafaripark.org/tickets" class="bg-brand hover:bg-green-800 text-white font-semibold px-8 py-4 rounded-lg text-center transition-all transform hover:scale-105">Reserve Your Safari Experience</a>
+                    <a href="#dining" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/30 text-center transition-colors">Explore Dining Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="bg-brand py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-white">
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">#1</span>
+                    <span class="text-sm text-green-200">Thing to Do in Escondido</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">5,646+</span>
+                    <span class="text-sm text-green-200">TripAdvisor Reviews</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">501(c)(3)</span>
+                    <span class="text-sm text-green-200">Conservation Nonprofit</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">1,800</span>
+                    <span class="text-sm text-green-200">Acres of Adventure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services/Dining Section -->
+    <section id="dining" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-brand font-semibold text-sm uppercase tracking-wide">Savor the Safari</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Dining Experiences Like No Other</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">From quick bites to premium dining, every meal comes with extraordinary views and African-inspired flavors.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mkutano House -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://sdzsafaripark.org/sites/default/files/page_list_item/mkutano-house-dining.jpg" alt="Mkutano House Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Premium Dining</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mkutano House</h3>
+                        <p class="text-gray-600 mb-4">Full-service dining with stunning views of African wildlife. Enjoy elevated cuisine in an elegant safari setting.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-green-800 inline-flex items-center gap-2 transition-colors">
+                            Reserve Table
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ona Lounge -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://sdzsafaripark.org/sites/default/files/page_list_item/ono-lounge-dining.jpg" alt="Ona Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Lounge Experience</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ona Lounge</h3>
+                        <p class="text-gray-600 mb-4">Premium cocktails, craft beers, and specialty drinks in an exclusive lounge atmosphere overlooking the park.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-green-800 inline-flex items-center gap-2 transition-colors">
+                            Explore Menu
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tu Grill -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://sdzsafaripark.org/sites/default/files/page_list_item/tu-grill-dining.jpg" alt="Tu Grill" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Casual Dining</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Tu Grill</h3>
+                        <p class="text-gray-600 mb-4">Fresh-grilled favorites perfect for families on the go. Quick, delicious, and satisfying after a day of adventure.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-green-800 inline-flex items-center gap-2 transition-colors">
+                            View Options
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Dining Options -->
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center">
+                    <div class="w-14 h-14 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Thorntree Terrace</h4>
+                    <p class="text-sm text-gray-600">Breakfast & burgers</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center">
+                    <div class="w-14 h-14 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Mombasa Cooker</h4>
+                    <p class="text-sm text-gray-600">African outdoor dining</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center">
+                    <div class="w-14 h-14 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Barking Deer</h4>
+                    <p class="text-sm text-gray-600">Pizza & craft beer</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center">
+                    <div class="w-14 h-14 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Safari Coffee</h4>
+                    <p class="text-sm text-gray-600">Coffee & pastries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand font-semibold text-sm uppercase tracking-wide">Beyond Dining</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">More Than a Meal — It's a Safari</h2>
+                    <p class="text-lg text-gray-600 mb-8">Every visit to San Diego Zoo Safari Park is an adventure. Combine world-class dining with unforgettable wildlife experiences that support global conservation efforts.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Live Animal Cameras</h4>
+                                <p class="text-gray-600">Watch wildlife from anywhere with our 24/7 live streams</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m9 5.197V21"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Youth Programs & Groups</h4>
+                                <p class="text-gray-600">Educational experiences for schools and organizations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Weddings & Catering</h4>
+                                <p class="text-gray-600">Say "I do" with giraffes as your witnesses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-brand/20 to-green-100 rounded-3xl p-8 lg:p-12">
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Plan Your Perfect Visit</h3>
+                            <p class="text-gray-600 mb-6">Book your safari tickets and dining reservations all in one place. No more navigating multiple sites.</p>
+                            <div class="space-y-3">
+                                <a href="https://sdzsafaripark.org/tickets" class="block w-full bg-brand hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors">
+                                    Reserve Safari Tickets
+                                </a>
+                                <a href="#dining" class="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg text-center transition-colors">
+                                    Browse Dining Options
+                                </a>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-4 text-center">Part of San Diego Zoo Wildlife Alliance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Section -->
+    <section class="py-12 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center text-sm text-gray-500 mb-6 uppercase tracking-wide font-medium">As Featured In</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                <div class="px-6 py-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="text-lg font-bold text-gray-700">TripAdvisor</span>
+                </div>
+                <div class="px-6 py-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="text-lg font-bold text-gray-700">Ciao Bambino</span>
+                </div>
+                <div class="px-6 py-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="text-lg font-bold text-gray-700">SD Zoo Wildlife Alliance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 bg-brand relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="safari-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
+                        <circle cx="10" cy="10" r="1.5" fill="white"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#safari-pattern)"/>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Your Safari Adventure Starts Here</h2>
+            <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Book your dining experience and reserve your Safari Park tickets today. From Mkutano House to the African savanna — an unforgettable day in Escondido awaits.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://sdzsafaripark.org/tickets" class="bg-white hover:bg-gray-100 text-brand font-bold px-8 py-4 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg">
+                    Reserve Your Safari Park Tickets
+                </a>
+                <a href="tel:6192311515" class="bg-transparent hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-lg border-2 border-white/50 transition-colors">
+                    Call (619) 231-1515
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="visit" class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-8 h-8 text-brand" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span class="font-bold text-xl text-white">San Diego Zoo Safari Park</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">A wildlife experience like no other. Part of San Diego Zoo Wildlife Alliance, a 501(c)(3) nonprofit dedicated to wildlife conservation.</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/sdzsafaripark" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="http://instagram.com/sdzsafaripark" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://sdzsafaripark.org/tickets" class="hover:text-brand transition-colors">Buy Tickets</a></li>
+                        <li><a href="#dining" class="hover:text-brand transition-colors">Dining</a></li>
+                        <li><a href="#experiences" class="hover:text-brand transition-colors">Experiences</a></li>
+                        <li><a href="https://zoo.sandiegozoo.org/tickets" class="hover:text-brand transition-colors">San Diego Zoo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <address class="not-italic space-y-2">
+                        <p>Escondido, CA 92027</p>
+                        <p><a href="tel:6192311515" class="hover:text-brand transition-colors">(619) 231-1515</a></p>
+                        <p><a href="https://sdzsafaripark.org" class="hover:text-brand transition-colors">sdzsafaripark.org</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-gray-500">© 2024 San Diego Zoo Wildlife Alliance. All rights reserved.</p>
+                <p class="text-sm text-gray-500">Site preview by <a href="https://theresandiego.com/advertise/" class="text-brand hover:underline">LVRG Agency</a></p>
+            </div>
+        </div>
+    </footer>
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #2d5016; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #2d5016;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #2d5016; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #2d5016; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with San Diego Zoo Safari Park</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for San Diego Zoo Safari Park. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "A knowledgeable, enthusiastic guide who embodies the safari adventure spirit while efficiently helping guests navigate dining options, make reservations, and plan their visit around animal viewing experiences.";
+const LVRG_BIZ = "San Diego Zoo Safari Park";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
