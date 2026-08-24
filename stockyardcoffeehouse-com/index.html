@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Stockyard Coffeehouse | Bridgeport's Neighborhood Coffee Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B6F47', cream: '#FDF8F3', warmwhite: '#FAF7F2', deepbrown: '#3D2E1F', softbrown: '#D4C4B0' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; }
+  </style>
+</head>
+<body class="bg-warmwhite text-deepbrown">
+  
+  <!-- Claim Bar -->
+  <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm flex-wrap">
+      <span>This site was built for <strong>The Stockyard Coffeehouse</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="bg-amber-500 hover:bg-amber-400 text-black font-semibold px-4 py-1 rounded-full text-xs transition-colors">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-warmwhite/95 backdrop-blur-sm sticky top-10 z-40 border-b border-softbrown/30">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold text-deepbrown tracking-tight">The Stockyard</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#menu" class="text-deepbrown/80 hover:text-brand transition-colors font-medium">Menu</a>
+        <a href="#about" class="text-deepbrown/80 hover:text-brand transition-colors font-medium">Our Story</a>
+        <a href="#visit" class="text-deepbrown/80 hover:text-brand transition-colors font-medium">Visit</a>
+        <a href="#order" class="bg-brand hover:bg-deepbrown text-white px-6 py-2.5 rounded-full font-semibold transition-colors">Order Online</a>
+      </div>
+      <button class="md:hidden text-deepbrown">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://customer-ugajlzvkncemhxjh.cloudflarestream.com/48d0519448ae454f98cdf4eda94853a6/thumbnails/thumbnail.jpg?width=1200" alt="The Stockyard Coffeehouse" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-deepbrown/90 via-deepbrown/70 to-deepbrown/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-brand/20 text-cream px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-brand/30">Bridgeport's Living Room Since 2018</span>
+        <h1 class="text-5xl md:text-7xl text-cream leading-tight mb-6">Where the regulars send their friends</h1>
+        <p class="text-xl text-cream/90 mb-10 leading-relaxed max-w-xl">Latin-inspired lattes. Neighborhood-perfected brunch. A corner of Bridgeport that feels like home from the first sip.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#order" class="bg-brand hover:bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:scale-105 text-center">Order for Pickup</a>
+          <a href="#menu" class="bg-cream/10 hover:bg-cream/20 text-cream border-2 border-cream/40 px-8 py-4 rounded-full font-semibold text-lg transition-all text-center backdrop-blur-sm">View Our Menu</a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-cream/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="bg-deepbrown py-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div class="flex items-center gap-3">
+          <div class="flex text-amber-400">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          </div>
+          <span class="text-cream text-lg font-semibold">4.7 Stars</span>
+        </div>
+        <div class="h-8 w-px bg-cream/20 hidden md:block"></div>
+        <div class="text-cream text-lg">
+          <span class="font-bold text-2xl text-brand">493</span> Happy Reviews
+        </div>
+        <div class="h-8 w-px bg-cream/20 hidden md:block"></div>
+        <div class="text-cream text-lg">
+          Proudly Serving Bridgeport Since <span class="font-bold text-brand">2018</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu/Services Section -->
+  <section id="menu" class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold tracking-wider uppercase text-sm">What We Pour & Plate</span>
+        <h2 class="text-4xl md:text-5xl text-deepbrown mt-3 mb-4">Crafted with care, inspired by heritage</h2>
+        <p class="text-deepbrown/70 max-w-2xl mx-auto text-lg">Every cup tells a story. Every plate is made to share. Latin flavors meet specialty coffee in our Bridgeport kitchen.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Specialty Coffee -->
+        <div class="bg-warmwhite rounded-3xl p-8 hover:shadow-xl transition-all duration-300 group border border-softbrown/20">
+          <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Specialty Coffee</h3>
+          <p class="text-deepbrown/70 mb-6 leading-relaxed">From classic espresso to our signature Latin-inspired lattes with horchata, dulce de leche, and more. Dairy and non-dairy options available.</p>
+          <ul class="space-y-2 text-sm text-deepbrown/60">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Espresso & Lattes</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Signature Drinks</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Cold Brew & Refreshers</li>
+          </ul>
+        </div>
+
+        <!-- Brunch -->
+        <div class="bg-warmwhite rounded-3xl p-8 hover:shadow-xl transition-all duration-300 group border border-softbrown/20">
+          <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path></svg>
+          </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Breakfast & Brunch</h3>
+          <p class="text-deepbrown/70 mb-6 leading-relaxed">A curated menu of morning favorites with quality ingredients. Perfect for a slow Saturday or a quick weekday fuel-up.</p>
+          <ul class="space-y-2 text-sm text-deepbrown/60">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Breakfast Plates</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Fresh Pastries</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Weekend Specials</li>
+          </ul>
+        </div>
+
+        <!-- Tea & Refreshers -->
+        <div class="bg-warmwhite rounded-3xl p-8 hover:shadow-xl transition-all duration-300 group border border-softbrown/20">
+          <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </div>
+          <h3 class="text-2xl text-deepbrown mb-3">Tea & Refreshers</h3>
+          <p class="text-deepbrown/70 mb-6 leading-relaxed">Not a coffee person? We've got you. Premium teas and fruit refreshers that hit just right, any time of day.</p>
+          <ul class="space-y-2 text-sm text-deepbrown/60">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Hot & Iced Teas</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Fruit Refreshers</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>Seasonal Specials</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#order" class="inline-flex items-center gap-2 bg-brand hover:bg-deepbrown text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:scale-105">
+          Order Online Now
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About/Story Section -->
+  <section id="about" class="py-24 bg-warmwhite">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-brand font-semibold tracking-wider uppercase text-sm">Our Story</span>
+          <h2 class="text-4xl md:text-5xl text-deepbrown mt-3 mb-6">Born in Bridgeport, brewed with love</h2>
+          <div class="space-y-6 text-deepbrown/70 text-lg leading-relaxed">
+            <p>In 2018, proud Bridgeport residents opened The Stockyard Coffeehouse with a simple mission: create a space where neighbors become friends over really good coffee.</p>
+            <p>Named for the historic stockyards that once defined this Chicago neighborhood, we honor our community's working-class roots while celebrating its vibrant Latin culture through every signature drink we pour.</p>
+            <p>Whether you're grabbing your morning espresso before the L or settling in for a Saturday brunch, you're part of our Bridgeport family.</p>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <span class="font-medium text-deepbrown">Community First</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+              </div>
+              <span class="font-medium text-deepbrown">Latin-Inspired</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="bg-brand/10 rounded-3xl p-8 md:p-12">
+            <div class="bg-cream rounded-2xl p-8 shadow-lg">
+              <h3 class="text-2xl text-deepbrown mb-6">Today's Hours</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center pb-3 border-b border-softbrown/20">
+                  <span class="text-deepbrown/70">Monday - Friday</span>
+                  <span class="font-semibold text-deepbrown">7:30am - 3:00pm</span>
+                </div>
+                <div class="flex justify-between items-center pb-3 border-b border-softbrown/20">
+                  <span class="text-deepbrown/70">Saturday + Sunday</span>
+                  <span class="font-semibold text-deepbrown">8:00am - 3:00pm</span>
+                </div>
+              </div>
+              <a href="#order" class="mt-8 w-full bg-brand hover:bg-deepbrown text-white py-4 rounded-full font-semibold transition-colors flex items-center justify-center gap-2">
+                Order for Pickup
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand/20 rounded-full blur-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section id="order" class="py-24 bg-deepbrown relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-brand rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <span class="inline-block bg-brand/20 text-brand px-4 py-1.5 rounded-full text-sm font-medium mb-6">Skip the Line</span>
+      <h2 class="text-4xl md:text-6xl text-cream mb-6">Your coffee is waiting</h2>
+      <p class="text-cream/80 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">Order online for convenient coffee and brunch delivery or pickup from our Bridgeport location. Fresh, fast, and made with love.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://stockyardcoffeehouse.com" class="bg-brand hover:bg-amber-600 text-white px-10 py-5 rounded-full font-semibold text-lg transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+          Order Online Now
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+        <a href="tel:3128665886" class="bg-cream/10 hover:bg-cream/20 text-cream border-2 border-cream/30 px-10 py-5 rounded-full font-semibold text-lg transition-all inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          Call to Order
+        </a>
+      </div>
+      <p class="text-cream/50 mt-8 text-sm">558 W 37th St, Chicago, IL 60609 • Open daily until 3pm</p>
+    </div>
+  </section>
+
+  <!-- Visit Section -->
+  <section id="visit" class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold tracking-wider uppercase text-sm">Find Us</span>
+        <h2 class="text-4xl md:text-5xl text-deepbrown mt-3 mb-4">Come say hello</h2>
+        <p class="text-deepbrown/70 max-w-2xl mx-auto text-lg">Located in the heart of Bridgeport, we're your neighborhood's go-to spot for specialty coffee and community connection.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-warmwhite rounded-2xl p-8 text-center border border-softbrown/20">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <h3 class="text-xl text-deepbrown mb-2">Location</h3>
+          <p class="text-deepbrown/70">558 W 37th St<br>Chicago, IL 60609<br>Bridgeport</p>
+        </div>
+
+        <div class="bg-warmwhite rounded-2xl p-8 text-center border border-softbrown/20">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl text-deepbrown mb-2">Hours</h3>
+          <p class="text-deepbrown/70">Mon-Fri: 7:30am - 3:00pm<br>Sat-Sun: 8:00am - 3:00pm</p>
+        </div>
+
+        <div class="bg-warmwhite rounded-2xl p-8 text-center border border-softbrown/20">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          </div>
+          <h3 class="text-xl text-deepbrown mb-2">Contact</h3>
+          <p class="text-deepbrown/70"><a href="tel:3128665886" class="hover:text-brand transition-colors">(312) 866-5886</a><br><a href="https://stockyardcoffeehouse.com" class="hover:text-brand transition-colors">stockyardcoffeehouse.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-deepbrown py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <h4 class="text-2xl text-cream font-bold mb-4">The Stockyard Coffeehouse</h4>
+          <p class="text-cream/70 mb-6 max-w-md leading-relaxed">A Bridgeport original since 2018. Specialty coffee, Latin-inspired flavors, and a whole lot of community love.</p>
+          <a href="#order" class="inline-flex items-center gap-2 bg-brand hover:bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105">
+            Order Online
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+        
+        <div>
+          <h5 class="text-cream font-semibold mb-4">Visit Us</h5>
+          <address class="text-cream/70 not-italic leading-relaxed">
+            558 W 37th St<br>
+            Chicago, IL 60609<br>
+            Bridgeport<br><br>
+            <a href="tel:3128665886" class="hover:text-brand transition-colors">(312) 866-5886</a>
+          </address>
+        </div>
+
+        <div>
+          <h5 class="text-cream font-semibold mb-4">Hours</h5>
+          <div class="text-cream/70 space-y-2">
+            <p>Monday - Friday<br><span class="text-cream">7:30am - 3:00pm</span></p>
+            <p>Saturday + Sunday<br><span class="text-cream">8:00am - 3:00pm</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-cream/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-cream/50 text-sm">© 2024 The Stockyard Coffeehouse. All rights reserved.</p>
+        <p class="text-cream/50 text-sm">Proudly serving Bridgeport, Chicago</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #8B6F47; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #8B6F47;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #8B6F47; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #8B6F47; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with The Stockyard Coffeehouse</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for The Stockyard Coffeehouse. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "A friendly, bilingual barista who is deeply connected to the Bridgeport community, knowledgeable about specialty coffee and Latin beverages, and enthusiastic about helping customers discover signature drinks.";
+const LVRG_BIZ = "The Stockyard Coffeehouse";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
