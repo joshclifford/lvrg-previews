@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/preview/ateliers--atbs-fr---restauration/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ateliers de la Boucle de la Seine (ATBS)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#1a5f4a' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Source Sans Pro', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- CLAIM BAR -->
+  <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap text-center">
+      <span class="text-sm">This site was built for <strong>Ateliers de la Boucle de la Seine (ATBS)</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black text-sm font-semibold px-4 py-1 rounded-full transition-colors">
+        Claim This Site →
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="bg-white shadow-md sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl font-bold text-brand tracking-tight">
+          ATBS
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-brand transition-colors font-medium">Home</a>
+          <a href="about.html" class="text-brand font-semibold border-b-2 border-brand pb-1">About</a>
+          <a href="services.html" class="text-gray-700 hover:text-brand transition-colors font-medium">Services</a>
+          <a href="contact.html" class="text-gray-700 hover:text-brand transition-colors font-medium">Contact</a>
+          <a href="contact.html" class="bg-brand hover:bg-green-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            Get a Quote
+          </a>
+        </div>
+        <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="md:hidden hidden pb-4" id="mobile-menu">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-brand">Home</a>
+        <a href="about.html" class="block py-2 text-brand font-semibold border-l-4 border-brand pl-3">About</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-brand">Services</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-brand">Contact</a>
+        <a href="contact.html" class="block mt-4 bg-brand text-white px-6 py-3 rounded-lg font-semibold text-center">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-96 md:h-[500px] overflow-hidden">
+    <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/774125924_18109508456516577_8386886101257765419_n.jpg" alt="ATBS team at work" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+    <div class="relative z-10 h-full flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-2xl">
+          Our Story
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 max-w-xl">
+          Building a more inclusive Gennevilliers through meaningful work and exceptional service
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Who We Are</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+            An ESAT with a Purpose
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Ateliers de la Boucle de la Seine (ATBS) is an Établissement et Service d'Aide par le Travail (ESAT) — an inclusive work facility dedicated to providing meaningful employment opportunities for people with disabilities in the heart of Gennevilliers.
+          </p>
+          <p class="text-lg text-gray-600 mb-6">
+            Since our founding, we've believed that everyone deserves the dignity of work and the chance to contribute their talents. Our diverse team brings dedication, precision, and genuine care to every service we provide — from crafting exquisite catering experiences to maintaining beautiful green spaces.
+          </p>
+          <p class="text-lg text-gray-600">
+            When you choose ATBS, you're not just getting professional service — you're supporting a mission that transforms lives and strengthens our community.
+          </p>
+        </div>
+        <div class="relative">
+          <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/759664023_993239990380016_4290665633786652029_n.jpg" alt="ATBS inclusive workspace" class="rounded-2xl shadow-2xl w-full">
+          <div class="absolute -bottom-6 -left-6 bg-brand text-white p-6 rounded-xl shadow-lg">
+            <div class="text-4xl font-bold">4.9★</div>
+            <div class="text-sm opacity-90">from 125 reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES SECTION -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Values</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+          What Makes Us Different
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Inclusion First</h3>
+          <p class="text-gray-600">
+            We create opportunities for people with disabilities to develop skills, build confidence, and achieve professional excellence in a supportive environment.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Uncompromising Quality</h3>
+          <p class="text-gray-600">
+            Our commitment to inclusion never means compromising on service. We hold ourselves to the highest professional standards across all six of our business lines.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Community Impact</h3>
+          <p class="text-gray-600">
+            Every contract with ATBS directly supports our mission. You're investing in Gennevilliers and helping build a more equitable local economy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIX BUSINESS LINES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/710098532_18099275429516577_3664307330668856015_n.jpg" alt="ATBS services" class="rounded-2xl shadow-2xl w-full">
+        </div>
+        <div class="order-1 lg:order-2">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Expertise</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Six Business Lines, One Mission
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            From our beloved restaurant La Croisée des Chemins to comprehensive facility services, we offer diverse solutions for businesses throughout the Île-de-France region.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Restaurant & Catering</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Meal Trays</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Packaging & Logistics</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Green Spaces</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Facility Cleaning</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-brand rounded-full"></div>
+              <span class="text-gray-700 font-medium">Laundry Services</span>
+            </div>
+          </div>
+          <a href="services.html" class="inline-flex items-center gap-2 mt-8 text-brand font-semibold hover:gap-3 transition-all">
+            Explore All Services
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-20 bg-brand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Partner with Purpose
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Whether you need catering for your next corporate event or want to experience our inclusive restaurant in Gennevilliers, we're ready to serve you. Request a custom quote today or reserve your table at La Croisée des Chemins.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-white text-brand px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+          Get a Custom Catering Quote
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+          Reserve a Table
+        </a>
+      </div>
+      <p class="text-white/70 mt-6 text-sm">
+        Call us directly at +33 1 40 86 25 23 • Monday to Friday
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold text-white mb-4">ATBS</h3>
+          <p class="text-gray-400 mb-4 max-w-md">
+            Ateliers de la Boucle de la Seine — an inclusive work facility providing professional catering and facility services in Gennevilliers.
+          </p>
+          <a href="https://www.instagram.com/lacroisee.gennevilliers" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Follow us on Instagram
+          </a>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-white font-semibold">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <address class="not-italic text-gray-400 space-y-2">
+            <p>2 Rue de Bergkamen</p>
+            <p>92230 Gennevilliers, France</p>
+            <p class="mt-4">
+              <a href="tel:+33140862523" class="hover:text-white transition-colors">+33 1 40 86 25 23</a>
+            </p>
+            <p class="mt-4 text-sm">
+              <span class="text-gray-500">Restaurant Hours:</span><br>
+              Monday - Friday: 12:00 - 14:30
+            </p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Ateliers de la Boucle de la Seine (ATBS). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #1a5f4a; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #1a5f4a;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #1a5f4a; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #1a5f4a; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Ateliers de la Boucle de la Seine (ATBS)</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Ateliers de la Boucle de la Seine (ATBS). How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "Warm and professional representative of an inclusive workplace that is proud of its mission, knowledgeable about catering options and facility services, and genuinely invested in supporting disabled workers.";
+const LVRG_BIZ = "Ateliers de la Boucle de la Seine (ATBS)";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>

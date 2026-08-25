@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/preview/ateliers--atbs-fr---restauration/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Ateliers de la Boucle de la Seine (ATBS)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#1a5f4a' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Source Sans Pro', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Claim Bar -->
+  <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm flex-wrap">
+      <span>This site was built for <strong>Ateliers de la Boucle de la Seine (ATBS)</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-semibold hover:bg-yellow-400 transition-colors">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="font-bold text-xl text-brand">ATBS</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-600 hover:text-brand transition-colors font-medium">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-brand transition-colors font-medium">About</a>
+          <a href="services.html" class="text-brand font-semibold border-b-2 border-brand pb-1">Services</a>
+          <a href="contact.html" class="text-gray-600 hover:text-brand transition-colors font-medium">Contact</a>
+        </div>
+        <a href="contact.html" class="bg-brand text-white px-5 py-2 rounded-lg font-semibold hover:bg-green-800 transition-colors hidden md:inline-block">Get a Quote</a>
+        <button class="md:hidden text-gray-600" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden pb-4" id="mobile-menu">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-brand">Home</a>
+        <a href="about.html" class="block py-2 text-gray-600 hover:text-brand">About</a>
+        <a href="services.html" class="block py-2 text-brand font-semibold">Services</a>
+        <a href="contact.html" class="block py-2 text-gray-600 hover:text-brand">Contact</a>
+        <a href="contact.html" class="block mt-3 bg-brand text-white px-5 py-2 rounded-lg font-semibold text-center">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-96 md:h-[500px] overflow-hidden">
+    <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/775740400_18110070656516577_1595293431778333046_n.jpg" alt="ATBS Catering Services" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-brand/90 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">6 Business Lines</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">Our Services</h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-6">From gourmet catering to facility management, ATBS delivers professional services with purpose in Gennevilliers and beyond.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="contact.html" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors">Request a Quote</a>
+          <a href="#services-grid" class="bg-white/20 backdrop-blur text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors border border-white/30">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-gray-50 py-6 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
+        <div>
+          <div class="flex items-center justify-center gap-1 mb-1">
+            <span class="text-2xl font-bold text-brand">4.9</span>
+            <div class="flex text-yellow-500">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600">From 125 Reviews</p>
+        </div>
+        <div class="h-10 w-px bg-gray-300 hidden md:block"></div>
+        <div>
+          <p class="text-2xl font-bold text-brand">6</p>
+          <p class="text-sm text-gray-600">Service Lines</p>
+        </div>
+        <div class="h-10 w-px bg-gray-300 hidden md:block"></div>
+        <div>
+          <p class="text-2xl font-bold text-brand">ESAT</p>
+          <p class="text-sm text-gray-600">Inclusive Employer</p>
+        </div>
+        <div class="h-10 w-px bg-gray-300 hidden md:block"></div>
+        <div>
+          <p class="text-2xl font-bold text-brand">Gennevilliers</p>
+          <p class="text-sm text-gray-600">Proudly Local</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services-grid" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Service Portfolio</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Whether you need daily catering, event services, or facility management, our skilled teams deliver professional results with a meaningful impact.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Restaurant -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/774125924_18109508456516577_8386886101257765419_n.jpg" alt="La Croisée des Chemins Restaurant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Restaurant</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">La Croisée des Chemins</h3>
+            <p class="text-gray-600 mb-4">Our inclusive restaurant in Gennevilliers serves fresh, homemade cuisine Monday to Friday. A welcoming space where great food meets social impact.</p>
+            <div class="flex items-center text-sm text-gray-500 mb-4">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Mon-Fri 12:00-14:30
+            </div>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Reserve a Table
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Meal Trays -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Daily Catering</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Meal Trays & Catering</h3>
+            <p class="text-gray-600 mb-4">Perfect for corporate lunches and daily office needs. Fresh, balanced meals delivered to your workplace across Gennevilliers and surrounding areas.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Individual & group options</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Flexible scheduling</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Get Quote
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Custom Catering -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/759664023_993239990380016_4290665633786652029_n.jpg" alt="Custom Catering Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Events</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Catering</h3>
+            <p class="text-gray-600 mb-4">Buffets, cocktails, and breakfast services tailored to your event. From intimate gatherings to corporate functions, we create memorable culinary experiences.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Buffets & cocktails</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Breakfast events</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Plan Your Event
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4: Fruit Baskets -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-green-100 to-yellow-50 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Wellness</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Fruit Baskets</h3>
+            <p class="text-gray-600 mb-4">Boost workplace wellness with fresh seasonal fruit delivered to your office. A simple way to show appreciation for your team while supporting inclusive employment.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Weekly delivery</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Seasonal selections</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Order Now
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5: Packaging & Logistics -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Logistics</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Packaging & Logistics</h3>
+            <p class="text-gray-600 mb-4">Professional packaging, assembly, and logistics solutions for businesses. Our trained teams handle your operations with care and precision.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Co-packing services</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Kit assembly</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6: Green Spaces -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden">
+            <img src="https://www.ateliers-atbs.fr/wp-content/uploads/2022/06/710098532_18099275429516577_3664307330668856015_n.jpg" alt="Green Spaces and Floral Decorations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Landscaping</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Green Spaces & Floral</h3>
+            <p class="text-gray-600 mb-4">Transform your spaces with professional landscaping and floral decorations. From office plants to event floristry, we bring nature to your environment.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Garden maintenance</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Event floristry</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Get Quote
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 7: Cleaning -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-cyan-100 to-teal-50 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Facilities</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Cleaning & Hygiene</h3>
+            <p class="text-gray-600 mb-4">Comprehensive facility cleaning and hygiene services for offices, commercial spaces, and events. Maintain pristine environments with our reliable teams.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Daily & periodic cleaning</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Sanitation protocols</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Request Service
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 8: Laundry -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-50 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+              </span>
+              <span class="text-xs font-semibold text-brand uppercase tracking-wide">Textile Care</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Laundry Services</h3>
+            <p class="text-gray-600 mb-4">Professional laundry and textile care for businesses, restaurants, and hospitality. From linens to uniforms, we keep your textiles impeccable.</p>
+            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Commercial linens</li>
+              <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Uniform care</li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-brand font-semibold hover:underline">
+              Get Quote
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand font-semibold text-sm uppercase tracking-wide">Why ATBS</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">Professional Services with Purpose</h2>
+          <p class="text-lg text-gray-600 mb-8">When you partner with ATBS, you're not just getting exceptional service — you're supporting meaningful employment for people with disabilities in Gennevilliers and contributing to a more inclusive economy.</p>
+          
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Quality Guaranteed</h3>
+                <p class="text-gray-600">Professional standards across all services, backed by trained teams and proven processes.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Social Impact</h3>
+                <p class="text-gray-600">As an ESAT, every contract supports inclusive employment and professional development.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">One-Stop Solution</h3>
+                <p class="text-gray-600">Six business lines means we can handle multiple needs with a single trusted partner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-brand rounded-2xl p-8 text-white">
+            <h3 class="text-2xl font-bold mb-6">Request a Custom Quote</h3>
+            <p class="text-white/90 mb-6">Tell us about your needs and we'll create a tailored proposal for your business. Whether it's catering for 10 or services for 1,000, we scale to fit.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Free consultation & quote</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Flexible packages</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #1a5f4a; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #1a5f4a;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #1a5f4a; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #1a5f4a; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Ateliers de la Boucle de la Seine (ATBS)</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Ateliers de la Boucle de la Seine (ATBS). How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "Warm and professional representative of an inclusive workplace that is proud of its mission, knowledgeable about catering options and facility services, and genuinely invested in supporting disabled workers.";
+const LVRG_BIZ = "Ateliers de la Boucle de la Seine (ATBS)";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
