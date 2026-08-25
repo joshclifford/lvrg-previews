@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/preview/ventrus-fr---pages-ventrus--latelier/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Ventrus L'Atelier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#2d2d2d' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Cormorant Garamond', serif; }
+  </style>
+</head>
+<body class="bg-white text-brand">
+
+  <!-- Claim Bar -->
+  <div class="bg-black py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap text-center">
+      <span class="text-white text-sm">This site was built for <strong>Ventrus L'Atelier</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="inline-block bg-amber-500 hover:bg-amber-400 text-black text-xs font-semibold px-4 py-1.5 rounded-full transition-colors">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="font-display text-2xl font-semibold tracking-wide text-brand">Ventrus L'Atelier</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm text-brand/70 hover:text-brand transition-colors">Home</a>
+          <a href="about.html" class="text-sm text-brand/70 hover:text-brand transition-colors">About</a>
+          <a href="services.html" class="text-sm text-brand font-semibold border-b-2 border-amber-500 pb-0.5">Services</a>
+          <a href="contact.html" class="text-sm text-brand/70 hover:text-brand transition-colors">Contact</a>
+          <a href="contact.html" class="bg-brand text-white px-5 py-2.5 text-sm font-medium hover:bg-brand/90 transition-colors">Reserve a Table</a>
+        </div>
+        <button class="md:hidden text-brand" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="md:hidden hidden pt-4 pb-2 space-y-3" id="mobile-menu">
+        <a href="index.html" class="block text-sm text-brand/70 hover:text-brand transition-colors">Home</a>
+        <a href="about.html" class="block text-sm text-brand/70 hover:text-brand transition-colors">About</a>
+        <a href="services.html" class="block text-sm text-brand font-semibold border-l-2 border-amber-500 pl-3">Services</a>
+        <a href="contact.html" class="block text-sm text-brand/70 hover:text-brand transition-colors">Contact</a>
+        <a href="contact.html" class="inline-block bg-brand text-white px-5 py-2.5 text-sm font-medium mt-2">Reserve a Table</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-96 md:h-[50vh] overflow-hidden">
+    <img src="https://cdn.shopify.com/s/files/1/0667/9576/5942/files/Ventrus_l_Atelier_salle.jpg?v=1773241498" alt="Ventrus L'Atelier dining room" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
+    <div class="relative h-full flex items-center justify-center text-center px-6">
+      <div>
+        <h1 class="font-display text-4xl md:text-6xl text-white font-semibold mb-4" style="text-shadow: 0 2px 20px rgba(0,0,0,0.4);">Our Services</h1>
+        <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto" style="text-shadow: 0 1px 10px rgba(0,0,0,0.5);">From intimate lunches to private celebrations, discover every way to experience Ventrus L'Atelier</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Introduction -->
+  <section class="py-16 md:py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-amber-600 text-sm font-medium tracking-widest uppercase">Culinary Experiences</span>
+      <h2 class="font-display text-3xl md:text-5xl mt-4 mb-6">A Menu of Moments</h2>
+      <p class="text-brand/70 text-lg leading-relaxed max-w-3xl mx-auto">Whether you're catching a quick lunch before a show at T2G, lingering over afterwork tapas, or hosting an unforgettable private event, we've crafted services to match every occasion. Each experience is rooted in our commitment to seasonal, locally-sourced ingredients from our rooftop garden and trusted producers.</p>
+      <div class="flex items-center justify-center gap-2 mt-8">
+        <div class="flex text-amber-500">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+        </div>
+        <span class="text-brand/60 text-sm">5★ from 11 Reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Services Grid -->
+  <section class="bg-stone-50 py-16 md:py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-amber-600 text-sm font-medium tracking-widest uppercase">Daily Offerings</span>
+        <h2 class="font-display text-3xl md:text-4xl mt-4">Regular Service Hours</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Lunch Service -->
+        <div class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow group">
+          <div class="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-3">Lunch Service</h3>
+          <p class="text-brand/60 text-sm mb-4">Monday – Saturday</p>
+          <p class="text-brand/70 leading-relaxed">A refined midday pause featuring our seasonal market menu. Perfect for business lunches or a leisurely meal before exploring Gennevilliers and the Théâtre de Gennevilliers.</p>
+        </div>
+
+        <!-- Dinner Service -->
+        <div class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow group">
+          <div class="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-3">Dinner Service</h3>
+          <p class="text-brand/60 text-sm mb-4">Thursday – Friday</p>
+          <p class="text-brand/70 leading-relaxed">An intimate evening experience where our full culinary creativity unfolds. Each dish tells the story of the season, crafted from vegetables harvested from our rooftop garden.</p>
+        </div>
+
+        <!-- Afterwork & Tapas -->
+        <div class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow group">
+          <div class="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-3">Afterwork & Tapas</h3>
+          <p class="text-brand/60 text-sm mb-4">Thursday – Friday, 18h – 19h</p>
+          <p class="text-brand/70 leading-relaxed">Unwind with colleagues or friends over shareable plates and curated wines. A convivial hour designed for connection, conversation, and seasonal small bites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theater Dining Feature -->
+  <section class="py-16 md:py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <span class="text-amber-600 text-sm font-medium tracking-widest uppercase">Culture Meets Cuisine</span>
+          <h2 class="font-display text-3xl md:text-4xl mt-4 mb-6">Pre & Post-Theater Dining</h2>
+          <p class="text-brand/70 leading-relaxed mb-6">Located within the Théâtre de Gennevilliers (T2G), we offer the perfect complement to your cultural evening. Arrive early for a leisurely pre-show dinner, or extend the magic with a late supper after the curtain falls.</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70">Timed service options to match show schedules</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70">Steps from your seat — no rushing between venues</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70">A complete evening of art and gastronomy</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="inline-block bg-brand text-white px-6 py-3 text-sm font-medium hover:bg-brand/90 transition-colors">Reserve for Your Next Show</a>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="https://cdn.shopify.com/s/files/1/0667/9576/5942/files/Facade_exterieur_jour_Ola_Rindal2.jpg?v=1773151368" alt="Ventrus L'Atelier exterior at Théâtre de Gennevilliers" class="w-full h-96 object-cover shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Market Menu -->
+  <section class="bg-brand text-white py-16 md:py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0667/9576/5942/files/Planches_de_carottes_bleuets_arroche_et_soucis_blettes.jpg?v=1773151367" alt="Seasonal dishes with carrots, blueberries, and garden vegetables" class="w-full h-96 object-cover shadow-2xl">
+        </div>
+        <div>
+          <span class="text-amber-400 text-sm font-medium tracking-widest uppercase">Garden to Table</span>
+          <h2 class="font-display text-3xl md:text-4xl mt-4 mb-6">Seasonal Market Menu</h2>
+          <p class="text-white/80 leading-relaxed mb-6">Our menu changes with the rhythms of nature. Vegetables from our rooftop garden at T2G, sourced through short supply chains, form the foundation of every dish. Chef Guillaume Chupeau transforms each season's harvest into creative, accessible cuisine that honors the ingredient.</p>
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div>
+              <p class="text-amber-400 font-display text-3xl mb-1">100%</p>
+              <p class="text-white/60 text-sm">Seasonal Ingredients</p>
+            </div>
+            <div>
+              <p class="text-amber-400 font-display text-3xl mb-1">Local</p>
+              <p class="text-white/60 text-sm">Short Supply Chains</p>
+            </div>
+          </div>
+          <p class="text-white/70 text-sm italic">Menu updates reflect what's freshest — ask your server about today's garden selections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Services -->
+  <section class="py-16 md:py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-amber-600 text-sm font-medium tracking-widest uppercase">Beyond the Everyday</span>
+        <h2 class="font-display text-3xl md:text-4xl mt-4">Special Occasions</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Private Events -->
+        <div class="relative overflow-hidden group">
+          <img src="https://cdn.shopify.com/s/files/1/0667/9576/5942/files/Ventrus-l_Atelier-2.png?v=1773152878" alt="Private dining setup at Ventrus L'Atelier" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <h3 class="font-display text-2xl text-white mb-2">Private Events & Privatization</h3>
+            <p class="text-white/80 text-sm mb-4">Transform our space into your own. From corporate gatherings to milestone celebrations, our team crafts bespoke menus and experiences for groups seeking an exclusive Gennevilliers venue.</p>
+            <a href="contact.html" class="inline-block text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors">Inquire About Private Events →</a>
+          </div>
+        </div>
+
+        <!-- Gift Certificates -->
+        <div class="bg-stone-50 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl mb-3">Gift Certificates</h3>
+          <p class="text-brand/70 leading-relaxed mb-6">Give the gift of an unforgettable culinary experience. Our gift certificates make perfect presents for food lovers, celebrating birthdays, anniversaries, or simply sharing something special.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70 text-sm">Available in custom amounts</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70 text-sm">Beautifully presented</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-brand/70 text-sm">Valid for all services</span>
+            </div>
+          </div>
+          <a href="contact.html" class="inline-block mt-8 text-amber-600 text-sm font-medium hover:text-amber-700 transition-colors">Purchase a Gift Certificate →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-20 md:py-28 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-stone-900"></div>
+    <div class="absolute inset-0 opacity-20" style="background-image: url('https://cdn.shopify.com/s/files/1/0667/9576/5942/files/Ventrus_l_Atelier_salle.jpg?v=1773241498'); background-size: cover; background-position: center;"></div>
+    <div class="relative max-w-3xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-5xl text-white mb-6">Reserve a Table to Experience Seasonal Market Cuisine</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Whether it's a weekday lunch, an afterwork gathering, or a special evening paired with theater, your table awaits at Ventrus L'Atelier in Gennevilliers.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="contact.html" class="bg-amber-500 hover:bg-amber-400 text-brand px-8 py-4 text-sm font-semibold transition-colors">Reserve Your Experience</a>
+        <a href="tel:+33769183965" class="border border-white/30 text-white px-8 py-4 text-sm font-medium hover:bg-white/10 transition-colors">Call +33 7 69 18 39 65</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <h3 class="font-display text-2xl mb-4">Ventrus L'Atelier</h3>
+          <p class="text-white/60 leading-relaxed mb-6 max-w-md">Market-driven cuisine at the heart of Gennevilliers, where seasonal ingredients from our rooftop garden meet creative French cooking.</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/lesventrus" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/restaurant-ventrus-avec-vue" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-medium mb-4 text-white/90">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-white/60 hover:text-white transition-colors text-sm">Home</a></li>
+            <li><a href="about.html" class="text-white/60 hover:text-white transition-colors text-sm">About</a></li>
+            <li><a href="services.html" class="text-white font-medium text-sm">Services</a></li>
+            <li><a href="contact.html" class="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-medium mb-4 text-white/90">Visit Us</h4>
+          <address class="not-italic text-white/60 text-sm space-y-3">
+            <p>41 Av. des Grésillons<br>92600 Gennevilliers, France</p>
+            <p><a href="tel:+33769183965" class="hover:text-white transition-colors">+33 7 69 18 39 65</a></p>
+            <div class="pt-2">
+              <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Hours</p>
+              <p>Lunch: Mon–Sat</p>
+              <p>Afterwork: Thu–Fri, 18h–19h</p>
+              <p>Dinner: Thu–Fri</p>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p class="text-white/40 text-sm">© 2024 Ventrus L'Atelier. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #2d2d2d; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #2d2d2d;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #2d2d2d; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #2d2d2d; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Ventrus L'Atelier</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Ventrus L'Atelier. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "A knowledgeable, friendly Parisian restaurant associate who is passionate about seasonal cuisine, local sourcing, and cultural integration, speaking with warmth about the theater and chef's vision.";
+const LVRG_BIZ = "Ventrus L'Atelier";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
