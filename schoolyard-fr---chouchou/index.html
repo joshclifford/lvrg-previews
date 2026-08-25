@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/preview/schoolyard-fr---chouchou/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chouchou | Brasserie de Quartier à Asnières-sur-Seine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#D4A574' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .font-heading { font-family: 'Cormorant Garamond', serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="font-body bg-stone-50 text-stone-800">
+
+  <!-- CLAIM BAR -->
+  <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
+      <span>This site was built for <strong class="text-brand">Chouchou</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="bg-brand text-black px-4 py-1 rounded-full text-xs font-semibold hover:bg-amber-400 transition-colors">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-heading text-3xl font-bold text-stone-900">Chouchou</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-brand font-medium border-b-2 border-brand pb-1">Home</a>
+        <a href="about.html" class="text-stone-600 hover:text-brand transition-colors">About</a>
+        <a href="services.html" class="text-stone-600 hover:text-brand transition-colors">Services</a>
+        <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors">Contact</a>
+      </div>
+      <a href="contact.html" class="bg-brand text-white px-6 py-2.5 rounded-full font-medium hover:bg-amber-600 transition-colors shadow-lg shadow-brand/25">Reserve a Table</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative h-screen min-h-[700px] max-h-[900px] overflow-hidden">
+    <img src="https://www.schoolyard.fr/img/restaurants/3/intro-1.jpg" alt="Chouchou restaurant ambiance" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+      <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight max-w-5xl" style="text-shadow: 0 4px 30px rgba(0,0,0,0.5);">
+        The table your neighbors<br>have been keeping secret
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-white/90 max-w-2xl font-light" style="text-shadow: 0 2px 15px rgba(0,0,0,0.5);">
+        Fresh, homemade cuisine in the heart of Quartier de la Paix — where every meal feels like coming home.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="contact.html" class="bg-brand text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-amber-600 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">Book Your Table</a>
+        <a href="services.html" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-medium border border-white/30 hover:bg-white/20 transition-all">View Our Services</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-8 h-8 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section class="bg-stone-900 py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+      <div class="flex items-center gap-3">
+        <div class="flex text-brand">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+        </div>
+        <span class="text-white text-xl font-heading font-semibold">4.8★</span>
+        <span class="text-stone-400">from 1,225 reviews</span>
+      </div>
+      <div class="h-8 w-px bg-stone-700 hidden md:block"></div>
+      <p class="text-stone-300 italic font-heading text-lg">"Venez chiller au Chouchou"</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-brand font-medium uppercase tracking-widest text-sm">Bienvenue</span>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-stone-900 mt-4 leading-tight">More than a restaurant.<br>A neighborhood ritual.</h2>
+        <p class="mt-6 text-lg text-stone-600 leading-relaxed">
+          Nestled on Avenue de la Paix in Asnières-sur-Seine, Chouchou has become the heartbeat of our quartier. Whether you're stopping by for a quick lunch between meetings, lingering over dinner with friends, or savoring a lazy Sunday brunch — this is your place.
+        </p>
+        <p class="mt-4 text-lg text-stone-600 leading-relaxed">
+          Our kitchen crafts everything fresh, in-house, daily. No shortcuts. No compromises. Just honest, homemade French brasserie cuisine that brings people together.
+        </p>
+        <a href="about.html" class="inline-flex items-center gap-2 mt-8 text-brand font-medium hover:gap-3 transition-all">
+          Discover Our Story
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <img src="https://www.schoolyard.fr/img/restaurants/3/intro-2.jpg" alt="Chouchou interior" class="rounded-2xl shadow-2xl">
+        <div class="absolute -bottom-6 -left-6 bg-brand text-white p-6 rounded-xl shadow-xl">
+          <p class="font-heading text-4xl font-bold">7 jours</p>
+          <p class="text-sm mt-1">Open all week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES/MENU -->
+  <section class="py-24 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand font-medium uppercase tracking-widest text-sm">What We Offer</span>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-stone-900 mt-4">Every occasion, covered</h2>
+        <p class="mt-6 text-lg text-stone-600">From power lunches to celebratory dinners, we've designed spaces and menus for how you actually live.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Lunch & Dinner -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://www.schoolyard.fr/img/restaurants/3/menu-1.jpg" alt="Fresh dishes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-bold text-stone-900">Lunch & Dinner</h3>
+            <p class="mt-3 text-stone-600">Fresh, seasonal plates prepared daily. Our market-driven menu changes with what's best — because compromise isn't on our list.</p>
+            <p class="mt-4 text-sm text-brand font-medium">Mon-Fri 12:00-00:00 • Sat 12:00-15:00 & 18:00-00:00</p>
+          </div>
+        </div>
+        <!-- Weekend Brunch -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://www.schoolyard.fr/img/restaurants/3/menu-2.jpg" alt="Brunch spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-bold text-stone-900">Weekend Brunch</h3>
+            <p class="mt-3 text-stone-600">Sunday mornings were made for this. Sweet, savory, and everything in between — plus bottomless coffee for the late risers.</p>
+            <p class="mt-4 text-sm text-brand font-medium">Sunday 11:00-15:00</p>
+          </div>
+        </div>
+        <!-- Bar & Private Events -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+          <div class="h-56 bg-gradient-to-br from-stone-800 to-stone-900 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-bold text-stone-900">Bar & Private Events</h3>
+            <p class="mt-3 text-stone-600">Craft cocktails at our bar, or book our spaces for your next celebration. Cozy dining room, summer terrace, winter terrace — pick your vibe.</p>
+            <p class="mt-4 text-sm text-brand font-medium">Groups welcome • Custom menus available</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="services.html" class="inline-flex items-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors">
+          Explore All Services
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS / AS SEEN IN -->
+  <section class="py-16 bg-white border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-center text-stone-500 uppercase tracking-widest text-sm mb-8">Featured On</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <a href="https://www.thefork.com" target="_blank" rel="noopener" class="text-stone-400 hover:text-brand transition-colors">
+          <span class="font-heading text-2xl font-bold">TheFork</span>
+        </a>
+        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener" class="text-stone-400 hover:text-brand transition-colors">
+          <span class="font-heading text-2xl font-bold">TripAdvisor</span>
+        </a>
+        <a href="https://www.instagram.com/chouchou_asnieres" target="_blank" rel="noopener" class="text-stone-400 hover:text-brand transition-colors">
+          <span class="font-heading text-2xl font-bold">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-24 bg-stone-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://www.schoolyard.fr/img/restaurants/3/intro-1.jpg" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-4xl md:text-6xl font-bold text-white leading-tight">Your table is waiting on Avenue de la Paix</h2>
+      <p class="mt-6 text-xl text-stone-300 max-w-2xl mx-auto">
+        Book your table to experience fresh homemade cuisine and our warm community atmosphere. No PDFs, no friction — just great food and even better company.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-brand text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-amber-600 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          Reserve Your Table Now
+        </a>
+        <a href="tel:+33140863087" class="bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-lg font-medium border border-white/30 hover:bg-white/20 transition-all">
+          Call +33 1 40 86 30 87
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="index.html" class="font-heading text-3xl font-bold text-white">Chouchou</a>
+          <p class="mt-4 text-sm leading-relaxed">Your neighborhood brasserie in the heart of Asnières-sur-Seine. Fresh, homemade, always welcoming.</p>
+          <a href="https://www.instagram.com/chouchou_asnieres" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-6 text-brand hover:text-amber-400 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @chouchou_asnieres
+          </a>
+        </div>
+        <!-- Navigation -->
+        <div>
+          <h4 class="font-heading text-lg font-semibold text-white mb-4">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-brand hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Hours -->
+        <div>
+          <h4 class="font-heading text-lg font-semibold text-white mb-4">Hours</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex justify-between"><span>Monday - Friday</span><span class="text-stone-300">12:00 - 00:00</span></li>
+            <li class="flex justify-between"><span>Saturday</span><span class="text-stone-300">12:00-15:00 & 18:00-00:00</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span class="text-stone-300">11:00 - 15:00</span></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="font-heading text-lg font-semibold text-white mb-4">Visit Us</h4>
+          <address class="not-italic text-sm space-y-3">
+            <p>11 Av. de la Paix<br>92600 Asnières-sur-Seine<br>France</p>
+            <p><a href="tel:+33140863087" class="text-brand hover:text-amber-400 transition-colors">+33 1 40 86 30 87</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-stone-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm">© 2024 Chouchou. All rights reserved.</p>
+        <p class="text-sm">Built with care by <a href="https://theresandiego.com/advertise/" class="text-brand hover:text-amber-400 transition-colors">LVRG Agency</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #D4A574; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #D4A574;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #D4A574; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #D4A574; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Chouchou</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Chouchou. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "A warm, friendly local brasserie host who knows the regulars by name and speaks with genuine enthusiasm about fresh, homemade cuisine and creating memorable neighborhood moments.";
+const LVRG_BIZ = "Chouchou";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
