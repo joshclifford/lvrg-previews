@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/preview/darkhorsecoffeeroasters-com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Dark Horse Coffee Roasters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B4513' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'DM Serif Display', serif; }
+  </style>
+</head>
+<body class="bg-amber-50 text-stone-800">
+  
+  <!-- Claim Bar -->
+  <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-4 text-sm flex-wrap">
+      <span>This site was built for <strong>Dark Horse Coffee Roasters</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/advertise/" class="bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-semibold hover:bg-yellow-400 transition-colors">Claim This Site →</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl font-bold text-brand">Dark Horse Coffee</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-stone-600 hover:text-brand transition-colors">Home</a>
+          <a href="about.html" class="text-stone-600 hover:text-brand transition-colors">About</a>
+          <a href="services.html" class="text-brand font-semibold border-b-2 border-brand pb-1">Services</a>
+          <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors">Contact</a>
+          <a href="services.html#subscription" class="bg-brand text-white px-6 py-2.5 rounded-full hover:bg-amber-800 transition-colors font-medium">Subscribe Now</a>
+        </div>
+        <button class="md:hidden text-stone-600" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="text-stone-600 hover:text-brand transition-colors">Home</a>
+          <a href="about.html" class="text-stone-600 hover:text-brand transition-colors">About</a>
+          <a href="services.html" class="text-brand font-semibold">Services</a>
+          <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors">Contact</a>
+          <a href="services.html#subscription" class="bg-brand text-white px-6 py-2.5 rounded-full hover:bg-amber-800 transition-colors font-medium text-center">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-96 overflow-hidden">
+    <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Dark Horse Coffee Subscription" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-900/50"></div>
+    <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl text-white mb-4">What We Offer</h1>
+        <p class="text-xl text-amber-100">From single-origin treasures to expertly crafted blends, discover the full spectrum of our San Diego roasted coffees and services.</p>
+        <div class="mt-6 flex items-center gap-4">
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+            <span class="text-yellow-400 text-lg">★</span>
+            <span class="text-white font-semibold">4.6</span>
+            <span class="text-amber-100 text-sm">from 668 reviews</span>
+          </div>
+          <div class="text-amber-100 text-sm">34K+ Instagram followers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl text-stone-800 mb-4">Our Coffee Services</h2>
+        <p class="text-lg text-stone-600 max-w-2xl mx-auto">Every bean tells a story. We source directly from farmers in Guatemala, Ethiopia, Colombia, and Brazil to bring you coffees with character and complexity.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Single-Origin Coffees -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Single-Origin Coffees</h3>
+          <p class="text-stone-600 mb-4">Experience the distinct terroir of each region. Our single-origins from Guatemala offer chocolate and citrus notes, while Ethiopian selections bring bright, fruity complexity. Colombian coffees deliver balanced sweetness, and Brazilian beans provide nutty, smooth profiles.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• Guatemala — Chocolate, citrus undertones</li>
+            <li>• Ethiopia — Bright, fruity, floral</li>
+            <li>• Colombia — Balanced, caramel sweetness</li>
+            <li>• Brazil — Nutty, smooth, low acidity</li>
+          </ul>
+        </div>
+
+        <!-- Coffee Blends -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Artisan Coffee Blends</h3>
+          <p class="text-stone-600 mb-4">Our master roasters craft signature blends that combine the best characteristics of multiple origins. Each blend is designed to deliver a consistent, memorable cup whether you're brewing at home or serving in a cafe.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• Espresso blends — Rich, balanced shots</li>
+            <li>• House blends — Everyday excellence</li>
+            <li>• Seasonal offerings — Limited releases</li>
+            <li>• Half-caff options available</li>
+          </ul>
+        </div>
+
+        <!-- Grind Options -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Multiple Grind Options</h3>
+          <p class="text-stone-600 mb-4">Not everyone has a grinder at home, and we believe everyone deserves perfectly ground coffee. We offer precise grinds tailored to your specific brewing method for optimal extraction.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• Whole Bean — Maximum freshness</li>
+            <li>• French Press — Coarse grind</li>
+            <li>• Drip / Pour Over — Medium grind</li>
+            <li>• Aeropress — Fine-medium grind</li>
+            <li>• Espresso — Extra fine grind</li>
+          </ul>
+        </div>
+
+        <!-- Coffee Shop Locations -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Coffee Shop Locations</h3>
+          <p class="text-stone-600 mb-4">Visit us in San Diego or Kaua'i, HI for the full Dark Horse experience. Our cafes are designed to be your neighborhood gathering spot — where great coffee meets warm hospitality.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• San Diego, CA — Adams Ave flagship</li>
+            <li>• Kaua'i, HI — Island paradise location</li>
+            <li>• Expert barista-crafted drinks</li>
+            <li>• Cozy, welcoming atmosphere</li>
+          </ul>
+        </div>
+
+        <!-- Wholesale Distribution -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Wholesale Distribution</h3>
+          <p class="text-stone-600 mb-4">Partner with Dark Horse to bring exceptional coffee to your cafe, restaurant, or office. We provide training, equipment support, and consistent quality that your customers will love.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• Competitive wholesale pricing</li>
+            <li>• Barista training available</li>
+            <li>• Equipment consultation</li>
+            <li>• Flexible delivery schedules</li>
+          </ul>
+        </div>
+
+        <!-- Decaf & Half-Caff -->
+        <div class="bg-amber-50 rounded-2xl p-8 hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/20 transition-colors">
+            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl text-stone-800 mb-3">Decaf & Half-Caff Options</h3>
+          <p class="text-stone-600 mb-4">Great coffee shouldn't require caffeine. Our decaf offerings use the Swiss Water Process to remove caffeine while preserving the complex flavors you love. Half-caff blends give you the best of both worlds.</p>
+          <ul class="text-sm text-stone-500 space-y-1">
+            <li>• Swiss Water Process decaf</li>
+            <li>• Full flavor, no compromise</li>
+            <li>• Half-caff custom blends</li>
+            <li>• Perfect for any time of day</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription Section -->
+  <section id="subscription" class="py-20 bg-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-amber-500/20 text-amber-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4">Most Popular</span>
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Roaster's Choice Subscription</h2>
+        <p class="text-lg text-stone-300 max-w-2xl mx-auto">Let our expert roasters curate your coffee journey. Each shipment brings you freshly roasted selections chosen for their exceptional quality and unique character.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1 Bag -->
+        <div class="bg-stone-700/50 rounded-2xl p-6 text-center hover:bg-stone-700 transition-colors group">
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Single bag subscription" class="w-full h-40 object-cover rounded-xl mb-6">
+          <h3 class="text-xl text-white mb-2">The Sampler</h3>
+          <p class="text-stone-400 text-sm mb-4">1 bag per shipment</p>
+          <p class="text-amber-300 text-sm">Perfect for trying new origins</p>
+        </div>
+
+        <!-- 2 Bags -->
+        <div class="bg-stone-700/50 rounded-2xl p-6 text-center hover:bg-stone-700 transition-colors group">
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/4c4c37ff-5cbe-406c-ad11-0d9c3f6ba0fb/Subs_TwoBags_ProductImage.jpg" alt="Two bag subscription" class="w-full h-40 object-cover rounded-xl mb-6">
+          <h3 class="text-xl text-white mb-2">The Duo</h3>
+          <p class="text-stone-400 text-sm mb-4">2 bags per shipment</p>
+          <p class="text-amber-300 text-sm">Great for couples or variety lovers</p>
+        </div>
+
+        <!-- 3 Bags -->
+        <div class="bg-amber-700/30 border-2 border-amber-500 rounded-2xl p-6 text-center relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-stone-900 px-3 py-1 rounded-full text-xs font-bold">BEST VALUE</span>
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/88a0ac3e-0bc5-44e5-a47f-703a67bbbae4/Subs_ThreeBags_ProductImage.jpg" alt="Three bag subscription" class="w-full h-40 object-cover rounded-xl mb-6">
+          <h3 class="text-xl text-white mb-2">The Explorer</h3>
+          <p class="text-stone-400 text-sm mb-4">3 bags per shipment</p>
+          <p class="text-amber-300 text-sm">Our most popular choice</p>
+        </div>
+
+        <!-- 4 Bags -->
+        <div class="bg-stone-700/50 rounded-2xl p-6 text-center hover:bg-stone-700 transition-colors group">
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/17968c9c-a86c-4433-90bb-3578ecf59870/Subs_FourBags_ProductImage.jpg" alt="Four bag subscription" class="w-full h-40 object-cover rounded-xl mb-6">
+          <h3 class="text-xl text-white mb-2">The Enthusiast</h3>
+          <p class="text-stone-400 text-sm mb-4">4 bags per shipment</p>
+          <p class="text-amber-300 text-sm">For serious coffee lovers</p>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-stone-700/30 rounded-2xl p-8 max-w-3xl mx-auto">
+        <h3 class="text-xl text-white mb-4 text-center">What Makes Roaster's Choice Special</h3>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div>
+            <div class="text-3xl mb-2">🌱</div>
+            <p class="text-stone-300 text-sm">Direct trade beans from farmers we know personally</p>
+          </div>
+          <div>
+            <div class="text-3xl mb-2">📦</div>
+            <p class="text-stone-300 text-sm">Roasted fresh and shipped within 48 hours</p>
+          </div>
+          <div>
+            <div class="text-3xl mb-2">📝</div>
+            <p class="text-stone-300 text-sm">Detailed tasting notes with every shipment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-brand to-amber-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl text-white mb-6">Ready to Discover Your New Favorite Coffee?</h2>
+      <p class="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">Start a Roaster's Choice subscription and let our experts curate exceptional coffees for you each month. Skip the guesswork and enjoy the adventure.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="services.html#subscription" class="bg-white text-brand px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-50 transition-colors shadow-lg">Start Your Subscription</a>
+        <a href="contact.html" class="text-white border-2 border-white/50 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+      <p class="mt-8 text-amber-200 text-sm">Join 668+ happy customers who've rated us 4.6 stars</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold text-white mb-4">Dark Horse Coffee Roasters</h3>
+          <p class="text-stone-400 mb-6 max-w-md">Specialty coffee roasters in San Diego, sourcing exceptional beans and roasting them to perfection since day one.</p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
+            </a>
+            <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.58-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.65.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.27.2-6.78,2.71-7,7C0,8.33,0,8.74,0,12s0,3.67.07,4.95c.2,4.27,2.71,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.27-.2,6.78-2.71,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.27-2.71-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About</a></li>
+            <li><a href="services.html" class="text-amber-400 font-medium">Services</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Visit Us</h4>
+          <address class="not-italic text-stone-400 space-y-2">
+            <p>3330 Adams Ave</p>
+            <p>San Diego, CA 92116</p>
+            <p class="pt-2"><a href="tel:+16193446962" class="hover:text-amber-400 transition-colors">(619) 344-6962</a></p>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-stone-800 mt-12 pt-8 text-center text-stone-500 text-sm">
+        <p>&copy; 2025 Dark Horse Coffee Roasters. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- LVRG AI Chat Widget -->
+<style>
+  #lvrg-chat-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #8B4513; color: #000;
+    border: none; cursor: pointer; z-index: 2147483647;
+    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  #lvrg-chat-btn:hover { transform: scale(1.1); }
+  #lvrg-chat-panel {
+    position: fixed; bottom: 92px; right: 24px;
+    width: 340px; max-height: 480px;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; z-index: 2147483647;
+    display: none; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #lvrg-chat-panel.open { display: flex; }
+  #lvrg-chat-header {
+    padding: 14px 16px; background: #8B4513;
+    font-weight: 700; font-size: 13px; color: #000;
+  }
+  #lvrg-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .lvrg-msg {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px;
+    font-size: 13px; line-height: 1.4;
+  }
+  .lvrg-msg.bot {
+    background: #27272a; color: #e4e4e7; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .lvrg-msg.user {
+    background: #8B4513; color: #000; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #lvrg-chat-input-row {
+    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
+  }
+  #lvrg-chat-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    color: #fff; outline: none;
+  }
+  #lvrg-chat-send {
+    background: #8B4513; border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
+  }
+</style>
+
+<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
+
+<div id="lvrg-chat-panel">
+  <div id="lvrg-chat-header">Chat with Dark Horse Coffee Roasters</div>
+  <div id="lvrg-chat-messages">
+    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Dark Horse Coffee Roasters. How can I help you today?</div>
+  </div>
+  <div id="lvrg-chat-input-row">
+    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
+    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
+  </div>
+</div>
+
+<script>
+const LVRG_PERSONA = "Knowledgeable coffee enthusiast who is passionate about direct trade sourcing and can recommend the best brew method and roast level for each customer's preferences.";
+const LVRG_BIZ = "Dark Horse Coffee Roasters";
+const LVRG_BOOKING = "https://theresandiego.com/advertise/";
+let lvrgHistory = [];
+
+async function lvrgSend() {
+  const inp = document.getElementById('lvrg-chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  lvrgAddMsg(msg, 'user');
+  lvrgHistory.push({"role":"user","content":msg});
+  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      messages: lvrgHistory,
+      persona: LVRG_PERSONA,
+      business_name: LVRG_BIZ,
+      booking_url: LVRG_BOOKING
+    })
+  });
+  const data = await resp.json();
+  const reply = data.reply || "Let me connect you with our team!";
+  lvrgHistory.push({"role":"assistant","content":reply});
+  lvrgAddMsg(reply, 'bot');
+}
+
+function lvrgAddMsg(text, role) {
+  const msgs = document.getElementById('lvrg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'lvrg-msg ' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+</body>
+</html>
