@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Dark Horse Coffee Roasters</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B4513' } } } }</script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B0000' } } } }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -21,111 +21,130 @@
   <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm flex-wrap">
       <span>This site was built for <strong>Dark Horse Coffee Roasters</strong> by LVRG Agency</span>
-      <a href="https://theresandiego.com/advertise/" class="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full text-xs transition-colors">Claim This Site →</a>
+      <a href="https://theresandiego.com/letschat" class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-semibold hover:bg-yellow-400 transition-colors">Claim This Site →</a>
     </div>
   </div>
 
   <!-- Navigation -->
-  <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
+  <nav class="bg-amber-50/95 backdrop-blur-sm sticky top-10 z-40 border-b border-amber-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="text-2xl font-bold text-brand" style="font-family: 'DM Serif Display', serif;">Dark Horse Coffee</a>
-        <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-2xl font-bold text-brand">
+          <span class="font-serif">Dark Horse</span>
+          <span class="block text-xs tracking-widest uppercase text-stone-600 font-sans">Coffee Roasters</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
           <a href="index.html" class="text-stone-600 hover:text-brand transition-colors font-medium">Home</a>
           <a href="about.html" class="text-stone-600 hover:text-brand transition-colors font-medium">About</a>
           <a href="services.html" class="text-stone-600 hover:text-brand transition-colors font-medium">Services</a>
           <a href="contact.html" class="text-brand font-semibold border-b-2 border-brand pb-1">Contact</a>
+          <a href="services.html" class="bg-brand text-white px-6 py-2.5 rounded-full hover:bg-red-900 transition-colors font-semibold">Subscribe Now</a>
         </div>
-        <a href="services.html" class="hidden md:inline-block bg-brand hover:bg-amber-800 text-white px-6 py-2.5 rounded-full font-semibold transition-colors">Subscribe Now</a>
         <button class="md:hidden text-stone-700" id="mobile-menu-btn">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
         </button>
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+    <div class="hidden md:hidden bg-amber-50 border-t border-amber-200" id="mobile-menu">
       <div class="px-4 py-4 space-y-3">
-        <a href="index.html" class="block text-stone-600 hover:text-brand font-medium">Home</a>
-        <a href="about.html" class="block text-stone-600 hover:text-brand font-medium">About</a>
-        <a href="services.html" class="block text-stone-600 hover:text-brand font-medium">Services</a>
+        <a href="index.html" class="block text-stone-600 hover:text-brand transition-colors font-medium">Home</a>
+        <a href="about.html" class="block text-stone-600 hover:text-brand transition-colors font-medium">About</a>
+        <a href="services.html" class="block text-stone-600 hover:text-brand transition-colors font-medium">Services</a>
         <a href="contact.html" class="block text-brand font-semibold">Contact</a>
-        <a href="services.html" class="block bg-brand text-white px-6 py-2.5 rounded-full font-semibold text-center">Subscribe Now</a>
+        <a href="services.html" class="block bg-brand text-white px-6 py-2.5 rounded-full hover:bg-red-900 transition-colors font-semibold text-center">Subscribe Now</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative h-80 md:h-96 overflow-hidden">
-    <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Dark Horse Coffee" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-900/40"></div>
-    <div class="relative z-10 h-full flex items-center">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl text-white max-w-2xl leading-tight">Let's Connect Over Coffee</h1>
-        <p class="mt-4 text-xl text-amber-100 max-w-xl">Whether you have questions, want to visit our San Diego roastery, or need help finding your perfect roast — we're here for you.</p>
-      </div>
+  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Dark Horse Coffee" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/85 via-stone-900/70 to-stone-900/50"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-20">
+      <h1 class="text-4xl md:text-6xl text-white mb-6 leading-tight">Let's Connect</h1>
+      <p class="text-xl md:text-2xl text-amber-100 max-w-2xl mx-auto">Whether you're stopping by our Adams Avenue area roastery or reaching out from afar, we'd love to hear from you.</p>
     </div>
   </section>
 
   <!-- Contact Information Section -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-        
         <!-- Contact Details -->
         <div>
-          <h2 class="text-3xl md:text-4xl text-stone-800 mb-8">Visit Our San Diego Roastery</h2>
-          <p class="text-stone-600 text-lg mb-10 leading-relaxed">Stop by our Adams Avenue location to experience freshly roasted specialty coffee. Our team loves helping customers discover new favorites — from bright Ethiopian naturals to rich Colombian blends.</p>
+          <h2 class="text-3xl md:text-4xl text-stone-800 mb-8">Get in Touch</h2>
+          <p class="text-lg text-stone-600 mb-10">Questions about our subscriptions, wholesale partnerships, or just want to chat about coffee? We're here for it.</p>
           
-          <div class="space-y-6">
-            <!-- Address -->
+          <div class="space-y-8">
+            <!-- Location -->
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-stone-800 text-lg">Location</h3>
-                <p class="text-stone-600">3330 Adams Ave<br>San Diego, CA 92116</p>
-                <a href="https://www.mapquest.com/directions/to/us/california/dark-horse-coffee-roasters-283995681" target="_blank" rel="noopener" class="inline-flex items-center text-brand hover:text-amber-700 font-medium mt-2 transition-colors">
-                  Get Directions
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </a>
+                <h3 class="font-semibold text-lg text-stone-800 mb-1">Visit Our Roastery</h3>
+                <p class="text-stone-600">811 25th St Unit 100<br>San Diego, CA 92102</p>
+                <p class="text-sm text-stone-500 mt-1">Located in the heart of the Adams Avenue area</p>
               </div>
             </div>
             
             <!-- Phone -->
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-stone-800 text-lg">Phone</h3>
-                <a href="tel:+16193446962" class="text-stone-600 hover:text-brand transition-colors">(619) 344-6962</a>
-                <p class="text-stone-500 text-sm mt-1">Call for wholesale inquiries or subscription help</p>
+                <h3 class="font-semibold text-lg text-stone-800 mb-1">Give Us a Call</h3>
+                <a href="tel:+16193440500" class="text-brand hover:text-red-900 transition-colors text-lg font-medium">(619) 344-0500</a>
               </div>
             </div>
             
-            <!-- Social -->
+            <!-- Email -->
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+              <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-stone-800 text-lg">Follow Along</h3>
-                <p class="text-stone-600 mb-3">Join 34K+ coffee lovers on Instagram</p>
-                <div class="flex gap-3">
-                  <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-brand hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <h3 class="font-semibold text-lg text-stone-800 mb-1">Drop Us a Line</h3>
+                <a href="mailto:hello@darkhorsecoffeeroasters.com" class="text-brand hover:text-red-900 transition-colors">hello@darkhorsecoffeeroasters.com</a>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg text-stone-800 mb-2">Follow Along</h3>
+                <div class="flex gap-4">
+                  <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-all text-stone-600">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                   </a>
-                  <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener" class="w-10 h-10 bg-brand hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-all text-stone-600">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Trust Badge -->
-          <div class="mt-10 p-6 bg-amber-50 rounded-2xl border border-amber-100">
+
+          <!-- Trust Signal -->
+          <div class="mt-10 p-6 bg-amber-50 rounded-2xl">
             <div class="flex items-center gap-3">
               <div class="flex text-yellow-500">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -134,53 +153,46 @@
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
-              <span class="text-stone-800 font-semibold">4.6 Stars</span>
-              <span class="text-stone-500">from 668 reviews</span>
+              <span class="text-stone-700 font-semibold">4.6★ from 549 reviews</span>
             </div>
-            <p class="text-stone-600 mt-2 text-sm">Trusted by San Diego coffee lovers for exceptional specialty roasts</p>
+            <p class="text-stone-600 text-sm mt-2">Join hundreds of happy coffee lovers in San Diego and beyond.</p>
           </div>
         </div>
-        
+
         <!-- Contact Form -->
-        <div class="bg-stone-50 rounded-3xl p-8 md:p-10">
-          <h3 class="text-2xl text-stone-800 mb-2">Send Us a Message</h3>
-          <p class="text-stone-600 mb-8">Questions about our coffees, subscriptions, or wholesale? We'd love to hear from you.</p>
-          
+        <div class="bg-stone-50 rounded-3xl p-8 lg:p-10">
+          <h3 class="text-2xl text-stone-800 mb-6">Send Us a Message</h3>
           <form class="space-y-6">
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
-                <label for="firstName" class="block text-sm font-medium text-stone-700 mb-2">First Name</label>
-                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all bg-white" placeholder="Your first name">
+                <label for="first-name" class="block text-sm font-medium text-stone-700 mb-2">First Name</label>
+                <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white" placeholder="Your first name">
               </div>
               <div>
-                <label for="lastName" class="block text-sm font-medium text-stone-700 mb-2">Last Name</label>
-                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all bg-white" placeholder="Your last name">
+                <label for="last-name" class="block text-sm font-medium text-stone-700 mb-2">Last Name</label>
+                <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white" placeholder="Your last name">
               </div>
             </div>
-            
             <div>
               <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all bg-white" placeholder="you@example.com">
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white" placeholder="you@example.com">
             </div>
-            
             <div>
               <label for="subject" class="block text-sm font-medium text-stone-700 mb-2">Subject</label>
-              <select id="subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all bg-white">
+              <select id="subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white">
                 <option value="">Select a topic</option>
                 <option value="subscription">Subscription Questions</option>
-                <option value="wholesale">Wholesale Inquiries</option>
-                <option value="coffee">Coffee Recommendations</option>
-                <option value="visit">Planning a Visit</option>
+                <option value="wholesale">Wholesale Inquiry</option>
+                <option value="general">General Question</option>
+                <option value="feedback">Feedback</option>
                 <option value="other">Other</option>
               </select>
             </div>
-            
             <div>
               <label for="message" class="block text-sm font-medium text-stone-700 mb-2">Message</label>
-              <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all bg-white resize-none" placeholder="Tell us what's on your mind..."></textarea>
+              <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all bg-white resize-none" placeholder="Tell us what's on your mind..."></textarea>
             </div>
-            
-            <button type="submit" class="w-full bg-brand hover:bg-amber-800 text-white font-semibold py-4 rounded-xl transition-colors">Send Message</button>
+            <button type="submit" class="w-full bg-brand text-white py-4 px-8 rounded-full font-semibold hover:bg-red-900 transition-colors text-lg">Send Message</button>
           </form>
         </div>
       </div>
@@ -191,29 +203,37 @@
   <section class="py-16 bg-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl text-stone-800 mb-4">Find Us on Adams Ave</h2>
-        <p class="text-stone-600 text-lg max-w-2xl mx-auto">Located in the heart of San Diego's Normal Heights neighborhood — easy parking and a warm welcome await.</p>
+        <h2 class="text-3xl md:text-4xl text-stone-800 mb-4">Find Us in San Diego</h2>
+        <p class="text-lg text-stone-600 max-w-2xl mx-auto">Our roastery is nestled in the Adams Avenue area, where we craft each batch with care. Stop by to pick up your favorite beans or just say hello.</p>
       </div>
-      
-      <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-        <div class="aspect-video bg-stone-200 relative">
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="aspect-video relative bg-stone-200">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.8475!2d-117.1291!3d32.7669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3330+Adams+Ave%2C+San+Diego%2C+CA+92116!5e0!3m2!1sen!2sus!4v1234567890"
-            class="absolute inset-0 w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.6789!2d-117.1284!3d32.7234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954f3!2s811%2025th%20St%20Unit%20100%2C%20San%20Diego%2C%20CA%2092102!5e0!3m2!1sen!2sus!4v1699000000000!5m2!1sen!2sus" 
+            class="w-full h-full absolute inset-0"
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <p class="font-semibold text-stone-800 text-lg">Dark Horse Coffee Roasters</p>
-            <p class="text-stone-600">3330 Adams Ave, San Diego, CA 92116</p>
+        <div class="p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand/10 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-stone-800">811 25th St Unit 100</p>
+              <p class="text-stone-600">San Diego, CA 92102</p>
+            </div>
           </div>
-          <a href="https://www.mapquest.com/directions/to/us/california/dark-horse-coffee-roasters-283995681" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-brand hover:bg-amber-800 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+          <a href="https://maps.google.com/?q=811+25th+St+Unit+100+San+Diego+CA+92102" target="_blank" rel="noopener" class="bg-stone-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-stone-700 transition-colors flex items-center gap-2">
             Get Directions
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -221,51 +241,55 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl text-stone-800 mb-4">Common Questions</h2>
-        <p class="text-stone-600 text-lg">Quick answers about our coffees, subscriptions, and visiting us in San Diego</p>
+        <p class="text-lg text-stone-600">Quick answers about subscriptions and orders.</p>
       </div>
-      
       <div class="space-y-4">
         <details class="group bg-amber-50 rounded-2xl">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-            <span class="font-semibold text-stone-800">What makes Dark Horse coffees special?</span>
-            <svg class="w-5 h-5 text-brand group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="font-semibold text-lg text-stone-800">How does the Roaster's Choice subscription work?</span>
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
           </summary>
           <div class="px-6 pb-6 text-stone-600">
-            <p>We source direct trade coffees from exceptional farms in Guatemala, Ethiopia, Colombia, Brazil, and beyond. Each origin is carefully roasted to highlight its unique flavor profile — from bright, fruity naturals to rich, chocolatey blends. Our small-batch approach ensures freshness you can taste.</p>
+            <p>Our roasting team curates unique coffee selections based on current quality and availability. Each month, you'll receive freshly roasted beans chosen specifically for their exceptional flavor profiles. It's like getting a surprise gift from coffee-obsessed friends.</p>
           </div>
         </details>
-        
         <details class="group bg-amber-50 rounded-2xl">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-            <span class="font-semibold text-stone-800">How does the Roaster's Choice subscription work?</span>
-            <svg class="w-5 h-5 text-brand group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="font-semibold text-lg text-stone-800">Can I choose my grind preference?</span>
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
           </summary>
           <div class="px-6 pb-6 text-stone-600">
-            <p>With Roaster's Choice, our team selects freshly roasted coffees based on what's tasting exceptional each shipment. You'll discover new single-origins and seasonal offerings — perfect for adventurous coffee lovers who trust our expertise. Choose from 1 to 4 bags per delivery.</p>
+            <p>Absolutely! We offer custom grind options including whole bean, French press, drip, pour over, Aeropress, and espresso. Just let us know your preference when ordering.</p>
           </div>
         </details>
-        
         <details class="group bg-amber-50 rounded-2xl">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-            <span class="font-semibold text-stone-800">Do you offer wholesale for coffee shops?</span>
-            <svg class="w-5 h-5 text-brand group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="font-semibold text-lg text-stone-800">Do you offer wholesale for cafes?</span>
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
           </summary>
           <div class="px-6 pb-6 text-stone-600">
-            <p>Yes! We partner with cafes, restaurants, and offices throughout San Diego and beyond. Call us at (619) 344-6962 or send a message through the form above to discuss wholesale pricing, training, and equipment support.</p>
+            <p>Yes! We provide wholesale distribution for cafes, restaurants, and retailers. Reach out using the form above or give us a call to discuss partnership opportunities.</p>
           </div>
         </details>
-        
         <details class="group bg-amber-50 rounded-2xl">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-            <span class="font-semibold text-stone-800">What grind options do you offer?</span>
-            <svg class="w-5 h-5 text-brand group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="font-semibold text-lg text-stone-800">Do you have decaf options?</span>
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
           </summary>
           <div class="px-6 pb-6 text-stone-600">
-            <p>We grind to order for maximum freshness: whole bean, French press, drip, pour over, Aeropress, or espresso. Not sure which to choose? We recommend whole bean if you have a grinder — but we're happy to help you decide!</p>
+            <p>We sure do! We offer both decaf and half-caff options so you can enjoy our specialty roasts any time of day without the buzz.</p>
           </div>
         </details>
       </div>
@@ -273,187 +297,120 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 md:py-24 bg-brand">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl text-white mb-6">Ready to Discover Exceptional Coffee?</h2>
-      <p class="text-xl text-amber-100 mb-10 max-w-2xl mx-auto">Start a Roaster's Choice subscription and let our experts curate freshly roasted, single-origin coffees delivered right to your door each month.</p>
+  <section class="py-20 bg-brand relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+          <pattern id="coffee-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="2" fill="currentColor"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#coffee-pattern)"/>
+      </svg>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl text-white mb-6">Ready for Your Next Coffee Adventure?</h2>
+      <p class="text-xl text-red-100 mb-10 max-w-2xl mx-auto">Subscribe to Roaster's Choice and let our team curate monthly surprises, or explore single-origin coffees from specific regions around the world.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="services.html" class="inline-block bg-white hover:bg-amber-50 text-brand px-8 py-4 rounded-full font-semibold text-lg transition-colors">Start Your Subscription</a>
-        <a href="tel:+16193446962" class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Call Us
+        <a href="services.html" class="bg-white text-brand px-8 py-4 rounded-full font-semibold hover:bg-amber-50 transition-colors text-lg inline-flex items-center justify-center gap-2">
+          Start Your Subscription
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="services.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors text-lg">
+          Explore Our Coffees
         </a>
       </div>
-      <div class="mt-8 flex items-center justify-center gap-2">
-        <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/4c4c37ff-5cbe-406c-ad11-0d9c3f6ba0fb/Subs_TwoBags_ProductImage.jpg" alt="Coffee subscription" class="w-16 h-16 rounded-full object-cover border-4 border-white/30">
-        <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/88a0ac3e-0bc5-44e5-a47f-703a67bbbae4/Subs_ThreeBags_ProductImage.jpg" alt="Coffee subscription" class="w-16 h-16 rounded-full object-cover border-4 border-white/30">
-        <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/17968c9c-a86c-4433-90bb-3578ecf59870/Subs_FourBags_ProductImage.jpg" alt="Coffee subscription" class="w-16 h-16 rounded-full object-cover border-4 border-white/30">
+      <div class="mt-10 flex items-center justify-center gap-2 text-red-100">
+        <div class="flex text-yellow-400">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <span>Trusted by 549+ coffee lovers</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-stone-900 text-white py-16">
+  <footer class="bg-stone-900 text-stone-300 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-10">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
         <!-- Brand -->
-        <div class="md:col-span-2">
-          <h3 class="text-2xl font-bold mb-4" style="font-family: 'DM Serif Display', serif;">Dark Horse Coffee Roasters</h3>
-          <p class="text-stone-400 mb-6 max-w-md">Specialty coffee roasters based in San Diego. Sourcing, roasting, and sharing exceptional single-origin and blended coffees since day one.</p>
+        <div class="md:col-span-1">
+          <div class="text-2xl font-bold text-white mb-4">
+            <span class="font-serif">Dark Horse</span>
+            <span class="block text-xs tracking-widest uppercase text-stone-400 font-sans">Coffee Roasters</span>
+          </div>
+          <p class="text-stone-400 text-sm mb-4">Adventurous specialty coffee with quirky personality, roasted in San Diego.</p>
           <div class="flex gap-4">
-            <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+            <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
           </div>
         </div>
-        
+
         <!-- Quick Links -->
         <div>
-          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="index.html" class="text-stone-400 hover:text-white transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-stone-400 hover:text-white transition-colors">About</a></li>
-            <li><a href="services.html" class="text-stone-400 hover:text-white transition-colors">Services</a></li>
-            <li><a href="contact.html" class="text-white font-medium">Contact</a></li>
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="contact.html" class="text-white font-semibold">Contact</a></li>
           </ul>
         </div>
-        
+
         <!-- Contact Info -->
         <div>
-          <h4 class="font-semibold text-lg mb-4">Visit Us</h4>
-          <address class="not-italic text-stone-400 space-y-3">
-            <p>3330 Adams Ave<br>San Diego, CA 92116</p>
-            <p><a href="tel:+16193446962" class="hover:text-white transition-colors">(619) 344-6962</a></p>
-          </address>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span>811 25th St Unit 100<br>San Diego, CA 92102</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+16193440500" class="hover:text-white transition-colors">(619) 344-0500</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Stay Caffeinated</h4>
+          <p class="text-sm text-stone-400 mb-4">Get updates on new roasts and special offers.</p>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-full bg-stone-800 border border-stone-700 focus:border-brand focus:outline-none text-sm">
+            <button type="submit" class="bg-brand text-white px-4 py-2 rounded-full hover:bg-red-900 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
-      
-      <div class="mt-12 pt-8 border-t border-stone-800 text-center text-stone-500 text-sm">
-        <p>&copy; 2024 Dark Horse Coffee Roasters. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+      <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-stone-500">© 2024 Dark Horse Coffee Roasters. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-500">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57
 
-<!-- LVRG AI Chat Widget -->
-<style>
-  #lvrg-chat-btn {
-    position: fixed; bottom: 24px; right: 24px;
-    width: 56px; height: 56px; border-radius: 50%;
-    background: #8B4513; color: #000;
-    border: none; cursor: pointer; z-index: 2147483647;
-    font-size: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    display: flex; align-items: center; justify-content: center;
-    transition: transform 0.2s;
-  }
-  #lvrg-chat-btn:hover { transform: scale(1.1); }
-  #lvrg-chat-panel {
-    position: fixed; bottom: 92px; right: 24px;
-    width: 340px; max-height: 480px;
-    background: #18181b; border: 1px solid #3f3f46;
-    border-radius: 16px; z-index: 2147483647;
-    display: none; flex-direction: column;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    overflow: hidden;
-  }
-  #lvrg-chat-panel.open { display: flex; }
-  #lvrg-chat-header {
-    padding: 14px 16px; background: #8B4513;
-    font-weight: 700; font-size: 13px; color: #000;
-  }
-  #lvrg-chat-messages {
-    flex: 1; overflow-y: auto; padding: 12px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .lvrg-msg {
-    max-width: 85%; padding: 8px 12px; border-radius: 12px;
-    font-size: 13px; line-height: 1.4;
-  }
-  .lvrg-msg.bot {
-    background: #27272a; color: #e4e4e7; align-self: flex-start;
-    border-bottom-left-radius: 4px;
-  }
-  .lvrg-msg.user {
-    background: #8B4513; color: #000; align-self: flex-end;
-    border-bottom-right-radius: 4px;
-  }
-  #lvrg-chat-input-row {
-    display: flex; padding: 8px; border-top: 1px solid #3f3f46; gap: 6px;
-  }
-  #lvrg-chat-input {
-    flex: 1; background: #27272a; border: 1px solid #3f3f46;
-    border-radius: 8px; padding: 8px 10px; font-size: 13px;
-    color: #fff; outline: none;
-  }
-  #lvrg-chat-send {
-    background: #8B4513; border: none; border-radius: 8px;
-    padding: 8px 12px; cursor: pointer; font-size: 13px; font-weight: 700; color: #000;
-  }
-</style>
-
-<button id="lvrg-chat-btn" onclick="document.getElementById('lvrg-chat-panel').classList.toggle('open')">💬</button>
-
-<div id="lvrg-chat-panel">
-  <div id="lvrg-chat-header">Chat with Dark Horse Coffee Roasters</div>
-  <div id="lvrg-chat-messages">
-    <div class="lvrg-msg bot">Hey! I'm the AI assistant for Dark Horse Coffee Roasters. How can I help you today?</div>
-  </div>
-  <div id="lvrg-chat-input-row">
-    <input id="lvrg-chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')lvrgSend()"/>
-    <button id="lvrg-chat-send" onclick="lvrgSend()">→</button>
-  </div>
-</div>
-
-<script>
-const LVRG_PERSONA = "Knowledgeable coffee enthusiast who is passionate about direct trade sourcing and can recommend the best brew method and roast level for each customer's preferences.";
-const LVRG_BIZ = "Dark Horse Coffee Roasters";
-const LVRG_BOOKING = "https://theresandiego.com/advertise/";
-let lvrgHistory = [];
-
-async function lvrgSend() {
-  const inp = document.getElementById('lvrg-chat-input');
-  const msg = inp.value.trim();
-  if (!msg) return;
-  inp.value = '';
-  lvrgAddMsg(msg, 'user');
-  lvrgHistory.push({"role":"user","content":msg});
-  const resp = await fetch('https://lvrg-engine-production.up.railway.app/chat', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      messages: lvrgHistory,
-      persona: LVRG_PERSONA,
-      business_name: LVRG_BIZ,
-      booking_url: LVRG_BOOKING
-    })
-  });
-  const data = await resp.json();
-  const reply = data.reply || "Let me connect you with our team!";
-  lvrgHistory.push({"role":"assistant","content":reply});
-  lvrgAddMsg(reply, 'bot');
-}
-
-function lvrgAddMsg(text, role) {
-  const msgs = document.getElementById('lvrg-chat-messages');
-  const div = document.createElement('div');
-  div.className = 'lvrg-msg ' + role;
-  div.textContent = text;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-</script>
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a906f149f17bc64b3a4a640"></script>
 
 </body>
 </html>
