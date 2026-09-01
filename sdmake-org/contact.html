@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/preview/sdmake-org/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | MAKE Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#6ba577' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Claim Bar -->
+  <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm flex-wrap">
+      <span>This site was built for <strong>MAKE Projects</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/letschat" class="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full text-xs transition-colors">
+        Claim This Site →
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="text-2xl font-bold text-brand">MAKE Projects</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-600 hover:text-brand transition-colors">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-brand transition-colors">About</a>
+          <a href="services.html" class="text-gray-600 hover:text-brand transition-colors">Services</a>
+          <a href="contact.html" class="text-brand font-semibold border-b-2 border-brand pb-1">Contact</a>
+          <a href="https://sdmake.org" class="bg-brand hover:bg-green-600 text-white px-5 py-2 rounded-full font-medium transition-colors">
+            Join the Movement
+          </a>
+        </div>
+        <button class="md:hidden text-gray-600" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-gray-600 hover:text-brand">Home</a>
+        <a href="about.html" class="block text-gray-600 hover:text-brand">About</a>
+        <a href="services.html" class="block text-gray-600 hover:text-brand">Services</a>
+        <a href="contact.html" class="block text-brand font-semibold">Contact</a>
+        <a href="https://sdmake.org" class="block bg-brand text-white px-5 py-2 rounded-full font-medium text-center">
+          Join the Movement
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gray-900 py-24 md:py-32">
+    <div class="absolute inset-0">
+      <img src="https://static.wixstatic.com/media/61b7b9_ff9383aab2ac4a2a969bab9d84070de0~mv2.jpg/v1/crop/x_0,y_202,w_6894,h_4191/fill/w_403,h_245,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MAKEProjects_KimberlyMotos-18.jpg" alt="MAKE Projects Community" class="w-full h-full object-cover opacity-40">
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Connect With Us
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
+        Visit us in Normal Heights, reach out by phone, or plan your next visit to MAKE Cafe. We're here to welcome you.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:8586336852" class="bg-brand hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition-colors inline-flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call Us Now
+        </a>
+        <a href="#directions" class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-full font-semibold text-lg transition-colors inline-flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Location Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Visit Us</h3>
+          <p class="text-gray-600 mb-4">
+            4712 Felton Street<br>
+            San Diego, CA 92116
+          </p>
+          <p class="text-sm text-brand font-medium">Off Adams Ave in Normal Heights</p>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Cafe Hours</h3>
+          <p class="text-gray-600 mb-2">
+            <span class="font-semibold">Thursday – Sunday</span><br>
+            9:00 AM – 2:00 PM
+          </p>
+          <p class="text-sm text-gray-500 mt-4">Breakfast, lunch & brunch</p>
+          <p class="text-sm text-brand font-medium mt-2">Walk-ins welcome!</p>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Call Us</h3>
+          <a href="tel:8586336852" class="text-2xl font-bold text-brand hover:text-green-600 transition-colors">
+            (858) 633-6852
+          </a>
+          <p class="text-sm text-gray-500 mt-4">Questions about our programs, cafe, or volunteering</p>
+        </div>
+      </div>
+
+      <!-- Rating Badge -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md">
+          <div class="flex text-yellow-400">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <span class="font-bold text-gray-900">4.8★</span>
+          <span class="text-gray-500">from 94 reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map & Directions Section -->
+  <section id="directions" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Find Us in Normal Heights
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Located just off Adams Avenue, MAKE Cafe is your neighborhood destination for delicious food with a purpose. Our urban farm and cafe sit at the heart of Normal Heights, welcoming guests Thursday through Sunday.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Easy Street Parking</h4>
+                <p class="text-gray-600">Free parking available along Felton Street and nearby streets</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Outdoor Seating</h4>
+                <p class="text-gray-600">Enjoy your meal surrounded by our beautiful urban farm</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Walk-Ins Welcome</h4>
+                <p class="text-gray-600">No reservation required, though you can book ahead on our website</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=4712+Felton+St+San+Diego+CA+92116" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            Open in Google Maps
+          </a>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg aspect-square">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.5!2d-117.1277!3d32.7667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9558c0c0c0c0c%3A0x0!2s4712%20Felton%20St%2C%20San%20Diego%2C%20CA%2092116!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full min-h-[400px]"
+              title="MAKE Projects Location Map">
+            </iframe>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+            <p class="text-sm text-gray-600">
+              <span class="font-semibold text-brand">As featured in WhatNow:</span> MAKE Café bringing community-focused dining to San Diego
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ways to Connect Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Three Ways to Get Involved
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Whether you're looking to dine, volunteer, or transform your career, there's a place for you at MAKE Projects.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Visit the Cafe -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://static.wixstatic.com/media/61b7b9_bc437fbca5794f9a865fb9bb399d8a87~mv2.jpg/v1/crop/x_312,y_1122,w_1602,h_1603/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MAKE%20Cafe%202%20Photo%20Credit%20Anchi%20Mei_JPG.jpg" alt="MAKE Cafe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Visit the Cafe</h3>
+            <p class="text-gray-600 mb-4">
+              Enjoy farm-fresh breakfast, lunch, and brunch while supporting refugee women's economic empowerment.
+            </p>
+            <a href="https://sdmake.org" class="inline-flex items-center gap-2 text-brand font-semibold hover:text-green-600 transition-colors">
+              View Menu
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Apply as Trainee -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://static.wixstatic.com/media/61b7b9_11b7f60d7f184971affb05060ec9dc5a~mv2.jpg/v1/crop/x_0,y_206,w_7008,h_4260/fill/w_403,h_245,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MAKEProjects_KimberlyMotos-7.jpg" alt="MAKE Projects Training Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Apply as a Trainee</h3>
+            <p class="text-gray-600 mb-4">
+              Our 12-week job readiness program helps refugee and immigrant women build careers with living wages.
+            </p>
+            <a href="https://sdmake.org" class="inline-flex items-center gap-2 text-brand font-semibold hover:text-green-600 transition-colors">
+              Learn About the Program
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Donate -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://static.wixstatic.com/media/61b7b9_81e103e6847247cdb398db1ee3de42cc~mv2.jpg/v1/crop/x_0,y_504,w_3024,h_3024/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2339_JPG.jpg" alt="MAKE Projects Farm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Make a Donation</h3>
+            <p class="text-gray-600 mb-4">
+              Your support funds training, mentorship, and community resources for women building new lives in San Diego.
+            </p>
+            <a href="https://sdmake.org" class="inline-flex items-center gap-2 text-brand font-semibold hover:text-green-600 transition-colors">
+              Donate Now
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-brand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Join the Movement
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Every meal, every donation, every volunteer hour supports refugee women's journey to economic independence. Be part of something meaningful in Normal Heights.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://sdmake.org" class="bg-white hover:bg-gray-100 text-brand px-8 py-4 rounded-full font-bold text-lg transition-colors shadow-lg">
+          Apply as a Trainee
+        </a>
+        <a href="https://sdmake.org" class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg transition-colors">
+          Donate Today
+        </a>
+      </div>
+      <p class="text-white/80 mt-8 text-sm">
+        Questions? Call us at <a href="tel:8586336852" class="underline hover:text-white">(858) 633-6852</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold text-brand mb-4">MAKE Projects</h3>
+          <p class="text-gray-400 mb-6 max-w-md">
+            A hyperlocal farm, cafe, and social enterprise empowering refugee and immigrant women through food, agriculture, and community in Normal Heights.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/sdmakeprojects" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sdmakeprojects" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-brand rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.58-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.65.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.27.2-6.78,2.71-7,7C0,8.33,0,8.74,0,12s0,3.67.07,4.95c.2,4.27,2.71,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.27-.2,6.78-2.71,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.27-2.71-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-brand transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-brand transition-colors">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-brand transition-colors">Services</a></li>
+            <li><a href="contact.html" class="text-brand font-medium">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>4712 Felton St<br>San Diego, CA 92116</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:8586336852" class="hover:text-brand transition-colors">(858) 633-6852</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Thu–Sun: 9am–2pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 MAKE Projects. All rights reserved. Empowering women through food, agriculture, and community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a906f149f17bc64b3a4a640"></script>
+
+</body>
+</html>
