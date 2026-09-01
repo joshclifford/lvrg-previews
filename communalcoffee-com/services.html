@@ -4,9 +4,9 @@
   <base href="/preview/communalcoffee-com/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Communal Coffee</title>
+  <title>Services | Communal</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand: '#F5F5F5', cream: '#FAF8F5', warmwhite: '#FEFDFB', deepbrown: '#3D2C29', mediumbrown: '#6B5249', lightbrown: '#A89082', gold: '#C9A962' } } } }</script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#ffffff', cream: '#FDF8F3', warmwhite: '#FAF7F2', deepbrown: '#3D2B1F', mediumbeige: '#D4C4B5', softtan: '#E8DDD4', gold: '#C9A227' } } } }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -17,281 +17,269 @@
 </head>
 <body class="bg-warmwhite text-deepbrown">
   
-  <div class="bg-black text-white py-2 px-4 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
-      <span>This site was built for <strong>Communal</strong> by LVRG Agency</span>
-      <a href="https://theresandiego.com/advertise/" class="bg-gold text-deepbrown px-4 py-1 rounded-full text-xs font-semibold hover:bg-yellow-500 transition-colors">Claim This Site →</a>
+  <!-- Claim Bar -->
+  <div class="sticky top-0 z-50 bg-black py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap">
+      <p class="text-white text-sm">This site was built for <span class="font-semibold">Communal</span> by LVRG Agency</p>
+      <a href="https://theresandiego.com/letschat" class="inline-block bg-gold text-black text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-yellow-500 transition-colors">Claim This Site →</a>
     </div>
   </div>
 
-  <nav class="bg-warmwhite border-b border-lightbrown/20 sticky top-10 z-40">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-      <div class="flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-serif text-deepbrown tracking-wide">Communal</a>
+  <!-- Navigation -->
+  <nav class="bg-cream border-b border-mediumbeige sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl md:text-3xl font-serif text-deepbrown tracking-wide">Communal</a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-mediumbrown hover:text-deepbrown transition-colors">Home</a>
-          <a href="about.html" class="text-mediumbrown hover:text-deepbrown transition-colors">About</a>
+          <a href="index.html" class="text-deepbrown hover:text-gold transition-colors">Home</a>
+          <a href="about.html" class="text-deepbrown hover:text-gold transition-colors">About</a>
           <a href="services.html" class="text-deepbrown font-semibold border-b-2 border-gold pb-1">Services</a>
-          <a href="contact.html" class="text-mediumbrown hover:text-deepbrown transition-colors">Contact</a>
+          <a href="contact.html" class="text-deepbrown hover:text-gold transition-colors">Contact</a>
+          <a href="contact.html" class="bg-deepbrown text-cream px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-colors font-medium">Visit Us</a>
         </div>
-        <a href="contact.html" class="bg-deepbrown text-warmwhite px-5 py-2 rounded-full text-sm font-medium hover:bg-mediumbrown transition-colors">Visit Us</a>
         <button class="md:hidden text-deepbrown" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-      <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-lightbrown/20 pt-4">
-        <div class="flex flex-col gap-3">
-          <a href="index.html" class="text-mediumbrown hover:text-deepbrown transition-colors">Home</a>
-          <a href="about.html" class="text-mediumbrown hover:text-deepbrown transition-colors">About</a>
-          <a href="services.html" class="text-deepbrown font-semibold">Services</a>
-          <a href="contact.html" class="text-mediumbrown hover:text-deepbrown transition-colors">Contact</a>
+      <div id="mobileMenu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="text-deepbrown hover:text-gold transition-colors">Home</a>
+          <a href="about.html" class="text-deepbrown hover:text-gold transition-colors">About</a>
+          <a href="services.html" class="text-deepbrown font-semibold border-b-2 border-gold pb-1 inline-block">Services</a>
+          <a href="contact.html" class="text-deepbrown hover:text-gold transition-colors">Contact</a>
+          <a href="contact.html" class="bg-deepbrown text-cream px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-colors font-medium text-center">Visit Us</a>
         </div>
       </div>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="relative h-96 md:h-[500px] overflow-hidden">
-    <img src="https://communalcoffee.com/cdn/shop/files/3.jpg?v=1743618795&width=1000" alt="Communal Coffee atmosphere" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-deepbrown/70 to-deepbrown/40"></div>
-    <div class="relative z-10 h-full flex items-center">
-      <div class="max-w-7xl mx-auto px-6 w-full">
-        <div class="max-w-2xl">
-          <p class="text-gold font-medium mb-3 tracking-wide uppercase text-sm">More Than Just Coffee</p>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl text-warmwhite mb-4 leading-tight">Everything we offer, made with care</h1>
-          <p class="text-cream/90 text-lg md:text-xl mb-6">From craft coffee to curated goods, every item at Communal is chosen to inspire and nurture our community across North Park, South Park, Bankers Hill, and Oceanside.</p>
-          <div class="flex items-center gap-4 text-warmwhite/90">
-            <div class="flex items-center gap-1">
-              <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <span class="font-semibold">4.5</span>
-              <span class="text-cream/70">from 1,372 reviews</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <img src="https://communalcoffee.com/cdn/shop/files/COMMUNAL_HOMEPAGE_BLOCKS.jpg?v=1743542299&width=750" alt="Communal Coffee Services" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-deepbrown bg-opacity-50"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+      <h1 class="text-4xl md:text-6xl text-cream mb-4">More Than Just Coffee</h1>
+      <p class="text-lg md:text-xl text-cream max-w-2xl opacity-90">From craft beverages to curated goods, discover everything we offer at our North Park, South Park, Oceanside, and Bankers Hill locations.</p>
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl text-deepbrown mb-4">Craft Coffee & Beverages</h2>
-        <p class="text-mediumbrown max-w-2xl mx-auto text-lg">The heart of what we do. Our full craft coffee and drink menu features carefully sourced beans, expertly prepared by passionate baristas who know your order by heart.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="order-2 md:order-1">
-          <div class="space-y-6">
-            <div class="bg-warmwhite p-6 rounded-2xl border border-lightbrown/20">
-              <h3 class="text-xl text-deepbrown mb-2">Espresso Drinks</h3>
-              <p class="text-mediumbrown">Lattes, cappuccinos, cortados, and more — each crafted with precision using our rotating selection of specialty roasters.</p>
-            </div>
-            <div class="bg-warmwhite p-6 rounded-2xl border border-lightbrown/20">
-              <h3 class="text-xl text-deepbrown mb-2">Pour Over & Batch Brew</h3>
-              <p class="text-mediumbrown">For those who appreciate the nuance of single-origin coffees, brewed fresh throughout the day.</p>
-            </div>
-            <div class="bg-warmwhite p-6 rounded-2xl border border-lightbrown/20">
-              <h3 class="text-xl text-deepbrown mb-2">Specialty Beverages</h3>
-              <p class="text-mediumbrown">Matcha, chai, seasonal drinks, and non-coffee options for every palate and preference.</p>
-            </div>
+  <!-- Services Overview -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium mb-2">What We Offer</p>
+        <h2 class="text-3xl md:text-5xl mb-6">A Curated Experience</h2>
+        <p class="text-lg text-deepbrown opacity-80 max-w-3xl mx-auto">Each Communal location is designed to inspire and care for our local community. Here's what awaits you when you visit.</p>
+        <div class="flex items-center justify-center gap-2 mt-6">
+          <div class="flex text-gold">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-        </div>
-        <div class="order-1 md:order-2">
-          <img src="https://communalcoffee.com/cdn/shop/files/COMMUNAL_HOMEPAGE_BLOCKS.jpg?v=1743542299&width=750" alt="Communal coffee and goods" class="rounded-2xl shadow-lg w-full h-80 md:h-96 object-cover">
+          <span class="text-deepbrown opacity-70">4.5★ from 1,372 reviews</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="py-16 md:py-24 bg-warmwhite">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl text-deepbrown mb-4">Seasonal Food Menu</h2>
-        <p class="text-mediumbrown max-w-2xl mx-auto text-lg">Our brunch and all-day menu changes with the seasons, featuring fresh, locally-sourced ingredients that complement your morning ritual.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-cream p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Craft Coffee & Drinks -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
             </svg>
           </div>
-          <h3 class="text-xl text-deepbrown mb-3">Breakfast & Brunch</h3>
-          <p class="text-mediumbrown">Start your day right with our breakfast sandwiches, pastries, and brunch plates served fresh every morning.</p>
+          <h3 class="text-2xl mb-3">Craft Coffee & Drinks</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Our full craft coffee menu features carefully sourced beans, expertly prepared espresso drinks, pour-overs, and seasonal specialty beverages that warm the soul.</p>
         </div>
-        <div class="bg-cream p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl text-deepbrown mb-3">Fresh Pastries</h3>
-          <p class="text-mediumbrown">House-made and locally sourced pastries, baked goods, and sweet treats to pair with your coffee.</p>
-        </div>
-        <div class="bg-cream p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="w-16 h-16 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl text-deepbrown mb-3">Grab & Go</h3>
-          <p class="text-mediumbrown">Quick bites and snacks for those busy mornings when you need something delicious on the run.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="https://communalcoffee.com/cdn/shop/files/2.jpg?v=1743618795&width=1000" alt="Fresh floral arrangements at Communal" class="rounded-2xl shadow-lg w-full h-80 md:h-[500px] object-cover">
-        </div>
-        <div>
-          <span class="text-gold font-medium tracking-wide uppercase text-sm">Floral Studio</span>
-          <h2 class="text-3xl md:text-4xl text-deepbrown mt-3 mb-4">Fresh Floral Arrangements</h2>
-          <p class="text-mediumbrown text-lg mb-6">Brighten someone's day — or your own space — with our hand-crafted floral arrangements. From simple bouquets to custom designs, our florals bring natural beauty into every moment.</p>
-          <ul class="space-y-3 text-mediumbrown">
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span>Daily fresh-cut arrangements</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span>Custom orders available</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span>Seasonal and locally sourced blooms</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span>Perfect for gifts or events</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16 md:py-24 bg-warmwhite">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <span class="text-gold font-medium tracking-wide uppercase text-sm">The Shop</span>
-        <h2 class="text-3xl md:text-4xl text-deepbrown mt-3 mb-4">Curated Goods for Inspired Living</h2>
-        <p class="text-mediumbrown max-w-2xl mx-auto text-lg">Every item in our shop is thoughtfully selected to inspire creativity and support local makers. Browse in-store or shop online to find something special.</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Beauty + Wellness</h3>
-        </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Seasonal Food Menu -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Books</h3>
+          <h3 class="text-2xl mb-3">Seasonal Food Menu</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Fresh, thoughtfully crafted dishes that change with the seasons. From breakfast bites to lunch favorites, our kitchen celebrates local ingredients and creative flavors.</p>
         </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Clothing + Accessories</h3>
-        </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Home Goods</h3>
-        </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <!-- Fresh Floral Arrangements -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
             </svg>
           </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Jewelry</h3>
+          <h3 class="text-2xl mb-3">Fresh Floral Arrangements</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Beautiful, hand-crafted floral arrangements available in-store. Perfect for brightening your home, gifting to someone special, or adding natural beauty to any space.</p>
         </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <!-- Curated Retail Goods -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-3">Curated Retail Goods</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Thoughtfully selected products from makers we believe in. Browse our ever-changing collection of items designed to inspire creativity and comfort in your daily life.</p>
+        </div>
+
+        <!-- Beauty & Wellness -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
           </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Baby + Kids</h3>
+          <h3 class="text-2xl mb-3">Beauty & Wellness</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Self-care essentials and wellness products that help you feel your best. From skincare to aromatherapy, discover products that nurture body and mind.</p>
         </div>
-        <div class="group bg-cream rounded-2xl p-6 text-center hover:bg-deepbrown transition-all duration-300 cursor-pointer col-span-2">
-          <div class="w-14 h-14 bg-lightbrown/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-warmwhite/20 transition-colors">
-            <svg class="w-7 h-7 text-deepbrown group-hover:text-warmwhite transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+
+        <!-- Books -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-lg text-deepbrown group-hover:text-warmwhite font-medium transition-colors">Curated Retail Goods</h3>
-          <p class="text-mediumbrown group-hover:text-warmwhite/80 text-sm mt-2 transition-colors">Unique finds from local artisans and makers</p>
+          <h3 class="text-2xl mb-3">Books</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">A carefully curated selection of reads to inspire, educate, and entertain. Pick up something new to enjoy alongside your favorite coffee.</p>
         </div>
+
+        <!-- Clothing & Accessories -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-3">Clothing & Accessories</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Thoughtfully designed apparel and accessories that reflect our creative spirit. From Communal branded pieces to local designer collaborations.</p>
+        </div>
+
+        <!-- Home Goods -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-3">Home Goods</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Beautiful objects for your living space. Candles, ceramics, textiles, and more — each piece selected to bring warmth and character to your home.</p>
+        </div>
+
+        <!-- Jewelry -->
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige hover:shadow-lg transition-shadow group">
+          <div class="w-14 h-14 bg-softtan rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors">
+            <svg class="w-7 h-7 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-3">Jewelry</h3>
+          <p class="text-deepbrown opacity-70 leading-relaxed">Delicate, handcrafted jewelry pieces from independent designers. Find something special that speaks to your personal style and story.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- Featured Services Section with Images -->
   <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="bg-deepbrown rounded-2xl p-8 md:p-10 text-warmwhite">
-          <span class="text-gold font-medium tracking-wide uppercase text-sm">As Seen In</span>
-          <h3 class="text-2xl md:text-3xl mt-3 mb-6">10 Years of Community</h3>
-          <blockquote class="text-cream/90 text-lg italic border-l-4 border-gold pl-6 mb-6">
-            "Craft Coffee + Brunch + Flowers + Goods"
-          </blockquote>
-          <p class="text-cream/80 mb-4">From our humble beginnings to five locations across San Diego County, we've been honored to serve and inspire our community for over a decade.</p>
-          <p class="text-gold font-medium">— Featured in San Diego Magazine</p>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div class="order-2 md:order-1">
+          <p class="text-gold font-medium mb-2">The Heart of Communal</p>
+          <h2 class="text-3xl md:text-4xl mb-6">Café Experiences</h2>
+          <p class="text-deepbrown opacity-80 leading-relaxed mb-6">More than just a place to grab coffee — Communal is a destination for connection and creativity. Our creatively-designed spaces across North Park, South Park, Oceanside, and Bankers Hill invite you to slow down, meet friends, get work done, or simply enjoy a quiet moment.</p>
+          <p class="text-deepbrown opacity-80 leading-relaxed mb-8">Each location has its own personality while sharing our commitment to quality, community, and an inspiring atmosphere that makes you want to stay a while.</p>
+          <p class="text-deepbrown font-medium">Questions? Call us at <a href="tel:6193637737" class="text-gold hover:underline">(619) 363-7737</a></p>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="https://communalcoffee.com/cdn/shop/files/3.jpg?v=1743618795&width=1000" alt="Communal Café Experience" class="rounded-2xl shadow-lg w-full h-80 md:h-96 object-cover">
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="https://communalcoffee.com/cdn/shop/files/2.jpg?v=1743618795&width=1000" alt="Communal Gift Cards" class="rounded-2xl shadow-lg w-full h-80 md:h-96 object-cover">
         </div>
         <div>
-          <img src="https://communalcoffee.com/cdn/shop/files/6.jpg?v=1743618832&width=1000" alt="Communal Coffee community" class="rounded-2xl shadow-lg w-full h-80 md:h-96 object-cover">
+          <p class="text-gold font-medium mb-2">Share the Love</p>
+          <h2 class="text-3xl md:text-4xl mb-6">Gift Cards</h2>
+          <p class="text-deepbrown opacity-80 leading-relaxed mb-6">Give the gift of a Communal experience. Our gift cards can be used for coffee, food, florals, or anything in our curated shop — making them perfect for any occasion.</p>
+          <p class="text-deepbrown opacity-80 leading-relaxed mb-8">Available in any amount and ready to use at all of our Southern California locations. Because sharing community is one of the best gifts you can give.</p>
+          <a href="contact.html" class="inline-flex items-center gap-2 text-deepbrown font-medium hover:text-gold transition-colors">
+            Get a gift card
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 md:py-28 bg-deepbrown text-warmwhite">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-5xl mb-6">Ready to experience Communal?</h2>
-      <p class="text-cream/80 text-lg md:text-xl mb-8 max-w-2xl mx-auto">Visit any of our five locations in North Park, South Park, Bankers Hill, Oceanside, or 30th Street — or explore our curated goods online to support local community.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="contact.html" class="bg-gold text-deepbrown px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 transition-colors">Find a Location</a>
-        <a href="https://communalcoffee.com" target="_blank" rel="noopener" class="border-2 border-warmwhite text-warmwhite px-8 py-4 rounded-full font-semibold text-lg hover:bg-warmwhite hover:text-deepbrown transition-all">Shop Online</a>
+  <!-- Hours by Location -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-gold font-medium mb-2">When to Visit</p>
+        <h2 class="text-3xl md:text-5xl mb-6">Our Hours</h2>
       </div>
-      <p class="text-cream/60 text-sm mt-8">Questions? Call us at <a href="tel:+16193637737" class="text-gold hover:underline">(619) 363-7737</a> or stop by in person.</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige text-center">
+          <h3 class="text-xl mb-4">North Park, South Park, Oceanside & Bankers Hill</h3>
+          <p class="text-deepbrown opacity-70 mb-2">Sunday – Thursday: 6:30 AM – 5 PM</p>
+          <p class="text-deepbrown opacity-70">Friday – Saturday: 6:30 AM – 6 PM</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-8 border border-mediumbeige text-center">
+          <h3 class="text-xl mb-4">30th Street Location</h3>
+          <p class="text-deepbrown opacity-70">Daily: 6:30 AM – 3 PM</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="bg-deepbrown text-warmwhite border-t border-lightbrown/20">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-      <div class="grid md:grid-cols-4 gap-8">
+  <!-- CTA Section -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <img src="https://communalcoffee.com/cdn/shop/files/6.jpg?v=1743618832&width=1000" alt="Visit Communal" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-deepbrown bg-opacity-70"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl text-cream mb-6">Come Experience It Yourself</h2>
+      <p class="text-lg md:text-xl text-cream opacity-90 mb-8 max-w-2xl mx-auto">Visit a Communal location to experience the café culture and browse curated goods. We'd love to welcome you.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="contact.html" class="bg-cream text-deepbrown px-8 py-4 rounded-full font-medium hover:bg-gold transition-colors">Find a Location</a>
+        <a href="tel:6193637737" class="border-2 border-cream text-cream px-8 py-4 rounded-full font-medium hover:bg-cream hover:text-deepbrown transition-colors">Call (619) 363-7737</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-deepbrown text-cream py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div class="md:col-span-2">
-          <h4 class="text-2xl font-serif mb-4">Communal</h4>
-          <p class="text-cream/80 mb-4 max-w-md">A creative-minded café and shop inspiring the local community across Southern California since 2014.</p>
+          <h3 class="text-3xl font-serif mb-4">Communal</h3>
+          <p class="opacity-80 mb-6 max-w-md">A creative-minded café and shop inspiring and caring for the local community across Southern California.</p>
           <div class="flex gap-4">
-            <a href="https://www.facebook.com/communalcoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-warmwhite/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-deepbrown transition-all">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="https://www.facebook.com/communalcoffee" class="w-10 h-10 bg-cream bg-opacity-10 rounded-full flex items-center justify-center hover:bg-gold hover:bg-opacity-100 transition-colors group">
+              <svg class="w-5 h-5 text-cream group-hover:text-deepbrown" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="https://www.instagram.com/communalcoffee" target="_blank" rel="noopener" class="w-10 h-10 bg-warmwhite/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-deepbrown transition-all">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://www.instagram.com/communalcoffee" class="w-10 h-10 bg-cream bg-opacity-10 rounded-full flex items-center justify-center hover:bg-gold hover:bg-opacity-100 transition-colors group">
+              <svg class="w-5 h-5 text-cream group-hover:text-deepbrown" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
           </div>
         </div>
         <div>
-          <h5 class="font-semibold text-gold mb-4">Pages</h5>
-          <ul class="space-y-2 text-cream/80">
+          <h4 class="font-medium mb-4 text-gold">Quick Links</h4>
+          <ul class="space-y-2 opacity-80">
             <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-gold transition-colors">About</a></li>
             <li><a href="services.html" class="text-gold font-medium">Services</a></li>
@@ -299,21 +287,18 @@
           </ul>
         </div>
         <div>
-          <h5 class="font-semibold text-gold mb-4">Visit Us</h5>
-          <address class="not-italic text-cream/80 space-y-2">
-            <p>2335 University Ave</p>
-            <p>San Diego, CA 92104</p>
-            <p class="mt-4"><a href="tel:+16193637737" class="hover:text-gold transition-colors">(619) 363-7737</a></p>
-          </address>
-          <div class="mt-4 text-cream/80 text-sm">
-            <p>Sun–Thu: 6:30 AM–5 PM</p>
-            <p>Fri–Sat: 6:30 AM–6 PM</p>
-            <p class="text-cream/60 mt-1">30th St: Daily 6:30 AM–3 PM</p>
-          </div>
+          <h4 class="font-medium mb-4 text-gold">Contact</h4>
+          <ul class="space-y-2 opacity-80">
+            <li>2335 University Ave</li>
+            <li>San Diego, CA 92104</li>
+            <li><a href="tel:6193637737" class="hover:text-gold transition-colors">(619) 363-7737</a></li>
+            <li class="pt-4">Sun–Thu: 6:30 AM – 5 PM</li>
+            <li>Fri–Sat: 6:30 AM – 6 PM</li>
+          </ul>
         </div>
       </div>
-      <div class="border-t border-lightbrown/20 mt-10 pt-8 text-center text-cream/60 text-sm">
-        <p>&copy; 2024 Communal Coffee. All rights reserved. | Preview site by <a href="https://theresandiego.com/advertise/" class="text-gold hover:underline">LVRG Agency</a></p>
+      <div class="border-t border-cream border-opacity-20 pt-8 text-center opacity-60 text-sm">
+        <p>© 2025 Communal. All rights reserved.</p>
       </div>
     </div>
   </footer>
