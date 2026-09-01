@@ -4,9 +4,9 @@
   <base href="/preview/betterbuzzcoffee-com/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Better Buzz Coffee</title>
+  <title>Contact | Better Buzz Coffee - San Diego</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand: '#000000', cream: '#FAF7F2', warmWhite: '#FDF9F3', deepBrown: '#3D2314', coffeeBrown: '#5C3D2E', caramel: '#C4A574' } } } }</script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#000000', cream: '#FDF8F3', warmwhite: '#FAF7F2', deepbrown: '#3D2314', mediumbrown: '#5C3D2E', lightbrown: '#8B6914', gold: '#C9A227' } } } }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -15,309 +15,278 @@
     h1, h2, h3, h4, h5, h6 { font-family: 'DM Serif Display', serif; }
   </style>
 </head>
-<body class="bg-cream text-deepBrown">
-
-  <div class="sticky top-0 z-50 bg-brand text-white py-2 px-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
-      <span>This site was built for <strong>Better Buzz Coffee</strong> by LVRG Agency</span>
-      <a href="https://theresandiego.com/advertise/" class="bg-caramel text-deepBrown px-4 py-1 rounded-full text-sm font-semibold hover:bg-yellow-500 transition-colors">Claim This Site →</a>
+<body class="bg-warmwhite text-deepbrown">
+  
+  <!-- CLAIM BAR -->
+  <div class="sticky top-0 z-50 bg-brand py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
+      <span class="text-white text-sm">This site was built for <strong>Better Buzz Coffee</strong> by LVRG Agency</span>
+      <a href="https://theresandiego.com/letschat" class="inline-block bg-gold hover:bg-yellow-600 text-brand text-sm font-semibold px-4 py-1 rounded-full transition-colors duration-300">Claim This Site →</a>
     </div>
   </div>
 
-  <nav class="bg-warmWhite shadow-sm sticky top-10 z-40">
+  <!-- NAVIGATION -->
+  <nav class="bg-cream/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="text-2xl font-bold text-deepBrown">
-          <span class="font-serif">Better Buzz</span> <span class="text-coffeeBrown">Coffee</span>
+        <a href="index.html" class="text-2xl font-bold text-deepbrown">
+          <span class="font-serif">Better Buzz</span> <span class="text-mediumbrown">Coffee</span>
         </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html" class="text-deepBrown hover:text-coffeeBrown transition-colors font-medium">Home</a>
-          <a href="about.html" class="text-deepBrown hover:text-coffeeBrown transition-colors font-medium">About</a>
-          <a href="services.html" class="text-deepBrown hover:text-coffeeBrown transition-colors font-medium">Services</a>
-          <a href="contact.html" class="text-coffeeBrown font-semibold border-b-2 border-coffeeBrown pb-1">Contact</a>
-          <a href="https://betterbuzzcoffee.com/pages/order" class="bg-deepBrown text-white px-6 py-2 rounded-full font-semibold hover:bg-coffeeBrown transition-colors">Order Online Now</a>
+          <a href="index.html" class="text-deepbrown hover:text-gold transition-colors duration-200">Home</a>
+          <a href="about.html" class="text-deepbrown hover:text-gold transition-colors duration-200">About</a>
+          <a href="services.html" class="text-deepbrown hover:text-gold transition-colors duration-200">Services</a>
+          <a href="contact.html" class="text-gold font-semibold border-b-2 border-gold pb-1">Contact</a>
+          <a href="https://betterbuzzcoffee.com" class="bg-deepbrown hover:bg-mediumbrown text-cream px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg">Order Now</a>
         </div>
-        <button class="md:hidden text-deepBrown" id="mobileMenuBtn">
+        <button class="md:hidden text-deepbrown" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-    </div>
-    <div class="hidden md:hidden bg-warmWhite border-t border-cream px-4 py-4" id="mobileMenu">
-      <a href="index.html" class="block py-2 text-deepBrown font-medium">Home</a>
-      <a href="about.html" class="block py-2 text-deepBrown font-medium">About</a>
-      <a href="services.html" class="block py-2 text-deepBrown font-medium">Services</a>
-      <a href="contact.html" class="block py-2 text-coffeeBrown font-semibold">Contact</a>
-      <a href="https://betterbuzzcoffee.com/pages/order" class="block mt-3 bg-deepBrown text-white px-6 py-2 rounded-full font-semibold text-center">Order Online Now</a>
+      <div id="mobileMenu" class="hidden md:hidden pb-4">
+        <a href="index.html" class="block py-2 text-deepbrown hover:text-gold">Home</a>
+        <a href="about.html" class="block py-2 text-deepbrown hover:text-gold">About</a>
+        <a href="services.html" class="block py-2 text-deepbrown hover:text-gold">Services</a>
+        <a href="contact.html" class="block py-2 text-gold font-semibold border-l-4 border-gold pl-3">Contact</a>
+        <a href="https://betterbuzzcoffee.com" class="inline-block mt-3 bg-deepbrown text-cream px-6 py-2.5 rounded-full font-medium">Order Now</a>
+      </div>
     </div>
   </nav>
 
+  <!-- HERO SECTION -->
   <section class="relative h-80 md:h-96 overflow-hidden">
-    <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-4.jpg?v=154951848870969584671786632978" alt="Better Buzz Coffee atmosphere" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-b from-deepBrown/70 to-deepBrown/50"></div>
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl text-white mb-4">Let's Connect</h1>
-      <p class="text-xl text-cream/90 max-w-2xl">We'd love to hear from you. Whether you have a question, want to find your nearest location, or just want to say hey — we're here.</p>
+    <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-2.jpg?v=118690366092295361601786632976" alt="Better Buzz Coffee Experience" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-deepbrown/80 to-deepbrown/50"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl text-cream mb-4">Let's Connect</h1>
+        <p class="text-xl text-cream/90 max-w-2xl mx-auto">We'd love to hear from you. Find us in San Diego or reach out anytime.</p>
+      </div>
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-warmWhite">
+  <!-- CONTACT INFO SECTION -->
+  <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-        
-        <div>
-          <h2 class="text-3xl md:text-4xl text-deepBrown mb-6">Get in Touch</h2>
-          <p class="text-coffeeBrown mb-8 text-lg">Have a question about our coffee, want to explore wholesale options, or need help with your order? Drop us a line and our team will get back to you.</p>
-          
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-deepBrown">Phone</h3>
-                <a href="tel:+16192692740" class="text-coffeeBrown hover:text-deepBrown transition-colors text-lg">(619) 269-2740</a>
-                <p class="text-sm text-coffeeBrown/70 mt-1">General inquiries & customer support</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-deepBrown">Flagship Location</h3>
-                <address class="not-italic text-coffeeBrown">
-                  801 University Ave<br>
-                  San Diego, CA 92103
-                </address>
-                <p class="text-sm text-coffeeBrown/70 mt-1">Hillcrest neighborhood</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-deepBrown">Social</h3>
-                <div class="flex gap-4 mt-2">
-                  <a href="https://www.facebook.com/betterbuzzcoffee" class="text-coffeeBrown hover:text-deepBrown transition-colors">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                  </a>
-                  <a href="https://www.instagram.com/betterbuzz" class="text-coffeeBrown hover:text-deepBrown transition-colors">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+      <div class="text-center mb-16">
+        <span class="inline-block bg-gold/20 text-deepbrown px-4 py-1.5 rounded-full text-sm font-medium mb-4">Find Us</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-deepbrown mb-4">Your Direct Line to Better Buzz</h2>
+        <p class="text-lg text-mediumbrown max-w-2xl mx-auto">No more searching — here's everything you need to visit us or get in touch.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Location Card -->
+        <div class="bg-warmwhite rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
           </div>
-          
-          <div class="mt-10 p-6 bg-cream rounded-2xl">
-            <div class="flex items-center gap-3 mb-2">
-              <div class="flex text-caramel">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" fill-opacity="0.5"></path></svg>
-              </div>
-              <span class="text-deepBrown font-semibold">4.5★</span>
-            </div>
-            <p class="text-coffeeBrown">Based on <strong>2,110 reviews</strong> from our amazing community</p>
-          </div>
+          <h3 class="text-xl font-serif text-deepbrown mb-3">Visit Us</h3>
+          <p class="text-mediumbrown mb-4">801 University Ave<br>San Diego, CA 92103</p>
+          <p class="text-sm text-mediumbrown/80">Hillcrest Neighborhood</p>
+          <a href="https://maps.google.com/?q=801+University+Ave+San+Diego+CA+92103" target="_blank" class="inline-flex items-center text-gold hover:text-deepbrown font-medium mt-4 transition-colors duration-200">
+            Get Directions
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
         </div>
-        
-        <div class="bg-cream rounded-3xl p-8 md:p-10">
-          <h3 class="text-2xl text-deepBrown mb-6">Send Us a Message</h3>
+
+        <!-- Phone Card -->
+        <div class="bg-warmwhite rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif text-deepbrown mb-3">Call Us</h3>
+          <a href="tel:+16192692740" class="text-2xl text-deepbrown hover:text-gold transition-colors duration-200 font-medium">(619) 269-2740</a>
+          <p class="text-sm text-mediumbrown/80 mt-4">Questions about orders,<br>catering, or wholesale</p>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="bg-warmwhite rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors duration-300">
+            <svg class="w-8 h-8 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif text-deepbrown mb-3">Hours</h3>
+          <div class="text-mediumbrown space-y-1">
+            <p>Monday – Friday: 6am – 7pm</p>
+            <p>Saturday – Sunday: 7am – 7pm</p>
+          </div>
+          <p class="text-sm text-gold mt-4 font-medium">Open 7 days a week</p>
+        </div>
+      </div>
+
+      <!-- Trust Badge -->
+      <div class="flex items-center justify-center gap-2 text-mediumbrown">
+        <div class="flex">
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg class="w-5 h-5 text-gold/50" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+        </div>
+        <span class="font-medium">4.5★ from 2,110 reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="py-16 md:py-24 bg-warmwhite">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-deepbrown/10 text-deepbrown px-4 py-1.5 rounded-full text-sm font-medium mb-4">Send a Message</span>
+          <h2 class="text-3xl md:text-4xl text-deepbrown mb-6">Questions? We're All Ears</h2>
+          <p class="text-lg text-mediumbrown mb-8">Whether you're curious about wholesale partnerships, catering for your next San Diego event, or just want to say hi — drop us a line.</p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-deepbrown">Wholesale Inquiries</h4>
+                <p class="text-mediumbrown text-sm">Bring Better Buzz to your business or cafe</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-deepbrown">Catering & Events</h4>
+                <p class="text-mediumbrown text-sm">Coffee carts for your San Diego gathering</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-deepbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-deepbrown">General Questions</h4>
+                <p class="text-mediumbrown text-sm">We're happy to help with anything</p>
+              </div>
+            </div>
+          </div>
+
+          <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-3.jpg?v=150429792829254079021786632977" alt="Better Buzz Coffee drinks" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+        </div>
+
+        <div class="bg-cream rounded-2xl p-8 md:p-10 shadow-xl">
           <form class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-deepBrown mb-2">Your Name</label>
-              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl border border-coffeeBrown/20 bg-warmWhite focus:outline-none focus:ring-2 focus:ring-coffeeBrown/50 transition-all" placeholder="Jane Smith">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-deepbrown mb-2">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200" placeholder="Your first name">
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-deepbrown mb-2">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200" placeholder="Your last name">
+              </div>
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-deepBrown mb-2">Email Address</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-coffeeBrown/20 bg-warmWhite focus:outline-none focus:ring-2 focus:ring-coffeeBrown/50 transition-all" placeholder="jane@example.com">
+              <label for="email" class="block text-sm font-medium text-deepbrown mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200" placeholder="you@example.com">
             </div>
             <div>
-              <label for="subject" class="block text-sm font-medium text-deepBrown mb-2">Subject</label>
-              <select id="subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-coffeeBrown/20 bg-warmWhite focus:outline-none focus:ring-2 focus:ring-coffeeBrown/50 transition-all">
+              <label for="phone" class="block text-sm font-medium text-deepbrown mb-2">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200" placeholder="(619) 555-0123">
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-deepbrown mb-2">Subject</label>
+              <select id="subject" name="subject" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200">
                 <option value="">Select a topic</option>
-                <option value="general">General Inquiry</option>
-                <option value="wholesale">Wholesale Partnership</option>
+                <option value="general">General Question</option>
+                <option value="wholesale">Wholesale Inquiry</option>
                 <option value="catering">Catering & Events</option>
                 <option value="feedback">Feedback</option>
-                <option value="careers">Careers</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div>
-              <label for="message" class="block text-sm font-medium text-deepBrown mb-2">Message</label>
-              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-coffeeBrown/20 bg-warmWhite focus:outline-none focus:ring-2 focus:ring-coffeeBrown/50 transition-all resize-none" placeholder="Tell us what's on your mind..."></textarea>
+              <label for="message" class="block text-sm font-medium text-deepbrown mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-warmwhite border border-mediumbrown/20 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200 resize-none" placeholder="Tell us what's on your mind..."></textarea>
             </div>
-            <button type="submit" class="w-full bg-deepBrown text-white py-4 rounded-xl font-semibold hover:bg-coffeeBrown transition-colors">Send Message</button>
+            <button type="submit" class="w-full bg-deepbrown hover:bg-mediumbrown text-cream py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-cream">
+  <!-- MAP SECTION -->
+  <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl text-deepBrown mb-4">Find Your Nearest Buzz</h2>
-        <p class="text-coffeeBrown text-lg max-w-2xl mx-auto">We've got multiple locations across San Diego so you're never too far from your favorite brew. Each café has its own vibe — find the one that feels like home.</p>
+        <h2 class="text-3xl md:text-4xl text-deepbrown mb-4">Find Us in Hillcrest</h2>
+        <p class="text-lg text-mediumbrown">In the heart of San Diego's vibrant Hillcrest neighborhood</p>
       </div>
-      
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-warmWhite rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-caramel/20 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-deepBrown mb-2">Hillcrest</h3>
-          <p class="text-coffeeBrown mb-3">801 University Ave<br>San Diego, CA 92103</p>
-          <a href="tel:+16192692740" class="text-coffeeBrown hover:text-deepBrown font-medium transition-colors">(619) 269-2740</a>
-        </div>
-        
-        <div class="bg-warmWhite rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-caramel/20 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-deepBrown mb-2">Point Loma</h3>
-          <p class="text-coffeeBrown mb-3">San Diego, CA</p>
-          <p class="text-sm text-coffeeBrown/70">Visit betterbuzzcoffee.com for hours</p>
-        </div>
-        
-        <div class="bg-warmWhite rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-caramel/20 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-deepBrown mb-2">La Jolla</h3>
-          <p class="text-coffeeBrown mb-3">San Diego, CA</p>
-          <p class="text-sm text-coffeeBrown/70">Visit betterbuzzcoffee.com for hours</p>
-        </div>
-        
-        <div class="bg-warmWhite rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-caramel/20 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-deepBrown mb-2">Pacific Beach</h3>
-          <p class="text-coffeeBrown mb-3">San Diego, CA</p>
-          <p class="text-sm text-coffeeBrown/70">Visit betterbuzzcoffee.com for hours</p>
-        </div>
-        
-        <div class="bg-warmWhite rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-caramel/20 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-coffeeBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-deepBrown mb-2">Encinitas</h3>
-          <p class="text-coffeeBrown mb-3">San Diego County, CA</p>
-          <p class="text-sm text-coffeeBrown/70">Visit betterbuzzcoffee.com for hours</p>
-        </div>
-        
-        <div class="bg-deepBrown rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-          <p class="text-cream mb-4">Looking for all locations with specific hours?</p>
-          <a href="https://betterbuzzcoffee.com/pages/locations" class="bg-caramel text-deepBrown px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors">View All Locations</a>
-        </div>
+      <div class="bg-warmwhite rounded-2xl overflow-hidden shadow-xl">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.4!2d-117.1617!3d32.7487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954d4b0e0b0e1%3A0x0!2s801%20University%20Ave%2C%20San%20Diego%2C%20CA%2092103!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full">
+        </iframe>
       </div>
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-warmWhite">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="relative rounded-3xl overflow-hidden aspect-video">
-          <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-2.jpg?v=118690366092295361601786632976" alt="Better Buzz Coffee beans" class="w-full h-full object-cover">
-        </div>
-        <div>
-          <span class="text-caramel font-semibold uppercase tracking-wide text-sm">Business Inquiries</span>
-          <h2 class="text-3xl md:text-4xl text-deepBrown mt-3 mb-6">Partner With Us</h2>
-          <p class="text-coffeeBrown text-lg mb-6">Since 2002, we've been roasting small batch specialty coffee right here in San Diego. Interested in bringing Better Buzz to your business, office, or event? We'd love to chat about wholesale partnerships.</p>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 text-caramel flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-coffeeBrown">Wholesale coffee programs</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 text-caramel flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-coffeeBrown">Office coffee service</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 text-caramel flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-coffeeBrown">Event catering</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 text-caramel flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-coffeeBrown">Custom branded products</span>
-            </li>
-          </ul>
-          <a href="mailto:wholesale@betterbuzzcoffee.com" class="inline-flex items-center gap-2 bg-deepBrown text-white px-8 py-4 rounded-full font-semibold hover:bg-coffeeBrown transition-colors">
-            Inquire About Wholesale
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-deepBrown relative overflow-hidden">
+  <!-- CTA SECTION -->
+  <section class="py-20 md:py-28 bg-deepbrown relative overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-      <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-3.jpg?v=150429792829254079021786632977" alt="" class="w-full h-full object-cover">
+      <img src="https://betterbuzzcoffee.com/cdn/shop/t/51/assets/home-slider-slide-4.jpg?v=154951848870969584671786632978" alt="" class="w-full h-full object-cover">
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-5xl text-white mb-6">Can't Wait? Order Ahead</h2>
-      <p class="text-cream/90 text-xl mb-10 max-w-2xl mx-auto">Skip the line and have your favorite Better Buzz drink ready when you arrive. Plus, join our rewards program and get 10% off your first order.</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl text-cream mb-6">Ready to Experience the Buzz?</h2>
+      <p class="text-xl text-cream/80 mb-10 max-w-2xl mx-auto">Skip the line with online ordering, or swing by our Hillcrest location for your next favorite drink. San Diego's specialty coffee awaits.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://betterbuzzcoffee.com/pages/order" class="bg-white text-deepBrown px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors text-lg">Order Online Now</a>
-        <a href="https://betterbuzzcoffee.com/pages/rewards" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors text-lg">Join Rewards for 10% Off</a>
+        <a href="https://betterbuzzcoffee.com" class="inline-flex items-center justify-center bg-gold hover:bg-yellow-600 text-brand px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
+          Order Online Now
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+        <a href="https://maps.google.com/?q=801+University+Ave+San+Diego+CA+92103" target="_blank" class="inline-flex items-center justify-center bg-transparent border-2 border-cream text-cream hover:bg-cream hover:text-deepbrown px-8 py-4 rounded-full font-semibold transition-all duration-300">
+          Visit Our Location
+        </a>
       </div>
     </div>
   </section>
 
-  <footer class="bg-brand text-white py-16">
+  <!-- FOOTER -->
+  <footer class="bg-brand text-cream pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div class="md:col-span-2">
-          <h3 class="text-2xl font-serif mb-4">Better Buzz <span class="text-caramel">Coffee</span></h3>
-          <p class="text-white/70 mb-6 max-w-md">San Diego's favorite small batch roaster since 2002. Specialty coffee, good vibes, and that California surf culture we all love.</p>
+          <h3 class="text-2xl font-serif mb-4">Better Buzz <span class="text-gold">Coffee</span></h3>
+          <p class="text-cream/70 mb-6 max-w-md">Small batch coffee roasting since 2002. Born in San Diego, brewed with passion. Experience the buzz at one of our locations or order online.</p>
           <div class="flex gap-4">
-            <a href="https://www.facebook.com/betterbuzzcoffee" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <a href="https://www.facebook.com/betterbuzzcoffee" target="_blank" class="w-10 h-10 bg-cream/10 hover:bg-gold rounded-full flex items-center justify-center transition-colors duration-200">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="https://www.instagram.com/betterbuzz" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://www.instagram.com/betterbuzz" target="_blank" class="w-10 h-10 bg-cream/10 hover:bg-gold rounded-full flex items-center justify-center transition-colors duration-200">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
           </div>
         </div>
@@ -325,38 +294,46 @@
         <div>
           <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-white/70 hover:text-white transition-colors">About</a></li>
-            <li><a href="services.html" class="text-white/70 hover:text-white transition-colors">Services</a></li>
-            <li><a href="contact.html" class="text-white font-medium">Contact</a></li>
+            <li><a href="index.html" class="text-cream/70 hover:text-gold transition-colors duration-200">Home</a></li>
+            <li><a href="about.html" class="text-cream/70 hover:text-gold transition-colors duration-200">About</a></li>
+            <li><a href="services.html" class="text-cream/70 hover:text-gold transition-colors duration-200">Services</a></li>
+            <li><a href="contact.html" class="text-gold font-medium">Contact</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="font-semibold text-lg mb-4">Visit Us</h4>
-          <address class="not-italic text-white/70 space-y-2">
-            <p>801 University Ave</p>
-            <p>San Diego, CA 92103</p>
-            <p class="pt-2">
-              <a href="tel:+16192692740" class="hover:text-white transition-colors">(619) 269-2740</a>
-            </p>
-          </address>
-          <p class="text-white/50 text-sm mt-4">Multiple locations across San Diego</p>
+          <h4 class="font-semibold text-lg mb-4">Contact</h4>
+          <ul class="space-y-3 text-cream/70">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <span>801 University Ave<br>San Diego, CA 92103</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              <a href="tel:+16192692740" class="hover:text-gold transition-colors duration-200">(619) 269-2740</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Open Daily 6am–7pm</span>
+            </li>
+          </ul>
         </div>
       </div>
       
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-white/50 text-sm">© 2024 Better Buzz Coffee. All rights reserved.</p>
-        <p class="text-white/50 text-sm">Preview site by LVRG Agency</p>
+      <div class="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-cream/50 text-sm">© 2024 Better Buzz Coffee. All rights reserved.</p>
+        <p class="text-cream/50 text-sm">Roasting specialty coffee in San Diego since 2002</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-  </script>
 
 <!-- GHL Chat Widget -->
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a906f149f17bc64b3a4a640"></script>
