@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Dark Horse Coffee Roasters</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand: '#8B0000' } } } }</script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: '#d9534f' } } } }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -16,180 +16,180 @@
   </style>
 </head>
 <body class="bg-amber-50 text-stone-800">
-
-  <!-- Claim Bar -->
+  
   <div class="sticky top-0 z-50 bg-black text-white py-2 px-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm flex-wrap">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm">
       <span>This site was built for <strong>Dark Horse Coffee Roasters</strong> by LVRG Agency</span>
-      <a href="https://theresandiego.com/letschat" class="bg-yellow-500 text-black px-4 py-1 rounded-full text-xs font-semibold hover:bg-yellow-400 transition-colors">Claim This Site →</a>
+      <a href="https://theresandiego.com/letschat" class="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full text-xs transition-colors">Claim This Site →</a>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="bg-cream-100 bg-amber-50/95 backdrop-blur-sm sticky top-10 z-40 border-b border-amber-200">
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-10 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <a href="index.html" class="text-2xl font-bold text-brand">
-          <span class="font-serif">Dark Horse</span> <span class="font-normal text-stone-600">Coffee Roasters</span>
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-lg">DH</span>
+          </div>
+          <span class="font-bold text-xl text-stone-900 hidden sm:block">Dark Horse Coffee Roasters</span>
         </a>
+        
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-stone-600 hover:text-brand transition-colors">Home</a>
+          <a href="index.html" class="text-stone-600 hover:text-brand transition-colors font-medium">Home</a>
           <a href="about.html" class="text-brand font-semibold border-b-2 border-brand pb-1">About</a>
-          <a href="services.html" class="text-stone-600 hover:text-brand transition-colors">Services</a>
-          <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors">Contact</a>
-          <a href="services.html" class="bg-brand text-white px-6 py-2.5 rounded-full hover:bg-red-900 transition-colors font-medium">Subscribe Now</a>
+          <a href="services.html" class="text-stone-600 hover:text-brand transition-colors font-medium">Services</a>
+          <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors font-medium">Contact</a>
         </div>
-        <button class="md:hidden text-stone-700" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        
+        <a href="services.html" class="bg-brand hover:bg-red-600 text-white font-semibold px-6 py-2.5 rounded-full transition-colors shadow-md hover:shadow-lg">Subscribe Now</a>
+        
+        <button class="md:hidden text-stone-700">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-      </div>
-      <div id="mobileMenu" class="hidden md:hidden pb-4">
-        <div class="flex flex-col gap-3">
-          <a href="index.html" class="text-stone-600 hover:text-brand transition-colors py-2">Home</a>
-          <a href="about.html" class="text-brand font-semibold border-l-4 border-brand pl-3 py-2">About</a>
-          <a href="services.html" class="text-stone-600 hover:text-brand transition-colors py-2">Services</a>
-          <a href="contact.html" class="text-stone-600 hover:text-brand transition-colors py-2">Contact</a>
-          <a href="services.html" class="bg-brand text-white px-6 py-2.5 rounded-full hover:bg-red-900 transition-colors font-medium text-center mt-2">Subscribe Now</a>
-        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="relative h-96 md:h-[500px] overflow-hidden">
-    <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Dark Horse Coffee Roasters coffee bag" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-900/40"></div>
-    <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">Our Story, One Cup at a Time</h1>
-        <p class="text-xl text-amber-100 leading-relaxed">From the heart of San Diego's Adams Avenue neighborhood, we're on a mission to bring you coffee that's as bold and adventurous as you are.</p>
+    <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/88a0ac3e-0bc5-44e5-a47f-703a67bbbae4/Subs_ThreeBags_ProductImage.jpg" alt="Dark Horse Coffee bags" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/60 to-transparent"></div>
+    <div class="relative z-10 h-full flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-brand/90 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Our Story</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">More Than Just Coffee — It's a Craft</h1>
+          <p class="text-lg md:text-xl text-amber-100 leading-relaxed">Rooted in San Diego, driven by passion, and dedicated to bringing you exceptional beans from around the world.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Story Section -->
-  <section class="py-20 bg-white">
+  <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <span class="text-brand font-medium tracking-wide uppercase text-sm">Who We Are</span>
-          <h2 class="text-3xl md:text-4xl text-stone-800 mt-3 mb-6">Specialty Coffee with a Quirky Soul</h2>
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Who We Are</span>
+          <h2 class="text-3xl md:text-4xl text-stone-900 mt-3 mb-6">Born on Adams Avenue, Built for Coffee Lovers</h2>
           <div class="space-y-5 text-stone-600 leading-relaxed">
-            <p>Dark Horse Coffee Roasters isn't just another coffee shop — we're a specialty coffee roaster born and bred in San Diego. From our home base at 811 25th St, we source, roast, and curate single-origin and blended coffees that tell a story with every sip.</p>
-            <p>Our roasting team obsesses over quality and availability, working directly with farmers through direct trade partnerships. This means the coffee in your cup isn't just delicious — it's ethically sourced and supports sustainable farming communities around the world.</p>
-            <p>Whether you're a pour-over purist, an espresso enthusiast, or someone who just loves a really good cup of coffee on a slow Saturday morning, we've got something special waiting for you.</p>
+            <p>Dark Horse Coffee Roasters didn't start in a boardroom or with a business plan — it started with a simple belief: that great coffee should be accessible, approachable, and absolutely delicious.</p>
+            <p>Based in the heart of San Diego's Adams Avenue neighborhood, we're a specialty coffee roaster that takes our craft seriously, but never ourselves. Our team obsesses over sourcing single-origin beans and crafting custom blends that tell a story with every sip.</p>
+            <p>We believe coffee is more than a morning ritual — it's a moment of pause, a conversation starter, and sometimes, the best part of your day. That's a responsibility we don't take lightly.</p>
+          </div>
+          <div class="mt-8 flex items-center gap-6">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-brand">4.6★</div>
+              <div class="text-sm text-stone-500 mt-1">from 668 reviews</div>
+            </div>
+            <div class="w-px h-16 bg-stone-200"></div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-stone-900">San Diego</div>
+              <div class="text-sm text-stone-500 mt-1">Proudly Local</div>
+            </div>
           </div>
         </div>
         <div class="relative">
-          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/4c4c37ff-5cbe-406c-ad11-0d9c3f6ba0fb/Subs_TwoBags_ProductImage.jpg" alt="Dark Horse Coffee subscription bags" class="rounded-2xl shadow-xl">
-          <div class="absolute -bottom-6 -left-6 bg-brand text-white p-6 rounded-xl shadow-lg">
-            <div class="text-4xl font-bold">4.6★</div>
-            <div class="text-amber-200 text-sm">from 549 reviews</div>
-          </div>
+          <div class="absolute -inset-4 bg-amber-100 rounded-3xl transform rotate-3"></div>
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/f69930b1-5ed2-4cad-9ab0-dd2e4deed553/Subs_SingleBag_ProductImage.jpg" alt="Dark Horse Coffee single bag" class="relative rounded-2xl shadow-xl w-full">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section class="py-20 bg-amber-50">
+  <section class="py-20 md:py-28 bg-stone-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand font-medium tracking-wide uppercase text-sm">What Drives Us</span>
-        <h2 class="text-3xl md:text-4xl text-stone-800 mt-3">Coffee is Our Craft, Community is Our Heart</h2>
+        <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Our Values</span>
+        <h2 class="text-3xl md:text-4xl mt-3 mb-6">What Makes Us Different</h2>
+        <p class="text-stone-400 text-lg">We're not trying to be everything to everyone. We're trying to be the best cup of coffee you've ever had.</p>
       </div>
+      
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+        <div class="bg-stone-800/50 rounded-2xl p-8 hover:bg-stone-800 transition-colors group">
+          <div class="w-14 h-14 bg-brand/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand/30 transition-colors">
             <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl text-stone-800 mb-3">Direct Trade Certified</h3>
-          <p class="text-stone-600 leading-relaxed">We build relationships directly with coffee farmers, ensuring fair compensation and sustainable practices at every origin.</p>
+          <h3 class="text-xl font-semibold mb-3">Single-Origin Focus</h3>
+          <p class="text-stone-400 leading-relaxed">We source directly from farms that share our passion for quality. Each bean has a story, and we're here to tell it through exceptional roasting.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        
+        <div class="bg-stone-800/50 rounded-2xl p-8 hover:bg-stone-800 transition-colors group">
+          <div class="w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500/30 transition-colors">
+            <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
             </svg>
           </div>
-          <h3 class="text-xl text-stone-800 mb-3">Expertly Curated</h3>
-          <p class="text-stone-600 leading-relaxed">Our roasting team hand-selects coffees based on current quality and availability, so you always get the best of what's in season.</p>
+          <h3 class="text-xl font-semibold mb-3">Playful Sophistication</h3>
+          <p class="text-stone-400 leading-relaxed">Specialty coffee doesn't have to be pretentious. We bring dark sophistication with a playful personality — serious about quality, never about being snobby.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        
+        <div class="bg-stone-800/50 rounded-2xl p-8 hover:bg-stone-800 transition-colors group">
+          <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
+            <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl text-stone-800 mb-3">San Diego Proud</h3>
-          <p class="text-stone-600 leading-relaxed">Rooted in the Adams Avenue neighborhood, we're proud to serve our local community while shipping great coffee nationwide.</p>
+          <h3 class="text-xl font-semibold mb-3">Community First</h3>
+          <p class="text-stone-400 leading-relaxed">Our Adams Avenue roots run deep. We're not just a coffee company — we're neighbors, partners, and friends to the San Diego community we call home.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Press & Recognition Section -->
-  <section class="py-20 bg-stone-800 text-white">
+  <section class="py-20 md:py-28 bg-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <span class="text-amber-400 font-medium tracking-wide uppercase text-sm">Trusted by Coffee Lovers</span>
-          <h2 class="text-3xl md:text-4xl text-white mt-3 mb-6">San Diego's Favorite Dark Horse</h2>
-          <p class="text-stone-300 leading-relaxed mb-8">With over 700 reviews on Yelp and a dedicated following on Instagram, we've built a community of coffee enthusiasts who trust us to deliver exceptional quality, cup after cup.</p>
-          <div class="grid grid-cols-2 gap-6">
-            <div class="bg-stone-700/50 p-6 rounded-xl">
-              <div class="text-3xl font-bold text-amber-400 mb-1">4.6★</div>
-              <div class="text-stone-400 text-sm">Average Rating</div>
-            </div>
-            <div class="bg-stone-700/50 p-6 rounded-xl">
-              <div class="text-3xl font-bold text-amber-400 mb-1">549+</div>
-              <div class="text-stone-400 text-sm">Happy Reviews</div>
-            </div>
-            <div class="bg-stone-700/50 p-6 rounded-xl">
-              <div class="text-3xl font-bold text-amber-400 mb-1">715+</div>
-              <div class="text-stone-400 text-sm">Yelp Reviews</div>
-            </div>
-            <div class="bg-stone-700/50 p-6 rounded-xl">
-              <div class="text-3xl font-bold text-amber-400 mb-1">Local</div>
-              <div class="text-stone-400 text-sm">San Diego Roasted</div>
-            </div>
-          </div>
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="order-2 lg:order-1 grid grid-cols-2 gap-4">
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/4c4c37ff-5cbe-406c-ad11-0d9c3f6ba0fb/Subs_TwoBags_ProductImage.jpg" alt="Two bags subscription" class="rounded-2xl shadow-lg w-full">
+          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/17968c9c-a86c-4433-90bb-3578ecf59870/Subs_FourBags_ProductImage.jpg" alt="Four bags subscription" class="rounded-2xl shadow-lg w-full mt-8">
         </div>
-        <div class="relative">
-          <img src="https://images.squarespace-cdn.com/content/v1/55049669e4b030d1c7f84cad/88a0ac3e-0bc5-44e5-a47f-703a67bbbae4/Subs_ThreeBags_ProductImage.jpg" alt="Dark Horse Coffee three bag subscription" class="rounded-2xl shadow-2xl">
+        <div class="order-1 lg:order-2">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Approach</span>
+          <h2 class="text-3xl md:text-4xl text-stone-900 mt-3 mb-6">Curated by Roasters Who Care</h2>
+          <div class="space-y-5 text-stone-600 leading-relaxed">
+            <p>Our roasting team doesn't just follow recipes — they create experiences. Every batch is roasted with intention, calibrated to bring out the unique characteristics that make each origin special.</p>
+            <p>From rare one-off coffees to our carefully crafted blends, we're constantly exploring, tasting, and refining. Our Roaster's Choice subscriptions let you join us on that journey, receiving hand-picked selections based on what's tasting exceptional right now.</p>
+            <p>Whether you prefer whole bean for your weekend pour-over ritual or a fine espresso grind for your morning shot, we've got you covered with custom grind options for every brewing method.</p>
+          </div>
+          <div class="mt-8">
+            <a href="services.html" class="inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
+              Explore Our Services
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-24 bg-gradient-to-br from-brand to-red-900 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-      <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
-    </div>
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-5xl mb-6">Ready to Discover Your New Favorite Coffee?</h2>
-      <p class="text-xl text-red-100 mb-10 max-w-2xl mx-auto leading-relaxed">Subscribe to Roaster's Choice and let our expert team surprise you with curated monthly selections, or explore our single-origin coffees from specific regions around the world.</p>
+  <section class="py-20 md:py-28 bg-gradient-to-br from-brand to-red-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl mb-6">Never Run Out of Exceptional Beans</h2>
+      <p class="text-xl text-red-100 mb-10 max-w-2xl mx-auto leading-relaxed">Subscribe to Roaster's Choice and let our team curate monthly coffee surprises delivered straight to your door. From special releases to rare finds — your next favorite coffee is waiting.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="services.html" class="bg-white text-brand px-8 py-4 rounded-full font-semibold hover:bg-amber-100 transition-colors text-lg">Start Your Subscription</a>
-        <a href="services.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors text-lg">Explore Single Origins</a>
+        <a href="services.html" class="bg-white text-brand font-bold px-8 py-4 rounded-full hover:bg-amber-50 transition-colors shadow-lg hover:shadow-xl text-lg">Start Your Subscription</a>
+        <a href="contact.html" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-colors text-lg">Get In Touch</a>
       </div>
+      <p class="mt-8 text-red-200 text-sm">Choose from 1-5 bag options • Cancel anytime • Free shipping on subscriptions</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-stone-900 text-stone-300 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-2">
-          <h3 class="text-2xl text-white mb-4 font-serif">Dark Horse Coffee Roasters</h3>
-          <p class="leading-relaxed mb-6 max-w-md">Specialty coffee roasted in San Diego with adventurous spirit and quirky personality. Direct trade certified, community driven.</p>
+  <footer class="bg-stone-900 text-stone-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-xl">DH</span>
+            </div>
+            <span class="font-bold text-2xl text-white">Dark Horse Coffee Roasters</span>
+          </div>
+          <p class="text-stone-400 leading-relaxed mb-6 max-w-md">Specialty coffee roasters based in San Diego, bringing you exceptional single-origin beans and custom blends with playful personality and dark sophistication.</p>
           <div class="flex gap-4">
             <a href="https://www.facebook.com/DarkHorseRoasting" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -198,30 +198,36 @@
             </a>
             <a href="http://instagram.com/darkhorsecoffee" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
               </svg>
             </a>
           </div>
         </div>
+        
         <div>
-          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <h4 class="font-semibold text-white text-lg mb-4">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-amber-400 font-medium">About</a></li>
-            <li><a href="services.html" class="hover:text-amber-400 transition-colors">Services</a></li>
-            <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+            <li><a href="index.html" class="hover:text-brand transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-brand font-semibold">About</a></li>
+            <li><a href="services.html" class="hover:text-brand transition-colors">Services</a></li>
+            <li><a href="contact.html" class="hover:text-brand transition-colors">Contact</a></li>
           </ul>
         </div>
+        
         <div>
-          <h4 class="text-white font-semibold mb-4">Visit Us</h4>
-          <address class="not-italic space-y-3">
-            <p>811 25th St Unit 100<br>San Diego, CA 92102</p>
-            <p><a href="tel:+16193440500" class="hover:text-amber-400 transition-colors">(619) 344-0500</a></p>
+          <h4 class="font-semibold text-white text-lg mb-4">Visit Us</h4>
+          <address class="not-italic space-y-3 text-stone-400">
+            <p>3330 Adams Ave<br>San Diego, CA 92116</p>
+            <p>
+              <a href="tel:+16193446962" class="hover:text-brand transition-colors">(619) 344-6962</a>
+            </p>
           </address>
         </div>
       </div>
-      <div class="border-t border-stone-800 pt-8 text-center text-stone-500 text-sm">
-        <p>&copy; 2024 Dark Horse Coffee Roasters. All rights reserved.</p>
+      
+      <div class="border-t border-stone-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-stone-500 text-sm">&copy; 2025 Dark Horse Coffee Roasters. All rights reserved.</p>
+        <p class="text-stone-500 text-sm">Roasted with ☕ on Adams Avenue, San Diego</p>
       </div>
     </div>
   </footer>
