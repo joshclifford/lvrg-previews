@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/preview/panchitasbakery-com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Panchita's Kitchen & Bakery</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors: { brand: '#C41E3A' } } } }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+  .font-script { font-family: 'Cormorant Garamond', serif; }
+</style>
+</head>
+<body class="bg-[#fdf8f3] text-stone-800">
+
+<!-- CLAIM BAR -->
+<div class="bg-black text-white text-xs sm:text-sm py-2.5 px-4 text-center flex flex-wrap items-center justify-center gap-2">
+  <span>This site was built for <strong>Panchita's Kitchen & Bakery</strong> by LVRG Agency</span>
+  <a href="https://theresandiego.com/letschat" class="bg-yellow-500 text-black font-semibold px-3 py-1 rounded-full hover:bg-yellow-400 transition whitespace-nowrap">Claim This Site →</a>
+</div>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-40 bg-[#fdf8f3]/95 backdrop-blur border-b border-stone-200">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl font-bold text-brand">Panchita's <span class="text-stone-800 font-script italic font-medium">Kitchen &amp; Bakery</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="about.html" class="hover:text-brand transition">About</a>
+      <a href="services.html" class="text-brand border-b-2 border-brand pb-1 font-semibold">Services</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    </div>
+    <a href="contact.html" class="bg-brand text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-red-800 transition shadow-md">Order Takeaway</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative h-[52vh] min-h-[380px] flex items-center justify-center overflow-hidden">
+  <img src="https://a.tile.openstreetmap.org/16/11444/26452.png" alt="North Park map view near Panchita's Kitchen & Bakery" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-center px-6">
+    <p class="uppercase tracking-[0.3em] text-yellow-400 text-xs sm:text-sm mb-4 font-medium">What We Offer</p>
+    <h1 class="font-display text-4xl sm:text-6xl font-bold text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">Our Services</h1>
+    <p class="font-script italic text-white/90 text-xl sm:text-2xl mt-4 max-w-2xl mx-auto">From morning pan dulce to late-night carnitas — every service crafted with the same family recipe pride.</p>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="max-w-4xl mx-auto px-6 py-16 text-center">
+  <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand mb-5">Eight Ways to Enjoy Panchita's</h2>
+  <p class="text-stone-600 leading-relaxed text-lg">Whether you're stopping by our North Park spot for breakfast before work, sending the kids off with fresh conchas, or feeding a hundred guests at your next celebration — Panchita's Kitchen & Bakery meets you where you are. Right now, most of these services still run through a phone call at (619) 281-6662. We're working on bringing online ordering to the table — until then, we're just one ring away.</p>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="max-w-7xl mx-auto px-6 pb-20">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🍳</div>
+      <h3 class="font-display text-xl font-bold mb-2">Breakfast</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Huevos rancheros, chilaquiles, and warm tortillas made the traditional way — the start North Park mornings deserve.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🌮</div>
+      <h3 class="font-display text-xl font-bold mb-2">Lunch</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Tacos, tortas, and hearty plates built for a quick midday break or a leisurely sit-down on the patio.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🌙</div>
+      <h3 class="font-display text-xl font-bold mb-2">Dinner</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Slow-simmered moles and comforting classics, plated for family dinners or a night out in the neighborhood.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🥐</div>
+      <h3 class="font-display text-xl font-bold mb-2">Bakery &amp; Pastries</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Conchas, empanadas, and artisanal panadería favorites baked fresh daily since 1983.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🥡</div>
+      <h3 class="font-display text-xl font-bold mb-2">Takeaway</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Full menu and bakery case to go. Call ahead and we'll have it boxed and ready when you arrive.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🚗</div>
+      <h3 class="font-display text-xl font-bold mb-2">Drive-Thru</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Available at select locations — grab your order without leaving the car, no reservation needed.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🌤️</div>
+      <h3 class="font-display text-xl font-bold mb-2">Outdoor Dining</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Our North Park patio is made for San Diego weather — coffee, pan dulce, and good company in the open air.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-stone-200 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl font-display font-bold mb-5">🎉</div>
+      <h3 class="font-display text-xl font-bold mb-2">Catering</h3>
+      <p class="text-stone-600 text-sm leading-relaxed">Feed your office, wedding, or family reunion with trays of our signature dishes and bakery favorites.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED: TAKEAWAY & CATERING SPOTLIGHT -->
+<section class="bg-white border-y border-stone-200">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="uppercase tracking-[0.25em] text-brand text-xs font-semibold mb-3">Our Most Requested Services</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Takeaway &amp; Catering, Done Right</h2>
+      <p class="text-stone-600 leading-relaxed mb-4">Panchita's has always been about feeding people well, whether it's one plate for the drive home or a full spread for two hundred guests. Our takeaway program moves fast — hot food, fresh bakery boxes, and a warm smile at pickup. Our catering team handles everything from office lunches to quinceañeras and weddings.</p>
+      <p class="text-stone-600 leading-relaxed mb-8">Right now, both start with a phone call. We're building the digital side of the kitchen — until it's live, our team answers every ring personally at <span class="text-brand font-semibold">(619) 281-6662</span>.</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="contact.html" class="bg-brand text-white text-center px-8 py-4 rounded-full font-semibold hover:bg-red-800 transition shadow-lg">Order Takeaway</a>
+        <a href="contact.html" class="border-2 border-brand text-brand text-center px-8 py-4 rounded-full font-semibold hover:bg-brand hover:text-white transition">Reserve Catering</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="https://b.tile.openstreetmap.org/16/11445/26452.png" alt="Panchita's Kitchen & Bakery North Park location area" class="rounded-2xl object-cover w-full h-56 shadow-lg">
+      <img src="https://c.tile.openstreetmap.org/16/11446/26452.png" alt="Panchita's Kitchen & Bakery neighborhood location" class="rounded-2xl object-cover w-full h-56 shadow-lg mt-8">
+      <img src="https://a.tile.openstreetmap.org/16/11447/26452.png" alt="Panchita's Kitchen & Bakery area map" class="rounded-2xl object-cover w-full h-56 shadow-lg col-span-2">
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY / STATS -->
+<section class="max-w-6xl mx-auto px-6 py-20 text-center">
+  <h2 class="font-display text-3xl font-bold mb-3">Trusted Across San Diego</h2>
+  <p class="text-stone-500 max-w-xl mx-auto mb-12">Since 1983, families across San Diego have chosen Panchita's for the flavors that feel like home.</p>
+  <div class="grid sm:grid-cols-3 gap-8 mb-14">
+    <div class="bg-brand/5 rounded-2xl p-8">
+      <p class="font-display text-5xl font-bold text-brand">4.2★</p>
+      <p class="text-stone-600 mt-2 text-sm">Average rating from 215 reviews</p>
+    </div>
+    <div class="bg-brand/5 rounded-2xl p-8">
+      <p class="font-display text-5xl font-bold text-brand">8</p>
+      <p class="text-stone-600 mt-2 text-sm">Distinct services, one kitchen philosophy</p>
+    </div>
+    <div class="bg-brand/5 rounded-2xl p-8">
+      <p class="font-display text-5xl font-bold text-brand">1983</p>
+      <p class="text-stone-600 mt-2 text-sm">Baking authentic recipes since</p>
+    </div>
+  </div>
+  <blockquote class="font-script italic text-2xl text-stone-700 max-w-3xl mx-auto leading-relaxed">
+    "Panchita's Kitchen &amp; Bakery – Best Brunch in North Park" — Bold flavors of authentic panadería in San Diego.
+  </blockquote>
+  <p class="text-stone-400 text-sm mt-3">— panchitasbakery.com</p>
+</section>
+
+<!-- CTA -->
+<section class="bg-brand relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-5">Skip the Wait. Not the Flavor.</h2>
+    <p class="text-white/90 text-lg mb-10 max-w-2xl mx-auto">Order takeaway for quick, authentic Mexican comfort food, or reserve catering for your next event. Our North Park team is ready — just give us a call.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:+16192816662" class="bg-white text-brand px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition shadow-lg">Call (619) 281-6662</a>
+      <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand transition">Plan Your Catering</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-stone-950 text-stone-300">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <h3 class="font-display text-2xl font-bold text-white mb-3">Panchita's Kitchen &amp; Bakery</h3>
+      <p class="text-sm text-stone-400">Authentic Mexican cuisine and artisanal pastries in the heart of North Park, San Diego.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3 uppercase tracking-wide text-sm">Visit</h4>
+      <p class="text-sm text-stone-400 leading-relaxed">4414 University Ave<br>San Diego, CA 92105<br>North Park</p>
+      <p class="text-sm text-stone-400 mt-2">(619) 281-6662</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3 uppercase tracking-wide text-sm">Hours</h4>
+      <ul class="text-sm text-stone-400 space-y-1">
+        <li>North Park: 7:30am - 2:00pm</li>
+        <li>Golden Hill: 5:30am - 9:00pm</li>
+        <li>Barrio Logan: 5:00am - 9:00pm</li>
+        <li>City Heights: Temporarily Closed</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-3 uppercase tracking-wide text-sm">Explore</h4>
+      <ul class="text-sm space-y-2">
+        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+        <li><a href="services.html" class="text-brand font-semibold">Services</a></li>
+        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-stone-800 py-6 text-center text-xs text-stone-500">
+    © 2024 Panchita's Kitchen &amp; Bakery. Preview site built by LVRG Agency.
+  </div>
+</footer>
+
+
+<!-- GHL Chat Widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a906f149f17bc64b3a4a640"></script>
+
+</body>
+</html>
