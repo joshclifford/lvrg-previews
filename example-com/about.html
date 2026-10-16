@@ -5,194 +5,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Example</title>
+<meta name="description" content="Example.com is a reserved domain designated by IANA for illustrative and documentation purposes — not an active commercial service.">
 <script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config = { theme: { extend: { colors: { brand: '#0051ba' } } } }</script>
+<script>tailwind.config = { theme: { extend: { colors: { brand: '#0066cc' } } } }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   body { font-family: 'Inter', sans-serif; }
   h1, h2, h3, .font-heading { font-family: 'Sora', sans-serif; }
 </style>
 </head>
-<body class="bg-white text-slate-800">
+<body class="bg-white text-slate-800 antialiased">
 
 <!-- CLAIM BAR -->
-<div class="sticky top-0 z-50 bg-black text-white text-sm py-2 px-4 flex items-center justify-center gap-4 flex-wrap">
-  <span class="text-center">This site was built for <strong>Example</strong> by There San Diego</span>
-  <a href="https://theresandiego.com/letschat?utm_source=lead_magnet&utm_medium=smart_site&utm_campaign=tsd_outreach&offer=smart_site&lead_id=example-com"
-     class="bg-yellow-400 text-black font-semibold text-xs px-4 py-1.5 rounded-full hover:bg-yellow-300 transition whitespace-nowrap">
-    Claim This Site →
-  </a>
+<div class="sticky top-0 z-50 bg-black text-white text-sm py-2.5 px-4">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
+    <span>This site was built for <strong class="font-semibold">Example</strong> by There San Diego</span>
+    <a href="https://theresandiego.com/letschat?utm_source=lead_magnet&utm_medium=smart_site&utm_campaign=tsd_outreach&offer=smart_site&lead_id=example-com"
+       class="inline-flex items-center gap-1 bg-amber-400 hover:bg-amber-300 text-black font-semibold text-xs px-3 py-1.5 rounded-full transition-colors">
+      Claim This Site →
+    </a>
+  </div>
 </div>
 
 <!-- NAV -->
-<header class="border-b border-slate-200 sticky top-[41px] z-40 bg-white/90 backdrop-blur">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="index.html" class="font-heading text-xl font-bold text-brand">Example</a>
+<header class="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-[41px] z-40">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-heading text-xl font-bold text-slate-900">Example<span class="text-brand">.</span></a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="index.html" class="text-slate-600 hover:text-brand transition">Home</a>
-      <a href="about.html" class="text-brand font-semibold underline underline-offset-4 decoration-2">About</a>
-      <a href="contact.html" class="text-slate-600 hover:text-brand transition">Contact</a>
+      <a href="index.html" class="text-slate-600 hover:text-brand transition-colors">Home</a>
+      <a href="about.html" class="text-brand font-semibold border-b-2 border-brand pb-1">About</a>
+      <a href="contact.html" class="text-slate-600 hover:text-brand transition-colors">Contact</a>
     </nav>
-    <a href="contact.html" class="bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-800 transition">
+    <a href="contact.html" class="bg-brand hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors">
       Learn More
     </a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="relative bg-gradient-to-br from-brand via-blue-800 to-slate-900 text-white py-24 px-6 overflow-hidden">
-  <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%)]"></div>
-  <div class="max-w-4xl mx-auto relative text-center">
-    <span class="inline-block text-xs uppercase tracking-widest font-semibold bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-      About the Domain
-    </span>
-    <h1 class="font-heading text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-      A Reserved Name, Held in Trust
+<section class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
+  <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 20%, #0066cc 0%, transparent 45%), radial-gradient(circle at 80% 70%, #0066cc 0%, transparent 40%);"></div>
+  <div class="relative max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
+    <span class="inline-block text-xs tracking-widest uppercase text-blue-300 font-semibold mb-4">About Example.com</span>
+    <h1 class="font-heading text-4xl md:text-5xl font-bold leading-tight mb-6">
+      A reserved name, not a running business.
     </h1>
-    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-      Example.com exists for one reason: to be used in documentation, teaching materials, and technical examples —
-      without ever being mistaken for a live, operating business.
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+      example.com exists as a documentation domain — set aside under IANA guidance so writers, developers, and educators have a safe, permanent placeholder that never resolves to a real company.
     </p>
   </div>
 </section>
 
-<!-- WHO / WHAT -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+<!-- WHO WE ARE -->
+<section class="max-w-5xl mx-auto px-6 py-20">
+  <div class="grid md:grid-cols-2 gap-14 items-start">
     <div>
-      <h2 class="font-heading text-3xl font-bold text-slate-900 mb-5">Who Manages Example.com</h2>
+      <h2 class="font-heading text-3xl font-bold text-slate-900 mb-5">What Example.com actually is</h2>
       <p class="text-slate-600 leading-relaxed mb-4">
-        Example.com is a documentation example domain managed by IANA (the Internet Assigned Numbers Authority)
-        for use in examples and documentation, free for anyone to reference without requiring permission.
+        Example.com is a reserved domain name, maintained for use in documentation and illustrative examples. It isn't tied to a storefront, a service menu, or a team — it's infrastructure for the open internet, the placeholder behind countless tutorials, manuals, and code samples.
       </p>
       <p class="text-slate-600 leading-relaxed mb-4">
-        It is deliberately official, informational, and multilingual in character — a administrative placeholder,
-        not a storefront. There is no product catalog here, no service list, no booking calendar, because none was ever intended.
+        Because it's reserved rather than operated, example.com was never built to do the things a real business site needs to do: take a booking, answer a call, capture an email, or greet a visitor on a phone screen. That's by design — and it's exactly where the gap shows up.
       </p>
       <p class="text-slate-600 leading-relaxed">
-        That is also precisely what makes it instructive: it shows, in the plainest terms, what a domain looks like
-        when it has a name and nothing else.
+        Independent reviews of the site — including a technical readiness audit — score it 2 out of 100 on conversion readiness. No contact form. No click-to-call. No mobile-ready viewport. For a reserved domain, that's expected. For an actual business, it would mean every visitor arrives and leaves with nowhere to go.
       </p>
     </div>
-    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8">
-      <h3 class="font-heading text-xl font-bold text-slate-900 mb-4">What Makes It Different</h3>
-      <ul class="space-y-4 text-slate-600 text-sm leading-relaxed">
-        <li class="flex gap-3">
-          <span class="text-brand font-bold">—</span>
-          <span>Not an operational service. Not intended for testing, monitoring, or transactional use of any kind.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-brand font-bold">—</span>
-          <span>No commercial purpose and no conversion pathway — by design, not by oversight.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-brand font-bold">—</span>
-          <span>Referenced globally across technical writing, RFCs, and classroom examples precisely because it is neutral and reserved.</span>
-        </li>
-      </ul>
+    <div class="space-y-5">
+      <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+        <h3 class="font-heading font-semibold text-slate-900 mb-2">Documentation, not sales</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Its purpose is to appear in examples — RFCs, API docs, classroom exercises — without pointing to anything that could be mistaken for a live offer.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+        <h3 class="font-heading font-semibold text-slate-900 mb-2">No conversion path</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">No booking system, no contact form, no phone link. A visitor who wants to reach "Example" has no way to do it from this page.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
+        <h3 class="font-heading font-semibold text-slate-900 mb-2">Referenced, not reviewed</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">It shows up in technical writing and academic examples — as a stand-in name, not as a rated or reviewed service.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- THE GAP / READINESS -->
-<section class="py-20 px-6 bg-slate-50 border-y border-slate-200">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="font-heading text-3xl font-bold text-slate-900 mb-5 text-center">Why There's Nothing to Click Here</h2>
-    <p class="text-slate-600 leading-relaxed text-center max-w-2xl mx-auto mb-12">
-      Audits of this page consistently return the same finding: readiness scores at zero. No booking system,
-      no contact form, no email link, no click-to-call, no mobile viewport configuration — the total absence
-      of conversion infrastructure that a real, operating business would need.
-    </p>
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white rounded-xl p-6 text-center border border-slate-200">
-        <div class="font-heading text-3xl font-bold text-brand mb-1">0</div>
-        <div class="text-xs uppercase tracking-wide text-slate-500">Booking System</div>
-      </div>
-      <div class="bg-white rounded-xl p-6 text-center border border-slate-200">
-        <div class="font-heading text-3xl font-bold text-brand mb-1">0</div>
-        <div class="text-xs uppercase tracking-wide text-slate-500">Contact Form</div>
-      </div>
-      <div class="bg-white rounded-xl p-6 text-center border border-slate-200">
-        <div class="font-heading text-3xl font-bold text-brand mb-1">0</div>
-        <div class="text-xs uppercase tracking-wide text-slate-500">Click-to-Call</div>
-      </div>
-      <div class="bg-white rounded-xl p-6 text-center border border-slate-200">
-        <div class="font-heading text-3xl font-bold text-brand mb-1">0</div>
-        <div class="text-xs uppercase tracking-wide text-slate-500">Viewport Tag</div>
-      </div>
-    </div>
-    <p class="text-slate-500 text-sm text-center mt-8 max-w-2xl mx-auto">
-      For a reserved IANA example domain, this is expected. For an actual local business, this same checklist
-      is the difference between a visitor finding you and a visitor bouncing.
-    </p>
-  </div>
-</section>
-
-<!-- PRESS -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4 text-center">Referenced Far Beyond Its Own Page</h2>
+<!-- PRESS / MENTIONS -->
+<section class="bg-slate-50 border-y border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="font-heading text-3xl font-bold text-slate-900 mb-3 text-center">Where the name shows up</h2>
     <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">
-      The example.com name shows up constantly in technical writing, language exams, and research — a sign of how
-      deeply "example" as a placeholder has embedded itself in how people teach and write.
+      example.com surfaces across the web as a stand-in — in exam prep, in research on review systems, and in discussions of how examples get used and misused. None of it is about a business; all of it confirms the name's role as a universal placeholder.
     </p>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="border border-slate-200 rounded-xl p-6 hover:shadow-md transition">
-        <div class="text-xs font-semibold uppercase tracking-wide text-brand mb-3">engxam.com</div>
-        <p class="text-slate-600 text-sm leading-relaxed italic">"Review - examples & model answers | C1 Advanced (CAE)"</p>
+      <div class="bg-white rounded-2xl border border-slate-200 p-6">
+        <p class="text-xs font-semibold text-brand uppercase tracking-wide mb-3">engxam.com</p>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3">Cited in C1 Advanced (CAE) exam-prep materials as a model reference example.</p>
+        <p class="text-xs text-slate-400">"Review — examples & model answers | C1 Advanced (CAE)"</p>
       </div>
-      <div class="border border-slate-200 rounded-xl p-6 hover:shadow-md transition">
-        <div class="text-xs font-semibold uppercase tracking-wide text-brand mb-3">reddit.com</div>
-        <p class="text-slate-600 text-sm leading-relaxed italic">"While this IS a good review, I also think it's a good example of why reviewers are having such problems right now."</p>
+      <div class="bg-white rounded-2xl border border-slate-200 p-6">
+        <p class="text-xs font-semibold text-brand uppercase tracking-wide mb-3">reddit.com</p>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3">Discussed as a reference point in a conversation about how review examples are evaluated.</p>
+        <p class="text-xs text-slate-400">"a good example of why reviewers are having such problems right now"</p>
       </div>
-      <div class="border border-slate-200 rounded-xl p-6 hover:shadow-md transition">
-        <div class="text-xs font-semibold uppercase tracking-wide text-brand mb-3">pubmed.ncbi.nlm.nih.gov</div>
-        <p class="text-slate-600 text-sm leading-relaxed italic">"Using artificial intelligence for systematic review: the example of ..."</p>
+      <div class="bg-white rounded-2xl border border-slate-200 p-6">
+        <p class="text-xs font-semibold text-brand uppercase tracking-wide mb-3">pubmed.ncbi.nlm.nih.gov</p>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3">Referenced in research exploring AI-assisted systematic review methodology.</p>
+        <p class="text-xs text-slate-400">"Using artificial intelligence for systematic review: the example of…"</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-20 px-6 bg-gradient-to-br from-brand to-slate-900 text-white text-center">
-  <div class="max-w-2xl mx-auto">
-    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Want the Full Technical Picture?</h2>
-    <p class="text-blue-100 mb-8 leading-relaxed">
-      IANA maintains the official record of what example.com is, why it exists, and how it may be used in
-      documentation and examples worldwide.
+<!-- THE GAP -->
+<section class="max-w-4xl mx-auto px-6 py-20 text-center">
+  <h2 class="font-heading text-3xl font-bold text-slate-900 mb-5">A placeholder makes the gap visible</h2>
+  <p class="text-slate-600 leading-relaxed mb-4">
+    Because example.com has no commercial intent, it's a useful illustration of what happens when a website has no way to turn a visit into a conversation: no form, no number to tap, no reason to stay past the first scroll.
+  </p>
+  <p class="text-slate-600 leading-relaxed">
+    A real business carrying that same readiness score would be losing customers before they ever introduced themselves. That's the part worth paying attention to — whether you're reading this as documentation, or as a mirror.
+  </p>
+</section>
+
+<!-- CTA SECTION -->
+<section class="bg-gradient-to-br from-brand to-blue-700 text-white">
+  <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Curious how example domains work?</h2>
+    <p class="text-blue-100 max-w-xl mx-auto mb-8 leading-relaxed">
+      Learn more about example domains, their reserved status, and why they're kept permanently separate from live commercial use.
     </p>
-    <a href="https://www.iana.org/help/example-domains" target="_blank" rel="noopener"
-       class="inline-block bg-yellow-400 text-slate-900 font-semibold px-8 py-3.5 rounded-lg hover:bg-yellow-300 transition">
-      Learn more about IANA example domains
+    <a href="contact.html" class="inline-block bg-white text-brand font-semibold px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors">
+      Learn More About Example Domains
     </a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-slate-900 text-slate-300 py-14 px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
     <div>
-      <div class="font-heading text-xl font-bold text-white mb-3">Example</div>
+      <h3 class="font-heading text-xl font-bold text-white mb-3">Example<span class="text-brand">.</span></h3>
       <p class="text-sm text-slate-400 leading-relaxed">
-        A reserved documentation domain managed by IANA for examples and documentation purposes.
+        example.com is a reserved domain designated for documentation and illustrative examples. Not a functional commercial service.
       </p>
     </div>
     <div>
-      <div class="font-heading text-sm font-semibold uppercase tracking-wide text-white mb-4">Pages</div>
-      <nav class="flex flex-col gap-2 text-sm">
-        <a href="index.html" class="hover:text-white transition">Home</a>
-        <a href="about.html" class="text-white font-semibold">About</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
-      </nav>
+      <h4 class="text-white font-semibold mb-3 text-sm tracking-wide uppercase">Pages</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="about.html" class="text-brand font-medium">About</a></li>
+        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+      </ul>
     </div>
     <div>
-      <div class="font-heading text-sm font-semibold uppercase tracking-wide text-white mb-4">Elsewhere</div>
-      <a href="https://www.instagram.com/example" target="_blank" rel="noopener" class="text-sm hover:text-white transition">Instagram</a>
+      <h4 class="text-white font-semibold mb-3 text-sm tracking-wide uppercase">Connect</h4>
+      <a href="https://www.instagram.com/example" target="_blank" rel="noopener" class="text-sm hover:text-white transition-colors">Instagram</a>
     </div>
   </div>
-  <div class="max-w-6xl mx-auto border-t border-slate-800 mt-10 pt-6 text-xs text-slate-500 text-center">
-    &copy; 2024 Example.com. For use in documentation without prior coordination or asking for permission.
+  <div class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    © 2024 Example.com — Reserved domain for documentation purposes.
   </div>
 </footer>
 
